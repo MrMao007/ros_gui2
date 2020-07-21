@@ -1,0 +1,17 @@
+-I/opt/ros/kinetic/include
+-I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp
+-I/opt/ros/kinetic/include/opencv-3.3.1-dev
+-I/opt/ros/kinetic/include/opencv-3.3.1-dev/opencv
+-I/home/mty/catkin_gui/devel/include
+-I/usr/include
+-I/usr/include/eigen3
+-I/usr/include/OGRE/Overlay
+-I/usr/include/OGRE
+-I/opt/ros/kinetic/include/opencv-3.3.1-dev
+-I/opt/ros/kinetic/include/opencv-3.3.1-dev/opencv
+-DROS_BUILD_SHARED_LIBS=1
+-DROS_PACKAGE_NAME="ros_gui"
+-DROSCONSOLE_BACKEND_LOG4CXX
+-o
+/home/mty/catkin_gui/src/ros_gui/build/include/ros_gui/moc_dialog.cpp
+/home/mty/catkin_gui/src/ros_gui/include/ros_gui/dialog.h
