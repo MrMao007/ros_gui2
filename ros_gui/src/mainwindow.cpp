@@ -124,6 +124,18 @@ MainWindow::MainWindow(int argc, char** argv, QWidget *parent) :
     render_panel_=new rviz::RenderPanel;
     ui->verticalLayout->addWidget(render_panel_);
 
+    manager_=new rviz::VisualizationManager(render_panel_);
+    tool_manager_=manager_->getToolManager();
+    viewManager_ = manager_->getViewManager();
+    //viewManager_->getCurrent()->subProp("Target Frame")->setValue("/map");
+
+    render_panel_->initialize(manager_->getSceneManager(),manager_);
+    manager_->initialize();
+    tool_manager_->initialize();
+    manager_->startUpdate();
+
+    manager_->removeAllDisplays();
+
 
     connect(&markernode, SIGNAL(power(float)), this, SLOT(power_slot(float)));
     connect(&markernode, SIGNAL(power_flag(float)), this, SLOT(flag_slot(float)));
@@ -216,17 +228,6 @@ void MainWindow::on_pushButton_10_clicked()
 void MainWindow::on_pushButton_12_clicked()
 {
     system("gnome-terminal -x bash -c 'bash ~/bash/nav_2d.sh'");
-    manager_=new rviz::VisualizationManager(render_panel_);
-    tool_manager_=manager_->getToolManager();
-    viewManager_ = manager_->getViewManager();
-    //viewManager_->getCurrent()->subProp("Target Frame")->setValue("/map");
-
-    render_panel_->initialize(manager_->getSceneManager(),manager_);
-    manager_->initialize();
-    tool_manager_->initialize();
-    manager_->startUpdate();
-
-    manager_->removeAllDisplays();
 
     manager_->setFixedFrame("/map");
 
@@ -380,11 +381,13 @@ void MainWindow::on_pushButton_29_clicked(){
 }
 
 void MainWindow::on_pushButton_30_clicked(){
-    manager_->setFixedFrame("/base_footprint");
+    //manager_->setFixedFrame("/base_footprint");
+    system("bash ~/bash/test.sh &");
 }
 
 void MainWindow::on_pushButton_31_clicked(){
-    manager_->setFixedFrame("/map");
+    //manager_->setFixedFrame("/map");
+    system("bash ~/bash/test_shut.sh &");
 }
 
 void MainWindow::reshow(){
