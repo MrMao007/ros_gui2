@@ -1,44 +1,57 @@
 <?xml version="1.0"?>
-<?xml-model
-  href="http://download.ros.org/schema/package_format3.xsd"
-  schematypens="http://www.w3.org/2001/XMLSchema"?>
-<package format="3">
-  <name>catkin</name>
-  <version>0.7.20</version>
-  <description>Low-level build system macros and infrastructure for ROS.</description>
-  <maintainer email="dthomas@osrfoundation.org">Dirk Thomas</maintainer>
+<package>
+  <name>ros_gui</name>
+  <version>0.1.0</version>
+  <description>
+
+     ros_gui
+
+  </description>
+  <maintainer email="mty@gmail.com">mty</maintainer>
+  <author>mty</author>
   <license>BSD</license>
+  <!-- <url type="bugtracker">https://github.com/stonier/qt_ros/issues</url> -->
+  <!-- <url type="repository">https://github.com/stonier/qt_ros</url> -->
 
-  <url type="website">http://wiki.ros.org/catkin</url>
-  <url type="bugtracker">https://github.com/ros/catkin/issues</url>
-  <url type="repository">https://github.com/ros/catkin</url>
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>qt_build</build_depend>
+  <build_depend>roscpp</build_depend>
+  <build_depend>rospy</build_depend>
+  <build_depend>std_msgs</build_depend>
+  <build_depend>sensor_msgs</build_depend>
+  <build_depend>rviz</build_depend>
+  <build_depend>cv_bridge</build_depend>
+  <build_depend>image_transport</build_depend>
+  <build_depend>qtbase5-dev</build_depend>
+  <build_depend>qt5-qmake</build_depend>
+  <build_depend>libopencv-dev</build_depend>
+  <build_depend>libqt5-core</build_depend>
+  <build_depend>libqt5-gui</build_depend>
+  <build_depend>libqt5-widgets</build_depend>
+  <build_depend>custom_msgs</build_depend>
+  <build_depend>move_base_msgs</build_depend>
+  <build_depend>actionlib</build_depend>
+  <build_depend>tf</build_depend>
 
-  <author>Troy Straszheim</author>
-  <author>Morten Kjaergaard</author>
-  <author>Brian Gerkey</author>
-  <author>Dirk Thomas</author>
 
-  <depend condition="$ROS_PYTHON_VERSION == 2">python-argparse</depend>
-  <depend condition="$ROS_PYTHON_VERSION == 2" version_gt="0.4.3">python-catkin-pkg</depend>
-  <depend condition="$ROS_PYTHON_VERSION == 3" version_gt="0.4.3">python3-catkin-pkg</depend>
-  <depend condition="$ROS_PYTHON_VERSION == 2">python-empy</depend>
-  <depend condition="$ROS_PYTHON_VERSION == 3">python3-empy</depend>
+  <run_depend>qt_build</run_depend>
+  <run_depend>roscpp</run_depend>
+  <run_depend>rospy</run_depend>
+  <run_depend>std_msgs</run_depend>
+  <run_depend>sensor_msgs</run_depend>
+  <run_depend>rviz</run_depend>
+  <run_depend>cv_bridge</run_depend>
+  <run_depend>image_transport</run_depend>
+  <run_depend>libqt5-core</run_depend>
+  <run_depend>libqt5-gui</run_depend>
+  <run_depend>libqt5-widgets</run_depend>
+  <run_depend>libopencv-dev</run_depend>
+  <run_depend>qtbase5-dev</run_depend>
+  <run_depend>qt5-qmake</run_depend>
+  <run_depend>custom_msgs</run_depend>
+  <run_depend>move_base_msgs</run_depend>
+  <run_depend>actionlib</run_depend>
+  <run_depend>tf</run_depend>
 
-  <buildtool_depend>cmake</buildtool_depend>
-  <buildtool_export_depend>cmake</buildtool_export_depend>
-
-  <build_export_depend>google-mock</build_export_depend>
-  <build_export_depend>gtest</build_export_depend>
-  <build_export_depend condition="$ROS_PYTHON_VERSION == 2">python-nose</build_export_depend>
-  <build_export_depend condition="$ROS_PYTHON_VERSION == 3">python3-nose</build_export_depend>
-
-  <test_depend condition="$ROS_PYTHON_VERSION == 2">python-mock</test_depend>
-  <test_depend condition="$ROS_PYTHON_VERSION == 3">python3-mock</test_depend>
-  <test_depend condition="$ROS_PYTHON_VERSION == 2">python-nose</test_depend>
-  <test_depend condition="$ROS_PYTHON_VERSION == 3">python3-nose</test_depend>
-
-  <export>
-    <rosdoc config="rosdoc.yaml"/>
-    <architecture_independent/>
-  </export>
+ 
 </package>

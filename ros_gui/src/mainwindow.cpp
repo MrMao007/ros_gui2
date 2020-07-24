@@ -382,7 +382,8 @@ void MainWindow::on_pushButton_29_clicked(){
 
 void MainWindow::on_pushButton_30_clicked(){
     //manager_->setFixedFrame("/base_footprint");
-    system("bash ~/bash/test.sh &");
+    //system("bash ~/bash/test.sh &");
+    system("gnome-terminal -x bash -c 'rosrun map_server map_saver -f test'");
 }
 
 void MainWindow::on_pushButton_31_clicked(){

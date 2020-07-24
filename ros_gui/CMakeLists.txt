@@ -15,7 +15,7 @@ list(APPEND CMAKE_PREFIX_PATH "/opt/ros/kinetic")
 set(custom_msgs_DIR /home/mty/catkin_gui/devel/share/custom_msgs/cmake)
 # qt_build provides the qt cmake glue, roscpp the comms for a default talker
 find_package(catkin REQUIRED COMPONENTS custom_msgs qt_build roscpp rospy std_msgs sensor_msgs rviz cv_bridge image_transport move_base_msgs tf)
-find_package(Qt5 REQUIRED COMPONENTS Core Gui Widgets Concurrent Process)
+find_package(Qt5 REQUIRED COMPONENTS Core Gui Widgets Concurrent)
 find_package(OpenCV REQUIRED)
 include_directories(${catkin_INCLUDE_DIRS})
 include_directories(${Qt5_INCLUDE_DIRS})
