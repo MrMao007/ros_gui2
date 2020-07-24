@@ -32,7 +32,7 @@ arm::arm(int argc, char** argv, QWidget *parent) :
     robot->subProp("Robot Description")->setValue("robot_description");
     qnode.init();
     connect(&qnode, SIGNAL(jointUpdated()), this, SLOT(updateJoint()));
-    connect(&qnode, SIGNAL(loggingCamera()), this, SLOT(updateLogcamera()));
+    //connect(&qnode, SIGNAL(loggingCamera()), this, SLOT(updateLogcamera()));
 
 
 }

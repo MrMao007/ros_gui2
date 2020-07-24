@@ -164,6 +164,7 @@ MainWindow::~MainWindow()
 void MainWindow::on_pushButton_2_clicked()
 {
     system("gnome-terminal -x bash -c 'bash ~/bash/remote.sh'");
+    ui->pushButton_2->setEnabled(false);
     this->statusLabel->setStyleSheet("color:green");
     this->statusLabel->setText("遥控中...");
 }
@@ -171,6 +172,7 @@ void MainWindow::on_pushButton_2_clicked()
 void MainWindow::on_pushButton_3_clicked()
 {
     system("gnome-terminal -x bash -c 'bash ~/bash/remote_shut.sh'");
+    ui->pushButton_2->setEnabled(true);
     this->statusLabel->setStyleSheet("color:gray");
     this->statusLabel->setText("遥控停止...");
 }
@@ -178,6 +180,7 @@ void MainWindow::on_pushButton_3_clicked()
 void MainWindow::on_pushButton_4_clicked()
 {
     system("gnome-terminal -x bash -c 'bash ~/bash/laser_2d.sh'");
+    ui->pushButton_4->setEnabled(false);
     this->laser2Label->setStyleSheet("color:green");
     this->laser2Label->setText("2D激光已启动！");
 }
@@ -185,13 +188,20 @@ void MainWindow::on_pushButton_4_clicked()
 void MainWindow::on_pushButton_5_clicked()
 {
     system("gnome-terminal -x bash -c 'bash ~/bash/odom.sh'");
+    ui->pushButton_5->setEnabled(false);
     this->odomLabel->setStyleSheet("color:green");
     this->odomLabel->setText("里程计已启动！");
 }
 
 void MainWindow::on_pushButton_6_clicked()
 {
+    if(ui->pushButton_4->isEnabled() || ui->pushButton_5->isEnabled()){
+        ui->label_6->setText("需要先启动激光\n雷达和里程计！");
+        return;
+    }
     system("gnome-terminal -x bash -c 'bash ~/bash/mapping_2d.sh'");
+    ui->pushButton_6->setEnabled(false);
+    ui->label_6->setText("");
     this->mapping2Label->setStyleSheet("color:green");
     this->mapping2Label->setText("2D建图中...");
 }
@@ -199,6 +209,7 @@ void MainWindow::on_pushButton_6_clicked()
 void MainWindow::on_pushButton_7_clicked()
 {
     system("gnome-terminal -x bash -c 'bash ~/bash/laser_2d_shut.sh'");
+    ui->pushButton_4->setEnabled(true);
     laser2Label->setStyleSheet("color:red");
     laser2Label->setText("2D激光停止...");
 }
@@ -206,6 +217,7 @@ void MainWindow::on_pushButton_7_clicked()
 void MainWindow::on_pushButton_8_clicked()
 {
     system("gnome-terminal -x bash -c 'bash ~/bash/odom_shut.sh'");
+    ui->pushButton_5->setEnabled(true);
     odomLabel->setStyleSheet("color:red");
     odomLabel->setText("里程计停止...");
 }
@@ -219,6 +231,7 @@ void MainWindow::on_pushButton_9_clicked()
 void MainWindow::on_pushButton_10_clicked()
 {
     system("gnome-terminal -x bash -c 'bash ~/bash/mapping_2d_shut.sh'");
+    ui->pushButton_6->setEnabled(true);
     mapping2Label->setStyleSheet("color:gray");
     mapping2Label->setText("2D建图停止...");
 }
@@ -227,58 +240,65 @@ void MainWindow::on_pushButton_10_clicked()
 
 void MainWindow::on_pushButton_12_clicked()
 {
-    system("gnome-terminal -x bash -c 'bash ~/bash/nav_2d.sh'");
+    if(ui->pushButton_4->isEnabled() || ui->pushButton_5->isEnabled()){
+        ui->label_5->setText("需要先启动激光\n雷达和里程计！");
+    }
+    else
+    {
+        system("gnome-terminal -x bash -c 'bash ~/bash/nav_2d.sh'");
+        ui->label_5->setText("");
+        ui->pushButton_12->setEnabled(false);
+        manager_->setFixedFrame("/map");
 
-    manager_->setFixedFrame("/map");
+        rviz::Display *map=manager_->createDisplay("rviz/Map","adjustable map",true);
+        ROS_ASSERT(map!=NULL);
+        map->subProp("Topic")->setValue("/map");
 
-    rviz::Display *map=manager_->createDisplay("rviz/Map","adjustable map",true);
-    ROS_ASSERT(map!=NULL);
-    map->subProp("Topic")->setValue("/map");
+        rviz::Display *robot=manager_->createDisplay("rviz/RobotModel","adjustable robot",true);
+        ROS_ASSERT(robot!=NULL);
+        robot->subProp("Robot Description")->setValue("robot_description");
 
-    rviz::Display *robot=manager_->createDisplay("rviz/RobotModel","adjustable robot",true);
-    ROS_ASSERT(robot!=NULL);
-    robot->subProp("Robot Description")->setValue("robot_description");
+        rviz::Display *laser=manager_->createDisplay("rviz/LaserScan","adjustable laser",true);
+        ROS_ASSERT(laser!=NULL);
+        laser->subProp("Topic")->setValue("rightlaser/scan");
+        laser->subProp("Size (m)")->setValue("0.1");
 
-    rviz::Display *laser=manager_->createDisplay("rviz/LaserScan","adjustable laser",true);
-    ROS_ASSERT(laser!=NULL);
-    laser->subProp("Topic")->setValue("rightlaser/scan");
-    laser->subProp("Size (m)")->setValue("0.1");
-
-    rviz::Display *linear=manager_->createDisplay("rviz/Marker","adjustable linear",true);
-    ROS_ASSERT(linear!=NULL);
-    linear->subProp("Marker Topic")->setValue("/lmarker");
-
-
-    rviz::Display *angular=manager_->createDisplay("rviz/MarkerArray","adjustable angular",true);
-    ROS_ASSERT(angular!=NULL);
-    angular->subProp("Marker Topic")->setValue("/amarker");
-
-    rviz::Display *text=manager_->createDisplay("rviz/Marker","adjustable text",true);
-    ROS_ASSERT(text!=NULL);
-    text->subProp("Marker Topic")->setValue("/tmarker");
-
-    rviz::Display *goal_marker=manager_->createDisplay("rviz/MarkerArray","adjustable goal",true);
-    ROS_ASSERT(goal_marker!=NULL);
-    goal_marker->subProp("Marker Topic")->setValue("/goalmarker");
+        rviz::Display *linear=manager_->createDisplay("rviz/Marker","adjustable linear",true);
+        ROS_ASSERT(linear!=NULL);
+        linear->subProp("Marker Topic")->setValue("/lmarker");
 
 
-    rviz::Display *goalid_marker=manager_->createDisplay("rviz/MarkerArray","adjustable goalid",true);
-    ROS_ASSERT(goalid_marker!=NULL);
-    goalid_marker->subProp("Marker Topic")->setValue("/goalid_marker");
+        rviz::Display *angular=manager_->createDisplay("rviz/MarkerArray","adjustable angular",true);
+        ROS_ASSERT(angular!=NULL);
+        angular->subProp("Marker Topic")->setValue("/amarker");
 
-    rviz::Display *forbidden=manager_->createDisplay("rviz/MarkerArray","adjustable forbidden",true);
-    ROS_ASSERT(forbidden!=NULL);
-    forbidden->subProp("Marker Topic")->setValue("/forbidden_marker");
+        rviz::Display *text=manager_->createDisplay("rviz/Marker","adjustable text",true);
+        ROS_ASSERT(text!=NULL);
+        text->subProp("Marker Topic")->setValue("/tmarker");
 
-    rviz::Display *id_marker=manager_->createDisplay("rviz/MarkerArray","adjustable id",true);
-    ROS_ASSERT(id_marker!=NULL);
-    id_marker->subProp("Marker Topic")->setValue("/id_marker");
+        rviz::Display *goal_marker=manager_->createDisplay("rviz/MarkerArray","adjustable goal",true);
+        ROS_ASSERT(goal_marker!=NULL);
+        goal_marker->subProp("Marker Topic")->setValue("/goalmarker");
 
-    rviz::Display *semantic_marker=manager_->createDisplay("rviz/MarkerArray","adjustable semantic",true);
-    ROS_ASSERT(semantic_marker!=NULL);
-    semantic_marker->subProp("Marker Topic")->setValue("/semantic_marker");
-    this->navLabel->setStyleSheet("color:green");
-    this->navLabel->setText("自主导航中...");
+
+        rviz::Display *goalid_marker=manager_->createDisplay("rviz/MarkerArray","adjustable goalid",true);
+        ROS_ASSERT(goalid_marker!=NULL);
+        goalid_marker->subProp("Marker Topic")->setValue("/goalid_marker");
+
+        rviz::Display *forbidden=manager_->createDisplay("rviz/MarkerArray","adjustable forbidden",true);
+        ROS_ASSERT(forbidden!=NULL);
+        forbidden->subProp("Marker Topic")->setValue("/forbidden_marker");
+
+        rviz::Display *id_marker=manager_->createDisplay("rviz/MarkerArray","adjustable id",true);
+        ROS_ASSERT(id_marker!=NULL);
+        id_marker->subProp("Marker Topic")->setValue("/id_marker");
+
+        rviz::Display *semantic_marker=manager_->createDisplay("rviz/MarkerArray","adjustable semantic",true);
+        ROS_ASSERT(semantic_marker!=NULL);
+        semantic_marker->subProp("Marker Topic")->setValue("/semantic_marker");
+        this->navLabel->setStyleSheet("color:green");
+        this->navLabel->setText("自主导航中...");
+    }
 }
 
 
@@ -286,6 +306,7 @@ void MainWindow::on_pushButton_12_clicked()
 void MainWindow::on_pushButton_14_clicked()
 {
     system("gnome-terminal -x bash -c 'bash ~/bash/nav_2d_shut.sh'");
+    ui->pushButton_12->setEnabled(true);
     this->navLabel->setStyleSheet("color:gray");
     this->navLabel->setText("导航停止中...");
 }
@@ -293,6 +314,7 @@ void MainWindow::on_pushButton_14_clicked()
 void MainWindow::on_pushButton_15_clicked()
 {
     system("gnome-terminal -x bash -c 'bash ~/bash/mapping_3d.sh'");
+    ui->pushButton_15->setEnabled(false);
     mapping3Label->setStyleSheet("color:green");
     mapping3Label->setText("3D建图中...");
 }
@@ -300,6 +322,7 @@ void MainWindow::on_pushButton_15_clicked()
 void MainWindow::on_pushButton_16_clicked()
 {
     system("gnome-terminal -x bash -c 'bash ~/bash/loc_3d.sh'");
+    ui->pushButton_16->setEnabled(false);
     loc3Label->setStyleSheet("color:green");
     loc3Label->setText("3D定位中...");
 }
@@ -307,6 +330,7 @@ void MainWindow::on_pushButton_16_clicked()
 void MainWindow::on_pushButton_17_clicked()
 {
     system("gnome-terminal -x bash -c 'bash ~/bash/loc_3d_shut.sh'");
+    ui->pushButton_16->setEnabled(true);
     loc3Label->setStyleSheet("color:gray");
     loc3Label->setText("3D定位停止...");
 }
@@ -314,6 +338,7 @@ void MainWindow::on_pushButton_17_clicked()
 void MainWindow::on_pushButton_18_clicked()
 {
     system("gnome-terminal -x bash -c 'bash ~/bash/mapping_3d_shut.sh'");
+    ui->pushButton_15->setEnabled(true);
     mapping3Label->setStyleSheet("color:gray");
     mapping3Label->setText("3D建图停止...");
 }
@@ -322,6 +347,7 @@ void MainWindow::on_pushButton_18_clicked()
 void MainWindow::on_pushButton_21_clicked()
 {
     system("gnome-terminal -x bash -c 'bash ~/bash/laser_3d.sh'");
+    ui->pushButton_21->setEnabled(false);
     laser3Label->setStyleSheet("color:green");
     laser3Label->setText("3D激光已启动！");
 }
@@ -329,6 +355,7 @@ void MainWindow::on_pushButton_21_clicked()
 void MainWindow::on_pushButton_22_clicked()
 {
     system("gnome-terminal -x bash -c 'bash ~/bash/laser_3d_shut.sh'");
+    ui->pushButton_21->setEnabled(true);
     laser3Label->setStyleSheet("color:red");
     laser3Label->setText("3D激光停止...");
 }

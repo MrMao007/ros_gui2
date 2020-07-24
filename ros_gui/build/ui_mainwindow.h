@@ -46,10 +46,12 @@ public:
     QPushButton *pushButton_8;
     QFrame *line;
     QPushButton *pushButton_6;
+    QLabel *label_6;
     QPushButton *pushButton_9;
     QPushButton *pushButton_10;
     QFrame *line_3;
     QPushButton *pushButton_12;
+    QLabel *label_5;
     QPushButton *pushButton_14;
     QWidget *widget;
     QVBoxLayout *verticalLayout_3;
@@ -105,12 +107,21 @@ public:
         verticalLayout_10->setObjectName(QStringLiteral("verticalLayout_10"));
         tabWidget = new QTabWidget(centralWidget);
         tabWidget->setObjectName(QStringLiteral("tabWidget"));
+        QSizePolicy sizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
+        sizePolicy.setHorizontalStretch(0);
+        sizePolicy.setVerticalStretch(0);
+        sizePolicy.setHeightForWidth(tabWidget->sizePolicy().hasHeightForWidth());
+        tabWidget->setSizePolicy(sizePolicy);
+        tabWidget->setTabPosition(QTabWidget::North);
+        tabWidget->setTabShape(QTabWidget::Rounded);
+        tabWidget->setIconSize(QSize(16, 16));
         tab = new QWidget();
         tab->setObjectName(QStringLiteral("tab"));
         verticalLayout_2 = new QVBoxLayout(tab);
-        verticalLayout_2->setSpacing(6);
+        verticalLayout_2->setSpacing(20);
         verticalLayout_2->setContentsMargins(11, 11, 11, 11);
         verticalLayout_2->setObjectName(QStringLiteral("verticalLayout_2"));
+        verticalLayout_2->setSizeConstraint(QLayout::SetMaximumSize);
         pushButton_4 = new QPushButton(tab);
         pushButton_4->setObjectName(QStringLiteral("pushButton_4"));
 
@@ -150,6 +161,14 @@ public:
 
         verticalLayout_2->addWidget(pushButton_6);
 
+        label_6 = new QLabel(tab);
+        label_6->setObjectName(QStringLiteral("label_6"));
+        sizePolicy.setHeightForWidth(label_6->sizePolicy().hasHeightForWidth());
+        label_6->setSizePolicy(sizePolicy);
+        label_6->setStyleSheet(QStringLiteral("color: rgb(239, 41, 41);"));
+
+        verticalLayout_2->addWidget(label_6);
+
         pushButton_9 = new QPushButton(tab);
         pushButton_9->setObjectName(QStringLiteral("pushButton_9"));
 
@@ -172,11 +191,29 @@ public:
 
         verticalLayout_2->addWidget(pushButton_12);
 
+        label_5 = new QLabel(tab);
+        label_5->setObjectName(QStringLiteral("label_5"));
+        label_5->setStyleSheet(QStringLiteral("color: rgb(239, 41, 41);"));
+
+        verticalLayout_2->addWidget(label_5);
+
         pushButton_14 = new QPushButton(tab);
         pushButton_14->setObjectName(QStringLiteral("pushButton_14"));
 
         verticalLayout_2->addWidget(pushButton_14);
 
+        verticalLayout_2->setStretch(0, 5);
+        verticalLayout_2->setStretch(1, 5);
+        verticalLayout_2->setStretch(2, 5);
+        verticalLayout_2->setStretch(3, 5);
+        verticalLayout_2->setStretch(4, 5);
+        verticalLayout_2->setStretch(5, 5);
+        verticalLayout_2->setStretch(6, 5);
+        verticalLayout_2->setStretch(8, 5);
+        verticalLayout_2->setStretch(10, 5);
+        verticalLayout_2->setStretch(11, 5);
+        verticalLayout_2->setStretch(12, 5);
+        verticalLayout_2->setStretch(13, 5);
         tabWidget->addTab(tab, QString());
         widget = new QWidget();
         widget->setObjectName(QStringLiteral("widget"));
@@ -393,9 +430,11 @@ public:
         pushButton_5->setText(QApplication::translate("MainWindow", "\345\220\257\345\212\250\351\207\214\347\250\213\350\256\241", 0));
         pushButton_8->setText(QApplication::translate("MainWindow", "\345\205\263\351\227\255\351\207\214\347\250\213\350\256\241", 0));
         pushButton_6->setText(QApplication::translate("MainWindow", "\345\274\200\345\247\213\345\273\272\345\233\276", 0));
+        label_6->setText(QString());
         pushButton_9->setText(QApplication::translate("MainWindow", "\344\277\235\345\255\230\345\234\260\345\233\276", 0));
         pushButton_10->setText(QApplication::translate("MainWindow", "\351\200\200\345\207\272\345\273\272\345\233\276", 0));
         pushButton_12->setText(QApplication::translate("MainWindow", "\345\220\257\345\212\250\345\257\274\350\210\252", 0));
+        label_5->setText(QString());
         pushButton_14->setText(QApplication::translate("MainWindow", "\347\273\223\346\235\237\345\257\274\350\210\252", 0));
         tabWidget->setTabText(tabWidget->indexOf(tab), QApplication::translate("MainWindow", "2D", 0));
         pushButton_21->setText(QApplication::translate("MainWindow", "\345\220\257\345\212\2503D\346\277\200\345\205\211", 0));
