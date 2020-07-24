@@ -163,7 +163,7 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_pushButton_2_clicked()
 {
-    system("gnome-terminal -x bash -c 'bash ~/bash/remote.sh'");
+    system("gnome-terminal -x bash -c 'bash ~/bash/remote.sh'");//zhe ju bu neng gai
     ui->pushButton_2->setEnabled(false);
     this->statusLabel->setStyleSheet("color:green");
     this->statusLabel->setText("遥控中...");
