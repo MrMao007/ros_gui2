@@ -1,0 +1,4 @@
+<launch>
+  <master auto="start"/>
+  <node name="ros_gui" pkg="ros_gui" type="ros_gui" />
+</launch>

@@ -25,10 +25,18 @@ int main(int argc, char *argv[])
     //r.show();
     //d.show();
 
-   /* while(ros::ok()){
-        ros::spinOnce();
-        loop_rate.sleep();
-    }*/
+    QFile styleFile(":/style/style.qss");
+    if(styleFile.open(QIODevice::ReadOnly))
+    {
+        qDebug("open success");
+        QString setStyleSheet(styleFile.readAll());
+        a.setStyleSheet(setStyleSheet);
+        styleFile.close();
+    }
+    else
+    {
+        qDebug("Open failed");
+    }
 
     return a.exec();
 }

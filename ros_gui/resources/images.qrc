@@ -102,5 +102,8 @@
         <file>images/set_return.png</file>
         <file>images/return.png</file>
         <file>images/temperature.png</file>
+        <file>images/end.png</file>
+        <file>images/start.png</file>
+        <file>style/style.qss</file>
     </qresource>
 </RCC>

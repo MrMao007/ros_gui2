@@ -165,6 +165,9 @@ qrc_images.cpp: ../resources/images/Navigate.png
 qrc_images.cpp: ../resources/images/set_return.png
 qrc_images.cpp: ../resources/images/return.png
 qrc_images.cpp: ../resources/images/temperature.png
+qrc_images.cpp: ../resources/images/end.png
+qrc_images.cpp: ../resources/images/start.png
+qrc_images.cpp: ../resources/style/style.qss
 qrc_images.cpp: ../resources/images.qrc
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/mty/catkin_gui/src/ros_gui/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating qrc_images.cpp"
 	/usr/lib/x86_64-linux-gnu/qt5/bin/rcc --name images --output /home/mty/catkin_gui/src/ros_gui/build/qrc_images.cpp /home/mty/catkin_gui/src/ros_gui/resources/images.qrc

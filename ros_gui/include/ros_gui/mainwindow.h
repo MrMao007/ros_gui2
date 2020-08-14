@@ -70,8 +70,19 @@ public Q_SLOTS:
 
 private slots:
 
-
-    void on_pushButton_2_clicked();
+    void on_radioButton_toggled(bool state);
+    void on_radioButton_2_toggled(bool state);
+    void on_radioButton_3_toggled(bool state);
+    void on_radioButton_4_toggled(bool state);
+    void on_radioButton_5_toggled(bool state);
+    void on_radioButton_6_toggled(bool state);
+    void on_radioButton_7_toggled(bool state);
+    void on_radioButton_8_toggled(bool state);
+    /*void on_radioButton_3_clicked();
+    void on_radioButton_4_clicked();
+    void on_radioButton_7_clicked();
+    void on_radioButton_8_clicked();*/
+    /*void on_pushButton_2_clicked();
 
     void on_pushButton_3_clicked();
 
@@ -128,7 +139,7 @@ private slots:
 
     void on_pushButton_30_clicked();
 
-    void on_pushButton_31_clicked();
+    void on_pushButton_31_clicked();*/
 
     void reshow();
 private:
@@ -150,7 +161,7 @@ private:
     QLabel *odomLabel;
     QLabel *mapping2Label;
     QLabel *mapping3Label;
-    QLabel *loc2Label;
+    QLabel *infoLabel;
     QLabel *loc3Label;
     arm *arm_ui;
     Dialog *dialog_ui;

@@ -219,7 +219,7 @@ QtWidgets/QApplication
 -
 QtWidgets/QButtonGroup
 -
-QtWidgets/QFrame
+QtWidgets/QGridLayout
 -
 QtWidgets/QHBoxLayout
 -
@@ -234,6 +234,8 @@ QtWidgets/QMenuBar
 QtWidgets/QProgressBar
 -
 QtWidgets/QPushButton
+-
+QtWidgets/QRadioButton
 -
 QtWidgets/QSpacerItem
 -
@@ -8840,6 +8842,10 @@ qprogressbar.h
 qpushbutton.h
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qpushbutton.h
 
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QRadioButton
+qradiobutton.h
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qradiobutton.h
+
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QSpacerItem
 qlayoutitem.h
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlayoutitem.h
@@ -9081,6 +9087,10 @@ QtWidgets/qframe.h
 -
 
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qpushbutton.h
+QtWidgets/qabstractbutton.h
+-
+
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qradiobutton.h
 QtWidgets/qabstractbutton.h
 -
 

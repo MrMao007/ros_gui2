@@ -10,6 +10,8 @@ MainWindow::MainWindow(int argc, char** argv, QWidget *parent) :
     ui(new Ui::MainWindow),
     markernode(argc, argv)
 {
+
+
     ui->setupUi(this);
     this->image = new QImage();
     double x1=-50.0,y1=0.0,w1=20.0,h1=20.0;
@@ -54,73 +56,27 @@ MainWindow::MainWindow(int argc, char** argv, QWidget *parent) :
     this->semantic_ui = new Semantic();
     this->multigoal_ui = new Multigoal(argc, argv);
 
-    statusLabel->setMinimumSize(100,20); //设置标签最小尺寸
-    statusLabel->setFrameShape(QFrame::WinPanel); //设置标签形状
-    statusLabel->setFrameShadow(QFrame::Sunken); //设置标签阴影
-    statusBar()->addWidget(statusLabel);
-    statusLabel->setStyleSheet("color:gray");
-    statusLabel->setText("遥控停止...");
+    this->infoLabel = new QLabel;
+    infoLabel->setMinimumSize(300,20); //设置标签最小尺寸
+    infoLabel->setFrameShape(QFrame::WinPanel); //设置标签形状
+    infoLabel->setFrameShadow(QFrame::Sunken); //设置标签阴影
+    statusBar()->addWidget(infoLabel);
+    infoLabel->setStyleSheet("color:green");
+    infoLabel->setText("正常");
 
-    this->navLabel = new QLabel;
-    navLabel->setMinimumSize(100,20); //设置标签最小尺寸
-    navLabel->setFrameShape(QFrame::WinPanel); //设置标签形状
-    navLabel->setFrameShadow(QFrame::Sunken); //设置标签阴影
-    statusBar()->addWidget(navLabel);
-    navLabel->setStyleSheet("color:gray");
-    navLabel->setText("导航停止...");
-
-    this->laser2Label = new QLabel;
-    laser2Label->setMinimumSize(100,20); //设置标签最小尺寸
-    laser2Label->setFrameShape(QFrame::WinPanel); //设置标签形状
-    laser2Label->setFrameShadow(QFrame::Sunken); //设置标签阴影
-    statusBar()->addWidget(laser2Label);
-    laser2Label->setStyleSheet("color:red");
-    laser2Label->setText("2D激光停止...");
-
-    this->laser3Label = new QLabel;
-    laser3Label->setMinimumSize(100,20); //设置标签最小尺寸
-    laser3Label->setFrameShape(QFrame::WinPanel); //设置标签形状
-    laser3Label->setFrameShadow(QFrame::Sunken); //设置标签阴影
-    statusBar()->addWidget(laser3Label);
-    laser3Label->setStyleSheet("color:red");
-    laser3Label->setText("3D激光停止...");
-
-    this->odomLabel = new QLabel;
-    odomLabel->setMinimumSize(100,20); //设置标签最小尺寸
-    odomLabel->setFrameShape(QFrame::WinPanel); //设置标签形状
-    odomLabel->setFrameShadow(QFrame::Sunken); //设置标签阴影
-    statusBar()->addWidget(odomLabel);
-    odomLabel->setStyleSheet("color:red");
-    odomLabel->setText("里程计停止...");
-
-    this->mapping2Label = new QLabel;
-    mapping2Label->setMinimumSize(100,20); //设置标签最小尺寸
-    mapping2Label->setFrameShape(QFrame::WinPanel); //设置标签形状
-    mapping2Label->setFrameShadow(QFrame::Sunken); //设置标签阴影
-    statusBar()->addWidget(mapping2Label);
-    mapping2Label->setStyleSheet("color:gray");
-    mapping2Label->setText("2D建图停止...");
-
-    this->mapping3Label = new QLabel;
-    mapping3Label->setMinimumSize(100,20); //设置标签最小尺寸
-    mapping3Label->setFrameShape(QFrame::WinPanel); //设置标签形状
-    mapping3Label->setFrameShadow(QFrame::Sunken); //设置标签阴影
-    statusBar()->addWidget(mapping3Label);
-    mapping3Label->setStyleSheet("color:gray");
-    mapping3Label->setText("3D建图停止...");
-
-
-    this->loc3Label = new QLabel;
-    loc3Label->setMinimumSize(100,20); //设置标签最小尺寸
-    loc3Label->setFrameShape(QFrame::WinPanel); //设置标签形状
-    loc3Label->setFrameShadow(QFrame::Sunken); //设置标签阴影
-    statusBar()->addWidget(loc3Label);
-    loc3Label->setStyleSheet("color:gray");
-    loc3Label->setText("3D定位停止...");
-
+    QFont font("Microsoft YaHei", 12, 50);
+    ui->label_5->setFont(font);
+    ui->label_6->setFont(font);
+    ui->label_7->setFont(font);
+    ui->label_8->setFont(font);
+    ui->label_9->setFont(font);
+    ui->label_10->setFont(font);
+    ui->label_11->setFont(font);
+    ui->label_12->setFont(font);
+    ui->pushButton_23->setFont(font);
     markernode.init();
 
-    ros::init(argc,argv,"mainwindow",ros::init_options::AnonymousName);
+    ros::init(argc,argv,"ros_gui",ros::init_options::AnonymousName);
     render_panel_=new rviz::RenderPanel;
     ui->verticalLayout->addWidget(render_panel_);
 
@@ -136,7 +92,7 @@ MainWindow::MainWindow(int argc, char** argv, QWidget *parent) :
 
     manager_->removeAllDisplays();
 
-
+    //connect(ui->radioButton, SIGNAL(toggled(bool)), this, SLOT(on(bool)));
     connect(&markernode, SIGNAL(power(float)), this, SLOT(power_slot(float)));
     connect(&markernode, SIGNAL(power_flag(float)), this, SLOT(flag_slot(float)));
     connect(&markernode, SIGNAL(temp(float)), this, SLOT(temp_slot(float)));
@@ -160,66 +116,246 @@ MainWindow::~MainWindow()
 }
 
 
+void MainWindow::on_radioButton_toggled(bool state){
+    if(state){
+        system("gnome-terminal -x bash -c 'bash ~/bash/laser_2d.sh'");
+    }
+    else{
+        system("gnome-terminal -x bash -c 'bash ~/bash/laser_2d_shut.sh'");
+    }
+}
 
+void MainWindow::on_radioButton_2_toggled(bool state){
+    if(state){
+        system("gnome-terminal -x bash -c 'bash ~/bash/odom.sh'");
+    }
+    else{
+        system("gnome-terminal -x bash -c 'bash ~/bash/odom_shut.sh'");
+    }
+}
+
+void MainWindow::on_radioButton_3_toggled(bool state){
+    if(state){
+        if(!ui->radioButton->isChecked() || !ui->radioButton_2->isChecked()){
+            infoLabel->setStyleSheet("color:red");
+            infoLabel->setText("需要先启动激光雷达和里程计!");
+            ui->radioButton_3->setChecked(false);
+        }
+        else{
+            infoLabel->setStyleSheet("color:green");
+            infoLabel->setText("正常");
+            system("gnome-terminal -x bash -c 'bash ~/bash/mapping_2d.sh'");
+        }
+    }
+    else{
+
+        system("gnome-terminal -x bash -c 'bash ~/bash/mapping_2d_shut.sh'");
+    }
+}
+
+void MainWindow::on_radioButton_4_toggled(bool state){
+    if(state){
+        if(!ui->radioButton->isChecked() || !ui->radioButton_2->isChecked()){
+            infoLabel->setStyleSheet("color:red");
+            infoLabel->setText("需要先启动激光雷达和里程计!");
+            ui->radioButton_4->setChecked(false);
+        }
+        else{
+            infoLabel->setStyleSheet("color:green");
+            infoLabel->setText("正常");
+            system("gnome-terminal -x bash -c 'bash ~/bash/nav_2d.sh'");
+        }
+    }
+    else{
+
+        system("gnome-terminal -x bash -c 'bash ~/bash/nav_2d_shut.sh'");
+    }
+}
+
+void MainWindow::on_radioButton_5_toggled(bool state){
+    if(state){
+        system("gnome-terminal -x bash -c 'bash ~/bash/remote.sh'");
+    }
+    else{
+        system("gnome-terminal -x bash -c 'bash ~/bash/remote_shut.sh'");
+    }
+}
+
+void MainWindow::on_radioButton_6_toggled(bool state){
+    if(state){
+        system("gnome-terminal -x bash -c 'bash ~/bash/laser_3d.sh'");
+    }
+    else{
+        system("gnome-terminal -x bash -c 'bash ~/bash/laser_3d_shut.sh'");
+    }
+}
+
+void MainWindow::on_radioButton_7_toggled(bool state){
+    if(state){
+        if(!ui->radioButton->isChecked() || !ui->radioButton_2->isChecked()){
+            infoLabel->setStyleSheet("color:red");
+            infoLabel->setText("需要先启动激光雷达!");
+            ui->radioButton_7->setChecked(false);
+        }
+        else{
+            infoLabel->setStyleSheet("color:green");
+            infoLabel->setText("正常");
+            system("gnome-terminal -x bash -c 'bash ~/bash/loc_3d.sh'");
+        }
+    }
+    else{
+
+        system("gnome-terminal -x bash -c 'bash ~/bash/loc_3d_shut.sh'");
+    }
+}
+
+void MainWindow::on_radioButton_8_toggled(bool state){
+    if(state){
+        if(!ui->radioButton->isChecked() || !ui->radioButton_2->isChecked()){
+            infoLabel->setStyleSheet("color:red");
+            infoLabel->setText("需要先启动激光雷达!");
+            ui->radioButton_8->setChecked(false);
+        }
+        else{
+            infoLabel->setStyleSheet("color:green");
+            infoLabel->setText("正常");
+            system("gnome-terminal -x bash -c 'bash ~/bash/mapping_3d.sh'");
+        }
+    }
+    else{
+        system("gnome-terminal -x bash -c 'bash ~/bash/mapping_3d_shut.sh'");
+    }
+}
+/*
+void MainWindow::on_radioButton_3_clicked(){
+    if(!ui->radioButton->isChecked() || !ui->radioButton_2->isChecked()){
+        infoLabel->setStyleSheet("color:red");
+        infoLabel->setText("需要先启动激光雷达和里程计!");
+    }
+    else{
+        ui->radioButton_3->setCheckable(true);
+        ui->radioButton_3->setChecked(true);
+        infoLabel->setStyleSheet("color:green");
+        infoLabel->setText("正常");
+    }
+}
+
+void MainWindow::on_radioButton_4_clicked(){
+    if(!ui->radioButton->isChecked() || !ui->radioButton_2->isChecked()){
+        infoLabel->setStyleSheet("color:red");
+        infoLabel->setText("需要先启动激光雷达和里程计!");
+    }
+    else{
+        ui->radioButton_4->setCheckable(true);
+        ui->radioButton_4->setChecked(true);
+        infoLabel->setStyleSheet("color:green");
+        infoLabel->setText("正常");
+    }
+}
+
+void MainWindow::on_radioButton_7_clicked(){
+    if(!ui->radioButton_6->isChecked()){
+        infoLabel->setStyleSheet("color:red");
+        infoLabel->setText("需要先启动激光雷达!");
+    }
+    else{
+        ui->radioButton_7->setCheckable(true);
+        //ui->radioButton_7->setChecked(true);
+        infoLabel->setStyleSheet("color:green");
+        infoLabel->setText("正常");
+    }
+}
+
+void MainWindow::on_radioButton_8_clicked(){
+    if(!ui->radioButton_6->isChecked()){
+        infoLabel->setStyleSheet("color:red");
+        infoLabel->setText("需要先启动激光雷达!");
+    }
+    else{
+        ui->radioButton_8->setCheckable(true);
+        ui->radioButton_8->setChecked(true);
+        infoLabel->setStyleSheet("color:green");
+        infoLabel->setText("正常");
+    }
+}*/
+/*
 void MainWindow::on_pushButton_2_clicked()
 {
     system("gnome-terminal -x bash -c 'bash ~/bash/remote.sh'");//zhe ju bu neng gai
+    ui->pushButton_2->setStyleSheet("color:green");
+    ui->pushButton_2->setText("遥控已启动");
     ui->pushButton_2->setEnabled(false);
-    this->statusLabel->setStyleSheet("color:green");
-    this->statusLabel->setText("遥控中...");
+    //this->statusLabel->setStyleSheet("color:green");
+    //this->statusLabel->setText("遥控中...");
 }
 
 void MainWindow::on_pushButton_3_clicked()
 {
     system("gnome-terminal -x bash -c 'bash ~/bash/remote_shut.sh'");
+    ui->pushButton_2->setStyleSheet("color:black");
+    ui->pushButton_2->setText("启动遥控");
     ui->pushButton_2->setEnabled(true);
-    this->statusLabel->setStyleSheet("color:gray");
-    this->statusLabel->setText("遥控停止...");
+    //this->statusLabel->setStyleSheet("color:gray");
+    //this->statusLabel->setText("遥控停止...");
 }
 
 void MainWindow::on_pushButton_4_clicked()
 {
     system("gnome-terminal -x bash -c 'bash ~/bash/laser_2d.sh'");
+    ui->pushButton_4->setStyleSheet("color:green");
+    ui->pushButton_4->setText("2D激光已启动");
     ui->pushButton_4->setEnabled(false);
-    this->laser2Label->setStyleSheet("color:green");
-    this->laser2Label->setText("2D激光已启动！");
+    //this->laser2Label->setStyleSheet("color:green");
+    //this->laser2Label->setText("2D激光已启动！");
 }
 
 void MainWindow::on_pushButton_5_clicked()
 {
     system("gnome-terminal -x bash -c 'bash ~/bash/odom.sh'");
+    ui->pushButton_5->setStyleSheet("color:green");
+    ui->pushButton_5->setText("里程计已启动");
     ui->pushButton_5->setEnabled(false);
-    this->odomLabel->setStyleSheet("color:green");
-    this->odomLabel->setText("里程计已启动！");
+    //this->odomLabel->setStyleSheet("color:green");
+    //this->odomLabel->setText("里程计已启动！");
 }
 
 void MainWindow::on_pushButton_6_clicked()
 {
     if(ui->pushButton_4->isEnabled() || ui->pushButton_5->isEnabled()){
-        ui->label_6->setText("需要先启动激光\n雷达和里程计！");
+        infoLabel->setStyleSheet("color:red");
+        infoLabel->setText("需要先启动激光雷达和里程计!");
+        //ui->label_6->setText("需要先启动激光\n雷达和里程计！");
         return;
     }
     system("gnome-terminal -x bash -c 'bash ~/bash/mapping_2d.sh'");
+    ui->pushButton_6->setStyleSheet("color:green");
+    ui->pushButton_6->setText("2D建图已启动");
     ui->pushButton_6->setEnabled(false);
-    ui->label_6->setText("");
-    this->mapping2Label->setStyleSheet("color:green");
-    this->mapping2Label->setText("2D建图中...");
+    infoLabel->setStyleSheet("color:green");
+    infoLabel->setText("正常");
+    //ui->label_6->setText("");
+    //this->mapping2Label->setStyleSheet("color:green");
+    //this->mapping2Label->setText("2D建图中...");
 }
 
 void MainWindow::on_pushButton_7_clicked()
 {
     system("gnome-terminal -x bash -c 'bash ~/bash/laser_2d_shut.sh'");
+    ui->pushButton_4->setStyleSheet("color:black");
+    ui->pushButton_4->setText("启动2D激光");
     ui->pushButton_4->setEnabled(true);
-    laser2Label->setStyleSheet("color:red");
-    laser2Label->setText("2D激光停止...");
+    //laser2Label->setStyleSheet("color:red");
+    //laser2Label->setText("2D激光停止...");
 }
 
 void MainWindow::on_pushButton_8_clicked()
 {
     system("gnome-terminal -x bash -c 'bash ~/bash/odom_shut.sh'");
+    ui->pushButton_5->setStyleSheet("color:black");
+    ui->pushButton_5->setText("启动里程计");
     ui->pushButton_5->setEnabled(true);
-    odomLabel->setStyleSheet("color:red");
-    odomLabel->setText("里程计停止...");
+    //odomLabel->setStyleSheet("color:red");
+    //odomLabel->setText("里程计停止...");
 }
 
 void MainWindow::on_pushButton_9_clicked()
@@ -231,9 +367,11 @@ void MainWindow::on_pushButton_9_clicked()
 void MainWindow::on_pushButton_10_clicked()
 {
     system("gnome-terminal -x bash -c 'bash ~/bash/mapping_2d_shut.sh'");
+    ui->pushButton_6->setStyleSheet("color:black");
+    ui->pushButton_6->setText("启动建图");
     ui->pushButton_6->setEnabled(true);
-    mapping2Label->setStyleSheet("color:gray");
-    mapping2Label->setText("2D建图停止...");
+    //mapping2Label->setStyleSheet("color:gray");
+    //mapping2Label->setText("2D建图停止...");
 }
 
 
@@ -241,12 +379,18 @@ void MainWindow::on_pushButton_10_clicked()
 void MainWindow::on_pushButton_12_clicked()
 {
     if(ui->pushButton_4->isEnabled() || ui->pushButton_5->isEnabled()){
-        ui->label_5->setText("需要先启动激光\n雷达和里程计！");
+        infoLabel->setStyleSheet("color:red");
+        infoLabel->setText("需要先启动激光雷达和里程计!");
+        //ui->label_5->setText("需要先启动激光\n雷达和里程计！");
     }
     else
     {
         system("gnome-terminal -x bash -c 'bash ~/bash/nav_2d.sh'");
-        ui->label_5->setText("");
+        //ui->label_5->setText("");
+        infoLabel->setStyleSheet("color:green");
+        infoLabel->setText("正常");
+        ui->pushButton_12->setStyleSheet("color:green");
+        ui->pushButton_12->setText("2D导航已启动");
         ui->pushButton_12->setEnabled(false);
         manager_->setFixedFrame("/map");
 
@@ -260,7 +404,7 @@ void MainWindow::on_pushButton_12_clicked()
 
         rviz::Display *laser=manager_->createDisplay("rviz/LaserScan","adjustable laser",true);
         ROS_ASSERT(laser!=NULL);
-        laser->subProp("Topic")->setValue("rightlaser/scan");
+        laser->subProp("Topic")->setValue("/scan");
         laser->subProp("Size (m)")->setValue("0.1");
 
         rviz::Display *linear=manager_->createDisplay("rviz/Marker","adjustable linear",true);
@@ -296,8 +440,8 @@ void MainWindow::on_pushButton_12_clicked()
         rviz::Display *semantic_marker=manager_->createDisplay("rviz/MarkerArray","adjustable semantic",true);
         ROS_ASSERT(semantic_marker!=NULL);
         semantic_marker->subProp("Marker Topic")->setValue("/semantic_marker");
-        this->navLabel->setStyleSheet("color:green");
-        this->navLabel->setText("自主导航中...");
+        //this->navLabel->setStyleSheet("color:green");
+        //this->navLabel->setText("自主导航中...");
     }
 }
 
@@ -306,58 +450,72 @@ void MainWindow::on_pushButton_12_clicked()
 void MainWindow::on_pushButton_14_clicked()
 {
     system("gnome-terminal -x bash -c 'bash ~/bash/nav_2d_shut.sh'");
+    ui->pushButton_12->setStyleSheet("color:black");
+    ui->pushButton_12->setText("启动导航");
     ui->pushButton_12->setEnabled(true);
-    this->navLabel->setStyleSheet("color:gray");
-    this->navLabel->setText("导航停止中...");
+    //this->navLabel->setStyleSheet("color:gray");
+    //this->navLabel->setText("导航停止中...");
 }
 
 void MainWindow::on_pushButton_15_clicked()
 {
     system("gnome-terminal -x bash -c 'bash ~/bash/mapping_3d.sh'");
+    ui->pushButton_15->setStyleSheet("color:green");
+    ui->pushButton_15->setText("3D建图已启动");
     ui->pushButton_15->setEnabled(false);
-    mapping3Label->setStyleSheet("color:green");
-    mapping3Label->setText("3D建图中...");
+    //mapping3Label->setStyleSheet("color:green");
+    //mapping3Label->setText("3D建图中...");
 }
 
 void MainWindow::on_pushButton_16_clicked()
 {
     system("gnome-terminal -x bash -c 'bash ~/bash/loc_3d.sh'");
+    ui->pushButton_16->setStyleSheet("color:green");
+    ui->pushButton_16->setText("3D定位已启动");
     ui->pushButton_16->setEnabled(false);
-    loc3Label->setStyleSheet("color:green");
-    loc3Label->setText("3D定位中...");
+    //loc3Label->setStyleSheet("color:green");
+    //loc3Label->setText("3D定位中...");
 }
 
 void MainWindow::on_pushButton_17_clicked()
 {
     system("gnome-terminal -x bash -c 'bash ~/bash/loc_3d_shut.sh'");
+    ui->pushButton_16->setStyleSheet("color:black");
+    ui->pushButton_16->setText("启动定位");
     ui->pushButton_16->setEnabled(true);
-    loc3Label->setStyleSheet("color:gray");
-    loc3Label->setText("3D定位停止...");
+    //loc3Label->setStyleSheet("color:gray");
+    //loc3Label->setText("3D定位停止...");
 }
 
 void MainWindow::on_pushButton_18_clicked()
 {
     system("gnome-terminal -x bash -c 'bash ~/bash/mapping_3d_shut.sh'");
+    ui->pushButton_15->setStyleSheet("color:black");
+    ui->pushButton_15->setText("启动建图");
     ui->pushButton_15->setEnabled(true);
-    mapping3Label->setStyleSheet("color:gray");
-    mapping3Label->setText("3D建图停止...");
+    //mapping3Label->setStyleSheet("color:gray");
+    //mapping3Label->setText("3D建图停止...");
 }
 
 
 void MainWindow::on_pushButton_21_clicked()
 {
     system("gnome-terminal -x bash -c 'bash ~/bash/laser_3d.sh'");
+    ui->pushButton_21->setStyleSheet("color:green");
+    ui->pushButton_21->setText("3D激光已启动");
     ui->pushButton_21->setEnabled(false);
-    laser3Label->setStyleSheet("color:green");
-    laser3Label->setText("3D激光已启动！");
+    //laser3Label->setStyleSheet("color:green");
+    //laser3Label->setText("3D激光已启动！");
 }
 
 void MainWindow::on_pushButton_22_clicked()
 {
     system("gnome-terminal -x bash -c 'bash ~/bash/laser_3d_shut.sh'");
+    ui->pushButton_21->setStyleSheet("color:black");
+    ui->pushButton_21->setText("启动3D激光");
     ui->pushButton_21->setEnabled(true);
-    laser3Label->setStyleSheet("color:red");
-    laser3Label->setText("3D激光停止...");
+    //laser3Label->setStyleSheet("color:red");
+    //laser3Label->setText("3D激光停止...");
 }
 
 
@@ -417,7 +575,7 @@ void MainWindow::on_pushButton_31_clicked(){
     //manager_->setFixedFrame("/map");
     system("bash ~/bash/test_shut.sh &");
 }
-
+*/
 void MainWindow::reshow(){
     this->show();
 }
