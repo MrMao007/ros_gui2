@@ -4,7 +4,7 @@
 #include <QDialog>
 #include <vector>
 #include <QString>
-#include "multinode.h"
+//#include "multinode.h"
 
 namespace Ui {
 class Multigoal;
@@ -18,7 +18,7 @@ public:
     explicit Multigoal(int argc, char** argv, QWidget *parent = 0);
     ~Multigoal();
 
-    Ui::Multinode multinode;
+    //Ui::Multinode multinode;
 
 signals:
     void setgoal_signal();

@@ -31,6 +31,9 @@
 #include <custom_msgs/Obstacles.h>
 #include <custom_msgs/Form.h>
 #include <move_base_msgs/MoveBaseAction.h>
+#include <actionlib/client/simple_action_client.h>
+#include <std_msgs/Float32.h>
+#include <QtConcurrent/QtConcurrent>
 
 
 
@@ -56,9 +59,11 @@ public:
     void line_startpCallback(const geometry_msgs::PointStampedConstPtr &sp);
     void line_endpCallback(const geometry_msgs::PointStampedConstPtr &ep);
     void pointpCallback(const geometry_msgs::PointStampedConstPtr &sp);
-    void semanticpCallback(const geometry_msgs::PointStampedConstPtr &sp);
+    void semanticpCallback(const geometry_msgs::PoseStampedConstPtr &sp);
     void goalCallback(const geometry_msgs::PoseStampedConstPtr &goal);
-
+    void coarseCallback(const geometry_msgs::PoseStampedConstPtr &goal);
+    void send_multigoal();
+    geometry_msgs::PoseStamped coarsetofine(const geometry_msgs::PoseStampedConstPtr &goal);
 
 
     visualization_msgs::MarkerArray markerarray;
@@ -75,6 +80,8 @@ public:
     double line_endp[2];
     double pointp[2];
     double semanticp[2];
+    std::vector<geometry_msgs::PoseStamped> semantic_vec;
+    std::vector<geometry_msgs::PoseStamped> goal_vec;
     int id = 0;
     int semantic_id = 0;
     int goal_id = 0;
@@ -86,6 +93,7 @@ signals:
     void pointpUpdated(double x, double y);
     void semanticpUpdated(double x,double y);
 
+
 public Q_SLOTS:
 
     void marker_slot();
@@ -93,6 +101,7 @@ public Q_SLOTS:
     void point_marker_slot(double radius);
     void delete_slot(int id);
     void semantic_slot(std::string semantic);
+    void multigoal_slot();
 
 private:
     int init_argc;
@@ -107,12 +116,14 @@ private:
     ros::Subscriber pointp_sub;
     ros::Subscriber semanticp_sub;
     ros::Subscriber goal_sub;
+    ros::Subscriber coarse_sub;
     ros::Publisher markerarray_pub;
     ros::Publisher semantic_markerarray_pub;
     ros::Publisher goalmarker_pub;
     ros::Publisher goalid_pub;
     ros::Publisher idarray_pub;
     ros::Publisher obstacle_pub;
+    ros::Publisher fine_pub;
 
 
 };

@@ -108,6 +108,7 @@ MainWindow::MainWindow(int argc, char** argv, QWidget *parent) :
     connect(semantic_ui,SIGNAL(semantic_signal(std::string)),&(this->dialog_ui->mapnode), SLOT(semantic_slot(std::string)));
     connect(delete_ui,SIGNAL(delete_signal(int)),&(this->dialog_ui->mapnode), SLOT(delete_slot(int)));
     connect(multigoal_ui, SIGNAL(setgoal_signal()), this, SLOT(setgoal_slot()));
+    connect(this->multigoal_ui, SIGNAL(multigoal_signal()), &(this->dialog_ui->mapnode), SLOT(multigoal_slot()));
 }
 
 MainWindow::~MainWindow()
@@ -164,6 +165,54 @@ void MainWindow::on_radioButton_4_toggled(bool state){
             infoLabel->setStyleSheet("color:green");
             infoLabel->setText("正常");
             system("gnome-terminal -x bash -c 'bash ~/bash/nav_2d.sh'");
+            manager_->setFixedFrame("/map");
+
+            rviz::Display *map=manager_->createDisplay("rviz/Map","adjustable map",true);
+            ROS_ASSERT(map!=NULL);
+            map->subProp("Topic")->setValue("/map");
+
+            rviz::Display *robot=manager_->createDisplay("rviz/RobotModel","adjustable robot",true);
+            ROS_ASSERT(robot!=NULL);
+            robot->subProp("Robot Description")->setValue("robot_description");
+
+            rviz::Display *laser=manager_->createDisplay("rviz/LaserScan","adjustable laser",true);
+            ROS_ASSERT(laser!=NULL);
+            laser->subProp("Topic")->setValue("/scan");
+            laser->subProp("Size (m)")->setValue("0.1");
+
+            rviz::Display *linear=manager_->createDisplay("rviz/Marker","adjustable linear",true);
+            ROS_ASSERT(linear!=NULL);
+            linear->subProp("Marker Topic")->setValue("/lmarker");
+
+
+            rviz::Display *angular=manager_->createDisplay("rviz/MarkerArray","adjustable angular",true);
+            ROS_ASSERT(angular!=NULL);
+            angular->subProp("Marker Topic")->setValue("/amarker");
+
+            rviz::Display *text=manager_->createDisplay("rviz/Marker","adjustable text",true);
+            ROS_ASSERT(text!=NULL);
+            text->subProp("Marker Topic")->setValue("/tmarker");
+
+            rviz::Display *goal_marker=manager_->createDisplay("rviz/MarkerArray","adjustable goal",true);
+            ROS_ASSERT(goal_marker!=NULL);
+            goal_marker->subProp("Marker Topic")->setValue("/goalmarker");
+
+
+            rviz::Display *goalid_marker=manager_->createDisplay("rviz/MarkerArray","adjustable goalid",true);
+            ROS_ASSERT(goalid_marker!=NULL);
+            goalid_marker->subProp("Marker Topic")->setValue("/goalid_marker");
+
+            rviz::Display *forbidden=manager_->createDisplay("rviz/MarkerArray","adjustable forbidden",true);
+            ROS_ASSERT(forbidden!=NULL);
+            forbidden->subProp("Marker Topic")->setValue("/forbidden_marker");
+
+            rviz::Display *id_marker=manager_->createDisplay("rviz/MarkerArray","adjustable id",true);
+            ROS_ASSERT(id_marker!=NULL);
+            id_marker->subProp("Marker Topic")->setValue("/id_marker");
+
+            rviz::Display *semantic_marker=manager_->createDisplay("rviz/MarkerArray","adjustable semantic",true);
+            ROS_ASSERT(semantic_marker!=NULL);
+            semantic_marker->subProp("Marker Topic")->setValue("/semantic_marker");
         }
     }
     else{
@@ -392,54 +441,7 @@ void MainWindow::on_pushButton_12_clicked()
         ui->pushButton_12->setStyleSheet("color:green");
         ui->pushButton_12->setText("2D导航已启动");
         ui->pushButton_12->setEnabled(false);
-        manager_->setFixedFrame("/map");
 
-        rviz::Display *map=manager_->createDisplay("rviz/Map","adjustable map",true);
-        ROS_ASSERT(map!=NULL);
-        map->subProp("Topic")->setValue("/map");
-
-        rviz::Display *robot=manager_->createDisplay("rviz/RobotModel","adjustable robot",true);
-        ROS_ASSERT(robot!=NULL);
-        robot->subProp("Robot Description")->setValue("robot_description");
-
-        rviz::Display *laser=manager_->createDisplay("rviz/LaserScan","adjustable laser",true);
-        ROS_ASSERT(laser!=NULL);
-        laser->subProp("Topic")->setValue("/scan");
-        laser->subProp("Size (m)")->setValue("0.1");
-
-        rviz::Display *linear=manager_->createDisplay("rviz/Marker","adjustable linear",true);
-        ROS_ASSERT(linear!=NULL);
-        linear->subProp("Marker Topic")->setValue("/lmarker");
-
-
-        rviz::Display *angular=manager_->createDisplay("rviz/MarkerArray","adjustable angular",true);
-        ROS_ASSERT(angular!=NULL);
-        angular->subProp("Marker Topic")->setValue("/amarker");
-
-        rviz::Display *text=manager_->createDisplay("rviz/Marker","adjustable text",true);
-        ROS_ASSERT(text!=NULL);
-        text->subProp("Marker Topic")->setValue("/tmarker");
-
-        rviz::Display *goal_marker=manager_->createDisplay("rviz/MarkerArray","adjustable goal",true);
-        ROS_ASSERT(goal_marker!=NULL);
-        goal_marker->subProp("Marker Topic")->setValue("/goalmarker");
-
-
-        rviz::Display *goalid_marker=manager_->createDisplay("rviz/MarkerArray","adjustable goalid",true);
-        ROS_ASSERT(goalid_marker!=NULL);
-        goalid_marker->subProp("Marker Topic")->setValue("/goalid_marker");
-
-        rviz::Display *forbidden=manager_->createDisplay("rviz/MarkerArray","adjustable forbidden",true);
-        ROS_ASSERT(forbidden!=NULL);
-        forbidden->subProp("Marker Topic")->setValue("/forbidden_marker");
-
-        rviz::Display *id_marker=manager_->createDisplay("rviz/MarkerArray","adjustable id",true);
-        ROS_ASSERT(id_marker!=NULL);
-        id_marker->subProp("Marker Topic")->setValue("/id_marker");
-
-        rviz::Display *semantic_marker=manager_->createDisplay("rviz/MarkerArray","adjustable semantic",true);
-        ROS_ASSERT(semantic_marker!=NULL);
-        semantic_marker->subProp("Marker Topic")->setValue("/semantic_marker");
         //this->navLabel->setStyleSheet("color:green");
         //this->navLabel->setText("自主导航中...");
     }
@@ -516,7 +518,7 @@ void MainWindow::on_pushButton_22_clicked()
     ui->pushButton_21->setEnabled(true);
     //laser3Label->setStyleSheet("color:red");
     //laser3Label->setText("3D激光停止...");
-}
+}*/
 
 
 
@@ -540,7 +542,7 @@ void MainWindow::on_pushButton_25_clicked(){
     current_tool= tool_manager_->addTool("rviz/SetGoal");
     //设置goal的话题
     rviz::Property* pro= current_tool->getPropertyContainer();
-    pro->subProp("Topic")->setValue("/move_base_simple/goal");
+    pro->subProp("Topic")->setValue("coarse_goal");//move_base_simple/goal
     //设置当前frame
     manager_->setFixedFrame("map");
     //设置当前使用的工具为SetGoal（实现在地图上标点）
@@ -575,7 +577,7 @@ void MainWindow::on_pushButton_31_clicked(){
     //manager_->setFixedFrame("/map");
     system("bash ~/bash/test_shut.sh &");
 }
-*/
+
 void MainWindow::reshow(){
     this->show();
 }
@@ -668,7 +670,7 @@ void MainWindow::point_markersignal_slot(){
 }
 
 void MainWindow::semanticp_slot(){
-    current_tool=tool_manager_->addTool("rviz/PublishPoint");
+    current_tool=tool_manager_->addTool("rviz/SetGoal");
     tool_manager_->setCurrentTool( current_tool );
 
     rviz::Property* pro= current_tool->getPropertyContainer();

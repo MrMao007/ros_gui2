@@ -49,6 +49,7 @@ public:
 	void run();
     void callback(const geometry_msgs::PoseStampedConstPtr &goal_msg);
     void send_multigoal();
+    //geometry_msgs::PoseStamped coarsetofine(const geometry_msgs::PoseStampedConstPtr &goal);
     std::vector<geometry_msgs::PoseStamped> goal_vec;
 
 public Q_SLOTS:

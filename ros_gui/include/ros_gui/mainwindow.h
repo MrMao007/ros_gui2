@@ -121,7 +121,7 @@ private slots:
 
     void on_pushButton_21_clicked();
 
-    void on_pushButton_22_clicked();
+    void on_pushButton_22_clicked();*/
 
     void on_pushButton_23_clicked();
 
@@ -139,7 +139,7 @@ private slots:
 
     void on_pushButton_30_clicked();
 
-    void on_pushButton_31_clicked();*/
+    void on_pushButton_31_clicked();
 
     void reshow();
 private:

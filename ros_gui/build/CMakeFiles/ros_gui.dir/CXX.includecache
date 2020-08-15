@@ -100,14 +100,6 @@ QtCore/qbytearray.h
 QtCore/qmetatype.h
 -
 
-/home/mty/catkin_gui/src/ros_gui/build/include/ros_gui/moc_multinode.cpp
-../../../include/ros_gui/multinode.h
-/home/mty/catkin_gui/src/ros_gui/include/ros_gui/multinode.h
-QtCore/qbytearray.h
--
-QtCore/qmetatype.h
--
-
 /home/mty/catkin_gui/src/ros_gui/build/include/ros_gui/moc_qnode.cpp
 ../../../include/ros_gui/qnode.h
 /home/mty/catkin_gui/src/ros_gui/include/ros_gui/qnode.h
@@ -403,6 +395,12 @@ custom_msgs/Form.h
 -
 move_base_msgs/MoveBaseAction.h
 -
+actionlib/client/simple_action_client.h
+-
+std_msgs/Float32.h
+-
+QtConcurrent/QtConcurrent
+-
 
 /home/mty/catkin_gui/src/ros_gui/include/ros_gui/markerNode.h
 ros/ros.h
@@ -428,24 +426,6 @@ QDialog
 vector
 -
 QString
--
-multinode.h
-/home/mty/catkin_gui/src/ros_gui/include/ros_gui/multinode.h
-
-/home/mty/catkin_gui/src/ros_gui/include/ros_gui/multinode.h
-ros/ros.h
--
-string
--
-QThread
--
-geometry_msgs/PointStamped.h
--
-move_base_msgs/MoveBaseAction.h
--
-actionlib/client/simple_action_client.h
--
-std_msgs/Float32.h
 -
 
 /home/mty/catkin_gui/src/ros_gui/include/ros_gui/qnode.h
@@ -561,18 +541,6 @@ math.h
 /home/mty/catkin_gui/src/ros_gui/include/ros_gui/multigoal.h
 ../build/ui_multigoal.h
 /home/mty/catkin_gui/src/ros_gui/build/ui_multigoal.h
-
-/home/mty/catkin_gui/src/ros_gui/src/multinode.cpp
-ros/ros.h
--
-ros/network.h
--
-../include/ros_gui/multinode.h
-/home/mty/catkin_gui/src/ros_gui/include/ros_gui/multinode.h
-std_msgs/Float32.h
--
-QtConcurrent/QtConcurrent
--
 
 /home/mty/catkin_gui/src/ros_gui/src/qnode.cpp
 ros/ros.h

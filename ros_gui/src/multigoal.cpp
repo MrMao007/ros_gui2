@@ -3,13 +3,9 @@
 
 Multigoal::Multigoal(int argc, char** argv,QWidget *parent) :
     QDialog(parent),
-    ui(new Ui::Multigoal),
-    multinode(argc, argv)
+    ui(new Ui::Multigoal)
 {
     ui->setupUi(this);
-    multinode.init();
-
-    connect(this, SIGNAL(multigoal_signal()), &multinode, SLOT(multigoal_slot()));
 
 }
 

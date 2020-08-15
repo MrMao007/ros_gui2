@@ -94,5 +94,7 @@ void Multinode::multigoal_slot(){
     QtConcurrent::run(this,&Multinode::send_multigoal);
 }
 
+
+
 }  // namespace ros_gui
 

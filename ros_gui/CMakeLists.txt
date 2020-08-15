@@ -20,6 +20,7 @@ find_package(OpenCV REQUIRED)
 include_directories(${catkin_INCLUDE_DIRS})
 include_directories(${Qt5_INCLUDE_DIRS})
 include_directories(${OpenCV_INCLUDE_DIRS})
+INCLUDE_DIRECTORIES("include/ros_gui")
 # Use this to define what the package will export (e.g. libs, headers).
 # Since the default here is to produce only a binary, we don't worry about
 # exporting anything. 

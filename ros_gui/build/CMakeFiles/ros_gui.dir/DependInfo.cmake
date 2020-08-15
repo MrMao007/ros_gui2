@@ -12,7 +12,6 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/mty/catkin_gui/src/ros_gui/build/include/ros_gui/moc_mapNode.cpp" "/home/mty/catkin_gui/src/ros_gui/build/CMakeFiles/ros_gui.dir/include/ros_gui/moc_mapNode.cpp.o"
   "/home/mty/catkin_gui/src/ros_gui/build/include/ros_gui/moc_markerNode.cpp" "/home/mty/catkin_gui/src/ros_gui/build/CMakeFiles/ros_gui.dir/include/ros_gui/moc_markerNode.cpp.o"
   "/home/mty/catkin_gui/src/ros_gui/build/include/ros_gui/moc_multigoal.cpp" "/home/mty/catkin_gui/src/ros_gui/build/CMakeFiles/ros_gui.dir/include/ros_gui/moc_multigoal.cpp.o"
-  "/home/mty/catkin_gui/src/ros_gui/build/include/ros_gui/moc_multinode.cpp" "/home/mty/catkin_gui/src/ros_gui/build/CMakeFiles/ros_gui.dir/include/ros_gui/moc_multinode.cpp.o"
   "/home/mty/catkin_gui/src/ros_gui/build/include/ros_gui/moc_qnode.cpp" "/home/mty/catkin_gui/src/ros_gui/build/CMakeFiles/ros_gui.dir/include/ros_gui/moc_qnode.cpp.o"
   "/home/mty/catkin_gui/src/ros_gui/build/include/ros_gui/moc_semantic.cpp" "/home/mty/catkin_gui/src/ros_gui/build/CMakeFiles/ros_gui.dir/include/ros_gui/moc_semantic.cpp.o"
   "/home/mty/catkin_gui/src/ros_gui/build/qrc_images.cpp" "/home/mty/catkin_gui/src/ros_gui/build/CMakeFiles/ros_gui.dir/qrc_images.cpp.o"
@@ -26,7 +25,6 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/mty/catkin_gui/src/ros_gui/src/mapNode.cpp" "/home/mty/catkin_gui/src/ros_gui/build/CMakeFiles/ros_gui.dir/src/mapNode.cpp.o"
   "/home/mty/catkin_gui/src/ros_gui/src/markerNode.cpp" "/home/mty/catkin_gui/src/ros_gui/build/CMakeFiles/ros_gui.dir/src/markerNode.cpp.o"
   "/home/mty/catkin_gui/src/ros_gui/src/multigoal.cpp" "/home/mty/catkin_gui/src/ros_gui/build/CMakeFiles/ros_gui.dir/src/multigoal.cpp.o"
-  "/home/mty/catkin_gui/src/ros_gui/src/multinode.cpp" "/home/mty/catkin_gui/src/ros_gui/build/CMakeFiles/ros_gui.dir/src/multinode.cpp.o"
   "/home/mty/catkin_gui/src/ros_gui/src/qnode.cpp" "/home/mty/catkin_gui/src/ros_gui/build/CMakeFiles/ros_gui.dir/src/qnode.cpp.o"
   "/home/mty/catkin_gui/src/ros_gui/src/semantic.cpp" "/home/mty/catkin_gui/src/ros_gui/build/CMakeFiles/ros_gui.dir/src/semantic.cpp.o"
   )
@@ -53,6 +51,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "/usr/include/eigen3"
   "/usr/include/OGRE/Overlay"
   "/usr/include/OGRE"
+  "../include/ros_gui"
   "/usr/include/x86_64-linux-gnu/qt5"
   "/usr/include/x86_64-linux-gnu/qt5/QtCore"
   "/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64"

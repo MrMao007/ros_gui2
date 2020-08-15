@@ -610,8 +610,29 @@ CMakeFiles/ros_gui.dir/include/ros_gui/moc_dialog.cpp.o
  /home/mty/catkin_gui/src/ros_gui/include/ros_gui/delete.h
  /home/mty/catkin_gui/src/ros_gui/include/ros_gui/dialog.h
  /home/mty/catkin_gui/src/ros_gui/include/ros_gui/mapNode.h
+ /opt/ros/kinetic/include/actionlib/action_definition.h
+ /opt/ros/kinetic/include/actionlib/client/action_client.h
+ /opt/ros/kinetic/include/actionlib/client/client_goal_handle_imp.h
+ /opt/ros/kinetic/include/actionlib/client/client_helpers.h
+ /opt/ros/kinetic/include/actionlib/client/comm_state.h
+ /opt/ros/kinetic/include/actionlib/client/comm_state_machine_imp.h
+ /opt/ros/kinetic/include/actionlib/client/connection_monitor.h
+ /opt/ros/kinetic/include/actionlib/client/goal_manager_imp.h
+ /opt/ros/kinetic/include/actionlib/client/simple_action_client.h
+ /opt/ros/kinetic/include/actionlib/client/simple_client_goal_state.h
+ /opt/ros/kinetic/include/actionlib/client/simple_goal_state.h
+ /opt/ros/kinetic/include/actionlib/client/terminal_state.h
+ /opt/ros/kinetic/include/actionlib/decl.h
+ /opt/ros/kinetic/include/actionlib/destruction_guard.h
+ /opt/ros/kinetic/include/actionlib/enclosure_deleter.h
+ /opt/ros/kinetic/include/actionlib/goal_id_generator.h
+ /opt/ros/kinetic/include/actionlib/managed_list.h
  /opt/ros/kinetic/include/actionlib_msgs/GoalID.h
  /opt/ros/kinetic/include/actionlib_msgs/GoalStatus.h
+ /opt/ros/kinetic/include/actionlib_msgs/GoalStatusArray.h
+ /opt/ros/kinetic/include/boost_161_condition_variable.h
+ /opt/ros/kinetic/include/boost_161_pthread_condition_variable.h
+ /opt/ros/kinetic/include/boost_161_pthread_condition_variable_fwd.h
  /opt/ros/kinetic/include/geometry_msgs/Point.h
  /opt/ros/kinetic/include/geometry_msgs/PointStamped.h
  /opt/ros/kinetic/include/geometry_msgs/Pose.h
@@ -629,6 +650,8 @@ CMakeFiles/ros_gui.dir/include/ros_gui/moc_dialog.cpp.o
  /opt/ros/kinetic/include/ros/advertise_service_options.h
  /opt/ros/kinetic/include/ros/assert.h
  /opt/ros/kinetic/include/ros/builtin_message_traits.h
+ /opt/ros/kinetic/include/ros/callback_queue.h
+ /opt/ros/kinetic/include/ros/callback_queue_interface.h
  /opt/ros/kinetic/include/ros/common.h
  /opt/ros/kinetic/include/ros/console.h
  /opt/ros/kinetic/include/ros/console_backend.h
@@ -682,15 +705,49 @@ CMakeFiles/ros_gui.dir/include/ros_gui/moc_dialog.cpp.o
  /opt/ros/kinetic/include/ros/wall_timer_options.h
  /opt/ros/kinetic/include/rosconsole/macros_generated.h
  /opt/ros/kinetic/include/std_msgs/ColorRGBA.h
+ /opt/ros/kinetic/include/std_msgs/Float32.h
  /opt/ros/kinetic/include/std_msgs/Header.h
  /opt/ros/kinetic/include/visualization_msgs/Marker.h
  /opt/ros/kinetic/include/visualization_msgs/MarkerArray.h
  /opt/ros/kinetic/include/xmlrpcpp/XmlRpcDecl.h
  /opt/ros/kinetic/include/xmlrpcpp/XmlRpcValue.h
+ /usr/include/x86_64-linux-gnu/qt5/QtConcurrent/QtConcurrent
+ /usr/include/x86_64-linux-gnu/qt5/QtConcurrent/QtConcurrentDepends
+ /usr/include/x86_64-linux-gnu/qt5/QtConcurrent/qtconcurrent_global.h
+ /usr/include/x86_64-linux-gnu/qt5/QtConcurrent/qtconcurrentcompilertest.h
+ /usr/include/x86_64-linux-gnu/qt5/QtConcurrent/qtconcurrentexception.h
+ /usr/include/x86_64-linux-gnu/qt5/QtConcurrent/qtconcurrentfilter.h
+ /usr/include/x86_64-linux-gnu/qt5/QtConcurrent/qtconcurrentfilterkernel.h
+ /usr/include/x86_64-linux-gnu/qt5/QtConcurrent/qtconcurrentfunctionwrappers.h
+ /usr/include/x86_64-linux-gnu/qt5/QtConcurrent/qtconcurrentiteratekernel.h
+ /usr/include/x86_64-linux-gnu/qt5/QtConcurrent/qtconcurrentmap.h
+ /usr/include/x86_64-linux-gnu/qt5/QtConcurrent/qtconcurrentmapkernel.h
+ /usr/include/x86_64-linux-gnu/qt5/QtConcurrent/qtconcurrentmedian.h
+ /usr/include/x86_64-linux-gnu/qt5/QtConcurrent/qtconcurrentreducekernel.h
+ /usr/include/x86_64-linux-gnu/qt5/QtConcurrent/qtconcurrentrun.h
+ /usr/include/x86_64-linux-gnu/qt5/QtConcurrent/qtconcurrentrunbase.h
+ /usr/include/x86_64-linux-gnu/qt5/QtConcurrent/qtconcurrentstoredfunctioncall.h
+ /usr/include/x86_64-linux-gnu/qt5/QtConcurrent/qtconcurrentthreadengine.h
+ /usr/include/x86_64-linux-gnu/qt5/QtConcurrent/qtconcurrentversion.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QObject
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QScopedPointer
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QString
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QStringList
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QThread
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QtCore
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QtCoreDepends
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qabstractanimation.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qabstracteventdispatcher.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qabstractitemmodel.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qabstractnativeeventfilter.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qabstractproxymodel.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qabstractstate.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qabstracttransition.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qalgorithms.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qanimationgroup.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qarraydata.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qarraydataops.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qarraydatapointer.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_armv5.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_armv6.h
@@ -703,68 +760,161 @@ CMakeFiles/ros_gui.dir/include/ros_gui/moc_dialog.cpp.o
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_unix.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_x86.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qbasicatomic.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qbasictimer.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qbitarray.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qbuffer.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qbytearray.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qbytearraylist.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qbytearraymatcher.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qcache.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qchar.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qcollator.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qcommandlineoption.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qcommandlineparser.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qcompilerdetection.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qconfig.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qcontainerfwd.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qcontiguouscache.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qcoreapplication.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qcoreevent.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qcryptographichash.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qdatastream.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qdatetime.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qdebug.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qdir.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qdiriterator.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qeasingcurve.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qelapsedtimer.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qendian.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qeventloop.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qeventtransition.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qexception.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qfactoryinterface.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qfeatures.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qfile.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qfiledevice.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qfileinfo.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qfileselector.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qfilesystemwatcher.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qfinalstate.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qflags.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qfuture.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qfutureinterface.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qfuturesynchronizer.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qfuturewatcher.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qgenericatomic.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qglobal.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qglobalstatic.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qhash.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qhistorystate.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qidentityproxymodel.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qiodevice.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qisenum.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qitemselectionmodel.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qiterator.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qjsonarray.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qjsondocument.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qjsonobject.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qjsonvalue.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qlibrary.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qlibraryinfo.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qline.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qlinkedlist.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qlist.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qlocale.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qlockfile.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qlogging.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qloggingcategory.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qmap.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qmargins.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qmath.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qmessageauthenticationcode.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qmetaobject.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qmetatype.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qmimedata.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qmimedatabase.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qmimetype.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qmutex.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qnamespace.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qnumeric.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qobject.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qobject_impl.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qobjectcleanuphandler.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qobjectdefs.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qobjectdefs_impl.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qpair.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qparallelanimationgroup.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qpauseanimation.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qplugin.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qpluginloader.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qpoint.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qpointer.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qprocess.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qprocessordetection.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qpropertyanimation.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qqueue.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qreadwritelock.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qrect.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qrefcount.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qregexp.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qregularexpression.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qresource.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qresultstore.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qrunnable.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qsavefile.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qscopedpointer.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qscopedvaluerollback.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qsemaphore.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qsequentialanimationgroup.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qset.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qsettings.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qshareddata.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qsharedmemory.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qsharedpointer.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qsharedpointer_impl.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qsignalmapper.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qsignaltransition.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qsize.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qsocketnotifier.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qsortfilterproxymodel.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qstack.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qstandardpaths.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qstate.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qstatemachine.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qstorageinfo.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qstring.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qstringbuilder.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qstringlist.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qstringlistmodel.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qstringmatcher.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qsysinfo.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qsystemdetection.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qsystemsemaphore.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qtcoreversion.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qtemporarydir.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qtemporaryfile.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qtextboundaryfinder.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qtextcodec.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qtextstream.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qthread.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qthreadpool.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qthreadstorage.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qtimeline.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qtimer.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qtimezone.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qtranslator.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qtypeinfo.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qtypetraits.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qurl.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qurlquery.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/quuid.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qvariant.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qvariantanimation.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qvarlengtharray.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qvector.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qwaitcondition.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qwineventnotifier.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qxmlstream.h
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qbrush.h
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qcolor.h
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qcursor.h
@@ -806,7 +956,6 @@ CMakeFiles/ros_gui.dir/include/ros_gui/moc_mainwindow.cpp.o
  /home/mty/catkin_gui/src/ros_gui/include/ros_gui/mapNode.h
  /home/mty/catkin_gui/src/ros_gui/include/ros_gui/markerNode.h
  /home/mty/catkin_gui/src/ros_gui/include/ros_gui/multigoal.h
- /home/mty/catkin_gui/src/ros_gui/include/ros_gui/multinode.h
  /home/mty/catkin_gui/src/ros_gui/include/ros_gui/qnode.h
  /home/mty/catkin_gui/src/ros_gui/include/ros_gui/semantic.h
  /opt/ros/kinetic/include/actionlib/action_definition.h
@@ -1222,6 +1371,24 @@ CMakeFiles/ros_gui.dir/include/ros_gui/moc_mainwindow.cpp.o
  /usr/include/OGRE/Threading/OgreThreadHeadersBoost.h
  /usr/include/OGRE/Threading/OgreThreadHeadersPoco.h
  /usr/include/OGRE/Threading/OgreThreadHeadersTBB.h
+ /usr/include/x86_64-linux-gnu/qt5/QtConcurrent/QtConcurrent
+ /usr/include/x86_64-linux-gnu/qt5/QtConcurrent/QtConcurrentDepends
+ /usr/include/x86_64-linux-gnu/qt5/QtConcurrent/qtconcurrent_global.h
+ /usr/include/x86_64-linux-gnu/qt5/QtConcurrent/qtconcurrentcompilertest.h
+ /usr/include/x86_64-linux-gnu/qt5/QtConcurrent/qtconcurrentexception.h
+ /usr/include/x86_64-linux-gnu/qt5/QtConcurrent/qtconcurrentfilter.h
+ /usr/include/x86_64-linux-gnu/qt5/QtConcurrent/qtconcurrentfilterkernel.h
+ /usr/include/x86_64-linux-gnu/qt5/QtConcurrent/qtconcurrentfunctionwrappers.h
+ /usr/include/x86_64-linux-gnu/qt5/QtConcurrent/qtconcurrentiteratekernel.h
+ /usr/include/x86_64-linux-gnu/qt5/QtConcurrent/qtconcurrentmap.h
+ /usr/include/x86_64-linux-gnu/qt5/QtConcurrent/qtconcurrentmapkernel.h
+ /usr/include/x86_64-linux-gnu/qt5/QtConcurrent/qtconcurrentmedian.h
+ /usr/include/x86_64-linux-gnu/qt5/QtConcurrent/qtconcurrentreducekernel.h
+ /usr/include/x86_64-linux-gnu/qt5/QtConcurrent/qtconcurrentrun.h
+ /usr/include/x86_64-linux-gnu/qt5/QtConcurrent/qtconcurrentrunbase.h
+ /usr/include/x86_64-linux-gnu/qt5/QtConcurrent/qtconcurrentstoredfunctioncall.h
+ /usr/include/x86_64-linux-gnu/qt5/QtConcurrent/qtconcurrentthreadengine.h
+ /usr/include/x86_64-linux-gnu/qt5/QtConcurrent/qtconcurrentversion.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QEvent
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QHash
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QList
@@ -1565,8 +1732,29 @@ CMakeFiles/ros_gui.dir/include/ros_gui/moc_mapNode.cpp.o
  /home/mty/catkin_gui/devel/include/custom_msgs/Obstacles.h
  /home/mty/catkin_gui/src/ros_gui/build/include/ros_gui/moc_mapNode.cpp
  /home/mty/catkin_gui/src/ros_gui/include/ros_gui/mapNode.h
+ /opt/ros/kinetic/include/actionlib/action_definition.h
+ /opt/ros/kinetic/include/actionlib/client/action_client.h
+ /opt/ros/kinetic/include/actionlib/client/client_goal_handle_imp.h
+ /opt/ros/kinetic/include/actionlib/client/client_helpers.h
+ /opt/ros/kinetic/include/actionlib/client/comm_state.h
+ /opt/ros/kinetic/include/actionlib/client/comm_state_machine_imp.h
+ /opt/ros/kinetic/include/actionlib/client/connection_monitor.h
+ /opt/ros/kinetic/include/actionlib/client/goal_manager_imp.h
+ /opt/ros/kinetic/include/actionlib/client/simple_action_client.h
+ /opt/ros/kinetic/include/actionlib/client/simple_client_goal_state.h
+ /opt/ros/kinetic/include/actionlib/client/simple_goal_state.h
+ /opt/ros/kinetic/include/actionlib/client/terminal_state.h
+ /opt/ros/kinetic/include/actionlib/decl.h
+ /opt/ros/kinetic/include/actionlib/destruction_guard.h
+ /opt/ros/kinetic/include/actionlib/enclosure_deleter.h
+ /opt/ros/kinetic/include/actionlib/goal_id_generator.h
+ /opt/ros/kinetic/include/actionlib/managed_list.h
  /opt/ros/kinetic/include/actionlib_msgs/GoalID.h
  /opt/ros/kinetic/include/actionlib_msgs/GoalStatus.h
+ /opt/ros/kinetic/include/actionlib_msgs/GoalStatusArray.h
+ /opt/ros/kinetic/include/boost_161_condition_variable.h
+ /opt/ros/kinetic/include/boost_161_pthread_condition_variable.h
+ /opt/ros/kinetic/include/boost_161_pthread_condition_variable_fwd.h
  /opt/ros/kinetic/include/geometry_msgs/Point.h
  /opt/ros/kinetic/include/geometry_msgs/PointStamped.h
  /opt/ros/kinetic/include/geometry_msgs/Pose.h
@@ -1584,6 +1772,8 @@ CMakeFiles/ros_gui.dir/include/ros_gui/moc_mapNode.cpp.o
  /opt/ros/kinetic/include/ros/advertise_service_options.h
  /opt/ros/kinetic/include/ros/assert.h
  /opt/ros/kinetic/include/ros/builtin_message_traits.h
+ /opt/ros/kinetic/include/ros/callback_queue.h
+ /opt/ros/kinetic/include/ros/callback_queue_interface.h
  /opt/ros/kinetic/include/ros/common.h
  /opt/ros/kinetic/include/ros/console.h
  /opt/ros/kinetic/include/ros/console_backend.h
@@ -1637,14 +1827,48 @@ CMakeFiles/ros_gui.dir/include/ros_gui/moc_mapNode.cpp.o
  /opt/ros/kinetic/include/ros/wall_timer_options.h
  /opt/ros/kinetic/include/rosconsole/macros_generated.h
  /opt/ros/kinetic/include/std_msgs/ColorRGBA.h
+ /opt/ros/kinetic/include/std_msgs/Float32.h
  /opt/ros/kinetic/include/std_msgs/Header.h
  /opt/ros/kinetic/include/visualization_msgs/Marker.h
  /opt/ros/kinetic/include/visualization_msgs/MarkerArray.h
  /opt/ros/kinetic/include/xmlrpcpp/XmlRpcDecl.h
  /opt/ros/kinetic/include/xmlrpcpp/XmlRpcValue.h
+ /usr/include/x86_64-linux-gnu/qt5/QtConcurrent/QtConcurrent
+ /usr/include/x86_64-linux-gnu/qt5/QtConcurrent/QtConcurrentDepends
+ /usr/include/x86_64-linux-gnu/qt5/QtConcurrent/qtconcurrent_global.h
+ /usr/include/x86_64-linux-gnu/qt5/QtConcurrent/qtconcurrentcompilertest.h
+ /usr/include/x86_64-linux-gnu/qt5/QtConcurrent/qtconcurrentexception.h
+ /usr/include/x86_64-linux-gnu/qt5/QtConcurrent/qtconcurrentfilter.h
+ /usr/include/x86_64-linux-gnu/qt5/QtConcurrent/qtconcurrentfilterkernel.h
+ /usr/include/x86_64-linux-gnu/qt5/QtConcurrent/qtconcurrentfunctionwrappers.h
+ /usr/include/x86_64-linux-gnu/qt5/QtConcurrent/qtconcurrentiteratekernel.h
+ /usr/include/x86_64-linux-gnu/qt5/QtConcurrent/qtconcurrentmap.h
+ /usr/include/x86_64-linux-gnu/qt5/QtConcurrent/qtconcurrentmapkernel.h
+ /usr/include/x86_64-linux-gnu/qt5/QtConcurrent/qtconcurrentmedian.h
+ /usr/include/x86_64-linux-gnu/qt5/QtConcurrent/qtconcurrentreducekernel.h
+ /usr/include/x86_64-linux-gnu/qt5/QtConcurrent/qtconcurrentrun.h
+ /usr/include/x86_64-linux-gnu/qt5/QtConcurrent/qtconcurrentrunbase.h
+ /usr/include/x86_64-linux-gnu/qt5/QtConcurrent/qtconcurrentstoredfunctioncall.h
+ /usr/include/x86_64-linux-gnu/qt5/QtConcurrent/qtconcurrentthreadengine.h
+ /usr/include/x86_64-linux-gnu/qt5/QtConcurrent/qtconcurrentversion.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QObject
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QScopedPointer
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QStringList
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QThread
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QtCore
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QtCoreDepends
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qabstractanimation.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qabstracteventdispatcher.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qabstractitemmodel.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qabstractnativeeventfilter.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qabstractproxymodel.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qabstractstate.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qabstracttransition.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qalgorithms.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qanimationgroup.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qarraydata.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qarraydataops.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qarraydatapointer.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_armv5.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_armv6.h
@@ -1657,44 +1881,161 @@ CMakeFiles/ros_gui.dir/include/ros_gui/moc_mapNode.cpp.o
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_unix.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_x86.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qbasicatomic.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qbasictimer.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qbitarray.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qbuffer.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qbytearray.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qbytearraylist.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qbytearraymatcher.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qcache.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qchar.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qcollator.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qcommandlineoption.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qcommandlineparser.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qcompilerdetection.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qconfig.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qcontainerfwd.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qcontiguouscache.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qcoreapplication.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qcoreevent.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qcryptographichash.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qdatastream.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qdatetime.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qdebug.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qdir.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qdiriterator.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qeasingcurve.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qelapsedtimer.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qendian.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qeventloop.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qeventtransition.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qexception.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qfactoryinterface.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qfeatures.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qfile.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qfiledevice.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qfileinfo.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qfileselector.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qfilesystemwatcher.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qfinalstate.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qflags.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qfuture.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qfutureinterface.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qfuturesynchronizer.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qfuturewatcher.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qgenericatomic.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qglobal.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qglobalstatic.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qhash.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qhistorystate.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qidentityproxymodel.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qiodevice.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qisenum.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qitemselectionmodel.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qiterator.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qjsonarray.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qjsondocument.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qjsonobject.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qjsonvalue.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qlibrary.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qlibraryinfo.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qline.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qlinkedlist.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qlist.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qlocale.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qlockfile.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qlogging.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qloggingcategory.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qmap.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qmargins.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qmath.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qmessageauthenticationcode.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qmetaobject.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qmetatype.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qmimedata.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qmimedatabase.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qmimetype.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qmutex.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qnamespace.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qnumeric.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qobject.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qobject_impl.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qobjectcleanuphandler.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qobjectdefs.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qobjectdefs_impl.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qpair.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qparallelanimationgroup.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qpauseanimation.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qplugin.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qpluginloader.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qpoint.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qpointer.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qprocess.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qprocessordetection.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qpropertyanimation.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qqueue.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qreadwritelock.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qrect.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qrefcount.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qregexp.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qregularexpression.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qresource.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qresultstore.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qrunnable.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qsavefile.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qscopedpointer.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qscopedvaluerollback.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qsemaphore.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qsequentialanimationgroup.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qset.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qsettings.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qshareddata.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qsharedmemory.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qsharedpointer.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qsharedpointer_impl.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qsignalmapper.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qsignaltransition.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qsize.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qsocketnotifier.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qsortfilterproxymodel.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qstack.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qstandardpaths.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qstate.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qstatemachine.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qstorageinfo.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qstring.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qstringbuilder.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qstringlist.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qstringlistmodel.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qstringmatcher.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qsysinfo.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qsystemdetection.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qsystemsemaphore.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qtcoreversion.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qtemporarydir.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qtemporaryfile.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qtextboundaryfinder.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qtextcodec.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qtextstream.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qthread.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qthreadpool.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qthreadstorage.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qtimeline.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qtimer.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qtimezone.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qtranslator.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qtypeinfo.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qtypetraits.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qurl.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qurlquery.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/quuid.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qvariant.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qvariantanimation.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qvarlengtharray.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qvector.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qwaitcondition.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qwineventnotifier.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qxmlstream.h
 CMakeFiles/ros_gui.dir/include/ros_gui/moc_markerNode.cpp.o
  /home/mty/catkin_gui/src/ros_gui/build/include/ros_gui/moc_markerNode.cpp
  /home/mty/catkin_gui/src/ros_gui/include/ros_gui/markerNode.h
@@ -1822,106 +2163,7 @@ CMakeFiles/ros_gui.dir/include/ros_gui/moc_markerNode.cpp.o
 CMakeFiles/ros_gui.dir/include/ros_gui/moc_multigoal.cpp.o
  /home/mty/catkin_gui/src/ros_gui/build/include/ros_gui/moc_multigoal.cpp
  /home/mty/catkin_gui/src/ros_gui/include/ros_gui/multigoal.h
- /home/mty/catkin_gui/src/ros_gui/include/ros_gui/multinode.h
- /opt/ros/kinetic/include/actionlib/action_definition.h
- /opt/ros/kinetic/include/actionlib/client/action_client.h
- /opt/ros/kinetic/include/actionlib/client/client_goal_handle_imp.h
- /opt/ros/kinetic/include/actionlib/client/client_helpers.h
- /opt/ros/kinetic/include/actionlib/client/comm_state.h
- /opt/ros/kinetic/include/actionlib/client/comm_state_machine_imp.h
- /opt/ros/kinetic/include/actionlib/client/connection_monitor.h
- /opt/ros/kinetic/include/actionlib/client/goal_manager_imp.h
- /opt/ros/kinetic/include/actionlib/client/simple_action_client.h
- /opt/ros/kinetic/include/actionlib/client/simple_client_goal_state.h
- /opt/ros/kinetic/include/actionlib/client/simple_goal_state.h
- /opt/ros/kinetic/include/actionlib/client/terminal_state.h
- /opt/ros/kinetic/include/actionlib/decl.h
- /opt/ros/kinetic/include/actionlib/destruction_guard.h
- /opt/ros/kinetic/include/actionlib/enclosure_deleter.h
- /opt/ros/kinetic/include/actionlib/goal_id_generator.h
- /opt/ros/kinetic/include/actionlib/managed_list.h
- /opt/ros/kinetic/include/actionlib_msgs/GoalID.h
- /opt/ros/kinetic/include/actionlib_msgs/GoalStatus.h
- /opt/ros/kinetic/include/actionlib_msgs/GoalStatusArray.h
- /opt/ros/kinetic/include/boost_161_condition_variable.h
- /opt/ros/kinetic/include/boost_161_pthread_condition_variable.h
- /opt/ros/kinetic/include/boost_161_pthread_condition_variable_fwd.h
- /opt/ros/kinetic/include/geometry_msgs/Point.h
- /opt/ros/kinetic/include/geometry_msgs/PointStamped.h
- /opt/ros/kinetic/include/geometry_msgs/Pose.h
- /opt/ros/kinetic/include/geometry_msgs/PoseStamped.h
- /opt/ros/kinetic/include/geometry_msgs/Quaternion.h
- /opt/ros/kinetic/include/move_base_msgs/MoveBaseAction.h
- /opt/ros/kinetic/include/move_base_msgs/MoveBaseActionFeedback.h
- /opt/ros/kinetic/include/move_base_msgs/MoveBaseActionGoal.h
- /opt/ros/kinetic/include/move_base_msgs/MoveBaseActionResult.h
- /opt/ros/kinetic/include/move_base_msgs/MoveBaseFeedback.h
- /opt/ros/kinetic/include/move_base_msgs/MoveBaseGoal.h
- /opt/ros/kinetic/include/move_base_msgs/MoveBaseResult.h
- /opt/ros/kinetic/include/ros/advertise_options.h
- /opt/ros/kinetic/include/ros/advertise_service_options.h
- /opt/ros/kinetic/include/ros/assert.h
- /opt/ros/kinetic/include/ros/builtin_message_traits.h
- /opt/ros/kinetic/include/ros/callback_queue.h
- /opt/ros/kinetic/include/ros/callback_queue_interface.h
- /opt/ros/kinetic/include/ros/common.h
- /opt/ros/kinetic/include/ros/console.h
- /opt/ros/kinetic/include/ros/console_backend.h
- /opt/ros/kinetic/include/ros/datatypes.h
- /opt/ros/kinetic/include/ros/duration.h
- /opt/ros/kinetic/include/ros/exception.h
- /opt/ros/kinetic/include/ros/exceptions.h
- /opt/ros/kinetic/include/ros/forwards.h
- /opt/ros/kinetic/include/ros/init.h
- /opt/ros/kinetic/include/ros/macros.h
- /opt/ros/kinetic/include/ros/master.h
- /opt/ros/kinetic/include/ros/message.h
- /opt/ros/kinetic/include/ros/message_event.h
- /opt/ros/kinetic/include/ros/message_forward.h
- /opt/ros/kinetic/include/ros/message_operations.h
- /opt/ros/kinetic/include/ros/message_traits.h
- /opt/ros/kinetic/include/ros/names.h
- /opt/ros/kinetic/include/ros/node_handle.h
- /opt/ros/kinetic/include/ros/param.h
- /opt/ros/kinetic/include/ros/parameter_adapter.h
- /opt/ros/kinetic/include/ros/platform.h
- /opt/ros/kinetic/include/ros/publisher.h
- /opt/ros/kinetic/include/ros/rate.h
- /opt/ros/kinetic/include/ros/ros.h
- /opt/ros/kinetic/include/ros/roscpp_serialization_macros.h
- /opt/ros/kinetic/include/ros/rostime_decl.h
- /opt/ros/kinetic/include/ros/serialization.h
- /opt/ros/kinetic/include/ros/serialized_message.h
- /opt/ros/kinetic/include/ros/service.h
- /opt/ros/kinetic/include/ros/service_callback_helper.h
- /opt/ros/kinetic/include/ros/service_client.h
- /opt/ros/kinetic/include/ros/service_client_options.h
- /opt/ros/kinetic/include/ros/service_server.h
- /opt/ros/kinetic/include/ros/service_traits.h
- /opt/ros/kinetic/include/ros/single_subscriber_publisher.h
- /opt/ros/kinetic/include/ros/spinner.h
- /opt/ros/kinetic/include/ros/static_assert.h
- /opt/ros/kinetic/include/ros/steady_timer.h
- /opt/ros/kinetic/include/ros/steady_timer_options.h
- /opt/ros/kinetic/include/ros/subscribe_options.h
- /opt/ros/kinetic/include/ros/subscriber.h
- /opt/ros/kinetic/include/ros/subscription_callback_helper.h
- /opt/ros/kinetic/include/ros/this_node.h
- /opt/ros/kinetic/include/ros/time.h
- /opt/ros/kinetic/include/ros/timer.h
- /opt/ros/kinetic/include/ros/timer_options.h
- /opt/ros/kinetic/include/ros/topic.h
- /opt/ros/kinetic/include/ros/transport_hints.h
- /opt/ros/kinetic/include/ros/types.h
- /opt/ros/kinetic/include/ros/wall_timer.h
- /opt/ros/kinetic/include/ros/wall_timer_options.h
- /opt/ros/kinetic/include/rosconsole/macros_generated.h
- /opt/ros/kinetic/include/std_msgs/Float32.h
- /opt/ros/kinetic/include/std_msgs/Header.h
- /opt/ros/kinetic/include/xmlrpcpp/XmlRpcDecl.h
- /opt/ros/kinetic/include/xmlrpcpp/XmlRpcValue.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QString
- /usr/include/x86_64-linux-gnu/qt5/QtCore/QThread
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qalgorithms.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qarraydata.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic.h
@@ -1990,7 +2232,6 @@ CMakeFiles/ros_gui.dir/include/ros_gui/moc_multigoal.cpp.o
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qsysinfo.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qsystemdetection.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qtextstream.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qthread.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qtypeinfo.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qtypetraits.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qurl.h
@@ -2025,159 +2266,6 @@ CMakeFiles/ros_gui.dir/include/ros_gui/moc_multigoal.cpp.o
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qdialog.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qsizepolicy.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qwidget.h
-CMakeFiles/ros_gui.dir/include/ros_gui/moc_multinode.cpp.o
- /home/mty/catkin_gui/src/ros_gui/build/include/ros_gui/moc_multinode.cpp
- /home/mty/catkin_gui/src/ros_gui/include/ros_gui/multinode.h
- /opt/ros/kinetic/include/actionlib/action_definition.h
- /opt/ros/kinetic/include/actionlib/client/action_client.h
- /opt/ros/kinetic/include/actionlib/client/client_goal_handle_imp.h
- /opt/ros/kinetic/include/actionlib/client/client_helpers.h
- /opt/ros/kinetic/include/actionlib/client/comm_state.h
- /opt/ros/kinetic/include/actionlib/client/comm_state_machine_imp.h
- /opt/ros/kinetic/include/actionlib/client/connection_monitor.h
- /opt/ros/kinetic/include/actionlib/client/goal_manager_imp.h
- /opt/ros/kinetic/include/actionlib/client/simple_action_client.h
- /opt/ros/kinetic/include/actionlib/client/simple_client_goal_state.h
- /opt/ros/kinetic/include/actionlib/client/simple_goal_state.h
- /opt/ros/kinetic/include/actionlib/client/terminal_state.h
- /opt/ros/kinetic/include/actionlib/decl.h
- /opt/ros/kinetic/include/actionlib/destruction_guard.h
- /opt/ros/kinetic/include/actionlib/enclosure_deleter.h
- /opt/ros/kinetic/include/actionlib/goal_id_generator.h
- /opt/ros/kinetic/include/actionlib/managed_list.h
- /opt/ros/kinetic/include/actionlib_msgs/GoalID.h
- /opt/ros/kinetic/include/actionlib_msgs/GoalStatus.h
- /opt/ros/kinetic/include/actionlib_msgs/GoalStatusArray.h
- /opt/ros/kinetic/include/boost_161_condition_variable.h
- /opt/ros/kinetic/include/boost_161_pthread_condition_variable.h
- /opt/ros/kinetic/include/boost_161_pthread_condition_variable_fwd.h
- /opt/ros/kinetic/include/geometry_msgs/Point.h
- /opt/ros/kinetic/include/geometry_msgs/PointStamped.h
- /opt/ros/kinetic/include/geometry_msgs/Pose.h
- /opt/ros/kinetic/include/geometry_msgs/PoseStamped.h
- /opt/ros/kinetic/include/geometry_msgs/Quaternion.h
- /opt/ros/kinetic/include/move_base_msgs/MoveBaseAction.h
- /opt/ros/kinetic/include/move_base_msgs/MoveBaseActionFeedback.h
- /opt/ros/kinetic/include/move_base_msgs/MoveBaseActionGoal.h
- /opt/ros/kinetic/include/move_base_msgs/MoveBaseActionResult.h
- /opt/ros/kinetic/include/move_base_msgs/MoveBaseFeedback.h
- /opt/ros/kinetic/include/move_base_msgs/MoveBaseGoal.h
- /opt/ros/kinetic/include/move_base_msgs/MoveBaseResult.h
- /opt/ros/kinetic/include/ros/advertise_options.h
- /opt/ros/kinetic/include/ros/advertise_service_options.h
- /opt/ros/kinetic/include/ros/assert.h
- /opt/ros/kinetic/include/ros/builtin_message_traits.h
- /opt/ros/kinetic/include/ros/callback_queue.h
- /opt/ros/kinetic/include/ros/callback_queue_interface.h
- /opt/ros/kinetic/include/ros/common.h
- /opt/ros/kinetic/include/ros/console.h
- /opt/ros/kinetic/include/ros/console_backend.h
- /opt/ros/kinetic/include/ros/datatypes.h
- /opt/ros/kinetic/include/ros/duration.h
- /opt/ros/kinetic/include/ros/exception.h
- /opt/ros/kinetic/include/ros/exceptions.h
- /opt/ros/kinetic/include/ros/forwards.h
- /opt/ros/kinetic/include/ros/init.h
- /opt/ros/kinetic/include/ros/macros.h
- /opt/ros/kinetic/include/ros/master.h
- /opt/ros/kinetic/include/ros/message.h
- /opt/ros/kinetic/include/ros/message_event.h
- /opt/ros/kinetic/include/ros/message_forward.h
- /opt/ros/kinetic/include/ros/message_operations.h
- /opt/ros/kinetic/include/ros/message_traits.h
- /opt/ros/kinetic/include/ros/names.h
- /opt/ros/kinetic/include/ros/node_handle.h
- /opt/ros/kinetic/include/ros/param.h
- /opt/ros/kinetic/include/ros/parameter_adapter.h
- /opt/ros/kinetic/include/ros/platform.h
- /opt/ros/kinetic/include/ros/publisher.h
- /opt/ros/kinetic/include/ros/rate.h
- /opt/ros/kinetic/include/ros/ros.h
- /opt/ros/kinetic/include/ros/roscpp_serialization_macros.h
- /opt/ros/kinetic/include/ros/rostime_decl.h
- /opt/ros/kinetic/include/ros/serialization.h
- /opt/ros/kinetic/include/ros/serialized_message.h
- /opt/ros/kinetic/include/ros/service.h
- /opt/ros/kinetic/include/ros/service_callback_helper.h
- /opt/ros/kinetic/include/ros/service_client.h
- /opt/ros/kinetic/include/ros/service_client_options.h
- /opt/ros/kinetic/include/ros/service_server.h
- /opt/ros/kinetic/include/ros/service_traits.h
- /opt/ros/kinetic/include/ros/single_subscriber_publisher.h
- /opt/ros/kinetic/include/ros/spinner.h
- /opt/ros/kinetic/include/ros/static_assert.h
- /opt/ros/kinetic/include/ros/steady_timer.h
- /opt/ros/kinetic/include/ros/steady_timer_options.h
- /opt/ros/kinetic/include/ros/subscribe_options.h
- /opt/ros/kinetic/include/ros/subscriber.h
- /opt/ros/kinetic/include/ros/subscription_callback_helper.h
- /opt/ros/kinetic/include/ros/this_node.h
- /opt/ros/kinetic/include/ros/time.h
- /opt/ros/kinetic/include/ros/timer.h
- /opt/ros/kinetic/include/ros/timer_options.h
- /opt/ros/kinetic/include/ros/topic.h
- /opt/ros/kinetic/include/ros/transport_hints.h
- /opt/ros/kinetic/include/ros/types.h
- /opt/ros/kinetic/include/ros/wall_timer.h
- /opt/ros/kinetic/include/ros/wall_timer_options.h
- /opt/ros/kinetic/include/rosconsole/macros_generated.h
- /opt/ros/kinetic/include/std_msgs/Float32.h
- /opt/ros/kinetic/include/std_msgs/Header.h
- /opt/ros/kinetic/include/xmlrpcpp/XmlRpcDecl.h
- /opt/ros/kinetic/include/xmlrpcpp/XmlRpcValue.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/QThread
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qalgorithms.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qarraydata.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_armv5.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_armv6.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_armv7.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_bootstrap.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_cxx11.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_gcc.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_ia64.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_msvc.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_unix.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_x86.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qbasicatomic.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qbytearray.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qbytearraylist.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qchar.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qcompilerdetection.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qconfig.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qcontainerfwd.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qcoreevent.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qfeatures.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qflags.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qgenericatomic.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qglobal.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qglobalstatic.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qisenum.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qiterator.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qlist.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qlogging.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qmetatype.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qmutex.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qnamespace.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qnumeric.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qobject.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qobject_impl.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qobjectdefs.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qobjectdefs_impl.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qprocessordetection.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qrefcount.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qregexp.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qscopedpointer.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qstring.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qstringbuilder.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qstringlist.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qstringmatcher.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qsysinfo.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qsystemdetection.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qthread.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qtypeinfo.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qtypetraits.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qvarlengtharray.h
 CMakeFiles/ros_gui.dir/include/ros_gui/moc_qnode.cpp.o
  /home/mty/catkin_gui/src/ros_gui/build/include/ros_gui/moc_qnode.cpp
  /home/mty/catkin_gui/src/ros_gui/include/ros_gui/qnode.h
@@ -3296,8 +3384,29 @@ CMakeFiles/ros_gui.dir/src/dialog.cpp.o
  /home/mty/catkin_gui/src/ros_gui/include/ros_gui/dialog.h
  /home/mty/catkin_gui/src/ros_gui/include/ros_gui/mapNode.h
  /home/mty/catkin_gui/src/ros_gui/src/dialog.cpp
+ /opt/ros/kinetic/include/actionlib/action_definition.h
+ /opt/ros/kinetic/include/actionlib/client/action_client.h
+ /opt/ros/kinetic/include/actionlib/client/client_goal_handle_imp.h
+ /opt/ros/kinetic/include/actionlib/client/client_helpers.h
+ /opt/ros/kinetic/include/actionlib/client/comm_state.h
+ /opt/ros/kinetic/include/actionlib/client/comm_state_machine_imp.h
+ /opt/ros/kinetic/include/actionlib/client/connection_monitor.h
+ /opt/ros/kinetic/include/actionlib/client/goal_manager_imp.h
+ /opt/ros/kinetic/include/actionlib/client/simple_action_client.h
+ /opt/ros/kinetic/include/actionlib/client/simple_client_goal_state.h
+ /opt/ros/kinetic/include/actionlib/client/simple_goal_state.h
+ /opt/ros/kinetic/include/actionlib/client/terminal_state.h
+ /opt/ros/kinetic/include/actionlib/decl.h
+ /opt/ros/kinetic/include/actionlib/destruction_guard.h
+ /opt/ros/kinetic/include/actionlib/enclosure_deleter.h
+ /opt/ros/kinetic/include/actionlib/goal_id_generator.h
+ /opt/ros/kinetic/include/actionlib/managed_list.h
  /opt/ros/kinetic/include/actionlib_msgs/GoalID.h
  /opt/ros/kinetic/include/actionlib_msgs/GoalStatus.h
+ /opt/ros/kinetic/include/actionlib_msgs/GoalStatusArray.h
+ /opt/ros/kinetic/include/boost_161_condition_variable.h
+ /opt/ros/kinetic/include/boost_161_pthread_condition_variable.h
+ /opt/ros/kinetic/include/boost_161_pthread_condition_variable_fwd.h
  /opt/ros/kinetic/include/geometry_msgs/Point.h
  /opt/ros/kinetic/include/geometry_msgs/PointStamped.h
  /opt/ros/kinetic/include/geometry_msgs/Pose.h
@@ -3315,6 +3424,8 @@ CMakeFiles/ros_gui.dir/src/dialog.cpp.o
  /opt/ros/kinetic/include/ros/advertise_service_options.h
  /opt/ros/kinetic/include/ros/assert.h
  /opt/ros/kinetic/include/ros/builtin_message_traits.h
+ /opt/ros/kinetic/include/ros/callback_queue.h
+ /opt/ros/kinetic/include/ros/callback_queue_interface.h
  /opt/ros/kinetic/include/ros/common.h
  /opt/ros/kinetic/include/ros/console.h
  /opt/ros/kinetic/include/ros/console_backend.h
@@ -3368,17 +3479,50 @@ CMakeFiles/ros_gui.dir/src/dialog.cpp.o
  /opt/ros/kinetic/include/ros/wall_timer_options.h
  /opt/ros/kinetic/include/rosconsole/macros_generated.h
  /opt/ros/kinetic/include/std_msgs/ColorRGBA.h
+ /opt/ros/kinetic/include/std_msgs/Float32.h
  /opt/ros/kinetic/include/std_msgs/Header.h
  /opt/ros/kinetic/include/visualization_msgs/Marker.h
  /opt/ros/kinetic/include/visualization_msgs/MarkerArray.h
  /opt/ros/kinetic/include/xmlrpcpp/XmlRpcDecl.h
  /opt/ros/kinetic/include/xmlrpcpp/XmlRpcValue.h
+ /usr/include/x86_64-linux-gnu/qt5/QtConcurrent/QtConcurrent
+ /usr/include/x86_64-linux-gnu/qt5/QtConcurrent/QtConcurrentDepends
+ /usr/include/x86_64-linux-gnu/qt5/QtConcurrent/qtconcurrent_global.h
+ /usr/include/x86_64-linux-gnu/qt5/QtConcurrent/qtconcurrentcompilertest.h
+ /usr/include/x86_64-linux-gnu/qt5/QtConcurrent/qtconcurrentexception.h
+ /usr/include/x86_64-linux-gnu/qt5/QtConcurrent/qtconcurrentfilter.h
+ /usr/include/x86_64-linux-gnu/qt5/QtConcurrent/qtconcurrentfilterkernel.h
+ /usr/include/x86_64-linux-gnu/qt5/QtConcurrent/qtconcurrentfunctionwrappers.h
+ /usr/include/x86_64-linux-gnu/qt5/QtConcurrent/qtconcurrentiteratekernel.h
+ /usr/include/x86_64-linux-gnu/qt5/QtConcurrent/qtconcurrentmap.h
+ /usr/include/x86_64-linux-gnu/qt5/QtConcurrent/qtconcurrentmapkernel.h
+ /usr/include/x86_64-linux-gnu/qt5/QtConcurrent/qtconcurrentmedian.h
+ /usr/include/x86_64-linux-gnu/qt5/QtConcurrent/qtconcurrentreducekernel.h
+ /usr/include/x86_64-linux-gnu/qt5/QtConcurrent/qtconcurrentrun.h
+ /usr/include/x86_64-linux-gnu/qt5/QtConcurrent/qtconcurrentrunbase.h
+ /usr/include/x86_64-linux-gnu/qt5/QtConcurrent/qtconcurrentstoredfunctioncall.h
+ /usr/include/x86_64-linux-gnu/qt5/QtConcurrent/qtconcurrentthreadengine.h
+ /usr/include/x86_64-linux-gnu/qt5/QtConcurrent/qtconcurrentversion.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QObject
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QScopedPointer
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QString
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QStringList
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QThread
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QVariant
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QtCore
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QtCoreDepends
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qabstractanimation.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qabstracteventdispatcher.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qabstractitemmodel.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qabstractnativeeventfilter.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qabstractproxymodel.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qabstractstate.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qabstracttransition.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qalgorithms.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qanimationgroup.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qarraydata.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qarraydataops.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qarraydatapointer.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_armv5.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_armv6.h
@@ -3391,72 +3535,161 @@ CMakeFiles/ros_gui.dir/src/dialog.cpp.o
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_unix.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_x86.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qbasicatomic.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qbasictimer.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qbitarray.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qbuffer.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qbytearray.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qbytearraylist.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qbytearraymatcher.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qcache.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qchar.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qcollator.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qcommandlineoption.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qcommandlineparser.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qcompilerdetection.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qconfig.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qcontainerfwd.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qcontiguouscache.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qcoreapplication.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qcoreevent.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qcryptographichash.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qdatastream.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qdatetime.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qdebug.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qdir.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qdiriterator.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qeasingcurve.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qelapsedtimer.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qendian.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qeventloop.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qeventtransition.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qexception.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qfactoryinterface.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qfeatures.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qfile.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qfiledevice.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qfileinfo.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qfileselector.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qfilesystemwatcher.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qfinalstate.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qflags.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qfuture.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qfutureinterface.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qfuturesynchronizer.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qfuturewatcher.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qgenericatomic.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qglobal.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qglobalstatic.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qhash.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qhistorystate.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qidentityproxymodel.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qiodevice.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qisenum.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qitemselectionmodel.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qiterator.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qjsonarray.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qjsondocument.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qjsonobject.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qjsonvalue.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qlibrary.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qlibraryinfo.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qline.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qlinkedlist.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qlist.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qlocale.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qlockfile.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qlogging.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qloggingcategory.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qmap.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qmargins.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qmath.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qmessageauthenticationcode.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qmetaobject.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qmetatype.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qmimedata.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qmimedatabase.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qmimetype.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qmutex.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qnamespace.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qnumeric.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qobject.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qobject_impl.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qobjectcleanuphandler.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qobjectdefs.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qobjectdefs_impl.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qpair.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qparallelanimationgroup.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qpauseanimation.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qplugin.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qpluginloader.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qpoint.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qpointer.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qprocess.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qprocessordetection.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qpropertyanimation.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qqueue.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qreadwritelock.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qrect.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qrefcount.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qregexp.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qregularexpression.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qresource.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qresultstore.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qrunnable.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qsavefile.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qscopedpointer.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qscopedvaluerollback.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qsemaphore.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qsequentialanimationgroup.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qset.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qsettings.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qshareddata.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qsharedmemory.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qsharedpointer.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qsharedpointer_impl.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qsignalmapper.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qsignaltransition.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qsize.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qsocketnotifier.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qsortfilterproxymodel.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qstack.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qstandardpaths.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qstate.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qstatemachine.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qstorageinfo.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qstring.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qstringbuilder.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qstringlist.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qstringlistmodel.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qstringmatcher.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qsysinfo.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qsystemdetection.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qsystemsemaphore.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qtcoreversion.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qtemporarydir.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qtemporaryfile.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qtextboundaryfinder.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qtextcodec.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qtextstream.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qthread.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qthreadpool.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qthreadstorage.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qtimeline.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qtimer.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qtimezone.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qtranslator.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qtypeinfo.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qtypetraits.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qurl.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qurlquery.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/quuid.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qvariant.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qvariantanimation.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qvarlengtharray.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qvector.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qwaitcondition.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qwineventnotifier.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qxmlstream.h
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qbrush.h
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qcolor.h
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qcursor.h
@@ -3863,7 +4096,6 @@ CMakeFiles/ros_gui.dir/src/main.cpp.o
  /home/mty/catkin_gui/src/ros_gui/include/ros_gui/mapNode.h
  /home/mty/catkin_gui/src/ros_gui/include/ros_gui/markerNode.h
  /home/mty/catkin_gui/src/ros_gui/include/ros_gui/multigoal.h
- /home/mty/catkin_gui/src/ros_gui/include/ros_gui/multinode.h
  /home/mty/catkin_gui/src/ros_gui/include/ros_gui/qnode.h
  /home/mty/catkin_gui/src/ros_gui/include/ros_gui/semantic.h
  /home/mty/catkin_gui/src/ros_gui/src/main.cpp
@@ -4280,6 +4512,24 @@ CMakeFiles/ros_gui.dir/src/main.cpp.o
  /usr/include/OGRE/Threading/OgreThreadHeadersBoost.h
  /usr/include/OGRE/Threading/OgreThreadHeadersPoco.h
  /usr/include/OGRE/Threading/OgreThreadHeadersTBB.h
+ /usr/include/x86_64-linux-gnu/qt5/QtConcurrent/QtConcurrent
+ /usr/include/x86_64-linux-gnu/qt5/QtConcurrent/QtConcurrentDepends
+ /usr/include/x86_64-linux-gnu/qt5/QtConcurrent/qtconcurrent_global.h
+ /usr/include/x86_64-linux-gnu/qt5/QtConcurrent/qtconcurrentcompilertest.h
+ /usr/include/x86_64-linux-gnu/qt5/QtConcurrent/qtconcurrentexception.h
+ /usr/include/x86_64-linux-gnu/qt5/QtConcurrent/qtconcurrentfilter.h
+ /usr/include/x86_64-linux-gnu/qt5/QtConcurrent/qtconcurrentfilterkernel.h
+ /usr/include/x86_64-linux-gnu/qt5/QtConcurrent/qtconcurrentfunctionwrappers.h
+ /usr/include/x86_64-linux-gnu/qt5/QtConcurrent/qtconcurrentiteratekernel.h
+ /usr/include/x86_64-linux-gnu/qt5/QtConcurrent/qtconcurrentmap.h
+ /usr/include/x86_64-linux-gnu/qt5/QtConcurrent/qtconcurrentmapkernel.h
+ /usr/include/x86_64-linux-gnu/qt5/QtConcurrent/qtconcurrentmedian.h
+ /usr/include/x86_64-linux-gnu/qt5/QtConcurrent/qtconcurrentreducekernel.h
+ /usr/include/x86_64-linux-gnu/qt5/QtConcurrent/qtconcurrentrun.h
+ /usr/include/x86_64-linux-gnu/qt5/QtConcurrent/qtconcurrentrunbase.h
+ /usr/include/x86_64-linux-gnu/qt5/QtConcurrent/qtconcurrentstoredfunctioncall.h
+ /usr/include/x86_64-linux-gnu/qt5/QtConcurrent/qtconcurrentthreadengine.h
+ /usr/include/x86_64-linux-gnu/qt5/QtConcurrent/qtconcurrentversion.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QEvent
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QHash
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QList
@@ -4633,7 +4883,6 @@ CMakeFiles/ros_gui.dir/src/mainwindow.cpp.o
  /home/mty/catkin_gui/src/ros_gui/include/ros_gui/mapNode.h
  /home/mty/catkin_gui/src/ros_gui/include/ros_gui/markerNode.h
  /home/mty/catkin_gui/src/ros_gui/include/ros_gui/multigoal.h
- /home/mty/catkin_gui/src/ros_gui/include/ros_gui/multinode.h
  /home/mty/catkin_gui/src/ros_gui/include/ros_gui/qnode.h
  /home/mty/catkin_gui/src/ros_gui/include/ros_gui/semantic.h
  /home/mty/catkin_gui/src/ros_gui/src/mainwindow.cpp
@@ -5050,6 +5299,24 @@ CMakeFiles/ros_gui.dir/src/mainwindow.cpp.o
  /usr/include/OGRE/Threading/OgreThreadHeadersBoost.h
  /usr/include/OGRE/Threading/OgreThreadHeadersPoco.h
  /usr/include/OGRE/Threading/OgreThreadHeadersTBB.h
+ /usr/include/x86_64-linux-gnu/qt5/QtConcurrent/QtConcurrent
+ /usr/include/x86_64-linux-gnu/qt5/QtConcurrent/QtConcurrentDepends
+ /usr/include/x86_64-linux-gnu/qt5/QtConcurrent/qtconcurrent_global.h
+ /usr/include/x86_64-linux-gnu/qt5/QtConcurrent/qtconcurrentcompilertest.h
+ /usr/include/x86_64-linux-gnu/qt5/QtConcurrent/qtconcurrentexception.h
+ /usr/include/x86_64-linux-gnu/qt5/QtConcurrent/qtconcurrentfilter.h
+ /usr/include/x86_64-linux-gnu/qt5/QtConcurrent/qtconcurrentfilterkernel.h
+ /usr/include/x86_64-linux-gnu/qt5/QtConcurrent/qtconcurrentfunctionwrappers.h
+ /usr/include/x86_64-linux-gnu/qt5/QtConcurrent/qtconcurrentiteratekernel.h
+ /usr/include/x86_64-linux-gnu/qt5/QtConcurrent/qtconcurrentmap.h
+ /usr/include/x86_64-linux-gnu/qt5/QtConcurrent/qtconcurrentmapkernel.h
+ /usr/include/x86_64-linux-gnu/qt5/QtConcurrent/qtconcurrentmedian.h
+ /usr/include/x86_64-linux-gnu/qt5/QtConcurrent/qtconcurrentreducekernel.h
+ /usr/include/x86_64-linux-gnu/qt5/QtConcurrent/qtconcurrentrun.h
+ /usr/include/x86_64-linux-gnu/qt5/QtConcurrent/qtconcurrentrunbase.h
+ /usr/include/x86_64-linux-gnu/qt5/QtConcurrent/qtconcurrentstoredfunctioncall.h
+ /usr/include/x86_64-linux-gnu/qt5/QtConcurrent/qtconcurrentthreadengine.h
+ /usr/include/x86_64-linux-gnu/qt5/QtConcurrent/qtconcurrentversion.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QEvent
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QHash
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QList
@@ -5434,265 +5701,6 @@ CMakeFiles/ros_gui.dir/src/mapNode.cpp.o
  /home/mty/catkin_gui/devel/include/custom_msgs/Obstacles.h
  /home/mty/catkin_gui/src/ros_gui/include/ros_gui/mapNode.h
  /home/mty/catkin_gui/src/ros_gui/src/mapNode.cpp
- /opt/ros/kinetic/include/actionlib_msgs/GoalID.h
- /opt/ros/kinetic/include/actionlib_msgs/GoalStatus.h
- /opt/ros/kinetic/include/geometry_msgs/Point.h
- /opt/ros/kinetic/include/geometry_msgs/PointStamped.h
- /opt/ros/kinetic/include/geometry_msgs/Pose.h
- /opt/ros/kinetic/include/geometry_msgs/PoseStamped.h
- /opt/ros/kinetic/include/geometry_msgs/Quaternion.h
- /opt/ros/kinetic/include/geometry_msgs/Vector3.h
- /opt/ros/kinetic/include/move_base_msgs/MoveBaseAction.h
- /opt/ros/kinetic/include/move_base_msgs/MoveBaseActionFeedback.h
- /opt/ros/kinetic/include/move_base_msgs/MoveBaseActionGoal.h
- /opt/ros/kinetic/include/move_base_msgs/MoveBaseActionResult.h
- /opt/ros/kinetic/include/move_base_msgs/MoveBaseFeedback.h
- /opt/ros/kinetic/include/move_base_msgs/MoveBaseGoal.h
- /opt/ros/kinetic/include/move_base_msgs/MoveBaseResult.h
- /opt/ros/kinetic/include/ros/advertise_options.h
- /opt/ros/kinetic/include/ros/advertise_service_options.h
- /opt/ros/kinetic/include/ros/assert.h
- /opt/ros/kinetic/include/ros/builtin_message_traits.h
- /opt/ros/kinetic/include/ros/common.h
- /opt/ros/kinetic/include/ros/console.h
- /opt/ros/kinetic/include/ros/console_backend.h
- /opt/ros/kinetic/include/ros/datatypes.h
- /opt/ros/kinetic/include/ros/duration.h
- /opt/ros/kinetic/include/ros/exception.h
- /opt/ros/kinetic/include/ros/exceptions.h
- /opt/ros/kinetic/include/ros/forwards.h
- /opt/ros/kinetic/include/ros/init.h
- /opt/ros/kinetic/include/ros/macros.h
- /opt/ros/kinetic/include/ros/master.h
- /opt/ros/kinetic/include/ros/message.h
- /opt/ros/kinetic/include/ros/message_event.h
- /opt/ros/kinetic/include/ros/message_forward.h
- /opt/ros/kinetic/include/ros/message_operations.h
- /opt/ros/kinetic/include/ros/message_traits.h
- /opt/ros/kinetic/include/ros/names.h
- /opt/ros/kinetic/include/ros/node_handle.h
- /opt/ros/kinetic/include/ros/param.h
- /opt/ros/kinetic/include/ros/parameter_adapter.h
- /opt/ros/kinetic/include/ros/platform.h
- /opt/ros/kinetic/include/ros/publisher.h
- /opt/ros/kinetic/include/ros/rate.h
- /opt/ros/kinetic/include/ros/ros.h
- /opt/ros/kinetic/include/ros/roscpp_serialization_macros.h
- /opt/ros/kinetic/include/ros/rostime_decl.h
- /opt/ros/kinetic/include/ros/serialization.h
- /opt/ros/kinetic/include/ros/serialized_message.h
- /opt/ros/kinetic/include/ros/service.h
- /opt/ros/kinetic/include/ros/service_callback_helper.h
- /opt/ros/kinetic/include/ros/service_client.h
- /opt/ros/kinetic/include/ros/service_client_options.h
- /opt/ros/kinetic/include/ros/service_server.h
- /opt/ros/kinetic/include/ros/service_traits.h
- /opt/ros/kinetic/include/ros/single_subscriber_publisher.h
- /opt/ros/kinetic/include/ros/spinner.h
- /opt/ros/kinetic/include/ros/static_assert.h
- /opt/ros/kinetic/include/ros/steady_timer.h
- /opt/ros/kinetic/include/ros/steady_timer_options.h
- /opt/ros/kinetic/include/ros/subscribe_options.h
- /opt/ros/kinetic/include/ros/subscriber.h
- /opt/ros/kinetic/include/ros/subscription_callback_helper.h
- /opt/ros/kinetic/include/ros/this_node.h
- /opt/ros/kinetic/include/ros/time.h
- /opt/ros/kinetic/include/ros/timer.h
- /opt/ros/kinetic/include/ros/timer_options.h
- /opt/ros/kinetic/include/ros/topic.h
- /opt/ros/kinetic/include/ros/transport_hints.h
- /opt/ros/kinetic/include/ros/types.h
- /opt/ros/kinetic/include/ros/wall_timer.h
- /opt/ros/kinetic/include/ros/wall_timer_options.h
- /opt/ros/kinetic/include/rosconsole/macros_generated.h
- /opt/ros/kinetic/include/std_msgs/ColorRGBA.h
- /opt/ros/kinetic/include/std_msgs/Header.h
- /opt/ros/kinetic/include/visualization_msgs/Marker.h
- /opt/ros/kinetic/include/visualization_msgs/MarkerArray.h
- /opt/ros/kinetic/include/xmlrpcpp/XmlRpcDecl.h
- /opt/ros/kinetic/include/xmlrpcpp/XmlRpcValue.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/QThread
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qalgorithms.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qarraydata.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_armv5.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_armv6.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_armv7.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_bootstrap.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_cxx11.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_gcc.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_ia64.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_msvc.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_unix.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_x86.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qbasicatomic.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qbytearray.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qbytearraylist.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qchar.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qcompilerdetection.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qconfig.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qcontainerfwd.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qcoreevent.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qfeatures.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qflags.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qgenericatomic.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qglobal.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qglobalstatic.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qisenum.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qiterator.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qlist.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qlogging.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qmetatype.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qmutex.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qnamespace.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qnumeric.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qobject.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qobject_impl.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qobjectdefs.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qobjectdefs_impl.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qprocessordetection.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qrefcount.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qregexp.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qscopedpointer.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qstring.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qstringbuilder.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qstringlist.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qstringmatcher.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qsysinfo.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qsystemdetection.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qthread.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qtypeinfo.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qtypetraits.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qvarlengtharray.h
-CMakeFiles/ros_gui.dir/src/markerNode.cpp.o
- /home/mty/catkin_gui/src/ros_gui/include/ros_gui/markerNode.h
- /home/mty/catkin_gui/src/ros_gui/src/markerNode.cpp
- /opt/ros/kinetic/include/geometry_msgs/Point.h
- /opt/ros/kinetic/include/geometry_msgs/Pose.h
- /opt/ros/kinetic/include/geometry_msgs/Quaternion.h
- /opt/ros/kinetic/include/geometry_msgs/Twist.h
- /opt/ros/kinetic/include/geometry_msgs/Vector3.h
- /opt/ros/kinetic/include/ros/advertise_options.h
- /opt/ros/kinetic/include/ros/advertise_service_options.h
- /opt/ros/kinetic/include/ros/assert.h
- /opt/ros/kinetic/include/ros/builtin_message_traits.h
- /opt/ros/kinetic/include/ros/common.h
- /opt/ros/kinetic/include/ros/console.h
- /opt/ros/kinetic/include/ros/console_backend.h
- /opt/ros/kinetic/include/ros/datatypes.h
- /opt/ros/kinetic/include/ros/duration.h
- /opt/ros/kinetic/include/ros/exception.h
- /opt/ros/kinetic/include/ros/exceptions.h
- /opt/ros/kinetic/include/ros/forwards.h
- /opt/ros/kinetic/include/ros/init.h
- /opt/ros/kinetic/include/ros/macros.h
- /opt/ros/kinetic/include/ros/master.h
- /opt/ros/kinetic/include/ros/message.h
- /opt/ros/kinetic/include/ros/message_event.h
- /opt/ros/kinetic/include/ros/message_forward.h
- /opt/ros/kinetic/include/ros/message_operations.h
- /opt/ros/kinetic/include/ros/message_traits.h
- /opt/ros/kinetic/include/ros/names.h
- /opt/ros/kinetic/include/ros/node_handle.h
- /opt/ros/kinetic/include/ros/param.h
- /opt/ros/kinetic/include/ros/parameter_adapter.h
- /opt/ros/kinetic/include/ros/platform.h
- /opt/ros/kinetic/include/ros/publisher.h
- /opt/ros/kinetic/include/ros/rate.h
- /opt/ros/kinetic/include/ros/ros.h
- /opt/ros/kinetic/include/ros/roscpp_serialization_macros.h
- /opt/ros/kinetic/include/ros/rostime_decl.h
- /opt/ros/kinetic/include/ros/serialization.h
- /opt/ros/kinetic/include/ros/serialized_message.h
- /opt/ros/kinetic/include/ros/service.h
- /opt/ros/kinetic/include/ros/service_callback_helper.h
- /opt/ros/kinetic/include/ros/service_client.h
- /opt/ros/kinetic/include/ros/service_client_options.h
- /opt/ros/kinetic/include/ros/service_server.h
- /opt/ros/kinetic/include/ros/service_traits.h
- /opt/ros/kinetic/include/ros/single_subscriber_publisher.h
- /opt/ros/kinetic/include/ros/spinner.h
- /opt/ros/kinetic/include/ros/static_assert.h
- /opt/ros/kinetic/include/ros/steady_timer.h
- /opt/ros/kinetic/include/ros/steady_timer_options.h
- /opt/ros/kinetic/include/ros/subscribe_options.h
- /opt/ros/kinetic/include/ros/subscriber.h
- /opt/ros/kinetic/include/ros/subscription_callback_helper.h
- /opt/ros/kinetic/include/ros/this_node.h
- /opt/ros/kinetic/include/ros/time.h
- /opt/ros/kinetic/include/ros/timer.h
- /opt/ros/kinetic/include/ros/timer_options.h
- /opt/ros/kinetic/include/ros/topic.h
- /opt/ros/kinetic/include/ros/transport_hints.h
- /opt/ros/kinetic/include/ros/types.h
- /opt/ros/kinetic/include/ros/wall_timer.h
- /opt/ros/kinetic/include/ros/wall_timer_options.h
- /opt/ros/kinetic/include/rosconsole/macros_generated.h
- /opt/ros/kinetic/include/std_msgs/ColorRGBA.h
- /opt/ros/kinetic/include/std_msgs/Float32.h
- /opt/ros/kinetic/include/std_msgs/Header.h
- /opt/ros/kinetic/include/visualization_msgs/Marker.h
- /opt/ros/kinetic/include/visualization_msgs/MarkerArray.h
- /opt/ros/kinetic/include/xmlrpcpp/XmlRpcDecl.h
- /opt/ros/kinetic/include/xmlrpcpp/XmlRpcValue.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/QThread
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qalgorithms.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qarraydata.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_armv5.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_armv6.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_armv7.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_bootstrap.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_cxx11.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_gcc.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_ia64.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_msvc.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_unix.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_x86.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qbasicatomic.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qbytearray.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qbytearraylist.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qchar.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qcompilerdetection.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qconfig.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qcontainerfwd.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qcoreevent.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qfeatures.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qflags.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qgenericatomic.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qglobal.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qglobalstatic.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qisenum.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qiterator.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qlist.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qlogging.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qmetatype.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qmutex.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qnamespace.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qnumeric.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qobject.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qobject_impl.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qobjectdefs.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qobjectdefs_impl.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qprocessordetection.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qrefcount.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qregexp.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qscopedpointer.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qstring.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qstringbuilder.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qstringlist.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qstringmatcher.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qsysinfo.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qsystemdetection.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qthread.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qtypeinfo.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qtypetraits.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qvarlengtharray.h
-CMakeFiles/ros_gui.dir/src/multigoal.cpp.o
- /home/mty/catkin_gui/src/ros_gui/build/ui_multigoal.h
- /home/mty/catkin_gui/src/ros_gui/include/ros_gui/multigoal.h
- /home/mty/catkin_gui/src/ros_gui/include/ros_gui/multinode.h
- /home/mty/catkin_gui/src/ros_gui/src/multigoal.cpp
  /opt/ros/kinetic/include/actionlib/action_definition.h
  /opt/ros/kinetic/include/actionlib/client/action_client.h
  /opt/ros/kinetic/include/actionlib/client/client_goal_handle_imp.h
@@ -5721,6 +5729,7 @@ CMakeFiles/ros_gui.dir/src/multigoal.cpp.o
  /opt/ros/kinetic/include/geometry_msgs/Pose.h
  /opt/ros/kinetic/include/geometry_msgs/PoseStamped.h
  /opt/ros/kinetic/include/geometry_msgs/Quaternion.h
+ /opt/ros/kinetic/include/geometry_msgs/Vector3.h
  /opt/ros/kinetic/include/move_base_msgs/MoveBaseAction.h
  /opt/ros/kinetic/include/move_base_msgs/MoveBaseActionFeedback.h
  /opt/ros/kinetic/include/move_base_msgs/MoveBaseActionGoal.h
@@ -5786,249 +5795,11 @@ CMakeFiles/ros_gui.dir/src/multigoal.cpp.o
  /opt/ros/kinetic/include/ros/wall_timer.h
  /opt/ros/kinetic/include/ros/wall_timer_options.h
  /opt/ros/kinetic/include/rosconsole/macros_generated.h
+ /opt/ros/kinetic/include/std_msgs/ColorRGBA.h
  /opt/ros/kinetic/include/std_msgs/Float32.h
  /opt/ros/kinetic/include/std_msgs/Header.h
- /opt/ros/kinetic/include/xmlrpcpp/XmlRpcDecl.h
- /opt/ros/kinetic/include/xmlrpcpp/XmlRpcValue.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/QString
- /usr/include/x86_64-linux-gnu/qt5/QtCore/QThread
- /usr/include/x86_64-linux-gnu/qt5/QtCore/QVariant
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qabstractitemmodel.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qalgorithms.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qarraydata.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_armv5.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_armv6.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_armv7.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_bootstrap.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_cxx11.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_gcc.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_ia64.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_msvc.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_unix.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_x86.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qbasicatomic.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qbytearray.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qbytearraylist.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qchar.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qcompilerdetection.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qconfig.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qcontainerfwd.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qcontiguouscache.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qcoreapplication.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qcoreevent.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qdatastream.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qdebug.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qeventloop.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qfeatures.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qfile.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qfiledevice.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qflags.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qgenericatomic.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qglobal.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qglobalstatic.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qhash.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qiodevice.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qisenum.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qitemselectionmodel.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qiterator.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qline.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qlist.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qlocale.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qlogging.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qmap.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qmargins.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qmetatype.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qmutex.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qnamespace.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qnumeric.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qobject.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qobject_impl.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qobjectdefs.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qobjectdefs_impl.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qpair.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qpoint.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qprocessordetection.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qrect.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qrefcount.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qregexp.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qregularexpression.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qscopedpointer.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qset.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qshareddata.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qsharedpointer.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qsharedpointer_impl.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qsize.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qstring.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qstringbuilder.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qstringlist.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qstringmatcher.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qsysinfo.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qsystemdetection.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qtextstream.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qthread.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qtypeinfo.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qtypetraits.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qurl.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qurlquery.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qvariant.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qvarlengtharray.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qvector.h
- /usr/include/x86_64-linux-gnu/qt5/QtGui/qbrush.h
- /usr/include/x86_64-linux-gnu/qt5/QtGui/qcolor.h
- /usr/include/x86_64-linux-gnu/qt5/QtGui/qcursor.h
- /usr/include/x86_64-linux-gnu/qt5/QtGui/qevent.h
- /usr/include/x86_64-linux-gnu/qt5/QtGui/qfont.h
- /usr/include/x86_64-linux-gnu/qt5/QtGui/qfontinfo.h
- /usr/include/x86_64-linux-gnu/qt5/QtGui/qfontmetrics.h
- /usr/include/x86_64-linux-gnu/qt5/QtGui/qguiapplication.h
- /usr/include/x86_64-linux-gnu/qt5/QtGui/qicon.h
- /usr/include/x86_64-linux-gnu/qt5/QtGui/qimage.h
- /usr/include/x86_64-linux-gnu/qt5/QtGui/qinputmethod.h
- /usr/include/x86_64-linux-gnu/qt5/QtGui/qkeysequence.h
- /usr/include/x86_64-linux-gnu/qt5/QtGui/qmatrix.h
- /usr/include/x86_64-linux-gnu/qt5/QtGui/qpaintdevice.h
- /usr/include/x86_64-linux-gnu/qt5/QtGui/qpainterpath.h
- /usr/include/x86_64-linux-gnu/qt5/QtGui/qpalette.h
- /usr/include/x86_64-linux-gnu/qt5/QtGui/qpixelformat.h
- /usr/include/x86_64-linux-gnu/qt5/QtGui/qpixmap.h
- /usr/include/x86_64-linux-gnu/qt5/QtGui/qpolygon.h
- /usr/include/x86_64-linux-gnu/qt5/QtGui/qregion.h
- /usr/include/x86_64-linux-gnu/qt5/QtGui/qrgb.h
- /usr/include/x86_64-linux-gnu/qt5/QtGui/qtouchdevice.h
- /usr/include/x86_64-linux-gnu/qt5/QtGui/qtransform.h
- /usr/include/x86_64-linux-gnu/qt5/QtGui/qvalidator.h
- /usr/include/x86_64-linux-gnu/qt5/QtGui/qvector2d.h
- /usr/include/x86_64-linux-gnu/qt5/QtGui/qwindowdefs.h
- /usr/include/x86_64-linux-gnu/qt5/QtGui/qwindowdefs_win.h
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QAction
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QApplication
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QButtonGroup
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QDialog
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QHeaderView
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QPushButton
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractbutton.h
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractitemdelegate.h
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractitemview.h
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractscrollarea.h
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractslider.h
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractspinbox.h
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qaction.h
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qactiongroup.h
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qapplication.h
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qbuttongroup.h
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qdesktopwidget.h
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qdialog.h
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qframe.h
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qheaderview.h
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qpushbutton.h
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qrubberband.h
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qsizepolicy.h
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qslider.h
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qstyle.h
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qstyleoption.h
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtabbar.h
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtabwidget.h
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qwidget.h
-CMakeFiles/ros_gui.dir/src/multinode.cpp.o
- /home/mty/catkin_gui/src/ros_gui/include/ros_gui/multinode.h
- /home/mty/catkin_gui/src/ros_gui/src/multinode.cpp
- /opt/ros/kinetic/include/actionlib/action_definition.h
- /opt/ros/kinetic/include/actionlib/client/action_client.h
- /opt/ros/kinetic/include/actionlib/client/client_goal_handle_imp.h
- /opt/ros/kinetic/include/actionlib/client/client_helpers.h
- /opt/ros/kinetic/include/actionlib/client/comm_state.h
- /opt/ros/kinetic/include/actionlib/client/comm_state_machine_imp.h
- /opt/ros/kinetic/include/actionlib/client/connection_monitor.h
- /opt/ros/kinetic/include/actionlib/client/goal_manager_imp.h
- /opt/ros/kinetic/include/actionlib/client/simple_action_client.h
- /opt/ros/kinetic/include/actionlib/client/simple_client_goal_state.h
- /opt/ros/kinetic/include/actionlib/client/simple_goal_state.h
- /opt/ros/kinetic/include/actionlib/client/terminal_state.h
- /opt/ros/kinetic/include/actionlib/decl.h
- /opt/ros/kinetic/include/actionlib/destruction_guard.h
- /opt/ros/kinetic/include/actionlib/enclosure_deleter.h
- /opt/ros/kinetic/include/actionlib/goal_id_generator.h
- /opt/ros/kinetic/include/actionlib/managed_list.h
- /opt/ros/kinetic/include/actionlib_msgs/GoalID.h
- /opt/ros/kinetic/include/actionlib_msgs/GoalStatus.h
- /opt/ros/kinetic/include/actionlib_msgs/GoalStatusArray.h
- /opt/ros/kinetic/include/boost_161_condition_variable.h
- /opt/ros/kinetic/include/boost_161_pthread_condition_variable.h
- /opt/ros/kinetic/include/boost_161_pthread_condition_variable_fwd.h
- /opt/ros/kinetic/include/geometry_msgs/Point.h
- /opt/ros/kinetic/include/geometry_msgs/PointStamped.h
- /opt/ros/kinetic/include/geometry_msgs/Pose.h
- /opt/ros/kinetic/include/geometry_msgs/PoseStamped.h
- /opt/ros/kinetic/include/geometry_msgs/Quaternion.h
- /opt/ros/kinetic/include/move_base_msgs/MoveBaseAction.h
- /opt/ros/kinetic/include/move_base_msgs/MoveBaseActionFeedback.h
- /opt/ros/kinetic/include/move_base_msgs/MoveBaseActionGoal.h
- /opt/ros/kinetic/include/move_base_msgs/MoveBaseActionResult.h
- /opt/ros/kinetic/include/move_base_msgs/MoveBaseFeedback.h
- /opt/ros/kinetic/include/move_base_msgs/MoveBaseGoal.h
- /opt/ros/kinetic/include/move_base_msgs/MoveBaseResult.h
- /opt/ros/kinetic/include/ros/advertise_options.h
- /opt/ros/kinetic/include/ros/advertise_service_options.h
- /opt/ros/kinetic/include/ros/assert.h
- /opt/ros/kinetic/include/ros/builtin_message_traits.h
- /opt/ros/kinetic/include/ros/callback_queue.h
- /opt/ros/kinetic/include/ros/callback_queue_interface.h
- /opt/ros/kinetic/include/ros/common.h
- /opt/ros/kinetic/include/ros/console.h
- /opt/ros/kinetic/include/ros/console_backend.h
- /opt/ros/kinetic/include/ros/datatypes.h
- /opt/ros/kinetic/include/ros/duration.h
- /opt/ros/kinetic/include/ros/exception.h
- /opt/ros/kinetic/include/ros/exceptions.h
- /opt/ros/kinetic/include/ros/forwards.h
- /opt/ros/kinetic/include/ros/init.h
- /opt/ros/kinetic/include/ros/macros.h
- /opt/ros/kinetic/include/ros/master.h
- /opt/ros/kinetic/include/ros/message.h
- /opt/ros/kinetic/include/ros/message_event.h
- /opt/ros/kinetic/include/ros/message_forward.h
- /opt/ros/kinetic/include/ros/message_operations.h
- /opt/ros/kinetic/include/ros/message_traits.h
- /opt/ros/kinetic/include/ros/names.h
- /opt/ros/kinetic/include/ros/network.h
- /opt/ros/kinetic/include/ros/node_handle.h
- /opt/ros/kinetic/include/ros/param.h
- /opt/ros/kinetic/include/ros/parameter_adapter.h
- /opt/ros/kinetic/include/ros/platform.h
- /opt/ros/kinetic/include/ros/publisher.h
- /opt/ros/kinetic/include/ros/rate.h
- /opt/ros/kinetic/include/ros/ros.h
- /opt/ros/kinetic/include/ros/roscpp_serialization_macros.h
- /opt/ros/kinetic/include/ros/rostime_decl.h
- /opt/ros/kinetic/include/ros/serialization.h
- /opt/ros/kinetic/include/ros/serialized_message.h
- /opt/ros/kinetic/include/ros/service.h
- /opt/ros/kinetic/include/ros/service_callback_helper.h
- /opt/ros/kinetic/include/ros/service_client.h
- /opt/ros/kinetic/include/ros/service_client_options.h
- /opt/ros/kinetic/include/ros/service_server.h
- /opt/ros/kinetic/include/ros/service_traits.h
- /opt/ros/kinetic/include/ros/single_subscriber_publisher.h
- /opt/ros/kinetic/include/ros/spinner.h
- /opt/ros/kinetic/include/ros/static_assert.h
- /opt/ros/kinetic/include/ros/steady_timer.h
- /opt/ros/kinetic/include/ros/steady_timer_options.h
- /opt/ros/kinetic/include/ros/subscribe_options.h
- /opt/ros/kinetic/include/ros/subscriber.h
- /opt/ros/kinetic/include/ros/subscription_callback_helper.h
- /opt/ros/kinetic/include/ros/this_node.h
- /opt/ros/kinetic/include/ros/time.h
- /opt/ros/kinetic/include/ros/timer.h
- /opt/ros/kinetic/include/ros/timer_options.h
- /opt/ros/kinetic/include/ros/topic.h
- /opt/ros/kinetic/include/ros/transport_hints.h
- /opt/ros/kinetic/include/ros/types.h
- /opt/ros/kinetic/include/ros/wall_timer.h
- /opt/ros/kinetic/include/ros/wall_timer_options.h
- /opt/ros/kinetic/include/rosconsole/macros_generated.h
- /opt/ros/kinetic/include/std_msgs/Float32.h
- /opt/ros/kinetic/include/std_msgs/Header.h
+ /opt/ros/kinetic/include/visualization_msgs/Marker.h
+ /opt/ros/kinetic/include/visualization_msgs/MarkerArray.h
  /opt/ros/kinetic/include/xmlrpcpp/XmlRpcDecl.h
  /opt/ros/kinetic/include/xmlrpcpp/XmlRpcValue.h
  /usr/include/x86_64-linux-gnu/qt5/QtConcurrent/QtConcurrent
@@ -6234,6 +6005,272 @@ CMakeFiles/ros_gui.dir/src/multinode.cpp.o
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qwaitcondition.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qwineventnotifier.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qxmlstream.h
+CMakeFiles/ros_gui.dir/src/markerNode.cpp.o
+ /home/mty/catkin_gui/src/ros_gui/include/ros_gui/markerNode.h
+ /home/mty/catkin_gui/src/ros_gui/src/markerNode.cpp
+ /opt/ros/kinetic/include/geometry_msgs/Point.h
+ /opt/ros/kinetic/include/geometry_msgs/Pose.h
+ /opt/ros/kinetic/include/geometry_msgs/Quaternion.h
+ /opt/ros/kinetic/include/geometry_msgs/Twist.h
+ /opt/ros/kinetic/include/geometry_msgs/Vector3.h
+ /opt/ros/kinetic/include/ros/advertise_options.h
+ /opt/ros/kinetic/include/ros/advertise_service_options.h
+ /opt/ros/kinetic/include/ros/assert.h
+ /opt/ros/kinetic/include/ros/builtin_message_traits.h
+ /opt/ros/kinetic/include/ros/common.h
+ /opt/ros/kinetic/include/ros/console.h
+ /opt/ros/kinetic/include/ros/console_backend.h
+ /opt/ros/kinetic/include/ros/datatypes.h
+ /opt/ros/kinetic/include/ros/duration.h
+ /opt/ros/kinetic/include/ros/exception.h
+ /opt/ros/kinetic/include/ros/exceptions.h
+ /opt/ros/kinetic/include/ros/forwards.h
+ /opt/ros/kinetic/include/ros/init.h
+ /opt/ros/kinetic/include/ros/macros.h
+ /opt/ros/kinetic/include/ros/master.h
+ /opt/ros/kinetic/include/ros/message.h
+ /opt/ros/kinetic/include/ros/message_event.h
+ /opt/ros/kinetic/include/ros/message_forward.h
+ /opt/ros/kinetic/include/ros/message_operations.h
+ /opt/ros/kinetic/include/ros/message_traits.h
+ /opt/ros/kinetic/include/ros/names.h
+ /opt/ros/kinetic/include/ros/node_handle.h
+ /opt/ros/kinetic/include/ros/param.h
+ /opt/ros/kinetic/include/ros/parameter_adapter.h
+ /opt/ros/kinetic/include/ros/platform.h
+ /opt/ros/kinetic/include/ros/publisher.h
+ /opt/ros/kinetic/include/ros/rate.h
+ /opt/ros/kinetic/include/ros/ros.h
+ /opt/ros/kinetic/include/ros/roscpp_serialization_macros.h
+ /opt/ros/kinetic/include/ros/rostime_decl.h
+ /opt/ros/kinetic/include/ros/serialization.h
+ /opt/ros/kinetic/include/ros/serialized_message.h
+ /opt/ros/kinetic/include/ros/service.h
+ /opt/ros/kinetic/include/ros/service_callback_helper.h
+ /opt/ros/kinetic/include/ros/service_client.h
+ /opt/ros/kinetic/include/ros/service_client_options.h
+ /opt/ros/kinetic/include/ros/service_server.h
+ /opt/ros/kinetic/include/ros/service_traits.h
+ /opt/ros/kinetic/include/ros/single_subscriber_publisher.h
+ /opt/ros/kinetic/include/ros/spinner.h
+ /opt/ros/kinetic/include/ros/static_assert.h
+ /opt/ros/kinetic/include/ros/steady_timer.h
+ /opt/ros/kinetic/include/ros/steady_timer_options.h
+ /opt/ros/kinetic/include/ros/subscribe_options.h
+ /opt/ros/kinetic/include/ros/subscriber.h
+ /opt/ros/kinetic/include/ros/subscription_callback_helper.h
+ /opt/ros/kinetic/include/ros/this_node.h
+ /opt/ros/kinetic/include/ros/time.h
+ /opt/ros/kinetic/include/ros/timer.h
+ /opt/ros/kinetic/include/ros/timer_options.h
+ /opt/ros/kinetic/include/ros/topic.h
+ /opt/ros/kinetic/include/ros/transport_hints.h
+ /opt/ros/kinetic/include/ros/types.h
+ /opt/ros/kinetic/include/ros/wall_timer.h
+ /opt/ros/kinetic/include/ros/wall_timer_options.h
+ /opt/ros/kinetic/include/rosconsole/macros_generated.h
+ /opt/ros/kinetic/include/std_msgs/ColorRGBA.h
+ /opt/ros/kinetic/include/std_msgs/Float32.h
+ /opt/ros/kinetic/include/std_msgs/Header.h
+ /opt/ros/kinetic/include/visualization_msgs/Marker.h
+ /opt/ros/kinetic/include/visualization_msgs/MarkerArray.h
+ /opt/ros/kinetic/include/xmlrpcpp/XmlRpcDecl.h
+ /opt/ros/kinetic/include/xmlrpcpp/XmlRpcValue.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QThread
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qalgorithms.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qarraydata.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_armv5.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_armv6.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_armv7.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_bootstrap.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_cxx11.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_gcc.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_ia64.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_msvc.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_unix.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_x86.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qbasicatomic.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qbytearray.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qbytearraylist.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qchar.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qcompilerdetection.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qconfig.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qcontainerfwd.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qcoreevent.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qfeatures.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qflags.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qgenericatomic.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qglobal.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qglobalstatic.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qisenum.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qiterator.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qlist.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qlogging.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qmetatype.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qmutex.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qnamespace.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qnumeric.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qobject.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qobject_impl.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qobjectdefs.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qobjectdefs_impl.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qprocessordetection.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qrefcount.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qregexp.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qscopedpointer.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qstring.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qstringbuilder.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qstringlist.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qstringmatcher.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qsysinfo.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qsystemdetection.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qthread.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qtypeinfo.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qtypetraits.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qvarlengtharray.h
+CMakeFiles/ros_gui.dir/src/multigoal.cpp.o
+ /home/mty/catkin_gui/src/ros_gui/build/ui_multigoal.h
+ /home/mty/catkin_gui/src/ros_gui/include/ros_gui/multigoal.h
+ /home/mty/catkin_gui/src/ros_gui/src/multigoal.cpp
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QString
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QVariant
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qabstractitemmodel.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qalgorithms.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qarraydata.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_armv5.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_armv6.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_armv7.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_bootstrap.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_cxx11.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_gcc.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_ia64.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_msvc.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_unix.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_x86.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qbasicatomic.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qbytearray.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qbytearraylist.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qchar.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qcompilerdetection.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qconfig.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qcontainerfwd.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qcontiguouscache.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qcoreapplication.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qcoreevent.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qdatastream.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qdebug.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qeventloop.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qfeatures.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qfile.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qfiledevice.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qflags.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qgenericatomic.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qglobal.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qglobalstatic.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qhash.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qiodevice.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qisenum.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qitemselectionmodel.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qiterator.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qline.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qlist.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qlocale.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qlogging.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qmap.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qmargins.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qmetatype.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qmutex.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qnamespace.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qnumeric.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qobject.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qobject_impl.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qobjectdefs.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qobjectdefs_impl.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qpair.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qpoint.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qprocessordetection.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qrect.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qrefcount.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qregexp.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qregularexpression.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qscopedpointer.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qset.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qshareddata.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qsharedpointer.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qsharedpointer_impl.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qsize.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qstring.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qstringbuilder.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qstringlist.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qstringmatcher.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qsysinfo.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qsystemdetection.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qtextstream.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qtypeinfo.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qtypetraits.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qurl.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qurlquery.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qvariant.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qvarlengtharray.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qvector.h
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qbrush.h
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qcolor.h
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qcursor.h
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qevent.h
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qfont.h
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qfontinfo.h
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qfontmetrics.h
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qguiapplication.h
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qicon.h
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qimage.h
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qinputmethod.h
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qkeysequence.h
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qmatrix.h
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qpaintdevice.h
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qpainterpath.h
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qpalette.h
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qpixelformat.h
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qpixmap.h
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qpolygon.h
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qregion.h
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qrgb.h
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qtouchdevice.h
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qtransform.h
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qvalidator.h
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qvector2d.h
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qwindowdefs.h
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qwindowdefs_win.h
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QAction
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QApplication
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QButtonGroup
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QDialog
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QHeaderView
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QPushButton
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractbutton.h
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractitemdelegate.h
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractitemview.h
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractscrollarea.h
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractslider.h
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractspinbox.h
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qaction.h
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qactiongroup.h
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qapplication.h
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qbuttongroup.h
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qdesktopwidget.h
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qdialog.h
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qframe.h
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qheaderview.h
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qpushbutton.h
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qrubberband.h
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qsizepolicy.h
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qslider.h
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qstyle.h
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qstyleoption.h
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtabbar.h
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtabwidget.h
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qwidget.h
 CMakeFiles/ros_gui.dir/src/qnode.cpp.o
  /home/mty/catkin_gui/src/ros_gui/include/ros_gui/qnode.h
  /home/mty/catkin_gui/src/ros_gui/src/qnode.cpp

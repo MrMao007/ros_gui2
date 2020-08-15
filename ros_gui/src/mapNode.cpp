@@ -23,6 +23,7 @@
 
 namespace Ui{
 
+typedef actionlib::SimpleActionClient<move_base_msgs::MoveBaseAction> MoveBaseClient;
 /*****************************************************************************
 ** Implementation
 *****************************************************************************/
@@ -55,8 +56,10 @@ bool MapNode::init() {
 
     pointp_sub = n.subscribe<geometry_msgs::PointStamped>("pointp", 10, &MapNode::pointpCallback, this);
 
-    semanticp_sub = n.subscribe<geometry_msgs::PointStamped>("semanticp", 10, &MapNode::semanticpCallback, this);
+    semanticp_sub = n.subscribe<geometry_msgs::PoseStamped>("semanticp", 10, &MapNode::semanticpCallback, this);
     goal_sub = n.subscribe<geometry_msgs::PoseStamped>("multigoal", 10, &MapNode::goalCallback, this);
+
+    coarse_sub = n.subscribe<geometry_msgs::PoseStamped>("coarse_goal", 10, &MapNode::coarseCallback, this);
 
     markerarray_pub = n.advertise<visualization_msgs::MarkerArray>("forbidden_marker", 10);
     semantic_markerarray_pub = n.advertise<visualization_msgs::MarkerArray>("semantic_marker", 10);
@@ -64,6 +67,7 @@ bool MapNode::init() {
     goalid_pub = n.advertise<visualization_msgs::MarkerArray>("goalid_marker",10);
     idarray_pub = n.advertise<visualization_msgs::MarkerArray>("id_marker", 10);
     obstacle_pub = n.advertise<custom_msgs::Obstacles>("Vobstacls", 10);
+    fine_pub = n.advertise<geometry_msgs::PoseStamped>("move_base_simple/goal", 10);
 
     start();
     return true;
@@ -107,9 +111,11 @@ void MapNode::pointpCallback(const geometry_msgs::PointStampedConstPtr &sp){
     emit pointpUpdated(pointp[0], pointp[1]);
 }
 
-void MapNode::semanticpCallback(const geometry_msgs::PointStampedConstPtr &sp){
-    semanticp[0] = sp->point.x;
-    semanticp[1] = sp->point.y;
+void MapNode::semanticpCallback(const geometry_msgs::PoseStampedConstPtr &sp){
+    geometry_msgs::PoseStamped temp=*sp;
+    semantic_vec.push_back(temp);
+    semanticp[0] = sp->pose.position.x;
+    semanticp[1] = sp->pose.position.y;
     emit semanticpUpdated(semanticp[0], semanticp[1]);
 }
 
@@ -313,14 +319,15 @@ void MapNode::semantic_slot(std::string text){
 
 void MapNode::goalCallback(const geometry_msgs::PoseStampedConstPtr &goal){
     visualization_msgs::Marker tmp;
-
+    geometry_msgs::PoseStamped temp = coarsetofine(goal);
+    goal_vec.push_back(temp);
     tmp.header.frame_id = "/map";
     tmp.header.stamp = ros::Time::now();
     tmp.ns = "goal";
     tmp.action = visualization_msgs::Marker::ADD;
     tmp.id = goal_id;
     tmp.type = visualization_msgs::Marker::ARROW;
-    tmp.pose = goal->pose;
+    tmp.pose = temp.pose;
     tmp.color.b = 1.0;
     tmp.color.g = 0;
     tmp.color.r = 0;
@@ -343,7 +350,7 @@ void MapNode::goalCallback(const geometry_msgs::PoseStampedConstPtr &goal){
     text_tmp.color.b = 1.0;
     text_tmp.color.a = 1.0;
     text_tmp.scale.z = 0.5;
-    text_tmp.pose=goal->pose;
+    text_tmp.pose=temp.pose;
     text_tmp.text = std::to_string(goal_id+1);
 
     goalid_markerarray.markers.push_back(text_tmp);
@@ -352,4 +359,49 @@ void MapNode::goalCallback(const geometry_msgs::PoseStampedConstPtr &goal){
     goal_id++;
 }
 
+void MapNode::coarseCallback(const geometry_msgs::PoseStampedConstPtr &goal){
+    geometry_msgs::PoseStamped fine = coarsetofine(goal);
+    fine_pub.publish(fine);
+}
+
+geometry_msgs::PoseStamped MapNode::coarsetofine(const geometry_msgs::PoseStampedConstPtr &goal){
+    geometry_msgs::PoseStamped res;
+    res.header = goal->header;
+    res.pose = goal->pose;
+    for(int i = 0 ; i < semantic_vec.size(); i++){
+        if((std::pow(semantic_vec[i].pose.position.x - goal->pose.position.x,2) + std::pow(semantic_vec[i].pose.position.y - goal->pose.position.y,2)) <= 4){
+            res.pose = semantic_vec[i].pose;
+            return res;
+        }
+    }
+    return res;
+}
+
+
+
+
+void MapNode::send_multigoal(){
+    MoveBaseClient ac("move_base", true);
+    while(!ac.waitForServer(ros::Duration(5.0))){
+      ROS_INFO("Waiting for the move_base action server to come up");
+    }
+    move_base_msgs::MoveBaseGoal tmp;
+    for(int i  = 0; i<goal_vec.size(); i++){
+        tmp.target_pose.header = goal_vec[i].header;
+        tmp.target_pose.pose = goal_vec[i].pose;
+        ac.sendGoal(tmp);
+        ac.waitForResult();
+        if(ac.getState() == actionlib::SimpleClientGoalState::SUCCEEDED){
+            ROS_INFO("Goal %d succeeded", i+1);
+        }
+        else{
+            ROS_INFO("FAIL!");
+            break;
+        }
+    }
+}
+
+void MapNode::multigoal_slot(){
+    QtConcurrent::run(this,&MapNode::send_multigoal);
+}
 }  // namespace ros_gui
