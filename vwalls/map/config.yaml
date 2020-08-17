@@ -1,0 +1,7 @@
+door_map: /home/liu/catkin_ws/src/vwalls/map/medical.pgm
+maxwidth: 0.5
+minwidth: 0.5
+length: 1.2
+r: 0.5
+bias_x: 0
+bias_y: 0

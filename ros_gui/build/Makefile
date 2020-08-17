@@ -1299,33 +1299,6 @@ include/ros_gui/moc_dialog.cpp.s:
 	$(MAKE) -f CMakeFiles/ros_gui.dir/build.make CMakeFiles/ros_gui.dir/include/ros_gui/moc_dialog.cpp.s
 .PHONY : include/ros_gui/moc_dialog.cpp.s
 
-include/ros_gui/moc_imagewidget.o: include/ros_gui/moc_imagewidget.cpp.o
-
-.PHONY : include/ros_gui/moc_imagewidget.o
-
-# target to build an object file
-include/ros_gui/moc_imagewidget.cpp.o:
-	$(MAKE) -f CMakeFiles/ros_gui.dir/build.make CMakeFiles/ros_gui.dir/include/ros_gui/moc_imagewidget.cpp.o
-.PHONY : include/ros_gui/moc_imagewidget.cpp.o
-
-include/ros_gui/moc_imagewidget.i: include/ros_gui/moc_imagewidget.cpp.i
-
-.PHONY : include/ros_gui/moc_imagewidget.i
-
-# target to preprocess a source file
-include/ros_gui/moc_imagewidget.cpp.i:
-	$(MAKE) -f CMakeFiles/ros_gui.dir/build.make CMakeFiles/ros_gui.dir/include/ros_gui/moc_imagewidget.cpp.i
-.PHONY : include/ros_gui/moc_imagewidget.cpp.i
-
-include/ros_gui/moc_imagewidget.s: include/ros_gui/moc_imagewidget.cpp.s
-
-.PHONY : include/ros_gui/moc_imagewidget.s
-
-# target to generate assembly for a file
-include/ros_gui/moc_imagewidget.cpp.s:
-	$(MAKE) -f CMakeFiles/ros_gui.dir/build.make CMakeFiles/ros_gui.dir/include/ros_gui/moc_imagewidget.cpp.s
-.PHONY : include/ros_gui/moc_imagewidget.cpp.s
-
 include/ros_gui/moc_mainwindow.o: include/ros_gui/moc_mainwindow.cpp.o
 
 .PHONY : include/ros_gui/moc_mainwindow.o
@@ -1623,33 +1596,6 @@ src/dialog.cpp.s:
 	$(MAKE) -f CMakeFiles/ros_gui.dir/build.make CMakeFiles/ros_gui.dir/src/dialog.cpp.s
 .PHONY : src/dialog.cpp.s
 
-src/imagewidget.o: src/imagewidget.cpp.o
-
-.PHONY : src/imagewidget.o
-
-# target to build an object file
-src/imagewidget.cpp.o:
-	$(MAKE) -f CMakeFiles/ros_gui.dir/build.make CMakeFiles/ros_gui.dir/src/imagewidget.cpp.o
-.PHONY : src/imagewidget.cpp.o
-
-src/imagewidget.i: src/imagewidget.cpp.i
-
-.PHONY : src/imagewidget.i
-
-# target to preprocess a source file
-src/imagewidget.cpp.i:
-	$(MAKE) -f CMakeFiles/ros_gui.dir/build.make CMakeFiles/ros_gui.dir/src/imagewidget.cpp.i
-.PHONY : src/imagewidget.cpp.i
-
-src/imagewidget.s: src/imagewidget.cpp.s
-
-.PHONY : src/imagewidget.s
-
-# target to generate assembly for a file
-src/imagewidget.cpp.s:
-	$(MAKE) -f CMakeFiles/ros_gui.dir/build.make CMakeFiles/ros_gui.dir/src/imagewidget.cpp.s
-.PHONY : src/imagewidget.cpp.s
-
 src/main.o: src/main.cpp.o
 
 .PHONY : src/main.o
@@ -1942,9 +1888,6 @@ help:
 	@echo "... include/ros_gui/moc_dialog.o"
 	@echo "... include/ros_gui/moc_dialog.i"
 	@echo "... include/ros_gui/moc_dialog.s"
-	@echo "... include/ros_gui/moc_imagewidget.o"
-	@echo "... include/ros_gui/moc_imagewidget.i"
-	@echo "... include/ros_gui/moc_imagewidget.s"
 	@echo "... include/ros_gui/moc_mainwindow.o"
 	@echo "... include/ros_gui/moc_mainwindow.i"
 	@echo "... include/ros_gui/moc_mainwindow.s"
@@ -1978,9 +1921,6 @@ help:
 	@echo "... src/dialog.o"
 	@echo "... src/dialog.i"
 	@echo "... src/dialog.s"
-	@echo "... src/imagewidget.o"
-	@echo "... src/imagewidget.i"
-	@echo "... src/imagewidget.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

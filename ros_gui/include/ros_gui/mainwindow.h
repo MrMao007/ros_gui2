@@ -2,7 +2,6 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include "imagewidget.h"
 #include <QKeyEvent>
 #include <iostream>
 #include <vector>
@@ -33,10 +32,6 @@ public:
     //void recvShowPicSignal(QImage image);//接收并显示图片的函数
     //void keyPressEvent(QKeyEvent *);//键盘按下事件
     //void keyReleaseEvent(QKeyEvent *);
-    QGraphicsPolygonItem* creatLeft();
-    QGraphicsPolygonItem* creatRight();
-    QGraphicsPolygonItem* creatUp();
-    QGraphicsPolygonItem* creatDown();
 
 public Q_SLOTS:
 
@@ -144,16 +139,7 @@ private slots:
     void reshow();
 private:
     Ui::MainWindow *ui;
-    ImageWidget *m_Image;
-    QImage *image;
-    QGraphicsEllipseItem* pEllipseItemTmp;
-    QGraphicsRectItem* direction;
-    QGraphicsPolygonItem* temp;
-    QGraphicsItemGroup *itemg;
-    QGraphicsPolygonItem* left;
-    QGraphicsPolygonItem* right;
-    QGraphicsPolygonItem* up;
-    QGraphicsPolygonItem* down;
+
     QLabel *statusLabel;
     QLabel *navLabel;
     QLabel *laser2Label;

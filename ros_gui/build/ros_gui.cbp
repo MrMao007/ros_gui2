@@ -1167,9 +1167,6 @@
       <Unit filename="/home/mty/catkin_gui/src/ros_gui/src/dialog.cpp">
          <Option target="ros_gui"/>
       </Unit>
-      <Unit filename="/home/mty/catkin_gui/src/ros_gui/src/imagewidget.cpp">
-         <Option target="ros_gui"/>
-      </Unit>
       <Unit filename="/home/mty/catkin_gui/src/ros_gui/src/main.cpp">
          <Option target="ros_gui"/>
       </Unit>

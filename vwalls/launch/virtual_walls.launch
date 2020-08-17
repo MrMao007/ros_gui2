@@ -1,0 +1,7 @@
+<launch>
+  <!-- turtlebot_teleop_key already has its own built in velocity smoother -->
+  <node pkg="vwalls" type="map-mannual.py" name="mannual"  output="screen">
+    <rosparam file="$(find vwalls)/map/medical.yaml" command="load"/>
+    <rosparam file="$(find vwalls)/map/config.yaml" command="load"/>
+  </node>
+</launch>

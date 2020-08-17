@@ -16,7 +16,6 @@ file(REMOVE_RECURSE
   "include/ros_gui/moc_arm.cpp"
   "include/ros_gui/moc_delete.cpp"
   "include/ros_gui/moc_mapNode.cpp"
-  "include/ros_gui/moc_imagewidget.cpp"
   "CMakeFiles/ros_gui.dir/src/semantic.cpp.o"
   "CMakeFiles/ros_gui.dir/src/mainwindow.cpp.o"
   "CMakeFiles/ros_gui.dir/src/markerNode.cpp.o"
@@ -26,7 +25,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/ros_gui.dir/src/main.cpp.o"
   "CMakeFiles/ros_gui.dir/src/arm.cpp.o"
   "CMakeFiles/ros_gui.dir/src/mapNode.cpp.o"
-  "CMakeFiles/ros_gui.dir/src/imagewidget.cpp.o"
   "CMakeFiles/ros_gui.dir/src/delete.cpp.o"
   "CMakeFiles/ros_gui.dir/qrc_media.cpp.o"
   "CMakeFiles/ros_gui.dir/qrc_images.cpp.o"
@@ -39,7 +37,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/ros_gui.dir/include/ros_gui/moc_arm.cpp.o"
   "CMakeFiles/ros_gui.dir/include/ros_gui/moc_delete.cpp.o"
   "CMakeFiles/ros_gui.dir/include/ros_gui/moc_mapNode.cpp.o"
-  "CMakeFiles/ros_gui.dir/include/ros_gui/moc_imagewidget.cpp.o"
   "devel/lib/ros_gui/ros_gui.pdb"
   "devel/lib/ros_gui/ros_gui"
 )
