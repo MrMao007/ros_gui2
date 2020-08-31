@@ -19,8 +19,8 @@
 
 QT_BEGIN_MOC_NAMESPACE
 struct qt_meta_stringdata_Ui__MapNode_t {
-    QByteArrayData data[20];
-    char stringdata0[229];
+    QByteArrayData data[24];
+    char stringdata0[288];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -48,7 +48,11 @@ QT_MOC_LITERAL(15, 176, 2), // "id"
 QT_MOC_LITERAL(16, 179, 13), // "semantic_slot"
 QT_MOC_LITERAL(17, 193, 11), // "std::string"
 QT_MOC_LITERAL(18, 205, 8), // "semantic"
-QT_MOC_LITERAL(19, 214, 14) // "multigoal_slot"
+QT_MOC_LITERAL(19, 214, 14), // "multigoal_slot"
+QT_MOC_LITERAL(20, 229, 16), // "record_path_slot"
+QT_MOC_LITERAL(21, 246, 14), // "save_path_slot"
+QT_MOC_LITERAL(22, 261, 10), // "track_slot"
+QT_MOC_LITERAL(23, 272, 15) // "track_shut_slot"
 
     },
     "Ui::MapNode\0startpUpdated\0\0x\0y\0"
@@ -57,7 +61,9 @@ QT_MOC_LITERAL(19, 214, 14) // "multigoal_slot"
     "semanticpUpdated\0marker_slot\0"
     "line_marker_slot\0point_marker_slot\0"
     "radius\0delete_slot\0id\0semantic_slot\0"
-    "std::string\0semantic\0multigoal_slot"
+    "std::string\0semantic\0multigoal_slot\0"
+    "record_path_slot\0save_path_slot\0"
+    "track_slot\0track_shut_slot"
 };
 #undef QT_MOC_LITERAL
 
@@ -67,7 +73,7 @@ static const uint qt_meta_data_Ui__MapNode[] = {
        7,       // revision
        0,       // classname
        0,    0, // classinfo
-      12,   14, // methods
+      16,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -75,20 +81,24 @@ static const uint qt_meta_data_Ui__MapNode[] = {
        6,       // signalCount
 
  // signals: name, argc, parameters, tag, flags
-       1,    2,   74,    2, 0x06 /* Public */,
-       5,    2,   79,    2, 0x06 /* Public */,
-       6,    2,   84,    2, 0x06 /* Public */,
-       7,    2,   89,    2, 0x06 /* Public */,
-       8,    2,   94,    2, 0x06 /* Public */,
-       9,    2,   99,    2, 0x06 /* Public */,
+       1,    2,   94,    2, 0x06 /* Public */,
+       5,    2,   99,    2, 0x06 /* Public */,
+       6,    2,  104,    2, 0x06 /* Public */,
+       7,    2,  109,    2, 0x06 /* Public */,
+       8,    2,  114,    2, 0x06 /* Public */,
+       9,    2,  119,    2, 0x06 /* Public */,
 
  // slots: name, argc, parameters, tag, flags
-      10,    0,  104,    2, 0x0a /* Public */,
-      11,    0,  105,    2, 0x0a /* Public */,
-      12,    1,  106,    2, 0x0a /* Public */,
-      14,    1,  109,    2, 0x0a /* Public */,
-      16,    1,  112,    2, 0x0a /* Public */,
-      19,    0,  115,    2, 0x0a /* Public */,
+      10,    0,  124,    2, 0x0a /* Public */,
+      11,    0,  125,    2, 0x0a /* Public */,
+      12,    1,  126,    2, 0x0a /* Public */,
+      14,    1,  129,    2, 0x0a /* Public */,
+      16,    1,  132,    2, 0x0a /* Public */,
+      19,    0,  135,    2, 0x0a /* Public */,
+      20,    0,  136,    2, 0x0a /* Public */,
+      21,    0,  137,    2, 0x0a /* Public */,
+      22,    0,  138,    2, 0x0a /* Public */,
+      23,    0,  139,    2, 0x0a /* Public */,
 
  // signals: parameters
     QMetaType::Void, QMetaType::Double, QMetaType::Double,    3,    4,
@@ -104,6 +114,10 @@ static const uint qt_meta_data_Ui__MapNode[] = {
     QMetaType::Void, QMetaType::Double,   13,
     QMetaType::Void, QMetaType::Int,   15,
     QMetaType::Void, 0x80000000 | 17,   18,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
     QMetaType::Void,
 
        0        // eod
@@ -127,6 +141,10 @@ void Ui::MapNode::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id,
         case 9: _t->delete_slot((*reinterpret_cast< int(*)>(_a[1]))); break;
         case 10: _t->semantic_slot((*reinterpret_cast< std::string(*)>(_a[1]))); break;
         case 11: _t->multigoal_slot(); break;
+        case 12: _t->record_path_slot(); break;
+        case 13: _t->save_path_slot(); break;
+        case 14: _t->track_slot(); break;
+        case 15: _t->track_shut_slot(); break;
         default: ;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {
@@ -196,13 +214,13 @@ int Ui::MapNode::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 12)
+        if (_id < 16)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 12;
+        _id -= 16;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 12)
+        if (_id < 16)
             *reinterpret_cast<int*>(_a[0]) = -1;
-        _id -= 12;
+        _id -= 16;
     }
     return _id;
 }

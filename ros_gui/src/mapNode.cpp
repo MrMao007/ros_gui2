@@ -60,6 +60,7 @@ bool MapNode::init() {
     goal_sub = n.subscribe<geometry_msgs::PoseStamped>("multigoal", 10, &MapNode::goalCallback, this);
 
     coarse_sub = n.subscribe<geometry_msgs::PoseStamped>("coarse_goal", 10, &MapNode::coarseCallback, this);
+    path_sub = n.subscribe<geometry_msgs::PoseWithCovarianceStamped>("amcl_pose", 10, &MapNode::pathCallback, this);
 
     markerarray_pub = n.advertise<visualization_msgs::MarkerArray>("forbidden_marker", 10);
     semantic_markerarray_pub = n.advertise<visualization_msgs::MarkerArray>("semantic_marker", 10);
@@ -68,6 +69,7 @@ bool MapNode::init() {
     idarray_pub = n.advertise<visualization_msgs::MarkerArray>("id_marker", 10);
     obstacle_pub = n.advertise<custom_msgs::Obstacles>("Vobstacls", 10);
     fine_pub = n.advertise<geometry_msgs::PoseStamped>("move_base_simple/goal", 10);
+    pathmarker_pub = n.advertise<visualization_msgs::MarkerArray>("path_marker", 10);
 
     start();
     return true;
@@ -119,6 +121,25 @@ void MapNode::semanticpCallback(const geometry_msgs::PoseStampedConstPtr &sp){
     emit semanticpUpdated(semanticp[0], semanticp[1]);
 }
 
+void MapNode::pathCallback(const geometry_msgs::PoseWithCovarianceStampedConstPtr &traj){
+    if(record_flag == 0)
+        return;
+    geometry_msgs::Pose temp = traj->pose.pose;
+    if(empty_flag == 1){
+        last_pose = temp;
+        path.push_back(temp);
+        add_path_makerarray(temp);
+        empty_flag = 0;
+    }
+    else{
+        if((std::pow(temp.position.x-last_pose.position.x, 2) + std::pow(temp.position.x-last_pose.position.x, 2) + std::pow(temp.position.x-last_pose.position.x, 2)) >= 0.25){
+            last_pose = temp;
+            path.push_back(temp);
+            add_path_makerarray(temp);
+        }
+
+    }
+}
 
 void MapNode::marker_slot(){
     visualization_msgs::Marker tmp;
@@ -297,24 +318,6 @@ void MapNode::semantic_slot(std::string text){
     semantic_markerarray.markers.push_back(tmp);
     semantic_markerarray_pub.publish(semantic_markerarray);
 
-    /*visualization_msgs::Marker id_tmp;
-    id_tmp.header.frame_id = "/map";
-    id_tmp.header.stamp = ros::Time::now();
-    id_tmp.ns = "id";
-    id_tmp.id = id -1;
-    id_tmp.type = visualization_msgs::Marker::TEXT_VIEW_FACING;
-    id_tmp.scale.z = 1;
-    id_tmp.color.g = 1;
-    id_tmp.color.a = 1;
-    id_tmp.pose.orientation.z = 1;
-    id_tmp.pose.position.x = pointp[0];
-    id_tmp.pose.position.y = pointp[1];
-    id_tmp.pose.position.z = 0;
-    std::ostringstream str;
-    str << id;
-    id_tmp.text = str.str();
-    idarray.markers.push_back(id_tmp);
-    idarray_pub.publish(idarray);*/
 }
 
 void MapNode::goalCallback(const geometry_msgs::PoseStampedConstPtr &goal){
@@ -404,4 +407,59 @@ void MapNode::send_multigoal(){
 void MapNode::multigoal_slot(){
     QtConcurrent::run(this,&MapNode::send_multigoal);
 }
+
+void MapNode::record_path_slot(){
+    path_id = 0;
+    std::vector<geometry_msgs::Pose>().swap(path);
+    clear_path_markerarray();
+    empty_flag = 1;
+    record_flag = 1;
+}
+
+void MapNode::save_path_slot(){
+    record_flag = 0;
+    QString data = "";
+    QFile file("/home/mty/bash/path.dat");
+    if(file.open(QIODevice::ReadWrite | QIODevice::Text)){
+        QTextStream stream(&file);
+        for(int i = 0; i < path.size(); i++){
+            stream << path[i].position.x << " " << path[i].position.y << " " << path[i].position.z << " " << path[i].orientation.x << " " << path[i].orientation.y << " " << path[i].orientation.z << " " << path[i].orientation.w << "\n";
+        }
+        file.close();
+    }
+}
+
+void MapNode::track_slot(){
+    track_flag = 1;
+}
+
+void MapNode::track_shut_slot(){
+    track_flag = 0;
+}
+
+void MapNode::add_path_makerarray(geometry_msgs::Pose last){
+    visualization_msgs::Marker tmp;
+    tmp.header.frame_id = "/map";
+    tmp.header.stamp = ros::Time::now();
+    tmp.ns = "path";
+    tmp.action = visualization_msgs::Marker::ADD;
+    tmp.id = path_id++;
+    tmp.type = visualization_msgs::Marker::CYLINDER;
+    tmp.color.b = 1.0;
+    tmp.color.r = 1.0;
+    tmp.color.a = 1.0;
+    tmp.scale.x = 0.1;
+    tmp.scale.y = 0.1;
+    tmp.pose.position.x = last.position.x;
+    tmp.pose.position.y = last.position.y;
+
+    path_markerarray.markers.push_back(tmp);
+    pathmarker_pub.publish(path_markerarray);
+}
+
+void MapNode::clear_path_markerarray(){
+    std::vector<visualization_msgs::Marker>().swap(path_markerarray.markers);
+    pathmarker_pub.publish(path_markerarray);
+}
 }  // namespace ros_gui
+

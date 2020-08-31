@@ -1,0 +1,363 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" 
+ 	xmlns:sensor="http://playerstage.sourceforge.net/gazebo/xmlschema/#sensor"
+    	xmlns:controller="http://playerstage.sourceforge.net/gazebo/xmlschema/#controller"
+    	xmlns:interface="http://playerstage.sourceforge.net/gazebo/xmlschema/#interface"
+	name="robot1_xacro">
+    <!-- PROPERTY LIST -->
+    <xacro:property name="M_PI" value="3.1415926"/>
+
+    <xacro:property name="chassisHeight" value="1.0"/><!-- chassis is base_link box -->
+    <xacro:property name="chassisLength" value="0.5"/>
+    <xacro:property name="chassisWidth" value="0.7"/>
+    <xacro:property name="chassisMass" value="39.57"/>
+
+    <xacro:property name="wheel_rf" value="0.1115"/><!-- 0.22r is radius -->
+    <xacro:property name="wheel_hf" value="0.075"/><!-- h is thickness -->
+    <xacro:property name="wheel_mf" value="0.65"/><!-- m is mass -->
+    <xacro:property name="wheel_separation" value="0.65"/>
+
+    <xacro:property name="wheel_rb" value="0.22"/><!-- 0.1115m is mass -->
+    <xacro:property name="wheel_hb" value="0.07"/>
+    <xacro:property name="wheel_mb" value="6.6"/>
+
+<!--xacro:macro name="mbot_base"-->
+  <link name="base_footprint">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+          <box size="0.001 0.001 0.001" />
+        </geometry>
+    </visual>
+  </link>
+
+  <joint name="base_footprint_joint" type="fixed">
+    <origin xyz="0 0 0.34" rpy="0 0 0" />     <!-- 0.53122 -->   
+      <parent link="base_footprint"/>
+      <child link="base_link" />
+  </joint>
+
+ <!-- smartwheelchair's link and joint -->
+<!-- base_link -->
+  <link name="base_link">
+    <inertial>
+      <origin xyz="-0.0467033089671817 0.00195040687504933 0.342099164322825" rpy="0 0 0" />
+        <mass value="${chassisMass}" />
+        <inertia ixx="${chassisMass*(chassisHeight*chassisHeight+chassisLength*chassisLength)/12}" ixy = "0" ixz = "0"
+            iyy="${chassisMass*(chassisWidth*chassisWidth+chassisLength*chassisLength)/12}" iyz = "0"
+            izz="${chassisMass*(chassisWidth*chassisWidth+chassisHeight*chassisHeight)/12}" /> 
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://wheelchair_witharm_description/meshes/base_link.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+<!--	
+        <box size="${chassisLength} ${chassisWidth} ${chassisHeight}"/>
+-->
+        <mesh filename="package://wheelchair_witharm_description/meshes/base_link.STL" />
+
+      </geometry>
+    </collision>
+  </link>
+
+
+<!-- wheel1_base_link -->
+  <link name="wheel1_base_link">
+    <inertial>
+      <origin xyz="-0.00531888423198426 0.000240068866362408 -0.0674007630439921" rpy="0 0 0" />
+      <mass value="0.256143008277043" />
+      <inertia
+        ixx="0.0013403622535211"
+        ixy="-2.68385471061318E-06"
+        ixz="6.27268459224356E-05"
+        iyy="0.00105791628007515"
+        iyz="5.54088017753336E-06"
+        izz="0.00076255932090289" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://wheelchair_witharm_description/meshes/wheel1_base_link.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://wheelchair_witharm_description/meshes/wheel1_base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="wheel1_base_joint" type="continuous">
+    <origin xyz="0.31798 0.24125 0.102" rpy="0 0 0" />
+    <parent link="base_link" />
+    <child link="wheel1_base_link" />
+    <axis xyz="0 0 -1" />
+  </joint>
+
+<!-- wheel1_link -->
+  <link name="wheel1_link">
+    <inertial>
+      <origin xyz="-0.000281197196000449 -0.0417491945994723 -0.00967140205549649" rpy="0 0 0" />
+      <mass value="${wheel_mf}" />
+      <inertia ixx="${wheel_mf*(3*wheel_rf*wheel_rf+wheel_hf*wheel_hf)/12}" ixy = "0" ixz = "0"
+            iyy="${wheel_mf*(3*wheel_rf*wheel_rf+wheel_hf*wheel_hf)/12}" iyz = "0"
+            izz="${wheel_mf*wheel_rf*wheel_rf/2}" /> 
+    </inertial>
+   <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://wheelchair_witharm_description/meshes/wheel1_link.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.227450980392157 0.247058823529412 0.23921568627451 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://wheelchair_witharm_description/meshes/wheel1_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="wheel1_joint" type="continuous">
+    <origin xyz="0.037969 0.035 -0.154" rpy="0 0 0" />
+    <parent link="wheel1_base_link" />
+    <child link="wheel1_link" />
+    <axis xyz="0 1 0" />
+  </joint>
+
+<!-- wheel3_base_link -->
+  <link name="wheel3_base_link">
+    <inertial>
+      <origin xyz="-0.00531888423198376 0.00024006886636304 -0.0674007630439927" rpy="0 0 0" />
+      <mass value="0.256143008277046" />
+      <inertia
+        ixx="0.00134036225352112"
+        ixy="-2.68385471061966E-06"
+        ixz="6.27268459224409E-05"
+        iyy="0.00105791628007516"
+        iyz="5.54088017754525E-06"
+        izz="0.000762559320902901" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://wheelchair_witharm_description/meshes/wheel3_base_link.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://wheelchair_witharm_description/meshes/wheel3_base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="wheel3_base_joint" type="continuous">
+    <origin xyz="0.31798 -0.24125 0.102" rpy="0 0 0" />
+    <parent link="base_link" />
+    <child link="wheel3_base_link" />
+    <axis xyz="0 0 -1" />
+  </joint>
+
+<!-- wheel3_link -->
+  <link name="wheel3_link">
+    <inertial>
+      <origin xyz="-0.0002812 0.028251 -0.0096714" rpy="0 0 0" />
+      <mass value="${wheel_mf}" />
+      <inertia ixx="${wheel_mf*(3*wheel_rf*wheel_rf+wheel_hf*wheel_hf)/12}" ixy = "0" ixz = "0"
+            iyy="${wheel_mf*(3*wheel_rf*wheel_rf+wheel_hf*wheel_hf)/12}" iyz = "0"
+            izz="${wheel_mf*wheel_rf*wheel_rf/2}" /> 
+    </inertial>
+
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://wheelchair_witharm_description/meshes/wheel3_link.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.227450980392157 0.247058823529412 0.23921568627451 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://wheelchair_witharm_description/meshes/wheel3_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="wheel3_joint" type="continuous">
+    <origin xyz="0.037969 -0.035 -0.154" rpy="0 0 0" />
+    <parent link="wheel3_base_link" />
+    <child link="wheel3_link" />
+    <axis xyz="0 1 0" /><!-- 0 -1 0 -->
+  </joint>
+
+<!-- wheel2_link -->
+  <link name="wheel2_link">
+    <inertial>
+      <origin xyz="-4.55191440096314E-15 -0.0082699243344691 -6.38378239159465E-16" rpy="0 0 0" />
+      <mass value="${wheel_mb}" />
+      <inertia ixx="${wheel_mb*(3*wheel_rb*wheel_rb+wheel_hb*wheel_hb)/12}" ixy = "0" ixz = "0"
+            iyy="${wheel_mb*(3*wheel_rb*wheel_rb+wheel_hb*wheel_hb)/12}" iyz = "0"
+            izz="${wheel_mb*wheel_rb*wheel_rb/2}" /> 
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://wheelchair_witharm_description/meshes/wheel2_link.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.227450980392157 0.247058823529412 0.23921568627451 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://wheelchair_witharm_description/meshes/wheel2_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="wheel2_joint" type="continuous">
+    <origin xyz="-0.29265 0.285 0.05475" rpy="0 0 0" />
+    <parent link="base_link" />
+    <child link="wheel2_link" />
+    <axis xyz="0 1 0" />
+  </joint>>
+
+<!-- wheel4_link -->
+  <link name="wheel4_link">
+    <inertial>
+      <origin xyz="7.88258347483861E-15 0.0147699243344732 -6.93889390390723E-16" rpy="0 0 0" />
+      <mass value="${wheel_mb}" />
+      <inertia ixx="${wheel_mb*(3*wheel_rb*wheel_rb+wheel_hb*wheel_hb)/12}" ixy = "0" ixz = "0"
+            iyy="${wheel_mb*(3*wheel_rb*wheel_rb+wheel_hb*wheel_hb)/12}" iyz = "0"
+            izz="${wheel_mb*wheel_rb*wheel_rb/2}" /> 
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://wheelchair_witharm_description/meshes/wheel4_link.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.227450980392157 0.247058823529412 0.23921568627451 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://wheelchair_witharm_description/meshes/wheel4_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="wheel4_joint" type="continuous">
+    <origin xyz="-0.29265 -0.2915 0.05475" rpy="0 0 0" />
+    <parent link="base_link" />
+    <child link="wheel4_link" />
+    <axis xyz="0 1 0" /><!-- 0 -1 0 -->
+  </joint>
+
+
+
+  <link name="frame_link">
+    <inertial>
+      <origin xyz="0.0568643757387729 4.44857429607315E-06 -0.124847834422441" rpy="0 0 0" />
+      <mass value="0.45397474241004" />
+      <inertia
+        ixx="0.0197636424106972"
+        ixy="8.49241518321996E-08"
+        ixz="-0.00260893831163848"
+        iyy="0.0148131962947126"
+        iyz="-6.19564656430542E-08"
+        izz="0.0090682428309201" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://wheelchair_witharm_description/meshes/frame_link.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://wheelchair_witharm_description/meshes/frame_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="frame_joint" type="fixed">
+    <origin xyz="-0.50893 0 1.4428" rpy="0 0 0" />
+    <parent link="base_link" />
+    <child link="frame_link" />
+  </joint>
+
+
+  <!-- Transmission is important to link the joints and the controller -->
+  <!--transmission name="wheel2_joint_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="wheel2_joint"/>
+    <actuator name="wheel2_joint_motor">
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission-->
+
+  <!-- Transmission is important to link the joints and the controller -->
+  <!--transmission name="wheel4_joint_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="wheel4_joint"/>
+    <actuator name="wheel4_joint_motor">
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission-->
+
+  <!-- controller -->
+  <gazebo>
+    <plugin name="differential_drive_controller" filename="libgazebo_ros_diff_drive.so">
+      <rosDebugLevel>Debug</rosDebugLevel>
+      <publishWheelTF>true</publishWheelTF>
+      <robotNamespace>/</robotNamespace>
+      <publishTf>1</publishTf>
+      <publishWheelJointState>true</publishWheelJointState>
+      <alwaysOn>true</alwaysOn>
+      <updateRate>100.0</updateRate>
+      <legacyMode>true</legacyMode>
+      <leftJoint>wheel4_joint</leftJoint>  <!-- wheel2_joint -->
+      <rightJoint>wheel2_joint</rightJoint><!-- wheel4_joint -->
+      <wheelSeparation>${wheel_separation}</wheelSeparation>
+      <wheelDiameter>${2*wheel_rb}</wheelDiameter>
+      <broadcastTF>1</broadcastTF>
+      <wheelTorque>100</wheelTorque>
+      <wheelAcceleration>1.8</wheelAcceleration>
+      <commandTopic>cmd_vel</commandTopic>
+      <odometryFrame>odom</odometryFrame>
+      <odometryTopic>odom</odometryTopic>
+      <publishOdomTF>true</publishOdomTF>
+      <robotBaseFrame>base_footprint</robotBaseFrame>
+    </plugin>
+  </gazebo>
+ 
+ <!--/xacro:macro-->
+
+</robot>

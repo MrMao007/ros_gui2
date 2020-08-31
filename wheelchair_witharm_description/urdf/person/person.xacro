@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="person">
+
+    <xacro:property name="personHeight" value="0.8"/><!-- person is box -->
+    <xacro:property name="personLength" value="0.9"/>
+    <xacro:property name="personWidth" value="0.5"/>
+    <xacro:property name="personMass" value="10"/>
+<!--xacro:macro name="person1"-->  
+  <link name="person_Link">
+    <inertial>
+      <origin xyz="-0.12865 -0.018283 -0.25098" rpy="0 0 0" />
+      <mass value="${personMass}" />
+        <inertia ixx="${personMass*(personHeight*personHeight+personLength*personLength)/12}" ixy = "0" ixz = "0"
+            iyy="${personMass*(personWidth*personWidth+personLength*personLength)/12}" iyz = "0"
+            izz="${personMass*(personWidth*personWidth+personHeight*personHeight)/12}" /> 
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://wheelchair_witharm_description/meshes/person.dae" scale="0.8 0.8 0.8"/>
+      </geometry>
+      <material name="">
+        <color rgba="0.75686 0.75686 0.52157 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://wheelchair_witharm_description/meshes/person.dae" scale="0.8 0.8 0.8"/>
+      </geometry>
+    </collision>
+  </link>
+
+ <!--/xacro:macro-->
+</robot>

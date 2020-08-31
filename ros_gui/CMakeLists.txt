@@ -17,6 +17,7 @@ set(custom_msgs_DIR /home/mty/catkin_gui/devel/share/custom_msgs/cmake)
 find_package(catkin REQUIRED COMPONENTS custom_msgs qt_build roscpp rospy std_msgs sensor_msgs rviz cv_bridge image_transport move_base_msgs tf)
 find_package(Qt5 REQUIRED COMPONENTS Core Gui Widgets Concurrent)
 find_package(OpenCV REQUIRED)
+
 include_directories(${catkin_INCLUDE_DIRS})
 include_directories(${Qt5_INCLUDE_DIRS})
 include_directories(${OpenCV_INCLUDE_DIRS})
@@ -62,6 +63,6 @@ file(GLOB_RECURSE QT_SOURCES RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} FOLLOW_SYMLINK
 ##############################################################################
 
 add_executable(ros_gui ${QT_SOURCES} ${QT_RESOURCES_CPP} ${QT_FORMS_HPP} ${QT_MOC_HPP})
-target_link_libraries(ros_gui  ${catkin_LIBRARIES} Qt5::Core Qt5::Gui Qt5::Widgets ${OpenCV_LIBRARIES})#${QT_LIBRARIES}
+target_link_libraries(ros_gui  ${catkin_LIBRARIES} Qt5::Core Qt5::Gui Qt5::Widgets ${OpenCV_LIBRARIES})
 install(TARGETS ros_gui
 	RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})

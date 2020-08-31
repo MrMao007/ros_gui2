@@ -1,0 +1,253 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <!-- materials -->
+
+<xacro:macro name="gazebo_link_reference" params="name color mu1 mu2 kp kd">
+  <gazebo reference = "${name}">
+    <turnGravityOff>false</turnGravityOff>
+    <material>Gazebo/${color}</material>
+    <mu1 value="${mu1}"/>
+    <mu2 value="${mu2}"/>
+    <kp value="${kp}"/>
+    <kd value="${kd}"/>
+  </gazebo>
+</xacro:macro>
+<xacro:macro name="gazebo_joint_reference" params="name mu1 mu2 kp kd">
+  <gazebo reference = "${name}">
+    <mu1 value="${mu1}"/>
+    <mu2 value="${mu2}"/>
+    <kp value="${kp}"/>
+    <kd value="${kd}"/>
+  </gazebo>
+</xacro:macro>
+
+<xacro:gazebo_link_reference name="wheel1_link" color="Black" mu1="100.0" mu2="500.0" kp="10000000.0" kd="0.01"/>
+<xacro:gazebo_link_reference name="wheel3_link" color="Black" mu1="100.0" mu2="500.0" kp="10000000.0" kd="0.01"/>
+<xacro:gazebo_link_reference name="wheel2_link" color="Black" mu1="1.0" mu2="1.0" kp="10000000.0" kd="0.1"/>
+<xacro:gazebo_link_reference name="wheel4_link" color="Black" mu1="1.0" mu2="1.0" kp="10000000.0" kd="0.1"/>
+<xacro:gazebo_link_reference name="wheel1_base_link" color="Grey" mu1="1.0" mu2="1.0" kp="10000000.0" kd="0.1"/>
+<xacro:gazebo_link_reference name="wheel3_base_link" color="Grey" mu1="1.0" mu2="1.0" kp="10000000.0" kd="0.1"/>
+
+<xacro:gazebo_joint_reference name="wheel1_base_joint" mu1="500.0" mu2="500.0" kp="10000000.0" kd="0.01"/>
+<xacro:gazebo_joint_reference name="wheel3_base_joint" mu1="500.0" mu2="500.0" kp="10000000.0" kd="0.01"/>
+<xacro:gazebo_joint_reference name="wheel1_joint" mu1="1.0" mu2="1.0" kp="10000000.0" kd="1.0"/>
+<xacro:gazebo_joint_reference name="wheel2_joint" mu1="1.0" mu2="1.0" kp="10000000.0" kd="1.0"/>
+<xacro:gazebo_joint_reference name="wheel3_joint" mu1="1.0" mu2="1.0" kp="10000000.0" kd="1.0"/>
+<xacro:gazebo_joint_reference name="wheel4_joint" mu1="1.0" mu2="1.0" kp="10000000.0" kd="1.0"/>
+<xacro:gazebo_joint_reference name="frame_joint" mu1="1.0" mu2="1.0" kp="10000000.0" kd="1.0"/>
+
+
+  <gazebo reference = "frame_link">
+    <turnGravityOff>false</turnGravityOff>
+    <material>Gazebo/Grey</material>
+  </gazebo>
+  <gazebo reference = "base_link">
+    <turnGravityOff>false</turnGravityOff>
+    <material>Gazebo/Grey</material>
+  </gazebo>
+
+  <!-- ros_control plugin -->
+<!--
+  <gazebo>
+    <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+      <robotNamespace>/robot</robotNamespace>
+      <legacyModeNS>true</legacyModeNS>
+    </plugin>
+  </gazebo>
+-->
+
+
+<!-- 2dlaser -->
+  <!-- hokuyo -->
+  <gazebo reference="2dlaser1_link">
+    <sensor type="ray" name="head_hokuyo_sensor1">
+      <pose>0 0 0 0 0 0</pose>
+      <visualize>false</visualize>
+      <update_rate>40</update_rate>
+      <ray>
+        <scan>
+          <horizontal>
+            <samples>720</samples>
+            <resolution>1</resolution>
+            <min_angle>-1.4</min_angle>
+            <max_angle>1.4</max_angle>
+          </horizontal>
+        </scan>
+        <range>
+          <min>0.10</min>
+          <max>30.0</max>
+          <resolution>0.01</resolution>
+        </range>
+        <noise>
+          <type>gaussian</type>
+          <!-- Noise parameters based on published spec for Hokuyo laser
+               achieving "+-30mm" accuracy at range < 10m.  A mean of 0.0m and
+               stddev of 0.01m will put 99.7% of samples within 0.03m of the true
+               reading. -->
+          <mean>0.0</mean>
+          <stddev>0.01</stddev>
+        </noise>
+      </ray>
+      <plugin name="gazebo_ros_head_hokuyo_controller" filename="libgazebo_ros_laser.so">
+        <topicName>scan</topicName>
+        <frameName>2dlaser1_link</frameName>
+      </plugin>
+    </sensor>
+  </gazebo>
+
+
+
+<!-- 2dlaser -->
+  <!-- hokuyo -->
+  <gazebo reference="2dlaser2_link">
+    <sensor type="ray" name="head_hokuyo_sensor2">
+      <pose>0 0 0 0 0 0</pose>
+      <visualize>false</visualize>
+      <update_rate>40</update_rate>
+      <ray>
+        <scan>
+          <horizontal>
+            <samples>720</samples>
+            <resolution>1</resolution>
+            <min_angle>-1.4</min_angle>
+            <max_angle>1.4</max_angle>
+          </horizontal>
+        </scan>
+        <range>
+          <min>0.10</min>
+          <max>30.0</max>
+          <resolution>0.01</resolution>
+        </range>
+        <noise>
+          <type>gaussian</type>
+          <!-- Noise parameters based on published spec for Hokuyo laser
+               achieving "+-30mm" accuracy at range < 10m.  A mean of 0.0m and
+               stddev of 0.01m will put 99.7% of samples within 0.03m of the true
+               reading. -->
+          <mean>0.0</mean>
+          <stddev>0.01</stddev>
+        </noise>
+      </ray>
+      <plugin name="gazebo_ros_head_hokuyo_controller" filename="libgazebo_ros_laser.so">
+        <topicName>scan</topicName>
+        <frameName>2dlaser2_link</frameName>
+      </plugin>
+    </sensor>
+  </gazebo>
+
+
+
+<!-- 2dlaser -->
+  <!-- hokuyo -->
+  <gazebo reference="2dlaser3_link">
+    <sensor type="ray" name="head_hokuyo_sensor3">
+      <pose>0 0 0 0 0 0</pose>
+      <visualize>false</visualize>
+      <update_rate>40</update_rate>
+      <ray>
+        <scan>
+          <horizontal>
+            <samples>720</samples>
+            <resolution>1</resolution>
+            <min_angle>-1.370796</min_angle>
+            <max_angle>1.370796</max_angle>
+          </horizontal>
+        </scan>
+        <range>
+          <min>0.10</min>
+          <max>30.0</max>
+          <resolution>0.01</resolution>
+        </range>
+        <noise>
+          <type>gaussian</type>
+          <!-- Noise parameters based on published spec for Hokuyo laser
+               achieving "+-30mm" accuracy at range < 10m.  A mean of 0.0m and
+               stddev of 0.01m will put 99.7% of samples within 0.03m of the true
+               reading. -->
+          <mean>0.0</mean>
+          <stddev>0.01</stddev>
+        </noise>
+      </ray>
+      <plugin name="gazebo_ros_head_hokuyo_controller" filename="libgazebo_ros_laser.so">
+        <topicName>backlaser/scan</topicName>
+        <frameName>2dlaser3_link</frameName>
+      </plugin>
+    </sensor>
+  </gazebo>
+<!--camera-->
+  <!--gazebo reference="camera_link">
+    <sensor type="camera" name="camera">
+      <update_rate>30.0</update_rate>
+      <camera name="camera">
+        <horizontal_fov>1.3962634</horizontal_fov>
+        <image>
+          <width>800</width>
+          <height>450</height>
+          <format>R8G8B8</format>
+        </image>
+        <clip>
+          <near>0.02</near>
+          <far>300</far>
+        </clip>
+        <noise>
+          <type>gaussian</type>
+          <mean>0.0</mean>
+          <stddev>0.007</stddev>
+        </noise>
+      </camera>
+      <plugin name="camera_controller" filename="libgazebo_ros_camera.so">
+        <alwaysOn>true</alwaysOn>
+        <updateRate>0.0</updateRate>
+        <cameraName>wheelchair/camera</cameraName>
+        <imageTopicName>image_raw</imageTopicName>
+        <cameraInfoTopicName>camera_info</cameraInfoTopicName>
+        <frameName>camera_link</frameName>
+        <hackBaseline>0.07</hackBaseline>
+        <distortionK1>0.0</distortionK1>
+        <distortionK2>0.0</distortionK2>
+        <distortionK3>0.0</distortionK3>
+        <distortionT1>0.0</distortionT1>
+        <distortionT2>0.0</distortionT2>
+      </plugin>
+    </sensor>
+  </gazebo-->
+  <!-- camera -->
+    <gazebo reference="camera_link">  
+      <sensor type="depth" name="camera">
+        <plugin name="kinect_camera_controller" filename="libgazebo_ros_openni_kinect.so">
+          <cameraName>camera</cameraName>
+          <alwaysOn>true</alwaysOn>
+          <updateRate>10</updateRate>
+          <imageTopicName>rgb/image_raw</imageTopicName>
+          <depthImageTopicName>depth/image_raw</depthImageTopicName>
+          <pointCloudTopicName>depth/points</pointCloudTopicName>
+          <cameraInfoTopicName>rgb/camera_info</cameraInfoTopicName>
+          <depthImageCameraInfoTopicName>depth/camera_info</depthImageCameraInfoTopicName>
+          <frameName>camera_link_optical</frameName>
+          <baseline>0.1</baseline>
+          <distortion_k1>0.0</distortion_k1>
+          <distortion_k2>0.0</distortion_k2>
+          <distortion_k3>0.0</distortion_k3>
+          <distortion_t1>0.0</distortion_t1>
+          <distortion_t2>0.0</distortion_t2>
+          <pointCloudCutoff>0.4</pointCloudCutoff>
+        </plugin>
+      </sensor>
+    </gazebo>
+
+<!-- ground_truth -->
+  <gazebo>
+    <plugin name="p3d_base_controller" filename="libgazebo_ros_p3d.so">
+      <alwaysOn>true</alwaysOn>
+      <updateRate>50.0</updateRate>
+      <bodyName>base_link</bodyName>
+      <topicName>ground_truth/state</topicName>
+      <gaussianNoise>0.01</gaussianNoise>
+      <frameName>world</frameName>
+      <xyzOffsets>0 0 0</xyzOffsets>
+      <rpyOffsets>0 0 0</rpyOffsets>
+    </plugin>
+  </gazebo>
+
+</robot>

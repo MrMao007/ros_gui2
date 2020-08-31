@@ -63,6 +63,10 @@ MainWindow::MainWindow(int argc, char** argv, QWidget *parent) :
     connect(&markernode, SIGNAL(power(float)), this, SLOT(power_slot(float)));
     connect(&markernode, SIGNAL(power_flag(float)), this, SLOT(flag_slot(float)));
     connect(&markernode, SIGNAL(temp(float)), this, SLOT(temp_slot(float)));
+    connect(this, SIGNAL(record_path_signal()), &(this->dialog_ui->mapnode), SLOT(record_path_slot()));
+    connect(this, SIGNAL(save_path_signal()), &(this->dialog_ui->mapnode), SLOT(save_path_slot()));
+    connect(this, SIGNAL(track_signal()), &(this->dialog_ui->mapnode), SLOT(track_slot()));
+    connect(this, SIGNAL(track_shut_signal()), &(this->dialog_ui->mapnode), SLOT(track_shut_slot()));
     connect(dialog_ui,SIGNAL(startp()),this,SLOT(startp_slot()));
     connect(dialog_ui,SIGNAL(endp()),this,SLOT(endp_slot()));
     connect(dialog_ui,SIGNAL(markersignal()),this,SLOT(markersignal_slot()));
@@ -181,11 +185,14 @@ void MainWindow::on_radioButton_4_toggled(bool state){
             ROS_ASSERT(semantic_marker!=NULL);
             semantic_marker->subProp("Marker Topic")->setValue("/semantic_marker");
 
-            //rviz::Display *path=manager_->createDisplay("rviz/Path","adjustable path",true);
+            //rviz::Display *path=manager_->createDisplay("rviz/Path","adjustable",true);
             //ROS_ASSERT(path!=NULL);
-            //
             //path->subProp("Topic")->setValue("/move_base/TebLocalPlannerROS/local_plan");
-            //path->subProp("Color")->setValue("25; 255; 0");
+            //path->subProp("Line Style")->setValue("Lines");
+            //path->subProp("Pose Style")->setValue("None");
+            //path->subProp("Color")->setValue(QColor(125,125,125));
+            //path->subProp("Color")->setValue("125; 125; 125");
+
 
 
             manager_->startUpdate();
@@ -252,7 +259,38 @@ void MainWindow::on_radioButton_8_toggled(bool state){
     }
 }
 
+void MainWindow::on_radioButton_9_toggled(bool state){
+    if(state){
 
+        rviz::Display *path_marker=manager_->createDisplay("rviz/MarkerArray","adjustable path",true);
+        ROS_ASSERT(path_marker!=NULL);
+        path_marker->subProp("Marker Topic")->setValue("/path_marker");
+        manager_->startUpdate();
+        emit record_path_signal();
+    }
+    else{
+        emit save_path_signal();
+    }
+}
+
+void MainWindow::on_radioButton_10_toggled(bool state){
+    if(state){
+        emit track_signal();
+    }
+    else{
+        emit track_shut_signal();
+    }
+}
+void MainWindow::on_pushButton_clicked(){
+    QString filename = QFileDialog::getOpenFileName(this, "select map", "/","PCD Files(*.pcd);;All Files(*)");
+    ui->lineEdit->setText(filename);
+}
+
+void MainWindow::on_pushButton_2_clicked(){
+    std::string filename = "/home/mty/bash/param.yaml";
+    int mappath_linenum = 51;
+    ModifyLineData(filename, mappath_linenum, "  mapPath: " + ui->lineEdit->text().toStdString());
+}
 
 void MainWindow::on_pushButton_23_clicked(){
     this->hide();
@@ -430,4 +468,48 @@ void MainWindow::setgoal_slot(){
     manager_->startUpdate();
 }
 
+/************************************
+@ Brief:    修改行数据
+@ Author: woniu201
+@ Created: 2018/08/31
+@ Return:
+************************************/
+void MainWindow::ModifyLineData(std::string fileName, int lineNum, std::string lineData)
+{
+    std::ifstream in;
+    in.open(fileName);
+    std::string strFileData = "";
+    int line = 1;
+    char tmpLineData[1024] = {0};
+    while(in.getline(tmpLineData, sizeof(tmpLineData)))
+    {
+        if (line == lineNum)
+        {
+        strFileData += lineData;
+        strFileData += "\n";
+        }
+    else
+        {
+        strFileData += CharToStr(tmpLineData);
+        strFileData += "\n";
+        }
+    line++;
+    }
+    in.close();
+    //写入文件
+    std::ofstream out;
+    out.open(fileName);
+    out.flush();
+    out<<strFileData;
+    out.close();
+}
 
+std::string MainWindow::CharToStr(char * contentChar)
+{
+    std::string tempStr;
+    for (int i=0;contentChar[i]!='\0';i++)
+    {
+        tempStr+=contentChar[i];
+    }
+    return tempStr;
+}

@@ -217,6 +217,8 @@ QtWidgets/QHeaderView
 -
 QtWidgets/QLabel
 -
+QtWidgets/QLineEdit
+-
 QtWidgets/QMainWindow
 -
 QtWidgets/QMenuBar
@@ -353,6 +355,8 @@ string
 -
 QThread
 -
+QFile
+-
 ros/ros.h
 -
 visualization_msgs/Marker.h
@@ -362,6 +366,8 @@ visualization_msgs/MarkerArray.h
 geometry_msgs/PointStamped.h
 -
 geometry_msgs/Point.h
+-
+geometry_msgs/PoseWithCovarianceStamped.h
 -
 custom_msgs/Obstacles.h
 -
@@ -994,6 +1000,44 @@ ros/message_operations.h
 std_msgs/Header.h
 -
 geometry_msgs/Pose.h
+-
+
+/opt/ros/kinetic/include/geometry_msgs/PoseWithCovariance.h
+string
+-
+vector
+-
+map
+-
+ros/types.h
+-
+ros/serialization.h
+-
+ros/builtin_message_traits.h
+-
+ros/message_operations.h
+-
+geometry_msgs/Pose.h
+-
+
+/opt/ros/kinetic/include/geometry_msgs/PoseWithCovarianceStamped.h
+string
+-
+vector
+-
+map
+-
+ros/types.h
+-
+ros/serialization.h
+-
+ros/builtin_message_traits.h
+-
+ros/message_operations.h
+-
+std_msgs/Header.h
+-
+geometry_msgs/PoseWithCovariance.h
 -
 
 /opt/ros/kinetic/include/geometry_msgs/Quaternion.h
@@ -5627,6 +5671,10 @@ QtCore/qsemaphore.h
 -
 
 /usr/include/x86_64-linux-gnu/qt5/QtConcurrent/qtconcurrentversion.h
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/QFile
+qfile.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qfile.h
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/QHash
 qhash.h

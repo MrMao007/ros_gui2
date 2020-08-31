@@ -17,6 +17,7 @@
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
+#include <QtWidgets/QLineEdit>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QProgressBar>
@@ -58,7 +59,14 @@ public:
     QLabel *label_10;
     QLabel *label_11;
     QRadioButton *radioButton_8;
+    QLabel *label_13;
     QLabel *label_12;
+    QRadioButton *radioButton_9;
+    QRadioButton *radioButton_10;
+    QLabel *label_14;
+    QLineEdit *lineEdit;
+    QPushButton *pushButton;
+    QPushButton *pushButton_2;
     QSpacerItem *verticalSpacer_2;
     QGridLayout *gridLayout_2;
     QRadioButton *radioButton_5;
@@ -238,14 +246,57 @@ public:
 
         gridLayout_3->addWidget(radioButton_8, 2, 0, 1, 1);
 
+        label_13 = new QLabel(widget);
+        label_13->setObjectName(QStringLiteral("label_13"));
+        label_13->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
+
+        gridLayout_3->addWidget(label_13, 3, 1, 1, 1);
+
         label_12 = new QLabel(widget);
         label_12->setObjectName(QStringLiteral("label_12"));
         label_12->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
 
         gridLayout_3->addWidget(label_12, 2, 1, 1, 1);
 
+        radioButton_9 = new QRadioButton(widget);
+        radioButton_9->setObjectName(QStringLiteral("radioButton_9"));
+        radioButton_9->setMinimumSize(QSize(25, 25));
+        radioButton_9->setAutoExclusive(false);
+
+        gridLayout_3->addWidget(radioButton_9, 3, 0, 1, 1);
+
+        radioButton_10 = new QRadioButton(widget);
+        radioButton_10->setObjectName(QStringLiteral("radioButton_10"));
+        radioButton_10->setMinimumSize(QSize(25, 25));
+        radioButton_10->setAutoExclusive(false);
+
+        gridLayout_3->addWidget(radioButton_10, 4, 0, 1, 1);
+
+        label_14 = new QLabel(widget);
+        label_14->setObjectName(QStringLiteral("label_14"));
+        label_14->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
+
+        gridLayout_3->addWidget(label_14, 4, 1, 1, 1);
+
 
         verticalLayout_3->addLayout(gridLayout_3);
+
+        lineEdit = new QLineEdit(widget);
+        lineEdit->setObjectName(QStringLiteral("lineEdit"));
+        lineEdit->setStyleSheet(QStringLiteral("background-color: rgb(255, 255, 255);"));
+        lineEdit->setReadOnly(true);
+
+        verticalLayout_3->addWidget(lineEdit);
+
+        pushButton = new QPushButton(widget);
+        pushButton->setObjectName(QStringLiteral("pushButton"));
+
+        verticalLayout_3->addWidget(pushButton);
+
+        pushButton_2 = new QPushButton(widget);
+        pushButton_2->setObjectName(QStringLiteral("pushButton_2"));
+
+        verticalLayout_3->addWidget(pushButton_2);
 
         verticalSpacer_2 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
 
@@ -411,7 +462,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        tabWidget->setCurrentIndex(0);
+        tabWidget->setCurrentIndex(1);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -434,7 +485,14 @@ public:
         label_10->setText(QApplication::translate("MainWindow", "3D\346\277\200\345\205\211", 0));
         label_11->setText(QApplication::translate("MainWindow", "\345\256\232\344\275\215", 0));
         radioButton_8->setText(QString());
+        label_13->setText(QApplication::translate("MainWindow", "\350\256\260\345\275\225\350\267\257\345\276\204", 0));
         label_12->setText(QApplication::translate("MainWindow", "\345\273\272\345\233\276", 0));
+        radioButton_9->setText(QString());
+        radioButton_10->setText(QString());
+        label_14->setText(QApplication::translate("MainWindow", "\350\267\237\350\270\252\350\267\257\345\276\204", 0));
+        lineEdit->setText(QString());
+        pushButton->setText(QApplication::translate("MainWindow", "\351\200\211\346\213\251\345\234\260\345\233\276", 0));
+        pushButton_2->setText(QApplication::translate("MainWindow", "\346\211\223\345\274\200\345\234\260\345\233\276", 0));
         tabWidget->setTabText(tabWidget->indexOf(widget), QApplication::translate("MainWindow", "3D", 0));
         radioButton_5->setText(QString());
         label_9->setText(QApplication::translate("MainWindow", "\351\201\245\346\216\247", 0));

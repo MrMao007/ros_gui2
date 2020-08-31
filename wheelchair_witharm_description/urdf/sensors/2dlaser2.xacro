@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="2dlaser2">
+<!--xacro:macro name="two_d_laser2"-->
+  <link
+    name="2dlaser2_link">
+    <inertial>
+      <origin xyz="0.771243118908379 0.274303584666176 -0.170989052206578" rpy="0 0 0" />
+        <mass value="1e-5" />
+        <inertia ixx="1e-6" ixy="0" ixz="0" iyy="1e-6" iyz="0" izz="1e-6" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" /><!-- 0 0 3.14 -->
+      <geometry>
+        <mesh filename="package://wheelchair_witharm_description/meshes/2dlaser2_link.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.00784313725490196 0.0117647058823529 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://wheelchair_witharm_description/meshes/2dlaser2_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+
+ <!--/xacro:macro-->
+</robot>

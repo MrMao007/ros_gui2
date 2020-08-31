@@ -636,6 +636,8 @@ CMakeFiles/ros_gui.dir/include/ros_gui/moc_dialog.cpp.o: /opt/ros/kinetic/includ
 CMakeFiles/ros_gui.dir/include/ros_gui/moc_dialog.cpp.o: /opt/ros/kinetic/include/geometry_msgs/PointStamped.h
 CMakeFiles/ros_gui.dir/include/ros_gui/moc_dialog.cpp.o: /opt/ros/kinetic/include/geometry_msgs/Pose.h
 CMakeFiles/ros_gui.dir/include/ros_gui/moc_dialog.cpp.o: /opt/ros/kinetic/include/geometry_msgs/PoseStamped.h
+CMakeFiles/ros_gui.dir/include/ros_gui/moc_dialog.cpp.o: /opt/ros/kinetic/include/geometry_msgs/PoseWithCovariance.h
+CMakeFiles/ros_gui.dir/include/ros_gui/moc_dialog.cpp.o: /opt/ros/kinetic/include/geometry_msgs/PoseWithCovarianceStamped.h
 CMakeFiles/ros_gui.dir/include/ros_gui/moc_dialog.cpp.o: /opt/ros/kinetic/include/geometry_msgs/Quaternion.h
 CMakeFiles/ros_gui.dir/include/ros_gui/moc_dialog.cpp.o: /opt/ros/kinetic/include/geometry_msgs/Vector3.h
 CMakeFiles/ros_gui.dir/include/ros_gui/moc_dialog.cpp.o: /opt/ros/kinetic/include/move_base_msgs/MoveBaseAction.h
@@ -728,6 +730,7 @@ CMakeFiles/ros_gui.dir/include/ros_gui/moc_dialog.cpp.o: /usr/include/x86_64-lin
 CMakeFiles/ros_gui.dir/include/ros_gui/moc_dialog.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtConcurrent/qtconcurrentstoredfunctioncall.h
 CMakeFiles/ros_gui.dir/include/ros_gui/moc_dialog.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtConcurrent/qtconcurrentthreadengine.h
 CMakeFiles/ros_gui.dir/include/ros_gui/moc_dialog.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtConcurrent/qtconcurrentversion.h
+CMakeFiles/ros_gui.dir/include/ros_gui/moc_dialog.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/QFile
 CMakeFiles/ros_gui.dir/include/ros_gui/moc_dialog.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/QObject
 CMakeFiles/ros_gui.dir/include/ros_gui/moc_dialog.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/QScopedPointer
 CMakeFiles/ros_gui.dir/include/ros_gui/moc_dialog.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/QString
@@ -991,6 +994,8 @@ CMakeFiles/ros_gui.dir/include/ros_gui/moc_mainwindow.cpp.o: /opt/ros/kinetic/in
 CMakeFiles/ros_gui.dir/include/ros_gui/moc_mainwindow.cpp.o: /opt/ros/kinetic/include/geometry_msgs/PointStamped.h
 CMakeFiles/ros_gui.dir/include/ros_gui/moc_mainwindow.cpp.o: /opt/ros/kinetic/include/geometry_msgs/Pose.h
 CMakeFiles/ros_gui.dir/include/ros_gui/moc_mainwindow.cpp.o: /opt/ros/kinetic/include/geometry_msgs/PoseStamped.h
+CMakeFiles/ros_gui.dir/include/ros_gui/moc_mainwindow.cpp.o: /opt/ros/kinetic/include/geometry_msgs/PoseWithCovariance.h
+CMakeFiles/ros_gui.dir/include/ros_gui/moc_mainwindow.cpp.o: /opt/ros/kinetic/include/geometry_msgs/PoseWithCovarianceStamped.h
 CMakeFiles/ros_gui.dir/include/ros_gui/moc_mainwindow.cpp.o: /opt/ros/kinetic/include/geometry_msgs/Quaternion.h
 CMakeFiles/ros_gui.dir/include/ros_gui/moc_mainwindow.cpp.o: /opt/ros/kinetic/include/geometry_msgs/Twist.h
 CMakeFiles/ros_gui.dir/include/ros_gui/moc_mainwindow.cpp.o: /opt/ros/kinetic/include/geometry_msgs/Vector3.h
@@ -1385,6 +1390,7 @@ CMakeFiles/ros_gui.dir/include/ros_gui/moc_mainwindow.cpp.o: /usr/include/x86_64
 CMakeFiles/ros_gui.dir/include/ros_gui/moc_mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtConcurrent/qtconcurrentstoredfunctioncall.h
 CMakeFiles/ros_gui.dir/include/ros_gui/moc_mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtConcurrent/qtconcurrentthreadengine.h
 CMakeFiles/ros_gui.dir/include/ros_gui/moc_mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtConcurrent/qtconcurrentversion.h
+CMakeFiles/ros_gui.dir/include/ros_gui/moc_mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/QFile
 CMakeFiles/ros_gui.dir/include/ros_gui/moc_mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/QHash
 CMakeFiles/ros_gui.dir/include/ros_gui/moc_mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/QList
 CMakeFiles/ros_gui.dir/include/ros_gui/moc_mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/QMap
@@ -1653,6 +1659,8 @@ CMakeFiles/ros_gui.dir/include/ros_gui/moc_mapNode.cpp.o: /opt/ros/kinetic/inclu
 CMakeFiles/ros_gui.dir/include/ros_gui/moc_mapNode.cpp.o: /opt/ros/kinetic/include/geometry_msgs/PointStamped.h
 CMakeFiles/ros_gui.dir/include/ros_gui/moc_mapNode.cpp.o: /opt/ros/kinetic/include/geometry_msgs/Pose.h
 CMakeFiles/ros_gui.dir/include/ros_gui/moc_mapNode.cpp.o: /opt/ros/kinetic/include/geometry_msgs/PoseStamped.h
+CMakeFiles/ros_gui.dir/include/ros_gui/moc_mapNode.cpp.o: /opt/ros/kinetic/include/geometry_msgs/PoseWithCovariance.h
+CMakeFiles/ros_gui.dir/include/ros_gui/moc_mapNode.cpp.o: /opt/ros/kinetic/include/geometry_msgs/PoseWithCovarianceStamped.h
 CMakeFiles/ros_gui.dir/include/ros_gui/moc_mapNode.cpp.o: /opt/ros/kinetic/include/geometry_msgs/Quaternion.h
 CMakeFiles/ros_gui.dir/include/ros_gui/moc_mapNode.cpp.o: /opt/ros/kinetic/include/geometry_msgs/Vector3.h
 CMakeFiles/ros_gui.dir/include/ros_gui/moc_mapNode.cpp.o: /opt/ros/kinetic/include/move_base_msgs/MoveBaseAction.h
@@ -1745,6 +1753,7 @@ CMakeFiles/ros_gui.dir/include/ros_gui/moc_mapNode.cpp.o: /usr/include/x86_64-li
 CMakeFiles/ros_gui.dir/include/ros_gui/moc_mapNode.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtConcurrent/qtconcurrentstoredfunctioncall.h
 CMakeFiles/ros_gui.dir/include/ros_gui/moc_mapNode.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtConcurrent/qtconcurrentthreadengine.h
 CMakeFiles/ros_gui.dir/include/ros_gui/moc_mapNode.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtConcurrent/qtconcurrentversion.h
+CMakeFiles/ros_gui.dir/include/ros_gui/moc_mapNode.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/QFile
 CMakeFiles/ros_gui.dir/include/ros_gui/moc_mapNode.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/QObject
 CMakeFiles/ros_gui.dir/include/ros_gui/moc_mapNode.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/QScopedPointer
 CMakeFiles/ros_gui.dir/include/ros_gui/moc_mapNode.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/QStringList
@@ -3305,6 +3314,8 @@ CMakeFiles/ros_gui.dir/src/dialog.cpp.o: /opt/ros/kinetic/include/geometry_msgs/
 CMakeFiles/ros_gui.dir/src/dialog.cpp.o: /opt/ros/kinetic/include/geometry_msgs/PointStamped.h
 CMakeFiles/ros_gui.dir/src/dialog.cpp.o: /opt/ros/kinetic/include/geometry_msgs/Pose.h
 CMakeFiles/ros_gui.dir/src/dialog.cpp.o: /opt/ros/kinetic/include/geometry_msgs/PoseStamped.h
+CMakeFiles/ros_gui.dir/src/dialog.cpp.o: /opt/ros/kinetic/include/geometry_msgs/PoseWithCovariance.h
+CMakeFiles/ros_gui.dir/src/dialog.cpp.o: /opt/ros/kinetic/include/geometry_msgs/PoseWithCovarianceStamped.h
 CMakeFiles/ros_gui.dir/src/dialog.cpp.o: /opt/ros/kinetic/include/geometry_msgs/Quaternion.h
 CMakeFiles/ros_gui.dir/src/dialog.cpp.o: /opt/ros/kinetic/include/geometry_msgs/Vector3.h
 CMakeFiles/ros_gui.dir/src/dialog.cpp.o: /opt/ros/kinetic/include/move_base_msgs/MoveBaseAction.h
@@ -3397,6 +3408,7 @@ CMakeFiles/ros_gui.dir/src/dialog.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCon
 CMakeFiles/ros_gui.dir/src/dialog.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtConcurrent/qtconcurrentstoredfunctioncall.h
 CMakeFiles/ros_gui.dir/src/dialog.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtConcurrent/qtconcurrentthreadengine.h
 CMakeFiles/ros_gui.dir/src/dialog.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtConcurrent/qtconcurrentversion.h
+CMakeFiles/ros_gui.dir/src/dialog.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/QFile
 CMakeFiles/ros_gui.dir/src/dialog.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/QObject
 CMakeFiles/ros_gui.dir/src/dialog.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/QScopedPointer
 CMakeFiles/ros_gui.dir/src/dialog.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/QString
@@ -3706,6 +3718,8 @@ CMakeFiles/ros_gui.dir/src/main.cpp.o: /opt/ros/kinetic/include/geometry_msgs/Po
 CMakeFiles/ros_gui.dir/src/main.cpp.o: /opt/ros/kinetic/include/geometry_msgs/PointStamped.h
 CMakeFiles/ros_gui.dir/src/main.cpp.o: /opt/ros/kinetic/include/geometry_msgs/Pose.h
 CMakeFiles/ros_gui.dir/src/main.cpp.o: /opt/ros/kinetic/include/geometry_msgs/PoseStamped.h
+CMakeFiles/ros_gui.dir/src/main.cpp.o: /opt/ros/kinetic/include/geometry_msgs/PoseWithCovariance.h
+CMakeFiles/ros_gui.dir/src/main.cpp.o: /opt/ros/kinetic/include/geometry_msgs/PoseWithCovarianceStamped.h
 CMakeFiles/ros_gui.dir/src/main.cpp.o: /opt/ros/kinetic/include/geometry_msgs/Quaternion.h
 CMakeFiles/ros_gui.dir/src/main.cpp.o: /opt/ros/kinetic/include/geometry_msgs/Twist.h
 CMakeFiles/ros_gui.dir/src/main.cpp.o: /opt/ros/kinetic/include/geometry_msgs/Vector3.h
@@ -4100,6 +4114,7 @@ CMakeFiles/ros_gui.dir/src/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtConcu
 CMakeFiles/ros_gui.dir/src/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtConcurrent/qtconcurrentstoredfunctioncall.h
 CMakeFiles/ros_gui.dir/src/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtConcurrent/qtconcurrentthreadengine.h
 CMakeFiles/ros_gui.dir/src/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtConcurrent/qtconcurrentversion.h
+CMakeFiles/ros_gui.dir/src/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/QFile
 CMakeFiles/ros_gui.dir/src/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/QHash
 CMakeFiles/ros_gui.dir/src/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/QList
 CMakeFiles/ros_gui.dir/src/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/QMap
@@ -4392,6 +4407,8 @@ CMakeFiles/ros_gui.dir/src/mainwindow.cpp.o: /opt/ros/kinetic/include/geometry_m
 CMakeFiles/ros_gui.dir/src/mainwindow.cpp.o: /opt/ros/kinetic/include/geometry_msgs/PointStamped.h
 CMakeFiles/ros_gui.dir/src/mainwindow.cpp.o: /opt/ros/kinetic/include/geometry_msgs/Pose.h
 CMakeFiles/ros_gui.dir/src/mainwindow.cpp.o: /opt/ros/kinetic/include/geometry_msgs/PoseStamped.h
+CMakeFiles/ros_gui.dir/src/mainwindow.cpp.o: /opt/ros/kinetic/include/geometry_msgs/PoseWithCovariance.h
+CMakeFiles/ros_gui.dir/src/mainwindow.cpp.o: /opt/ros/kinetic/include/geometry_msgs/PoseWithCovarianceStamped.h
 CMakeFiles/ros_gui.dir/src/mainwindow.cpp.o: /opt/ros/kinetic/include/geometry_msgs/Quaternion.h
 CMakeFiles/ros_gui.dir/src/mainwindow.cpp.o: /opt/ros/kinetic/include/geometry_msgs/Twist.h
 CMakeFiles/ros_gui.dir/src/mainwindow.cpp.o: /opt/ros/kinetic/include/geometry_msgs/Vector3.h
@@ -4786,6 +4803,7 @@ CMakeFiles/ros_gui.dir/src/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/Q
 CMakeFiles/ros_gui.dir/src/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtConcurrent/qtconcurrentstoredfunctioncall.h
 CMakeFiles/ros_gui.dir/src/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtConcurrent/qtconcurrentthreadengine.h
 CMakeFiles/ros_gui.dir/src/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtConcurrent/qtconcurrentversion.h
+CMakeFiles/ros_gui.dir/src/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/QFile
 CMakeFiles/ros_gui.dir/src/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/QHash
 CMakeFiles/ros_gui.dir/src/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/QList
 CMakeFiles/ros_gui.dir/src/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/QMap
@@ -5000,11 +5018,15 @@ CMakeFiles/ros_gui.dir/src/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/Q
 CMakeFiles/ros_gui.dir/src/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtGui/qpaintdevice.h
 CMakeFiles/ros_gui.dir/src/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtGui/qpainterpath.h
 CMakeFiles/ros_gui.dir/src/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtGui/qpalette.h
+CMakeFiles/ros_gui.dir/src/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtGui/qpen.h
 CMakeFiles/ros_gui.dir/src/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtGui/qpixelformat.h
 CMakeFiles/ros_gui.dir/src/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtGui/qpixmap.h
 CMakeFiles/ros_gui.dir/src/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtGui/qpolygon.h
 CMakeFiles/ros_gui.dir/src/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtGui/qregion.h
 CMakeFiles/ros_gui.dir/src/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtGui/qrgb.h
+CMakeFiles/ros_gui.dir/src/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtGui/qtextcursor.h
+CMakeFiles/ros_gui.dir/src/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtGui/qtextformat.h
+CMakeFiles/ros_gui.dir/src/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtGui/qtextoption.h
 CMakeFiles/ros_gui.dir/src/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtGui/qtouchdevice.h
 CMakeFiles/ros_gui.dir/src/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtGui/qtransform.h
 CMakeFiles/ros_gui.dir/src/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtGui/qvalidator.h
@@ -5021,6 +5043,7 @@ CMakeFiles/ros_gui.dir/src/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/Q
 CMakeFiles/ros_gui.dir/src/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QHBoxLayout
 CMakeFiles/ros_gui.dir/src/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QHeaderView
 CMakeFiles/ros_gui.dir/src/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QLabel
+CMakeFiles/ros_gui.dir/src/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QLineEdit
 CMakeFiles/ros_gui.dir/src/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMainWindow
 CMakeFiles/ros_gui.dir/src/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMenuBar
 CMakeFiles/ros_gui.dir/src/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QProgressBar
@@ -5051,6 +5074,7 @@ CMakeFiles/ros_gui.dir/src/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/Q
 CMakeFiles/ros_gui.dir/src/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlabel.h
 CMakeFiles/ros_gui.dir/src/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlayout.h
 CMakeFiles/ros_gui.dir/src/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlayoutitem.h
+CMakeFiles/ros_gui.dir/src/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlineedit.h
 CMakeFiles/ros_gui.dir/src/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmainwindow.h
 CMakeFiles/ros_gui.dir/src/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmenu.h
 CMakeFiles/ros_gui.dir/src/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmenubar.h
@@ -5098,6 +5122,8 @@ CMakeFiles/ros_gui.dir/src/mapNode.cpp.o: /opt/ros/kinetic/include/geometry_msgs
 CMakeFiles/ros_gui.dir/src/mapNode.cpp.o: /opt/ros/kinetic/include/geometry_msgs/PointStamped.h
 CMakeFiles/ros_gui.dir/src/mapNode.cpp.o: /opt/ros/kinetic/include/geometry_msgs/Pose.h
 CMakeFiles/ros_gui.dir/src/mapNode.cpp.o: /opt/ros/kinetic/include/geometry_msgs/PoseStamped.h
+CMakeFiles/ros_gui.dir/src/mapNode.cpp.o: /opt/ros/kinetic/include/geometry_msgs/PoseWithCovariance.h
+CMakeFiles/ros_gui.dir/src/mapNode.cpp.o: /opt/ros/kinetic/include/geometry_msgs/PoseWithCovarianceStamped.h
 CMakeFiles/ros_gui.dir/src/mapNode.cpp.o: /opt/ros/kinetic/include/geometry_msgs/Quaternion.h
 CMakeFiles/ros_gui.dir/src/mapNode.cpp.o: /opt/ros/kinetic/include/geometry_msgs/Vector3.h
 CMakeFiles/ros_gui.dir/src/mapNode.cpp.o: /opt/ros/kinetic/include/move_base_msgs/MoveBaseAction.h
@@ -5190,6 +5216,7 @@ CMakeFiles/ros_gui.dir/src/mapNode.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCo
 CMakeFiles/ros_gui.dir/src/mapNode.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtConcurrent/qtconcurrentstoredfunctioncall.h
 CMakeFiles/ros_gui.dir/src/mapNode.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtConcurrent/qtconcurrentthreadengine.h
 CMakeFiles/ros_gui.dir/src/mapNode.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtConcurrent/qtconcurrentversion.h
+CMakeFiles/ros_gui.dir/src/mapNode.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/QFile
 CMakeFiles/ros_gui.dir/src/mapNode.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/QObject
 CMakeFiles/ros_gui.dir/src/mapNode.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/QScopedPointer
 CMakeFiles/ros_gui.dir/src/mapNode.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/QStringList

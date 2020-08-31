@@ -32,6 +32,16 @@ public:
     //void recvShowPicSignal(QImage image);//接收并显示图片的函数
     //void keyPressEvent(QKeyEvent *);//键盘按下事件
     //void keyReleaseEvent(QKeyEvent *);
+    void ModifyLineData(std::string fileName, int lineNum, std::string lineData);
+    std::string CharToStr(char * contentChar);
+signals:
+    void record_path_signal();
+
+    void save_path_signal();
+
+    void track_signal();
+
+    void track_shut_signal();
 
 public Q_SLOTS:
 
@@ -73,50 +83,12 @@ private slots:
     void on_radioButton_6_toggled(bool state);
     void on_radioButton_7_toggled(bool state);
     void on_radioButton_8_toggled(bool state);
-    /*void on_radioButton_3_clicked();
-    void on_radioButton_4_clicked();
-    void on_radioButton_7_clicked();
-    void on_radioButton_8_clicked();*/
-    /*void on_pushButton_2_clicked();
+    void on_radioButton_9_toggled(bool state);
+    void on_radioButton_10_toggled(bool state);
 
-    void on_pushButton_3_clicked();
+    void on_pushButton_clicked();
 
-    void on_pushButton_4_clicked();
-
-    void on_pushButton_5_clicked();
-
-    void on_pushButton_6_clicked();
-
-    void on_pushButton_7_clicked();
-
-    void on_pushButton_8_clicked();
-
-    void on_pushButton_9_clicked();
-
-    void on_pushButton_10_clicked();
-
-
-    void on_pushButton_12_clicked();
-
-
-
-    void on_pushButton_14_clicked();
-
-    void on_pushButton_15_clicked();
-
-    void on_pushButton_16_clicked();
-
-    void on_pushButton_17_clicked();
-
-    void on_pushButton_18_clicked();
-
-
-
-
-
-    void on_pushButton_21_clicked();
-
-    void on_pushButton_22_clicked();*/
+    void on_pushButton_2_clicked();
 
     void on_pushButton_23_clicked();
 

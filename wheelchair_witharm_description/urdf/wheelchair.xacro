@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<robot name="wheelchair" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+    <xacro:include filename="$(find wheelchair_witharm_description)/urdf/wheelchair_base/wheelchair_base.xacro" />
+    <xacro:include filename="$(find wheelchair_witharm_description)/urdf/sensors/2dlaser1.xacro" />
+    <xacro:include filename="$(find wheelchair_witharm_description)/urdf/sensors/2dlaser2.xacro" />
+    <xacro:include filename="$(find wheelchair_witharm_description)/urdf/sensors/2dlaser3.xacro" />
+    <xacro:include filename="$(find wheelchair_witharm_description)/urdf/sensors/VLP-16.urdf.xacro" />
+    <xacro:include filename="$(find wheelchair_witharm_description)/urdf/sensors/camera.xacro" />
+
+<!--
+    <xacro:include filename="$(find wheelchair_witharm_description)/urdf/arm_and_gripper/gen3_robotiq_2f_85.xacro" />
+-->
+    <xacro:include filename="$(find wheelchair_witharm_description)/urdf/robot.gazebo" />
+
+
+<!-- 2dlaser1 -->
+  <joint name="2dlaser1_joint" type="fixed">
+    <origin xyz="0.60054 0.29449 0.29895" rpy="-3.1416 0 0" />
+    <parent link="base_link" />
+    <child link="2dlaser1_link" />
+  </joint>
+
+<!-- 2dlaser2 -->
+  <joint name="2dlaser2_joint" type="fixed">
+    <origin xyz="0.60054 -0.29448 0.29896" rpy="3.1416 0 0" />
+    <parent link="base_link" />
+    <child link="2dlaser2_link" />
+  </joint>
+
+<!-- 2dlaser3 -->
+  <joint name="2dlaser3_joint" type="fixed">
+    <origin xyz="-0.50189 0 0.04275" rpy="3.1416 0 3.1416" />
+    <parent link="base_link" />
+    <child link="2dlaser3_link" />
+  </joint>
+<!-- VLP16 -->
+  <VLP-16 parent="frame_link">
+    <origin xyz="0.133276057040779 0 0.022" rpy="0 0 0" />
+  </VLP-16>
+
+<!-- camera -->
+  <joint name="camera_joint" type="fixed">
+    <origin xyz="0.279276057040779 0 -0.0429999999999999" rpy="0 0 0" />
+    <parent link="frame_link" />
+    <child link="camera_link" />
+  </joint>
+
+<!-- arm -->
+<!--
+  <joint
+    name="base_arm_joint"
+    type="fixed">
+    <origin
+      xyz="0.284346132074759 -0.282000000523709 0.364088000000036"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="base_arm_link" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+-->
+
+
+</robot>
