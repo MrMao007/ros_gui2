@@ -67,6 +67,10 @@ public:
     void coarseCallback(const geometry_msgs::PoseStampedConstPtr &goal);
     void pathCallback(const geometry_msgs::PoseWithCovarianceStampedConstPtr &traj);
     void send_multigoal();
+    void send_door_front();
+    void send_door_in();
+    void send_door_out();
+    void send_dock();
     geometry_msgs::PoseStamped coarsetofine(const geometry_msgs::PoseStampedConstPtr &goal);
 
 
@@ -107,6 +111,10 @@ signals:
     void line_endpUpdated(double x, double y);
     void pointpUpdated(double x, double y);
     void semanticpUpdated(double x,double y);
+    void door_front_ready_signal();
+    void door_in_ready_signal();
+    void door_out_ready_signal();
+    void dock_ready_signal();
 
 
 public Q_SLOTS:
@@ -121,6 +129,10 @@ public Q_SLOTS:
     void save_path_slot();
     void track_slot();
     void track_shut_slot();
+    void door_front_slot();
+    void door_in_slot();
+    void door_out_slot();
+    void dock_slot();
 
 private:
     int init_argc;

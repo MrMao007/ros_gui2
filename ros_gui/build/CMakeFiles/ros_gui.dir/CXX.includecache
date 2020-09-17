@@ -475,6 +475,8 @@ QString
 /home/mty/catkin_gui/src/ros_gui/build/ui_mainwindow.h
 math.h
 -
+unistd.h
+-
 
 /home/mty/catkin_gui/src/ros_gui/src/mapNode.cpp
 ros/ros.h

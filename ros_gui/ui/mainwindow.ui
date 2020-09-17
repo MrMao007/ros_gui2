@@ -546,14 +546,14 @@
         <item>
          <widget class="QPushButton" name="pushButton_30">
           <property name="text">
-           <string>test1</string>
+           <string>到门前</string>
           </property>
          </widget>
         </item>
         <item>
          <widget class="QPushButton" name="pushButton_31">
           <property name="text">
-           <string>test2</string>
+           <string>对接</string>
           </property>
          </widget>
         </item>

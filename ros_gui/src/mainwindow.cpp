@@ -1,6 +1,7 @@
 #include "../include/ros_gui/mainwindow.h"
 #include "../build/ui_mainwindow.h"
 #include <math.h>
+#include <unistd.h>
 
 #define pi 3.1415926
 
@@ -80,6 +81,15 @@ MainWindow::MainWindow(int argc, char** argv, QWidget *parent) :
     connect(delete_ui,SIGNAL(delete_signal(int)),&(this->dialog_ui->mapnode), SLOT(delete_slot(int)));
     connect(multigoal_ui, SIGNAL(setgoal_signal()), this, SLOT(setgoal_slot()));
     connect(this->multigoal_ui, SIGNAL(multigoal_signal()), &(this->dialog_ui->mapnode), SLOT(multigoal_slot()));
+    connect(this, SIGNAL(door_front_signal()), &(this->dialog_ui->mapnode), SLOT(door_front_slot()));
+    connect(this, SIGNAL(door_in_signal()), &(this->dialog_ui->mapnode), SLOT(door_in_slot()));
+    connect(this, SIGNAL(door_out_signal()), &(this->dialog_ui->mapnode), SLOT(door_out_slot()));
+    connect(this, SIGNAL(dock_signal()), &(this->dialog_ui->mapnode), SLOT(dock_slot()));
+    connect(&(this->dialog_ui->mapnode), SIGNAL(door_front_ready_signal()), this, SLOT(door_front_ready_slot()));
+    connect(&(this->dialog_ui->mapnode), SIGNAL(door_in_ready_signal()), this, SLOT(door_in_ready_slot()));
+    connect(&(this->dialog_ui->mapnode), SIGNAL(door_out_ready_signal()), this, SLOT(door_out_ready_slot()));
+    connect(&(this->dialog_ui->mapnode), SIGNAL(dock_ready_signal()), this, SLOT(dock_ready_slot()));
+    connect(&(this->dialog_ui->mapnode), SIGNAL(dock_ready_signal()), this, SLOT(dock_ready_slot2()));
 }
 
 MainWindow::~MainWindow()
@@ -340,12 +350,26 @@ void MainWindow::on_pushButton_29_clicked(){
 void MainWindow::on_pushButton_30_clicked(){
     //manager_->setFixedFrame("/base_footprint");
     //system("bash ~/bash/test.sh &");
-    system("gnome-terminal -x bash -c 'rosrun map_server map_saver -f test'");
+    //system("gnome-terminal -x bash -c 'rosrun map_server map_saver -f test'");
+    ui->pushButton_30->setEnabled(false);
+    switch (door_state) {
+    case 1:
+        emit door_front_signal();
+        break;
+    case 2:
+        emit door_in_signal();
+        break;
+    case 3:
+        emit door_out_signal();
+        break;
+    default:
+        break;
+    }
 }
 
 void MainWindow::on_pushButton_31_clicked(){
-    //manager_->setFixedFrame("/map");
-    system("bash ~/bash/test_shut.sh &");
+    //
+    emit dock_signal();
 }
 
 void MainWindow::reshow(){
@@ -512,4 +536,37 @@ std::string MainWindow::CharToStr(char * contentChar)
         tempStr+=contentChar[i];
     }
     return tempStr;
+}
+
+void MainWindow::door_front_ready_slot()
+{
+    ui->pushButton_30->setEnabled(true);
+    ui->pushButton_30->setText("进门");
+    door_state = 2;
+}
+
+void MainWindow::door_in_ready_slot()
+{
+    ui->pushButton_30->setEnabled(true);
+    ui->pushButton_30->setText("出门");
+    door_state = 3;
+}
+
+void MainWindow::door_out_ready_slot()
+{
+    ui->pushButton_30->setEnabled(true);
+    ui->pushButton_30->setText("到门前");
+    door_state = 1;
+}
+
+void MainWindow::dock_ready_slot(){
+    system("gnome-terminal -x bash -c 'bash ~/bash/test.sh'");
+    //system("gnome-terminal -x bash -c 'bash ~/bash/test_shut.sh'");
+}
+
+void MainWindow::dock_ready_slot2(){
+    //system("gnome-terminal -x bash -c 'bash ~/bash/test.sh'");
+    sleep(5);
+    system("gnome-terminal -x bash -c 'bash ~/bash/test_shut.sh'");
+    return;
 }

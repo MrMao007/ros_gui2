@@ -9,7 +9,7 @@
     <arg name="world_name" value="$(arg world_file)"/>
   </include>
 
-  <param name="robot_description" command="$(find xacro)/xacro --inorder $(find wheelchair_witharm_description)/urdf/wheelchair_with_all.xacro"/>
+  <param name="robot_description" command="$(find xacro)/xacro --inorder $(find wheelchair_witharm_description)/urdf/wheelchair_with_person.xacro"/>
   <!-- Define wheelchair's default pose -->
   <arg name="x_pos" default="0"/>
   <arg name="y_pos" default="-3.5"/><!-- -3.5 -->

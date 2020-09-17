@@ -408,6 +408,106 @@ void MapNode::multigoal_slot(){
     QtConcurrent::run(this,&MapNode::send_multigoal);
 }
 
+void MapNode::send_door_front(){
+    MoveBaseClient ac1("move_base", true);
+    while(!ac1.waitForServer(ros::Duration(5.0))){
+      ROS_INFO("Waiting for the move_base action server to come up");
+    }
+    move_base_msgs::MoveBaseGoal tmp;
+    tmp.target_pose.header = goal_vec[0].header;
+    tmp.target_pose.pose = goal_vec[0].pose;
+    ac1.sendGoal(tmp);
+    ac1.waitForResult();
+    if(ac1.getState() == actionlib::SimpleClientGoalState::SUCCEEDED){
+        ROS_INFO("Goal succeeded");
+        emit door_front_ready_signal();
+    }
+    else{
+        ROS_INFO("FAIL!");
+    }
+}
+
+void MapNode::door_front_slot(){
+    QtConcurrent::run(this,&MapNode::send_door_front);
+}
+
+void MapNode::send_door_in(){
+    MoveBaseClient ac1("move_base", true);
+    while(!ac1.waitForServer(ros::Duration(5.0))){
+      ROS_INFO("Waiting for the move_base action server to come up");
+    }
+    move_base_msgs::MoveBaseGoal tmp;
+    tmp.target_pose.header = goal_vec[1].header;
+    tmp.target_pose.pose = goal_vec[1].pose;
+    ac1.sendGoal(tmp);
+    ac1.waitForResult();
+    if(ac1.getState() == actionlib::SimpleClientGoalState::SUCCEEDED){
+        ROS_INFO("Goal succeeded");
+        emit door_in_ready_signal();
+    }
+    else{
+        ROS_INFO("FAIL!");
+    }
+}
+
+void MapNode::door_in_slot(){
+    QtConcurrent::run(this,&MapNode::send_door_in);
+}
+
+void MapNode::send_door_out(){
+    MoveBaseClient ac1("move_base", true);
+    while(!ac1.waitForServer(ros::Duration(5.0))){
+      ROS_INFO("Waiting for the move_base action server to come up");
+    }
+    move_base_msgs::MoveBaseGoal tmp;
+    tmp.target_pose.header = goal_vec[2].header;
+    tmp.target_pose.pose = goal_vec[2].pose;
+    ac1.sendGoal(tmp);
+    ac1.waitForResult();
+    if(ac1.getState() == actionlib::SimpleClientGoalState::SUCCEEDED){
+        ROS_INFO("Goal succeeded");
+        emit door_out_ready_signal();
+    }
+    else{
+        ROS_INFO("FAIL!");
+    }
+}
+
+void MapNode::door_out_slot(){
+    QtConcurrent::run(this,&MapNode::send_door_out);
+}
+
+void MapNode::send_dock(){
+    MoveBaseClient ac1("move_base", true);
+    while(!ac1.waitForServer(ros::Duration(5.0))){
+      ROS_INFO("Waiting for the move_base action server to come up");
+    }
+    move_base_msgs::MoveBaseGoal tmp;
+    tmp.target_pose.header.seq = 0;
+    tmp.target_pose.header.stamp = ros::Time::now();
+    tmp.target_pose.header.frame_id="map";
+    tmp.target_pose.pose.position.x=6.14211;
+    tmp.target_pose.pose.position.y=-0.47909;
+    tmp.target_pose.pose.position.z=0;
+    tmp.target_pose.pose.orientation.x=0.000188457;
+    tmp.target_pose.pose.orientation.y=0.00051522;
+    tmp.target_pose.pose.orientation.z=0.742209;
+    tmp.target_pose.pose.orientation.w=0.670168;
+    ac1.sendGoal(tmp);
+    ac1.waitForResult();
+    if(ac1.getState() == actionlib::SimpleClientGoalState::SUCCEEDED){
+        ROS_INFO("Goal succeeded");
+        emit dock_ready_signal();
+    }
+    else{
+        ROS_INFO("FAIL!");
+    }
+}
+
+void MapNode::dock_slot(){
+    QtConcurrent::run(this,&MapNode::send_dock);
+}
+
 void MapNode::record_path_slot(){
     path_id = 0;
     std::vector<geometry_msgs::Pose>().swap(path);
@@ -461,5 +561,7 @@ void MapNode::clear_path_markerarray(){
     std::vector<visualization_msgs::Marker>().swap(path_markerarray.markers);
     pathmarker_pub.publish(path_markerarray);
 }
+
+
 }  // namespace ros_gui
 

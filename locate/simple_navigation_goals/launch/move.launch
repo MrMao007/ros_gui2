@@ -1,0 +1,5 @@
+<launch>
+
+  <node pkg="simple_navigation_goals" type="send_goal_turtlebot" name="send_goal_turtlebot" output="screen"/>
+
+</launch>

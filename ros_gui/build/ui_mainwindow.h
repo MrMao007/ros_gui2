@@ -507,8 +507,8 @@ public:
         pushButton_26->setText(QApplication::translate("MainWindow", "\346\267\273\345\212\240\347\246\201\350\241\214\345\214\272\345\237\237", 0));
         pushButton_27->setText(QApplication::translate("MainWindow", "\345\210\240\351\231\244\347\246\201\350\241\214\345\214\272\345\237\237", 0));
         pushButton_28->setText(QApplication::translate("MainWindow", "\350\257\255\344\271\211\346\240\207\350\256\260\345\214\272\345\237\237", 0));
-        pushButton_30->setText(QApplication::translate("MainWindow", "test1", 0));
-        pushButton_31->setText(QApplication::translate("MainWindow", "test2", 0));
+        pushButton_30->setText(QApplication::translate("MainWindow", "\345\210\260\351\227\250\345\211\215", 0));
+        pushButton_31->setText(QApplication::translate("MainWindow", "\345\257\271\346\216\245", 0));
     } // retranslateUi
 
 };

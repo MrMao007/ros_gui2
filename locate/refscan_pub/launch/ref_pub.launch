@@ -1,0 +1,3 @@
+<launch>
+  <node pkg="refscan_pub" type="refscan_pub_node" name="refscan_pub_node" output="screen"/>
+</launch>
