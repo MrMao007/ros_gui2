@@ -376,7 +376,8 @@ void MainWindow::on_pushButton_30_clicked(){
 }
 
 void MainWindow::on_pushButton_31_clicked(){
-    //
+
+
     emit dock_signal();
 }
 
@@ -568,20 +569,19 @@ void MainWindow::door_out_ready_slot()
 }
 
 void MainWindow::dock_ready_slot(){
-    system("gnome-terminal -x bash -c 'bash ~/bash/test.sh'");
-    //system("gnome-terminal -x bash -c 'bash ~/bash/test_shut.sh'");
+    system("gnome-terminal -x bash -c 'bash ~/bash/icp.sh'");
 }
 
 void MainWindow::dock_ready_slot2(){
-    //system("gnome-terminal -x bash -c 'bash ~/bash/test.sh'");
     sleep(5);
-    system("gnome-terminal -x bash -c 'bash ~/bash/test_shut.sh'");
+    system("gnome-terminal -x bash -c 'bash ~/bash/dock.sh'");
     return;
 }
 
 void MainWindow::demostration_ready_slot(){
     sleep(3);
     system("gnome-terminal -x bash -c 'bash ~/bash/demostration_shut.sh'");
+    //ROS_INFO("DEMO READY");
     QMessageBox::information(NULL, "消息", "示教完成!", QMessageBox::Yes | QMessageBox::No, QMessageBox::Yes);
 }
 

@@ -133,7 +133,7 @@ void MapNode::refscanCallback(const sensor_msgs::LaserScanConstPtr &scan){
 
 void MapNode::dock_stateCallback(const std_msgs::Int8ConstPtr &state){
     if(state->data == 1)
-        dock_state = 1;
+        system("gnome-terminal -x bash -c 'bash ~/bash/dock_shut.sh'");
 }
 
 void MapNode::startpCallback(const geometry_msgs::PointStampedConstPtr &sp){
