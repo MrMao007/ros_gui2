@@ -60,7 +60,7 @@ bool QNode::init() {
 
 
 void QNode::run() {
-    ros::spin();
+    while(1);
 }
 
 

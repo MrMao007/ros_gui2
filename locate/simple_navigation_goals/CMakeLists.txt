@@ -86,7 +86,8 @@ include_directories(
  include
   ${catkin_INCLUDE_DIRS}
 )
-
+add_executable(send_goal src/send_goal.cpp)
+target_link_libraries(send_goal ${catkin_LIBRARIES})
 
 add_executable(send_goal_turtlebot src/send_goal_turtlebot.cpp)
 target_link_libraries(send_goal_turtlebot ${catkin_LIBRARIES})

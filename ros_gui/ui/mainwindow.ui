@@ -551,6 +551,13 @@
          </widget>
         </item>
         <item>
+         <widget class="QPushButton" name="pushButton_3">
+          <property name="text">
+           <string>示教</string>
+          </property>
+         </widget>
+        </item>
+        <item>
          <widget class="QPushButton" name="pushButton_31">
           <property name="text">
            <string>对接</string>

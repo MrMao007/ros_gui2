@@ -9,6 +9,7 @@
 #include <string.h>
 #include <QFileDialog>
 #include <QLabel>
+#include <QMessageBox>
 #include "arm.h"
 #include "markerNode.h"
 #include "dialog.h"
@@ -53,6 +54,8 @@ signals:
 
     void dock_signal();
 
+    void demostration_signal();
+
 public Q_SLOTS:
 
     void power_slot(float p);
@@ -93,6 +96,8 @@ public Q_SLOTS:
 
     void dock_ready_slot2();
 
+    void demostration_ready_slot();
+
 private slots:
 
     void on_radioButton_toggled(bool state);
@@ -109,6 +114,8 @@ private slots:
     void on_pushButton_clicked();
 
     void on_pushButton_2_clicked();
+
+    void on_pushButton_3_clicked();
 
     void on_pushButton_23_clicked();
 

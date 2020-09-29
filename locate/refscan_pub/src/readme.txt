@@ -1,3 +1,0 @@
-ref_pub0.cpp　使用最原始的控制方法
-ref_pub.cpp是目前使用的控制算法，参考方的算法
-ref_pub_real是轮椅真机的代码

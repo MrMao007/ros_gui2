@@ -25,6 +25,8 @@ public:
 
     void ros_init(int argc,char **argv);
 
+     Ui::QNode qnode;
+
 private slots:
     void on_pushButton_clicked();
 
@@ -50,7 +52,6 @@ private:
     rviz::VisualizationManager *manager_;
     rviz::RenderPanel *render_panel_;
     rviz::ViewManager* viewManager;
-    Ui::QNode qnode;
     QImage qimage_;
     mutable QMutex qimage_mutex_;
 };

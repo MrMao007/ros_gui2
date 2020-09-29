@@ -1,5 +1,6 @@
 #include "simple_navigation_goals/send_goal.h"
-
+#include <cmath>
+const double maxSpeed = 0.05;
 void subCallback(scan_map_icp::t_d_m msg)
 {
   linear_dist = sqrt(msg.linear_dist_x * msg.linear_dist_x + msg.linear_dist_y * msg.linear_dist_y);
@@ -15,7 +16,7 @@ int main(int argc, char** argv)
   ros::NodeHandle n;
   ros::Subscriber sub = n.subscribe("/scan_map_icp_node/error", 1, subCallback);
   ros::Publisher pub= n.advertise<geometry_msgs::Twist>("/cmd_vel", 1);
-  ros::Publisher state_pub_ = n.advertise<std_msgs::Int8>("/state", 1);
+  ros::Publisher state_pub_ = n.advertise<std_msgs::Int8>("/state", 1); //发送对接完成的标志位
 
   geometry_msgs::Twist twist;
   geometry_msgs::Vector3 linear;
@@ -29,12 +30,26 @@ int main(int argc, char** argv)
     ros::spinOnce();
     if((linear_dist >= 0.01) && (turn==false))
     {
-      linear.x = 0.2 * linear_dist;
       linear.y = 0;
       linear.z = 0; 
       angular.x = 0;
       angular.y = 0;
-      angular.z = -0.3 * (angle_1 - angle_2);
+      if (fabs(0.2 * linear_dist) < maxSpeed)
+	  linear.x = 0.2 * linear_dist;
+      else
+	{
+	  std::cout << "state1: Linear Speed Limit to 0.05!" << std::endl;
+          linear.x = maxSpeed * ((linear_dist > 0)? 1: -1);
+	}
+
+      if (fabs(0.3 * (angle_1 - angle_2)) < maxSpeed)
+        angular.z = -0.3 * (angle_1 - angle_2);
+      else
+	{
+	  std::cout << "state1: Angular Speed Limit to 0.05!" << std::endl;
+          angular.z = -maxSpeed * ((angle_1 - angle_2) > 0? 1: -1);
+	}
+        
       twist.linear=linear;
       twist.angular=angular;
       pub.publish(twist);
@@ -48,12 +63,18 @@ int main(int argc, char** argv)
       linear.z = 0; 
       angular.x = 0;
       angular.y = 0;
-      angular.z = -0.15 * angle_error;
-      twist.linear=linear;
+      if (fabs(0.15 * angle_error) < maxSpeed)
+        angular.z = -0.15 * angle_error;
+      else
+	{
+	  std::cout << "state2: Speed Limit to 0.05!" << std::endl;
+          angular.z = -maxSpeed * ((angle_error > 0)? 1: -1);
+	}
+      twist.linear=linear; 
       twist.angular=angular;
       pub.publish(twist);
       ROS_INFO("angle_error: %f", angle_error);
-      if(angle_error <= 0.01)
+      if(fabs(angle_error) <= 0.01)
       {
         linear.x = 0;
         linear.y = 0;
@@ -67,6 +88,7 @@ int main(int argc, char** argv)
         pub.publish(twist);
         state_pub_.publish(state);
         ROS_INFO("STOP.");
+        break;
       }
     }
   }

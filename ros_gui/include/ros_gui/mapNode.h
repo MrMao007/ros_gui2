@@ -27,9 +27,11 @@
 #include <ros/ros.h>
 #include <visualization_msgs/Marker.h>
 #include<visualization_msgs/MarkerArray.h>
+#include <std_msgs/Int8.h>
 #include <geometry_msgs/PointStamped.h>
 #include <geometry_msgs/Point.h>
 #include <geometry_msgs/PoseWithCovarianceStamped.h>
+#include <sensor_msgs/LaserScan.h>
 #include <custom_msgs/Obstacles.h>
 #include <custom_msgs/Form.h>
 #include <move_base_msgs/MoveBaseAction.h>
@@ -66,12 +68,16 @@ public:
     void goalCallback(const geometry_msgs::PoseStampedConstPtr &goal);
     void coarseCallback(const geometry_msgs::PoseStampedConstPtr &goal);
     void pathCallback(const geometry_msgs::PoseWithCovarianceStampedConstPtr &traj);
+    void refscanCallback(const sensor_msgs::LaserScanConstPtr &scan);
+    void dock_stateCallback(const std_msgs::Int8ConstPtr &state);
     void send_multigoal();
     void send_door_front();
     void send_door_in();
     void send_door_out();
     void send_dock();
+    void readFile();
     geometry_msgs::PoseStamped coarsetofine(const geometry_msgs::PoseStampedConstPtr &goal);
+    void WriteLaser(const sensor_msgs::LaserScan scan);
 
 
     visualization_msgs::MarkerArray markerarray;
@@ -93,6 +99,9 @@ public:
     std::vector<geometry_msgs::Pose> path;
     std::vector<geometry_msgs::PoseStamped> semantic_vec;
     std::vector<geometry_msgs::PoseStamped> goal_vec;
+    sensor_msgs::LaserScan got_laser;
+    sensor_msgs::LaserScan ref_laser;
+    geometry_msgs::PoseWithCovarianceStamped ref_goal;
     int id = 0;
     int semantic_id = 0;
     int goal_id = 0;
@@ -100,6 +109,9 @@ public:
     int empty_flag = 1;
     int record_flag = 0;
     int track_flag = 0;
+    int demo_flag = 0;
+    int dock_ready_flag = 0;
+    int dock_state = 0;
 
     void add_path_makerarray(geometry_msgs::Pose last);
     void clear_path_markerarray();
@@ -115,7 +127,8 @@ signals:
     void door_in_ready_signal();
     void door_out_ready_signal();
     void dock_ready_signal();
-
+    void demostration_ready_signal();
+    void ros_shutdown();
 
 public Q_SLOTS:
 
@@ -133,11 +146,13 @@ public Q_SLOTS:
     void door_in_slot();
     void door_out_slot();
     void dock_slot();
+    void demostration_slot();
 
 private:
     int init_argc;
     char** init_argv;
-
+    //sensor_msgs::LaserScan scan_;
+    geometry_msgs::PoseWithCovarianceStamped pose_;
     //ros::Publisher text_pub;
     //ros::Subscriber power_sub;
     ros::Subscriber startp_sub;
@@ -149,6 +164,8 @@ private:
     ros::Subscriber goal_sub;
     ros::Subscriber coarse_sub;
     ros::Subscriber path_sub;
+    ros::Subscriber refscan_sub;
+    ros::Subscriber dock_state_sub;
 
     ros::Publisher markerarray_pub;
     ros::Publisher semantic_markerarray_pub;
@@ -158,6 +175,7 @@ private:
     ros::Publisher obstacle_pub;
     ros::Publisher fine_pub;
     ros::Publisher pathmarker_pub;
+    ros::Publisher refscan_pub;
 
 
 };

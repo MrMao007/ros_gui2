@@ -90,6 +90,9 @@ MainWindow::MainWindow(int argc, char** argv, QWidget *parent) :
     connect(&(this->dialog_ui->mapnode), SIGNAL(door_out_ready_signal()), this, SLOT(door_out_ready_slot()));
     connect(&(this->dialog_ui->mapnode), SIGNAL(dock_ready_signal()), this, SLOT(dock_ready_slot()));
     connect(&(this->dialog_ui->mapnode), SIGNAL(dock_ready_signal()), this, SLOT(dock_ready_slot2()));
+    connect(this, SIGNAL(demostration_signal()), &(this->dialog_ui->mapnode), SLOT(demostration_slot()));
+    connect(&(this->dialog_ui->mapnode), SIGNAL(demostration_ready_signal()), this, SLOT(demostration_ready_slot()));
+    connect(&(this->dialog_ui->mapnode), SIGNAL(ros_shutdown()), this, SLOT(close()));
 }
 
 MainWindow::~MainWindow()
@@ -300,6 +303,11 @@ void MainWindow::on_pushButton_2_clicked(){
     std::string filename = "/home/mty/bash/param.yaml";
     int mappath_linenum = 51;
     ModifyLineData(filename, mappath_linenum, "  mapPath: " + ui->lineEdit->text().toStdString());
+}
+
+void MainWindow::on_pushButton_3_clicked(){
+    system("gnome-terminal -x bash -c 'bash ~/bash/demostration.sh'");
+    emit demostration_signal();
 }
 
 void MainWindow::on_pushButton_23_clicked(){
@@ -570,3 +578,11 @@ void MainWindow::dock_ready_slot2(){
     system("gnome-terminal -x bash -c 'bash ~/bash/test_shut.sh'");
     return;
 }
+
+void MainWindow::demostration_ready_slot(){
+    sleep(3);
+    system("gnome-terminal -x bash -c 'bash ~/bash/demostration_shut.sh'");
+    QMessageBox::information(NULL, "消息", "示教完成!", QMessageBox::Yes | QMessageBox::No, QMessageBox::Yes);
+}
+
+

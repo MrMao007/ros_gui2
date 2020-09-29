@@ -14,6 +14,9 @@
 #include <string>
 #include <sstream>
 #include <math.h>
+#include <fstream>
+#include <iostream>
+#include <tf/transform_datatypes.h>
 #include "../include/ros_gui/mapNode.h"
 #define pi 3.14159256
 
@@ -62,6 +65,9 @@ bool MapNode::init() {
     coarse_sub = n.subscribe<geometry_msgs::PoseStamped>("coarse_goal", 10, &MapNode::coarseCallback, this);
     path_sub = n.subscribe<geometry_msgs::PoseWithCovarianceStamped>("amcl_pose", 10, &MapNode::pathCallback, this);
 
+    refscan_sub = n.subscribe<sensor_msgs::LaserScan>("refscan", 10, &MapNode::refscanCallback, this);
+    dock_state_sub = n.subscribe<std_msgs::Int8>("state",1,&MapNode::dock_stateCallback, this);
+
     markerarray_pub = n.advertise<visualization_msgs::MarkerArray>("forbidden_marker", 10);
     semantic_markerarray_pub = n.advertise<visualization_msgs::MarkerArray>("semantic_marker", 10);
     goalmarker_pub = n.advertise<visualization_msgs::MarkerArray>("goalmarker",10);
@@ -71,6 +77,8 @@ bool MapNode::init() {
     fine_pub = n.advertise<geometry_msgs::PoseStamped>("move_base_simple/goal", 10);
     pathmarker_pub = n.advertise<visualization_msgs::MarkerArray>("path_marker", 10);
 
+    refscan_pub = n.advertise<sensor_msgs::LaserScan>("reftable", 10);
+
     start();
     return true;
 }
@@ -78,10 +86,55 @@ bool MapNode::init() {
 
 
 void MapNode::run() {
-    while(1);
-    //ros::spin();
+    ros::Rate loop_rate(100);
+            //当当前节点没有关闭时
+            while ( ros::ok() ) {
+                ref_laser.header.stamp=ros::Time::now();
+                refscan_pub.publish(ref_laser);
+                //调用消息处理回调函数
+                ros::spinOnce();
+
+                loop_rate.sleep();
+            }
+    emit ros_shutdown();
 }
 
+void MapNode::WriteLaser(const sensor_msgs::LaserScan scan){
+    sensor_msgs::LaserScan tmp = scan;
+    std::ofstream fout;
+    int num = tmp.ranges.size();
+    fout.open("/home/mty/bash/refscan.dat", std::ios::binary|std::ios::out);
+    //fout.write((char*)&(tmp.header.stamp), sizeof(tmp.header.stamp));
+    fout.write((char*)&(tmp.angle_min), sizeof(tmp.angle_min));
+    fout.write((char*)&(tmp.angle_max), sizeof(tmp.angle_max));
+    fout.write((char*)&(tmp.angle_increment), sizeof(tmp.angle_increment));
+    fout.write((char*)&(tmp.time_increment), sizeof(tmp.time_increment));
+    fout.write((char*)&(tmp.scan_time), sizeof(tmp.scan_time));
+    fout.write((char*)&(tmp.range_min), sizeof(tmp.range_max));
+    fout.write((char*)&(tmp.range_max), sizeof(tmp.range_max));
+    fout.write((char*)&(num), sizeof(num));
+    for(int i = 0; i < num; i++){
+        fout.write((char*)&(tmp.ranges[i]), sizeof(tmp.ranges[i]));
+    }
+    fout.write((char*)&(pose_.pose), sizeof(pose_.pose));
+    ROS_INFO("666");
+    fout.close();
+}
+void MapNode::refscanCallback(const sensor_msgs::LaserScanConstPtr &scan){
+    got_laser = *scan;
+    //scan_ = *scan;
+    if(demo_flag == 0)
+        return;
+    demo_flag = 0;
+    ROS_INFO("555");
+    WriteLaser(got_laser);
+    emit demostration_ready_signal();
+}
+
+void MapNode::dock_stateCallback(const std_msgs::Int8ConstPtr &state){
+    if(state->data == 1)
+        dock_state = 1;
+}
 
 void MapNode::startpCallback(const geometry_msgs::PointStampedConstPtr &sp){
     startp[0] = sp->point.x;
@@ -122,6 +175,7 @@ void MapNode::semanticpCallback(const geometry_msgs::PoseStampedConstPtr &sp){
 }
 
 void MapNode::pathCallback(const geometry_msgs::PoseWithCovarianceStampedConstPtr &traj){
+    pose_ = *traj;
     if(record_flag == 0)
         return;
     geometry_msgs::Pose temp = traj->pose.pose;
@@ -476,8 +530,43 @@ void MapNode::send_door_out(){
 void MapNode::door_out_slot(){
     QtConcurrent::run(this,&MapNode::send_door_out);
 }
+void MapNode::readFile(){
+    std::ifstream infile("/home/mty/bash/refscan.dat", std::ios::binary|std::ios::in);
+    //sensor_msgs::LaserScan tmp_l;
+    //geometry_msgs::PoseWithCovarianceStamped temp;
+    int n;
+    float range_data;
+    //tf::Quaternion quat;
+    //double roll, pitch, yaw;
+    ref_laser.header.frame_id = "/2dlaser1_link";
+    //ref_laser.header.stamp = ros::Time::now();
+    //infile.read((char*)&(ref_laser.header.stamp), sizeof(ref_laser.header.stamp));
+    infile.read((char*)&(ref_laser.angle_min), sizeof(ref_laser.angle_min));
+    infile.read((char*)&(ref_laser.angle_max), sizeof(ref_laser.angle_max));
+    infile.read((char*)&(ref_laser.angle_increment), sizeof(ref_laser.angle_increment));
+    infile.read((char*)&(ref_laser.time_increment), sizeof(ref_laser.time_increment));
+    infile.read((char*)&(ref_laser.scan_time), sizeof(ref_laser.scan_time));
+    infile.read((char*)&(ref_laser.range_min), sizeof(ref_laser.range_min));
+    infile.read((char*)&(ref_laser.range_max), sizeof(ref_laser.range_max));
+    infile.read((char*)&(n), sizeof(n));
+    std::cout << n;
+    ref_laser.ranges.resize(n);
+    for(int i = 0; i < n; i++){
+        infile.read((char*)&(range_data), sizeof(range_data));
+        ref_laser.ranges[i] = range_data;
+    }
+    infile.read((char*)(&ref_goal.pose), sizeof(ref_goal.pose));
+    //ref_goal.pose.pose.position.y -=1;
+    /*tf::quaternionMsgToTF(ref_goal.pose.pose.orientation, quat);
+    tf::Matrix3x3(quat).getRPY(roll, pitch, yaw);
+    //yaw +=0.2;
+    ref_goal.pose.pose.orientation = tf::createQuaternionMsgFromYaw(yaw);*/
+    infile.close();
+}
 
 void MapNode::send_dock(){
+    dock_state = 0;
+    readFile();
     MoveBaseClient ac1("move_base", true);
     while(!ac1.waitForServer(ros::Duration(5.0))){
       ROS_INFO("Waiting for the move_base action server to come up");
@@ -485,19 +574,23 @@ void MapNode::send_dock(){
     move_base_msgs::MoveBaseGoal tmp;
     tmp.target_pose.header.seq = 0;
     tmp.target_pose.header.stamp = ros::Time::now();
-    tmp.target_pose.header.frame_id="map";
-    tmp.target_pose.pose.position.x=6.14211;
-    tmp.target_pose.pose.position.y=-0.47909;
-    tmp.target_pose.pose.position.z=0;
-    tmp.target_pose.pose.orientation.x=0.000188457;
-    tmp.target_pose.pose.orientation.y=0.00051522;
-    tmp.target_pose.pose.orientation.z=0.742209;
-    tmp.target_pose.pose.orientation.w=0.670168;
+    tmp.target_pose.header.frame_id="/map";
+    tmp.target_pose.pose.position.x=ref_goal.pose.pose.position.x;
+    tmp.target_pose.pose.position.y=ref_goal.pose.pose.position.y;
+    tmp.target_pose.pose.position.z=ref_goal.pose.pose.position.z;
+    tmp.target_pose.pose.orientation.x=ref_goal.pose.pose.orientation.x;
+    tmp.target_pose.pose.orientation.y=ref_goal.pose.pose.orientation.y;
+    tmp.target_pose.pose.orientation.z=ref_goal.pose.pose.orientation.z;
+    tmp.target_pose.pose.orientation.w=ref_goal.pose.pose.orientation.w;
     ac1.sendGoal(tmp);
     ac1.waitForResult();
     if(ac1.getState() == actionlib::SimpleClientGoalState::SUCCEEDED){
         ROS_INFO("Goal succeeded");
         emit dock_ready_signal();
+/*       while(!dock_state && ros::ok()){
+            ref_laser.header.stamp = ros::Time::now();
+            refscan_pub.publish(ref_laser);
+        }*/
     }
     else{
         ROS_INFO("FAIL!");
@@ -562,6 +655,9 @@ void MapNode::clear_path_markerarray(){
     pathmarker_pub.publish(path_markerarray);
 }
 
+void MapNode::demostration_slot(){
+    demo_flag = 1;
+}
 
 }  // namespace ros_gui
 

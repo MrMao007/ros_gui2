@@ -88,6 +88,7 @@ public:
     QPushButton *pushButton_27;
     QPushButton *pushButton_28;
     QPushButton *pushButton_30;
+    QPushButton *pushButton_3;
     QPushButton *pushButton_31;
     QSpacerItem *horizontalSpacer;
     QVBoxLayout *verticalLayout;
@@ -425,6 +426,11 @@ public:
 
         horizontalLayout_2->addWidget(pushButton_30);
 
+        pushButton_3 = new QPushButton(centralWidget);
+        pushButton_3->setObjectName(QStringLiteral("pushButton_3"));
+
+        horizontalLayout_2->addWidget(pushButton_3);
+
         pushButton_31 = new QPushButton(centralWidget);
         pushButton_31->setObjectName(QStringLiteral("pushButton_31"));
 
@@ -508,6 +514,7 @@ public:
         pushButton_27->setText(QApplication::translate("MainWindow", "\345\210\240\351\231\244\347\246\201\350\241\214\345\214\272\345\237\237", 0));
         pushButton_28->setText(QApplication::translate("MainWindow", "\350\257\255\344\271\211\346\240\207\350\256\260\345\214\272\345\237\237", 0));
         pushButton_30->setText(QApplication::translate("MainWindow", "\345\210\260\351\227\250\345\211\215", 0));
+        pushButton_3->setText(QApplication::translate("MainWindow", "\347\244\272\346\225\231", 0));
         pushButton_31->setText(QApplication::translate("MainWindow", "\345\257\271\346\216\245", 0));
     } // retranslateUi
 

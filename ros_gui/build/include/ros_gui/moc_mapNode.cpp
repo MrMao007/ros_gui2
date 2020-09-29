@@ -19,8 +19,8 @@
 
 QT_BEGIN_MOC_NAMESPACE
 struct qt_meta_stringdata_Ui__MapNode_t {
-    QByteArrayData data[32];
-    char stringdata0[426];
+    QByteArrayData data[35];
+    char stringdata0[483];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -43,24 +43,27 @@ QT_MOC_LITERAL(10, 110, 23), // "door_front_ready_signal"
 QT_MOC_LITERAL(11, 134, 20), // "door_in_ready_signal"
 QT_MOC_LITERAL(12, 155, 21), // "door_out_ready_signal"
 QT_MOC_LITERAL(13, 177, 17), // "dock_ready_signal"
-QT_MOC_LITERAL(14, 195, 11), // "marker_slot"
-QT_MOC_LITERAL(15, 207, 16), // "line_marker_slot"
-QT_MOC_LITERAL(16, 224, 17), // "point_marker_slot"
-QT_MOC_LITERAL(17, 242, 6), // "radius"
-QT_MOC_LITERAL(18, 249, 11), // "delete_slot"
-QT_MOC_LITERAL(19, 261, 2), // "id"
-QT_MOC_LITERAL(20, 264, 13), // "semantic_slot"
-QT_MOC_LITERAL(21, 278, 11), // "std::string"
-QT_MOC_LITERAL(22, 290, 8), // "semantic"
-QT_MOC_LITERAL(23, 299, 14), // "multigoal_slot"
-QT_MOC_LITERAL(24, 314, 16), // "record_path_slot"
-QT_MOC_LITERAL(25, 331, 14), // "save_path_slot"
-QT_MOC_LITERAL(26, 346, 10), // "track_slot"
-QT_MOC_LITERAL(27, 357, 15), // "track_shut_slot"
-QT_MOC_LITERAL(28, 373, 15), // "door_front_slot"
-QT_MOC_LITERAL(29, 389, 12), // "door_in_slot"
-QT_MOC_LITERAL(30, 402, 13), // "door_out_slot"
-QT_MOC_LITERAL(31, 416, 9) // "dock_slot"
+QT_MOC_LITERAL(14, 195, 25), // "demostration_ready_signal"
+QT_MOC_LITERAL(15, 221, 12), // "ros_shutdown"
+QT_MOC_LITERAL(16, 234, 11), // "marker_slot"
+QT_MOC_LITERAL(17, 246, 16), // "line_marker_slot"
+QT_MOC_LITERAL(18, 263, 17), // "point_marker_slot"
+QT_MOC_LITERAL(19, 281, 6), // "radius"
+QT_MOC_LITERAL(20, 288, 11), // "delete_slot"
+QT_MOC_LITERAL(21, 300, 2), // "id"
+QT_MOC_LITERAL(22, 303, 13), // "semantic_slot"
+QT_MOC_LITERAL(23, 317, 11), // "std::string"
+QT_MOC_LITERAL(24, 329, 8), // "semantic"
+QT_MOC_LITERAL(25, 338, 14), // "multigoal_slot"
+QT_MOC_LITERAL(26, 353, 16), // "record_path_slot"
+QT_MOC_LITERAL(27, 370, 14), // "save_path_slot"
+QT_MOC_LITERAL(28, 385, 10), // "track_slot"
+QT_MOC_LITERAL(29, 396, 15), // "track_shut_slot"
+QT_MOC_LITERAL(30, 412, 15), // "door_front_slot"
+QT_MOC_LITERAL(31, 428, 12), // "door_in_slot"
+QT_MOC_LITERAL(32, 441, 13), // "door_out_slot"
+QT_MOC_LITERAL(33, 455, 9), // "dock_slot"
+QT_MOC_LITERAL(34, 465, 17) // "demostration_slot"
 
     },
     "Ui::MapNode\0startpUpdated\0\0x\0y\0"
@@ -68,13 +71,14 @@ QT_MOC_LITERAL(31, 416, 9) // "dock_slot"
     "line_endpUpdated\0pointpUpdated\0"
     "semanticpUpdated\0door_front_ready_signal\0"
     "door_in_ready_signal\0door_out_ready_signal\0"
-    "dock_ready_signal\0marker_slot\0"
-    "line_marker_slot\0point_marker_slot\0"
-    "radius\0delete_slot\0id\0semantic_slot\0"
-    "std::string\0semantic\0multigoal_slot\0"
-    "record_path_slot\0save_path_slot\0"
-    "track_slot\0track_shut_slot\0door_front_slot\0"
-    "door_in_slot\0door_out_slot\0dock_slot"
+    "dock_ready_signal\0demostration_ready_signal\0"
+    "ros_shutdown\0marker_slot\0line_marker_slot\0"
+    "point_marker_slot\0radius\0delete_slot\0"
+    "id\0semantic_slot\0std::string\0semantic\0"
+    "multigoal_slot\0record_path_slot\0"
+    "save_path_slot\0track_slot\0track_shut_slot\0"
+    "door_front_slot\0door_in_slot\0door_out_slot\0"
+    "dock_slot\0demostration_slot"
 };
 #undef QT_MOC_LITERAL
 
@@ -84,40 +88,43 @@ static const uint qt_meta_data_Ui__MapNode[] = {
        7,       // revision
        0,       // classname
        0,    0, // classinfo
-      24,   14, // methods
+      27,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
        0,       // flags
-      10,       // signalCount
+      12,       // signalCount
 
  // signals: name, argc, parameters, tag, flags
-       1,    2,  134,    2, 0x06 /* Public */,
-       5,    2,  139,    2, 0x06 /* Public */,
-       6,    2,  144,    2, 0x06 /* Public */,
-       7,    2,  149,    2, 0x06 /* Public */,
-       8,    2,  154,    2, 0x06 /* Public */,
-       9,    2,  159,    2, 0x06 /* Public */,
-      10,    0,  164,    2, 0x06 /* Public */,
-      11,    0,  165,    2, 0x06 /* Public */,
-      12,    0,  166,    2, 0x06 /* Public */,
-      13,    0,  167,    2, 0x06 /* Public */,
+       1,    2,  149,    2, 0x06 /* Public */,
+       5,    2,  154,    2, 0x06 /* Public */,
+       6,    2,  159,    2, 0x06 /* Public */,
+       7,    2,  164,    2, 0x06 /* Public */,
+       8,    2,  169,    2, 0x06 /* Public */,
+       9,    2,  174,    2, 0x06 /* Public */,
+      10,    0,  179,    2, 0x06 /* Public */,
+      11,    0,  180,    2, 0x06 /* Public */,
+      12,    0,  181,    2, 0x06 /* Public */,
+      13,    0,  182,    2, 0x06 /* Public */,
+      14,    0,  183,    2, 0x06 /* Public */,
+      15,    0,  184,    2, 0x06 /* Public */,
 
  // slots: name, argc, parameters, tag, flags
-      14,    0,  168,    2, 0x0a /* Public */,
-      15,    0,  169,    2, 0x0a /* Public */,
-      16,    1,  170,    2, 0x0a /* Public */,
-      18,    1,  173,    2, 0x0a /* Public */,
-      20,    1,  176,    2, 0x0a /* Public */,
-      23,    0,  179,    2, 0x0a /* Public */,
-      24,    0,  180,    2, 0x0a /* Public */,
-      25,    0,  181,    2, 0x0a /* Public */,
-      26,    0,  182,    2, 0x0a /* Public */,
-      27,    0,  183,    2, 0x0a /* Public */,
-      28,    0,  184,    2, 0x0a /* Public */,
-      29,    0,  185,    2, 0x0a /* Public */,
-      30,    0,  186,    2, 0x0a /* Public */,
-      31,    0,  187,    2, 0x0a /* Public */,
+      16,    0,  185,    2, 0x0a /* Public */,
+      17,    0,  186,    2, 0x0a /* Public */,
+      18,    1,  187,    2, 0x0a /* Public */,
+      20,    1,  190,    2, 0x0a /* Public */,
+      22,    1,  193,    2, 0x0a /* Public */,
+      25,    0,  196,    2, 0x0a /* Public */,
+      26,    0,  197,    2, 0x0a /* Public */,
+      27,    0,  198,    2, 0x0a /* Public */,
+      28,    0,  199,    2, 0x0a /* Public */,
+      29,    0,  200,    2, 0x0a /* Public */,
+      30,    0,  201,    2, 0x0a /* Public */,
+      31,    0,  202,    2, 0x0a /* Public */,
+      32,    0,  203,    2, 0x0a /* Public */,
+      33,    0,  204,    2, 0x0a /* Public */,
+      34,    0,  205,    2, 0x0a /* Public */,
 
  // signals: parameters
     QMetaType::Void, QMetaType::Double, QMetaType::Double,    3,    4,
@@ -130,13 +137,16 @@ static const uint qt_meta_data_Ui__MapNode[] = {
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
 
  // slots: parameters
     QMetaType::Void,
     QMetaType::Void,
-    QMetaType::Void, QMetaType::Double,   17,
-    QMetaType::Void, QMetaType::Int,   19,
-    QMetaType::Void, 0x80000000 | 21,   22,
+    QMetaType::Void, QMetaType::Double,   19,
+    QMetaType::Void, QMetaType::Int,   21,
+    QMetaType::Void, 0x80000000 | 23,   24,
+    QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
@@ -166,20 +176,23 @@ void Ui::MapNode::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id,
         case 7: _t->door_in_ready_signal(); break;
         case 8: _t->door_out_ready_signal(); break;
         case 9: _t->dock_ready_signal(); break;
-        case 10: _t->marker_slot(); break;
-        case 11: _t->line_marker_slot(); break;
-        case 12: _t->point_marker_slot((*reinterpret_cast< double(*)>(_a[1]))); break;
-        case 13: _t->delete_slot((*reinterpret_cast< int(*)>(_a[1]))); break;
-        case 14: _t->semantic_slot((*reinterpret_cast< std::string(*)>(_a[1]))); break;
-        case 15: _t->multigoal_slot(); break;
-        case 16: _t->record_path_slot(); break;
-        case 17: _t->save_path_slot(); break;
-        case 18: _t->track_slot(); break;
-        case 19: _t->track_shut_slot(); break;
-        case 20: _t->door_front_slot(); break;
-        case 21: _t->door_in_slot(); break;
-        case 22: _t->door_out_slot(); break;
-        case 23: _t->dock_slot(); break;
+        case 10: _t->demostration_ready_signal(); break;
+        case 11: _t->ros_shutdown(); break;
+        case 12: _t->marker_slot(); break;
+        case 13: _t->line_marker_slot(); break;
+        case 14: _t->point_marker_slot((*reinterpret_cast< double(*)>(_a[1]))); break;
+        case 15: _t->delete_slot((*reinterpret_cast< int(*)>(_a[1]))); break;
+        case 16: _t->semantic_slot((*reinterpret_cast< std::string(*)>(_a[1]))); break;
+        case 17: _t->multigoal_slot(); break;
+        case 18: _t->record_path_slot(); break;
+        case 19: _t->save_path_slot(); break;
+        case 20: _t->track_slot(); break;
+        case 21: _t->track_shut_slot(); break;
+        case 22: _t->door_front_slot(); break;
+        case 23: _t->door_in_slot(); break;
+        case 24: _t->door_out_slot(); break;
+        case 25: _t->dock_slot(); break;
+        case 26: _t->demostration_slot(); break;
         default: ;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {
@@ -245,6 +258,18 @@ void Ui::MapNode::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id,
                 *result = 9;
             }
         }
+        {
+            typedef void (MapNode::*_t)();
+            if (*reinterpret_cast<_t *>(func) == static_cast<_t>(&MapNode::demostration_ready_signal)) {
+                *result = 10;
+            }
+        }
+        {
+            typedef void (MapNode::*_t)();
+            if (*reinterpret_cast<_t *>(func) == static_cast<_t>(&MapNode::ros_shutdown)) {
+                *result = 11;
+            }
+        }
     }
 }
 
@@ -273,13 +298,13 @@ int Ui::MapNode::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 24)
+        if (_id < 27)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 24;
+        _id -= 27;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 24)
+        if (_id < 27)
             *reinterpret_cast<int*>(_a[0]) = -1;
-        _id -= 24;
+        _id -= 27;
     }
     return _id;
 }
@@ -348,5 +373,17 @@ void Ui::MapNode::door_out_ready_signal()
 void Ui::MapNode::dock_ready_signal()
 {
     QMetaObject::activate(this, &staticMetaObject, 9, Q_NULLPTR);
+}
+
+// SIGNAL 10
+void Ui::MapNode::demostration_ready_signal()
+{
+    QMetaObject::activate(this, &staticMetaObject, 10, Q_NULLPTR);
+}
+
+// SIGNAL 11
+void Ui::MapNode::ros_shutdown()
+{
+    QMetaObject::activate(this, &staticMetaObject, 11, Q_NULLPTR);
 }
 QT_END_MOC_NAMESPACE

@@ -606,7 +606,10 @@ void ScanMapIcp::runIcp()
     has_scan_transform_ = true;    
     // compute real transform info, actually R and t in icp math model
     icp_result_.dist = sqrt((t_.getOrigin().x() * t_.getOrigin().x()) + (t_.getOrigin().y() * t_.getOrigin().y()));
-    icp_result_.angle_dist = t_.getRotation().getAngle();
+    if (transf(0,1) < 0)
+      icp_result_.angle_dist = t_.getRotation().getAngle();
+    else
+      icp_result_.angle_dist = -t_.getRotation().getAngle();
     /***
     * 对小车发送控制命令
     ***/
@@ -666,9 +669,10 @@ void ScanMapIcp::runIcp()
     error.header.frame_id = "hokuyo_link";
     error.linear_dist_x = ref_X - now_X ;
     error.linear_dist_y = ref_Y - now_Y;
-    std::cout << "linear_dist_y=" << error.linear_dist_y << std::endl;
+    // std::cout << "linear_dist_y=" << error.linear_dist_y << std::endl;
     error.angle_dist_1 = yaw; //angle_dist_1表示先将机器人旋转到与世界坐标系对齐
     error.angle_dist_2 = icp_result_.angle_dist; //angle_dist_2表示机器人当前姿态与参考姿态的误差
+    std::cout << "angle_error = " << icp_result_.angle_dist << std::endl;
     control_cmd.publish(error);
     
 
