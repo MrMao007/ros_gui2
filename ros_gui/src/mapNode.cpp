@@ -103,7 +103,8 @@ void MapNode::WriteLaser(const sensor_msgs::LaserScan scan){
     sensor_msgs::LaserScan tmp = scan;
     std::ofstream fout;
     int num = tmp.ranges.size();
-    std::string filename = "/home/mty/bash/" + demo_name.toStdString() + ".dat";
+    std::string home_path = std::getenv("HOME");
+    std::string filename = home_path + "/bash/" + demo_name.toStdString() + ".dat";
     fout.open(filename, std::ios::binary|std::ios::out);
     //fout.write((char*)&(tmp.header.stamp), sizeof(tmp.header.stamp));
     fout.write((char*)&(tmp.angle_min), sizeof(tmp.angle_min));
@@ -532,7 +533,8 @@ void MapNode::door_out_slot(){
     QtConcurrent::run(this,&MapNode::send_door_out);
 }
 void MapNode::readFile(){
-    std::string filename = "/home/mty/bash/" + dock_name.toStdString() + ".dat";
+    std::string home_path = std::getenv("HOME");
+    std::string filename = home_path + "/bash/" + dock_name.toStdString() + ".dat";
     std::ifstream infile(filename, std::ios::binary|std::ios::in);
     //sensor_msgs::LaserScan tmp_l;
     //geometry_msgs::PoseWithCovarianceStamped temp;
@@ -614,8 +616,8 @@ void MapNode::record_path_slot(){
 
 void MapNode::save_path_slot(){
     record_flag = 0;
-    QString data = "";
-    QFile file("/home/mty/bash/path.bin");
+    QString home_path = QString::fromStdString(std::getenv("HOME"));
+    QFile file(home_path + "/bash/path.bin");
     if(file.open(QIODevice::ReadWrite | QIODevice::Text)){
         QTextStream stream(&file);
         for(int i = 0; i < path.size(); i++){

@@ -6,7 +6,8 @@ Dock::Dock(QWidget *parent) :
     ui(new Ui::Dock)
 {
     ui->setupUi(this);
-    std::string pattern = "/home/mty/bash/*.dat";
+    std::string home_path = std::getenv("HOME");
+    std::string pattern = home_path + "/bash/*.dat";
     std::vector<cv::String> fn;
     cv::glob(pattern, fn);
     for(int i = 0; i < fn.size(); i++){

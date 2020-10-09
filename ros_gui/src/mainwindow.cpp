@@ -12,7 +12,6 @@ MainWindow::MainWindow(int argc, char** argv, QWidget *parent) :
     markernode(argc, argv)
 {
 
-
     ui->setupUi(this);
 
 
@@ -303,7 +302,8 @@ void MainWindow::on_pushButton_clicked(){
 }
 
 void MainWindow::on_pushButton_2_clicked(){
-    std::string filename = "/home/mty/bash/param.yaml";
+    std::string home_path =  std::getenv("HOME");
+    std::string filename = home_path + "/bash/param.yaml";
     int mappath_linenum = 51;
     ModifyLineData(filename, mappath_linenum, "  mapPath: " + ui->lineEdit->text().toStdString());
 }
