@@ -112,6 +112,8 @@ public:
     int demo_flag = 0;
     int dock_ready_flag = 0;
     int dock_state = 0;
+    QString demo_name;
+    QString dock_name;
 
     void add_path_makerarray(geometry_msgs::Pose last);
     void clear_path_markerarray();
@@ -127,7 +129,7 @@ signals:
     void door_in_ready_signal();
     void door_out_ready_signal();
     void dock_ready_signal();
-    void demostration_ready_signal();
+    void demostration_ready_signal(QString demo_n);
     void ros_shutdown();
 
 public Q_SLOTS:
@@ -145,8 +147,8 @@ public Q_SLOTS:
     void door_front_slot();
     void door_in_slot();
     void door_out_slot();
-    void dock_slot();
-    void demostration_slot();
+    void dock_slot(QString dock_n);
+    void demostration_slot(QString demo_n);
 
 private:
     int init_argc;

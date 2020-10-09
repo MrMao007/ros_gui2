@@ -103,7 +103,8 @@ void MapNode::WriteLaser(const sensor_msgs::LaserScan scan){
     sensor_msgs::LaserScan tmp = scan;
     std::ofstream fout;
     int num = tmp.ranges.size();
-    fout.open("/home/mty/bash/refscan.dat", std::ios::binary|std::ios::out);
+    std::string filename = "/home/mty/bash/" + demo_name.toStdString() + ".dat";
+    fout.open(filename, std::ios::binary|std::ios::out);
     //fout.write((char*)&(tmp.header.stamp), sizeof(tmp.header.stamp));
     fout.write((char*)&(tmp.angle_min), sizeof(tmp.angle_min));
     fout.write((char*)&(tmp.angle_max), sizeof(tmp.angle_max));
@@ -128,7 +129,7 @@ void MapNode::refscanCallback(const sensor_msgs::LaserScanConstPtr &scan){
     demo_flag = 0;
     ROS_INFO("555");
     WriteLaser(got_laser);
-    emit demostration_ready_signal();
+    emit demostration_ready_signal(demo_name);
 }
 
 void MapNode::dock_stateCallback(const std_msgs::Int8ConstPtr &state){
@@ -531,7 +532,8 @@ void MapNode::door_out_slot(){
     QtConcurrent::run(this,&MapNode::send_door_out);
 }
 void MapNode::readFile(){
-    std::ifstream infile("/home/mty/bash/refscan.dat", std::ios::binary|std::ios::in);
+    std::string filename = "/home/mty/bash/" + dock_name.toStdString() + ".dat";
+    std::ifstream infile(filename, std::ios::binary|std::ios::in);
     //sensor_msgs::LaserScan tmp_l;
     //geometry_msgs::PoseWithCovarianceStamped temp;
     int n;
@@ -597,7 +599,8 @@ void MapNode::send_dock(){
     }
 }
 
-void MapNode::dock_slot(){
+void MapNode::dock_slot(QString dock_n){
+    dock_name = dock_n;
     QtConcurrent::run(this,&MapNode::send_dock);
 }
 
@@ -612,7 +615,7 @@ void MapNode::record_path_slot(){
 void MapNode::save_path_slot(){
     record_flag = 0;
     QString data = "";
-    QFile file("/home/mty/bash/path.dat");
+    QFile file("/home/mty/bash/path.bin");
     if(file.open(QIODevice::ReadWrite | QIODevice::Text)){
         QTextStream stream(&file);
         for(int i = 0; i < path.size(); i++){
@@ -655,7 +658,8 @@ void MapNode::clear_path_markerarray(){
     pathmarker_pub.publish(path_markerarray);
 }
 
-void MapNode::demostration_slot(){
+void MapNode::demostration_slot(QString demo_n){
+    demo_name = demo_n;
     demo_flag = 1;
 }
 

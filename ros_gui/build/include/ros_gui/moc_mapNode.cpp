@@ -19,8 +19,8 @@
 
 QT_BEGIN_MOC_NAMESPACE
 struct qt_meta_stringdata_Ui__MapNode_t {
-    QByteArrayData data[35];
-    char stringdata0[483];
+    QByteArrayData data[37];
+    char stringdata0[497];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -44,26 +44,28 @@ QT_MOC_LITERAL(11, 134, 20), // "door_in_ready_signal"
 QT_MOC_LITERAL(12, 155, 21), // "door_out_ready_signal"
 QT_MOC_LITERAL(13, 177, 17), // "dock_ready_signal"
 QT_MOC_LITERAL(14, 195, 25), // "demostration_ready_signal"
-QT_MOC_LITERAL(15, 221, 12), // "ros_shutdown"
-QT_MOC_LITERAL(16, 234, 11), // "marker_slot"
-QT_MOC_LITERAL(17, 246, 16), // "line_marker_slot"
-QT_MOC_LITERAL(18, 263, 17), // "point_marker_slot"
-QT_MOC_LITERAL(19, 281, 6), // "radius"
-QT_MOC_LITERAL(20, 288, 11), // "delete_slot"
-QT_MOC_LITERAL(21, 300, 2), // "id"
-QT_MOC_LITERAL(22, 303, 13), // "semantic_slot"
-QT_MOC_LITERAL(23, 317, 11), // "std::string"
-QT_MOC_LITERAL(24, 329, 8), // "semantic"
-QT_MOC_LITERAL(25, 338, 14), // "multigoal_slot"
-QT_MOC_LITERAL(26, 353, 16), // "record_path_slot"
-QT_MOC_LITERAL(27, 370, 14), // "save_path_slot"
-QT_MOC_LITERAL(28, 385, 10), // "track_slot"
-QT_MOC_LITERAL(29, 396, 15), // "track_shut_slot"
-QT_MOC_LITERAL(30, 412, 15), // "door_front_slot"
-QT_MOC_LITERAL(31, 428, 12), // "door_in_slot"
-QT_MOC_LITERAL(32, 441, 13), // "door_out_slot"
-QT_MOC_LITERAL(33, 455, 9), // "dock_slot"
-QT_MOC_LITERAL(34, 465, 17) // "demostration_slot"
+QT_MOC_LITERAL(15, 221, 6), // "demo_n"
+QT_MOC_LITERAL(16, 228, 12), // "ros_shutdown"
+QT_MOC_LITERAL(17, 241, 11), // "marker_slot"
+QT_MOC_LITERAL(18, 253, 16), // "line_marker_slot"
+QT_MOC_LITERAL(19, 270, 17), // "point_marker_slot"
+QT_MOC_LITERAL(20, 288, 6), // "radius"
+QT_MOC_LITERAL(21, 295, 11), // "delete_slot"
+QT_MOC_LITERAL(22, 307, 2), // "id"
+QT_MOC_LITERAL(23, 310, 13), // "semantic_slot"
+QT_MOC_LITERAL(24, 324, 11), // "std::string"
+QT_MOC_LITERAL(25, 336, 8), // "semantic"
+QT_MOC_LITERAL(26, 345, 14), // "multigoal_slot"
+QT_MOC_LITERAL(27, 360, 16), // "record_path_slot"
+QT_MOC_LITERAL(28, 377, 14), // "save_path_slot"
+QT_MOC_LITERAL(29, 392, 10), // "track_slot"
+QT_MOC_LITERAL(30, 403, 15), // "track_shut_slot"
+QT_MOC_LITERAL(31, 419, 15), // "door_front_slot"
+QT_MOC_LITERAL(32, 435, 12), // "door_in_slot"
+QT_MOC_LITERAL(33, 448, 13), // "door_out_slot"
+QT_MOC_LITERAL(34, 462, 9), // "dock_slot"
+QT_MOC_LITERAL(35, 472, 6), // "dock_n"
+QT_MOC_LITERAL(36, 479, 17) // "demostration_slot"
 
     },
     "Ui::MapNode\0startpUpdated\0\0x\0y\0"
@@ -72,13 +74,14 @@ QT_MOC_LITERAL(34, 465, 17) // "demostration_slot"
     "semanticpUpdated\0door_front_ready_signal\0"
     "door_in_ready_signal\0door_out_ready_signal\0"
     "dock_ready_signal\0demostration_ready_signal\0"
-    "ros_shutdown\0marker_slot\0line_marker_slot\0"
-    "point_marker_slot\0radius\0delete_slot\0"
-    "id\0semantic_slot\0std::string\0semantic\0"
-    "multigoal_slot\0record_path_slot\0"
-    "save_path_slot\0track_slot\0track_shut_slot\0"
-    "door_front_slot\0door_in_slot\0door_out_slot\0"
-    "dock_slot\0demostration_slot"
+    "demo_n\0ros_shutdown\0marker_slot\0"
+    "line_marker_slot\0point_marker_slot\0"
+    "radius\0delete_slot\0id\0semantic_slot\0"
+    "std::string\0semantic\0multigoal_slot\0"
+    "record_path_slot\0save_path_slot\0"
+    "track_slot\0track_shut_slot\0door_front_slot\0"
+    "door_in_slot\0door_out_slot\0dock_slot\0"
+    "dock_n\0demostration_slot"
 };
 #undef QT_MOC_LITERAL
 
@@ -106,25 +109,25 @@ static const uint qt_meta_data_Ui__MapNode[] = {
       11,    0,  180,    2, 0x06 /* Public */,
       12,    0,  181,    2, 0x06 /* Public */,
       13,    0,  182,    2, 0x06 /* Public */,
-      14,    0,  183,    2, 0x06 /* Public */,
-      15,    0,  184,    2, 0x06 /* Public */,
+      14,    1,  183,    2, 0x06 /* Public */,
+      16,    0,  186,    2, 0x06 /* Public */,
 
  // slots: name, argc, parameters, tag, flags
-      16,    0,  185,    2, 0x0a /* Public */,
-      17,    0,  186,    2, 0x0a /* Public */,
-      18,    1,  187,    2, 0x0a /* Public */,
-      20,    1,  190,    2, 0x0a /* Public */,
-      22,    1,  193,    2, 0x0a /* Public */,
-      25,    0,  196,    2, 0x0a /* Public */,
-      26,    0,  197,    2, 0x0a /* Public */,
-      27,    0,  198,    2, 0x0a /* Public */,
-      28,    0,  199,    2, 0x0a /* Public */,
-      29,    0,  200,    2, 0x0a /* Public */,
-      30,    0,  201,    2, 0x0a /* Public */,
-      31,    0,  202,    2, 0x0a /* Public */,
-      32,    0,  203,    2, 0x0a /* Public */,
-      33,    0,  204,    2, 0x0a /* Public */,
-      34,    0,  205,    2, 0x0a /* Public */,
+      17,    0,  187,    2, 0x0a /* Public */,
+      18,    0,  188,    2, 0x0a /* Public */,
+      19,    1,  189,    2, 0x0a /* Public */,
+      21,    1,  192,    2, 0x0a /* Public */,
+      23,    1,  195,    2, 0x0a /* Public */,
+      26,    0,  198,    2, 0x0a /* Public */,
+      27,    0,  199,    2, 0x0a /* Public */,
+      28,    0,  200,    2, 0x0a /* Public */,
+      29,    0,  201,    2, 0x0a /* Public */,
+      30,    0,  202,    2, 0x0a /* Public */,
+      31,    0,  203,    2, 0x0a /* Public */,
+      32,    0,  204,    2, 0x0a /* Public */,
+      33,    0,  205,    2, 0x0a /* Public */,
+      34,    1,  206,    2, 0x0a /* Public */,
+      36,    1,  209,    2, 0x0a /* Public */,
 
  // signals: parameters
     QMetaType::Void, QMetaType::Double, QMetaType::Double,    3,    4,
@@ -137,15 +140,15 @@ static const uint qt_meta_data_Ui__MapNode[] = {
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
-    QMetaType::Void,
+    QMetaType::Void, QMetaType::QString,   15,
     QMetaType::Void,
 
  // slots: parameters
     QMetaType::Void,
     QMetaType::Void,
-    QMetaType::Void, QMetaType::Double,   19,
-    QMetaType::Void, QMetaType::Int,   21,
-    QMetaType::Void, 0x80000000 | 23,   24,
+    QMetaType::Void, QMetaType::Double,   20,
+    QMetaType::Void, QMetaType::Int,   22,
+    QMetaType::Void, 0x80000000 | 24,   25,
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
@@ -154,8 +157,8 @@ static const uint qt_meta_data_Ui__MapNode[] = {
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
-    QMetaType::Void,
-    QMetaType::Void,
+    QMetaType::Void, QMetaType::QString,   35,
+    QMetaType::Void, QMetaType::QString,   15,
 
        0        // eod
 };
@@ -176,7 +179,7 @@ void Ui::MapNode::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id,
         case 7: _t->door_in_ready_signal(); break;
         case 8: _t->door_out_ready_signal(); break;
         case 9: _t->dock_ready_signal(); break;
-        case 10: _t->demostration_ready_signal(); break;
+        case 10: _t->demostration_ready_signal((*reinterpret_cast< QString(*)>(_a[1]))); break;
         case 11: _t->ros_shutdown(); break;
         case 12: _t->marker_slot(); break;
         case 13: _t->line_marker_slot(); break;
@@ -191,8 +194,8 @@ void Ui::MapNode::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id,
         case 22: _t->door_front_slot(); break;
         case 23: _t->door_in_slot(); break;
         case 24: _t->door_out_slot(); break;
-        case 25: _t->dock_slot(); break;
-        case 26: _t->demostration_slot(); break;
+        case 25: _t->dock_slot((*reinterpret_cast< QString(*)>(_a[1]))); break;
+        case 26: _t->demostration_slot((*reinterpret_cast< QString(*)>(_a[1]))); break;
         default: ;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {
@@ -259,7 +262,7 @@ void Ui::MapNode::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id,
             }
         }
         {
-            typedef void (MapNode::*_t)();
+            typedef void (MapNode::*_t)(QString );
             if (*reinterpret_cast<_t *>(func) == static_cast<_t>(&MapNode::demostration_ready_signal)) {
                 *result = 10;
             }
@@ -376,9 +379,10 @@ void Ui::MapNode::dock_ready_signal()
 }
 
 // SIGNAL 10
-void Ui::MapNode::demostration_ready_signal()
+void Ui::MapNode::demostration_ready_signal(QString _t1)
 {
-    QMetaObject::activate(this, &staticMetaObject, 10, Q_NULLPTR);
+    void *_a[] = { Q_NULLPTR, const_cast<void*>(reinterpret_cast<const void*>(&_t1)) };
+    QMetaObject::activate(this, &staticMetaObject, 10, _a);
 }
 
 // SIGNAL 11

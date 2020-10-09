@@ -1164,7 +1164,13 @@
       <Unit filename="/home/mty/catkin_gui/src/ros_gui/src/delete.cpp">
          <Option target="ros_gui"/>
       </Unit>
+      <Unit filename="/home/mty/catkin_gui/src/ros_gui/src/demo.cpp">
+         <Option target="ros_gui"/>
+      </Unit>
       <Unit filename="/home/mty/catkin_gui/src/ros_gui/src/dialog.cpp">
+         <Option target="ros_gui"/>
+      </Unit>
+      <Unit filename="/home/mty/catkin_gui/src/ros_gui/src/dock.cpp">
          <Option target="ros_gui"/>
       </Unit>
       <Unit filename="/home/mty/catkin_gui/src/ros_gui/src/main.cpp">
@@ -1194,7 +1200,13 @@
       <Unit filename="/home/mty/catkin_gui/src/ros_gui/ui/delete.ui">
          <Option target="ros_gui"/>
       </Unit>
+      <Unit filename="/home/mty/catkin_gui/src/ros_gui/ui/demo.ui">
+         <Option target="ros_gui"/>
+      </Unit>
       <Unit filename="/home/mty/catkin_gui/src/ros_gui/ui/dialog.ui">
+         <Option target="ros_gui"/>
+      </Unit>
+      <Unit filename="/home/mty/catkin_gui/src/ros_gui/ui/dock.ui">
          <Option target="ros_gui"/>
       </Unit>
       <Unit filename="/home/mty/catkin_gui/src/ros_gui/ui/mainwindow.ui">

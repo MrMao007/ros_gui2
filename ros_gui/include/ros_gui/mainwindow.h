@@ -16,6 +16,8 @@
 #include "delete.h"
 #include "semantic.h"
 #include "multigoal.h"
+#include "demo.h"
+#include "dock.h"
 
 
 
@@ -52,9 +54,6 @@ signals:
 
     void door_out_signal();
 
-    void dock_signal();
-
-    void demostration_signal();
 
 public Q_SLOTS:
 
@@ -153,6 +152,8 @@ private:
     Delete *delete_ui;
     Semantic *semantic_ui;
     Multigoal *multigoal_ui;
+    Demo *demo_ui;
+    Dock *dock_ui;
     double cur_angle = 0;
     rviz::VisualizationManager *manager_;
     rviz::RenderPanel *render_panel_;

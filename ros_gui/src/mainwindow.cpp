@@ -23,6 +23,8 @@ MainWindow::MainWindow(int argc, char** argv, QWidget *parent) :
     this->delete_ui = new Delete();
     this->semantic_ui = new Semantic();
     this->multigoal_ui = new Multigoal(argc, argv);
+    this->demo_ui = new Demo();
+    this->dock_ui = new Dock();
 
     this->infoLabel = new QLabel;
     infoLabel->setMinimumSize(300,20); //设置标签最小尺寸
@@ -84,14 +86,15 @@ MainWindow::MainWindow(int argc, char** argv, QWidget *parent) :
     connect(this, SIGNAL(door_front_signal()), &(this->dialog_ui->mapnode), SLOT(door_front_slot()));
     connect(this, SIGNAL(door_in_signal()), &(this->dialog_ui->mapnode), SLOT(door_in_slot()));
     connect(this, SIGNAL(door_out_signal()), &(this->dialog_ui->mapnode), SLOT(door_out_slot()));
-    connect(this, SIGNAL(dock_signal()), &(this->dialog_ui->mapnode), SLOT(dock_slot()));
     connect(&(this->dialog_ui->mapnode), SIGNAL(door_front_ready_signal()), this, SLOT(door_front_ready_slot()));
     connect(&(this->dialog_ui->mapnode), SIGNAL(door_in_ready_signal()), this, SLOT(door_in_ready_slot()));
     connect(&(this->dialog_ui->mapnode), SIGNAL(door_out_ready_signal()), this, SLOT(door_out_ready_slot()));
     connect(&(this->dialog_ui->mapnode), SIGNAL(dock_ready_signal()), this, SLOT(dock_ready_slot()));
     connect(&(this->dialog_ui->mapnode), SIGNAL(dock_ready_signal()), this, SLOT(dock_ready_slot2()));
-    connect(this, SIGNAL(demostration_signal()), &(this->dialog_ui->mapnode), SLOT(demostration_slot()));
-    connect(&(this->dialog_ui->mapnode), SIGNAL(demostration_ready_signal()), this, SLOT(demostration_ready_slot()));
+    connect(demo_ui, SIGNAL(demostration_signal(QString)), &(this->dialog_ui->mapnode), SLOT(demostration_slot(QString)));
+    connect(dock_ui, SIGNAL(dock_signal(QString)), &(this->dialog_ui->mapnode), SLOT(dock_slot(QString)));
+    connect(&(this->dialog_ui->mapnode), SIGNAL(demostration_ready_signal(QString)), this, SLOT(demostration_ready_slot()));
+    connect(&(this->dialog_ui->mapnode), SIGNAL(demostration_ready_signal(QString)),this->dock_ui, SLOT(demostration_ready_slot(QString)));
     connect(&(this->dialog_ui->mapnode), SIGNAL(ros_shutdown()), this, SLOT(close()));
 }
 
@@ -306,8 +309,9 @@ void MainWindow::on_pushButton_2_clicked(){
 }
 
 void MainWindow::on_pushButton_3_clicked(){
-    system("gnome-terminal -x bash -c 'bash ~/bash/demostration.sh'");
-    emit demostration_signal();
+    this->demo_ui->show();
+    //
+
 }
 
 void MainWindow::on_pushButton_23_clicked(){
@@ -376,9 +380,8 @@ void MainWindow::on_pushButton_30_clicked(){
 }
 
 void MainWindow::on_pushButton_31_clicked(){
-
-
-    emit dock_signal();
+    this->dock_ui->show();
+    //emit dock_signal();
 }
 
 void MainWindow::reshow(){

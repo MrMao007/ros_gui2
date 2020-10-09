@@ -1272,6 +1272,33 @@ include/ros_gui/moc_delete.cpp.s:
 	$(MAKE) -f CMakeFiles/ros_gui.dir/build.make CMakeFiles/ros_gui.dir/include/ros_gui/moc_delete.cpp.s
 .PHONY : include/ros_gui/moc_delete.cpp.s
 
+include/ros_gui/moc_demo.o: include/ros_gui/moc_demo.cpp.o
+
+.PHONY : include/ros_gui/moc_demo.o
+
+# target to build an object file
+include/ros_gui/moc_demo.cpp.o:
+	$(MAKE) -f CMakeFiles/ros_gui.dir/build.make CMakeFiles/ros_gui.dir/include/ros_gui/moc_demo.cpp.o
+.PHONY : include/ros_gui/moc_demo.cpp.o
+
+include/ros_gui/moc_demo.i: include/ros_gui/moc_demo.cpp.i
+
+.PHONY : include/ros_gui/moc_demo.i
+
+# target to preprocess a source file
+include/ros_gui/moc_demo.cpp.i:
+	$(MAKE) -f CMakeFiles/ros_gui.dir/build.make CMakeFiles/ros_gui.dir/include/ros_gui/moc_demo.cpp.i
+.PHONY : include/ros_gui/moc_demo.cpp.i
+
+include/ros_gui/moc_demo.s: include/ros_gui/moc_demo.cpp.s
+
+.PHONY : include/ros_gui/moc_demo.s
+
+# target to generate assembly for a file
+include/ros_gui/moc_demo.cpp.s:
+	$(MAKE) -f CMakeFiles/ros_gui.dir/build.make CMakeFiles/ros_gui.dir/include/ros_gui/moc_demo.cpp.s
+.PHONY : include/ros_gui/moc_demo.cpp.s
+
 include/ros_gui/moc_dialog.o: include/ros_gui/moc_dialog.cpp.o
 
 .PHONY : include/ros_gui/moc_dialog.o
@@ -1298,6 +1325,33 @@ include/ros_gui/moc_dialog.s: include/ros_gui/moc_dialog.cpp.s
 include/ros_gui/moc_dialog.cpp.s:
 	$(MAKE) -f CMakeFiles/ros_gui.dir/build.make CMakeFiles/ros_gui.dir/include/ros_gui/moc_dialog.cpp.s
 .PHONY : include/ros_gui/moc_dialog.cpp.s
+
+include/ros_gui/moc_dock.o: include/ros_gui/moc_dock.cpp.o
+
+.PHONY : include/ros_gui/moc_dock.o
+
+# target to build an object file
+include/ros_gui/moc_dock.cpp.o:
+	$(MAKE) -f CMakeFiles/ros_gui.dir/build.make CMakeFiles/ros_gui.dir/include/ros_gui/moc_dock.cpp.o
+.PHONY : include/ros_gui/moc_dock.cpp.o
+
+include/ros_gui/moc_dock.i: include/ros_gui/moc_dock.cpp.i
+
+.PHONY : include/ros_gui/moc_dock.i
+
+# target to preprocess a source file
+include/ros_gui/moc_dock.cpp.i:
+	$(MAKE) -f CMakeFiles/ros_gui.dir/build.make CMakeFiles/ros_gui.dir/include/ros_gui/moc_dock.cpp.i
+.PHONY : include/ros_gui/moc_dock.cpp.i
+
+include/ros_gui/moc_dock.s: include/ros_gui/moc_dock.cpp.s
+
+.PHONY : include/ros_gui/moc_dock.s
+
+# target to generate assembly for a file
+include/ros_gui/moc_dock.cpp.s:
+	$(MAKE) -f CMakeFiles/ros_gui.dir/build.make CMakeFiles/ros_gui.dir/include/ros_gui/moc_dock.cpp.s
+.PHONY : include/ros_gui/moc_dock.cpp.s
 
 include/ros_gui/moc_mainwindow.o: include/ros_gui/moc_mainwindow.cpp.o
 
@@ -1569,6 +1623,33 @@ src/delete.cpp.s:
 	$(MAKE) -f CMakeFiles/ros_gui.dir/build.make CMakeFiles/ros_gui.dir/src/delete.cpp.s
 .PHONY : src/delete.cpp.s
 
+src/demo.o: src/demo.cpp.o
+
+.PHONY : src/demo.o
+
+# target to build an object file
+src/demo.cpp.o:
+	$(MAKE) -f CMakeFiles/ros_gui.dir/build.make CMakeFiles/ros_gui.dir/src/demo.cpp.o
+.PHONY : src/demo.cpp.o
+
+src/demo.i: src/demo.cpp.i
+
+.PHONY : src/demo.i
+
+# target to preprocess a source file
+src/demo.cpp.i:
+	$(MAKE) -f CMakeFiles/ros_gui.dir/build.make CMakeFiles/ros_gui.dir/src/demo.cpp.i
+.PHONY : src/demo.cpp.i
+
+src/demo.s: src/demo.cpp.s
+
+.PHONY : src/demo.s
+
+# target to generate assembly for a file
+src/demo.cpp.s:
+	$(MAKE) -f CMakeFiles/ros_gui.dir/build.make CMakeFiles/ros_gui.dir/src/demo.cpp.s
+.PHONY : src/demo.cpp.s
+
 src/dialog.o: src/dialog.cpp.o
 
 .PHONY : src/dialog.o
@@ -1595,6 +1676,33 @@ src/dialog.s: src/dialog.cpp.s
 src/dialog.cpp.s:
 	$(MAKE) -f CMakeFiles/ros_gui.dir/build.make CMakeFiles/ros_gui.dir/src/dialog.cpp.s
 .PHONY : src/dialog.cpp.s
+
+src/dock.o: src/dock.cpp.o
+
+.PHONY : src/dock.o
+
+# target to build an object file
+src/dock.cpp.o:
+	$(MAKE) -f CMakeFiles/ros_gui.dir/build.make CMakeFiles/ros_gui.dir/src/dock.cpp.o
+.PHONY : src/dock.cpp.o
+
+src/dock.i: src/dock.cpp.i
+
+.PHONY : src/dock.i
+
+# target to preprocess a source file
+src/dock.cpp.i:
+	$(MAKE) -f CMakeFiles/ros_gui.dir/build.make CMakeFiles/ros_gui.dir/src/dock.cpp.i
+.PHONY : src/dock.cpp.i
+
+src/dock.s: src/dock.cpp.s
+
+.PHONY : src/dock.s
+
+# target to generate assembly for a file
+src/dock.cpp.s:
+	$(MAKE) -f CMakeFiles/ros_gui.dir/build.make CMakeFiles/ros_gui.dir/src/dock.cpp.s
+.PHONY : src/dock.cpp.s
 
 src/main.o: src/main.cpp.o
 
@@ -1885,9 +1993,15 @@ help:
 	@echo "... include/ros_gui/moc_delete.o"
 	@echo "... include/ros_gui/moc_delete.i"
 	@echo "... include/ros_gui/moc_delete.s"
+	@echo "... include/ros_gui/moc_demo.o"
+	@echo "... include/ros_gui/moc_demo.i"
+	@echo "... include/ros_gui/moc_demo.s"
 	@echo "... include/ros_gui/moc_dialog.o"
 	@echo "... include/ros_gui/moc_dialog.i"
 	@echo "... include/ros_gui/moc_dialog.s"
+	@echo "... include/ros_gui/moc_dock.o"
+	@echo "... include/ros_gui/moc_dock.i"
+	@echo "... include/ros_gui/moc_dock.s"
 	@echo "... include/ros_gui/moc_mainwindow.o"
 	@echo "... include/ros_gui/moc_mainwindow.i"
 	@echo "... include/ros_gui/moc_mainwindow.s"
@@ -1918,9 +2032,15 @@ help:
 	@echo "... src/delete.o"
 	@echo "... src/delete.i"
 	@echo "... src/delete.s"
+	@echo "... src/demo.o"
+	@echo "... src/demo.i"
+	@echo "... src/demo.s"
 	@echo "... src/dialog.o"
 	@echo "... src/dialog.i"
 	@echo "... src/dialog.s"
+	@echo "... src/dock.o"
+	@echo "... src/dock.i"
+	@echo "... src/dock.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

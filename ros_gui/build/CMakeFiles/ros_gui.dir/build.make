@@ -176,65 +176,81 @@ ui_dialog.h: ../ui/dialog.ui
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/mty/catkin_gui/src/ros_gui/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating ui_dialog.h"
 	/usr/lib/x86_64-linux-gnu/qt5/bin/uic -o /home/mty/catkin_gui/src/ros_gui/build/ui_dialog.h /home/mty/catkin_gui/src/ros_gui/ui/dialog.ui
 
+ui_demo.h: ../ui/demo.ui
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/mty/catkin_gui/src/ros_gui/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating ui_demo.h"
+	/usr/lib/x86_64-linux-gnu/qt5/bin/uic -o /home/mty/catkin_gui/src/ros_gui/build/ui_demo.h /home/mty/catkin_gui/src/ros_gui/ui/demo.ui
+
 ui_mainwindow.h: ../ui/mainwindow.ui
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/mty/catkin_gui/src/ros_gui/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating ui_mainwindow.h"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/mty/catkin_gui/src/ros_gui/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating ui_mainwindow.h"
 	/usr/lib/x86_64-linux-gnu/qt5/bin/uic -o /home/mty/catkin_gui/src/ros_gui/build/ui_mainwindow.h /home/mty/catkin_gui/src/ros_gui/ui/mainwindow.ui
 
 ui_arm.h: ../ui/arm.ui
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/mty/catkin_gui/src/ros_gui/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating ui_arm.h"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/mty/catkin_gui/src/ros_gui/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Generating ui_arm.h"
 	/usr/lib/x86_64-linux-gnu/qt5/bin/uic -o /home/mty/catkin_gui/src/ros_gui/build/ui_arm.h /home/mty/catkin_gui/src/ros_gui/ui/arm.ui
 
+ui_dock.h: ../ui/dock.ui
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/mty/catkin_gui/src/ros_gui/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Generating ui_dock.h"
+	/usr/lib/x86_64-linux-gnu/qt5/bin/uic -o /home/mty/catkin_gui/src/ros_gui/build/ui_dock.h /home/mty/catkin_gui/src/ros_gui/ui/dock.ui
+
 ui_multigoal.h: ../ui/multigoal.ui
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/mty/catkin_gui/src/ros_gui/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Generating ui_multigoal.h"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/mty/catkin_gui/src/ros_gui/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Generating ui_multigoal.h"
 	/usr/lib/x86_64-linux-gnu/qt5/bin/uic -o /home/mty/catkin_gui/src/ros_gui/build/ui_multigoal.h /home/mty/catkin_gui/src/ros_gui/ui/multigoal.ui
 
 ui_semantic.h: ../ui/semantic.ui
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/mty/catkin_gui/src/ros_gui/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Generating ui_semantic.h"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/mty/catkin_gui/src/ros_gui/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Generating ui_semantic.h"
 	/usr/lib/x86_64-linux-gnu/qt5/bin/uic -o /home/mty/catkin_gui/src/ros_gui/build/ui_semantic.h /home/mty/catkin_gui/src/ros_gui/ui/semantic.ui
 
 ui_delete.h: ../ui/delete.ui
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/mty/catkin_gui/src/ros_gui/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Generating ui_delete.h"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/mty/catkin_gui/src/ros_gui/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Generating ui_delete.h"
 	/usr/lib/x86_64-linux-gnu/qt5/bin/uic -o /home/mty/catkin_gui/src/ros_gui/build/ui_delete.h /home/mty/catkin_gui/src/ros_gui/ui/delete.ui
 
 include/ros_gui/moc_markerNode.cpp: ../include/ros_gui/markerNode.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/mty/catkin_gui/src/ros_gui/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Generating include/ros_gui/moc_markerNode.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/mty/catkin_gui/src/ros_gui/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Generating include/ros_gui/moc_markerNode.cpp"
 	cd /home/mty/catkin_gui/src/ros_gui/build/include/ros_gui && /usr/lib/x86_64-linux-gnu/qt5/bin/moc @/home/mty/catkin_gui/src/ros_gui/build/include/ros_gui/moc_markerNode.cpp_parameters
 
 include/ros_gui/moc_qnode.cpp: ../include/ros_gui/qnode.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/mty/catkin_gui/src/ros_gui/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Generating include/ros_gui/moc_qnode.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/mty/catkin_gui/src/ros_gui/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Generating include/ros_gui/moc_qnode.cpp"
 	cd /home/mty/catkin_gui/src/ros_gui/build/include/ros_gui && /usr/lib/x86_64-linux-gnu/qt5/bin/moc @/home/mty/catkin_gui/src/ros_gui/build/include/ros_gui/moc_qnode.cpp_parameters
 
 include/ros_gui/moc_dialog.cpp: ../include/ros_gui/dialog.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/mty/catkin_gui/src/ros_gui/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Generating include/ros_gui/moc_dialog.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/mty/catkin_gui/src/ros_gui/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Generating include/ros_gui/moc_dialog.cpp"
 	cd /home/mty/catkin_gui/src/ros_gui/build/include/ros_gui && /usr/lib/x86_64-linux-gnu/qt5/bin/moc @/home/mty/catkin_gui/src/ros_gui/build/include/ros_gui/moc_dialog.cpp_parameters
 
 include/ros_gui/moc_multigoal.cpp: ../include/ros_gui/multigoal.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/mty/catkin_gui/src/ros_gui/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Generating include/ros_gui/moc_multigoal.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/mty/catkin_gui/src/ros_gui/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Generating include/ros_gui/moc_multigoal.cpp"
 	cd /home/mty/catkin_gui/src/ros_gui/build/include/ros_gui && /usr/lib/x86_64-linux-gnu/qt5/bin/moc @/home/mty/catkin_gui/src/ros_gui/build/include/ros_gui/moc_multigoal.cpp_parameters
 
 include/ros_gui/moc_semantic.cpp: ../include/ros_gui/semantic.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/mty/catkin_gui/src/ros_gui/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Generating include/ros_gui/moc_semantic.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/mty/catkin_gui/src/ros_gui/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Generating include/ros_gui/moc_semantic.cpp"
 	cd /home/mty/catkin_gui/src/ros_gui/build/include/ros_gui && /usr/lib/x86_64-linux-gnu/qt5/bin/moc @/home/mty/catkin_gui/src/ros_gui/build/include/ros_gui/moc_semantic.cpp_parameters
 
 include/ros_gui/moc_mainwindow.cpp: ../include/ros_gui/mainwindow.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/mty/catkin_gui/src/ros_gui/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Generating include/ros_gui/moc_mainwindow.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/mty/catkin_gui/src/ros_gui/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Generating include/ros_gui/moc_mainwindow.cpp"
 	cd /home/mty/catkin_gui/src/ros_gui/build/include/ros_gui && /usr/lib/x86_64-linux-gnu/qt5/bin/moc @/home/mty/catkin_gui/src/ros_gui/build/include/ros_gui/moc_mainwindow.cpp_parameters
 
 include/ros_gui/moc_arm.cpp: ../include/ros_gui/arm.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/mty/catkin_gui/src/ros_gui/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Generating include/ros_gui/moc_arm.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/mty/catkin_gui/src/ros_gui/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Generating include/ros_gui/moc_arm.cpp"
 	cd /home/mty/catkin_gui/src/ros_gui/build/include/ros_gui && /usr/lib/x86_64-linux-gnu/qt5/bin/moc @/home/mty/catkin_gui/src/ros_gui/build/include/ros_gui/moc_arm.cpp_parameters
 
 include/ros_gui/moc_delete.cpp: ../include/ros_gui/delete.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/mty/catkin_gui/src/ros_gui/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Generating include/ros_gui/moc_delete.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/mty/catkin_gui/src/ros_gui/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Generating include/ros_gui/moc_delete.cpp"
 	cd /home/mty/catkin_gui/src/ros_gui/build/include/ros_gui && /usr/lib/x86_64-linux-gnu/qt5/bin/moc @/home/mty/catkin_gui/src/ros_gui/build/include/ros_gui/moc_delete.cpp_parameters
 
 include/ros_gui/moc_mapNode.cpp: ../include/ros_gui/mapNode.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/mty/catkin_gui/src/ros_gui/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Generating include/ros_gui/moc_mapNode.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/mty/catkin_gui/src/ros_gui/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Generating include/ros_gui/moc_mapNode.cpp"
 	cd /home/mty/catkin_gui/src/ros_gui/build/include/ros_gui && /usr/lib/x86_64-linux-gnu/qt5/bin/moc @/home/mty/catkin_gui/src/ros_gui/build/include/ros_gui/moc_mapNode.cpp_parameters
+
+include/ros_gui/moc_demo.cpp: ../include/ros_gui/demo.h
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/mty/catkin_gui/src/ros_gui/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Generating include/ros_gui/moc_demo.cpp"
+	cd /home/mty/catkin_gui/src/ros_gui/build/include/ros_gui && /usr/lib/x86_64-linux-gnu/qt5/bin/moc @/home/mty/catkin_gui/src/ros_gui/build/include/ros_gui/moc_demo.cpp_parameters
+
+include/ros_gui/moc_dock.cpp: ../include/ros_gui/dock.h
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/mty/catkin_gui/src/ros_gui/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Generating include/ros_gui/moc_dock.cpp"
+	cd /home/mty/catkin_gui/src/ros_gui/build/include/ros_gui && /usr/lib/x86_64-linux-gnu/qt5/bin/moc @/home/mty/catkin_gui/src/ros_gui/build/include/ros_gui/moc_dock.cpp_parameters
 
 CMakeFiles/ros_gui.dir/src/semantic.cpp.o: CMakeFiles/ros_gui.dir/flags.make
 CMakeFiles/ros_gui.dir/src/semantic.cpp.o: ../src/semantic.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mty/catkin_gui/src/ros_gui/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/ros_gui.dir/src/semantic.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mty/catkin_gui/src/ros_gui/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/ros_gui.dir/src/semantic.cpp.o"
 	/usr/bin/g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ros_gui.dir/src/semantic.cpp.o -c /home/mty/catkin_gui/src/ros_gui/src/semantic.cpp
 
 CMakeFiles/ros_gui.dir/src/semantic.cpp.i: cmake_force
@@ -256,9 +272,33 @@ CMakeFiles/ros_gui.dir/src/semantic.cpp.o.provides: CMakeFiles/ros_gui.dir/src/s
 CMakeFiles/ros_gui.dir/src/semantic.cpp.o.provides.build: CMakeFiles/ros_gui.dir/src/semantic.cpp.o
 
 
+CMakeFiles/ros_gui.dir/src/dock.cpp.o: CMakeFiles/ros_gui.dir/flags.make
+CMakeFiles/ros_gui.dir/src/dock.cpp.o: ../src/dock.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mty/catkin_gui/src/ros_gui/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/ros_gui.dir/src/dock.cpp.o"
+	/usr/bin/g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ros_gui.dir/src/dock.cpp.o -c /home/mty/catkin_gui/src/ros_gui/src/dock.cpp
+
+CMakeFiles/ros_gui.dir/src/dock.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ros_gui.dir/src/dock.cpp.i"
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mty/catkin_gui/src/ros_gui/src/dock.cpp > CMakeFiles/ros_gui.dir/src/dock.cpp.i
+
+CMakeFiles/ros_gui.dir/src/dock.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ros_gui.dir/src/dock.cpp.s"
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mty/catkin_gui/src/ros_gui/src/dock.cpp -o CMakeFiles/ros_gui.dir/src/dock.cpp.s
+
+CMakeFiles/ros_gui.dir/src/dock.cpp.o.requires:
+
+.PHONY : CMakeFiles/ros_gui.dir/src/dock.cpp.o.requires
+
+CMakeFiles/ros_gui.dir/src/dock.cpp.o.provides: CMakeFiles/ros_gui.dir/src/dock.cpp.o.requires
+	$(MAKE) -f CMakeFiles/ros_gui.dir/build.make CMakeFiles/ros_gui.dir/src/dock.cpp.o.provides.build
+.PHONY : CMakeFiles/ros_gui.dir/src/dock.cpp.o.provides
+
+CMakeFiles/ros_gui.dir/src/dock.cpp.o.provides.build: CMakeFiles/ros_gui.dir/src/dock.cpp.o
+
+
 CMakeFiles/ros_gui.dir/src/mainwindow.cpp.o: CMakeFiles/ros_gui.dir/flags.make
 CMakeFiles/ros_gui.dir/src/mainwindow.cpp.o: ../src/mainwindow.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mty/catkin_gui/src/ros_gui/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/ros_gui.dir/src/mainwindow.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mty/catkin_gui/src/ros_gui/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/ros_gui.dir/src/mainwindow.cpp.o"
 	/usr/bin/g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ros_gui.dir/src/mainwindow.cpp.o -c /home/mty/catkin_gui/src/ros_gui/src/mainwindow.cpp
 
 CMakeFiles/ros_gui.dir/src/mainwindow.cpp.i: cmake_force
@@ -280,9 +320,33 @@ CMakeFiles/ros_gui.dir/src/mainwindow.cpp.o.provides: CMakeFiles/ros_gui.dir/src
 CMakeFiles/ros_gui.dir/src/mainwindow.cpp.o.provides.build: CMakeFiles/ros_gui.dir/src/mainwindow.cpp.o
 
 
+CMakeFiles/ros_gui.dir/src/demo.cpp.o: CMakeFiles/ros_gui.dir/flags.make
+CMakeFiles/ros_gui.dir/src/demo.cpp.o: ../src/demo.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mty/catkin_gui/src/ros_gui/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object CMakeFiles/ros_gui.dir/src/demo.cpp.o"
+	/usr/bin/g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ros_gui.dir/src/demo.cpp.o -c /home/mty/catkin_gui/src/ros_gui/src/demo.cpp
+
+CMakeFiles/ros_gui.dir/src/demo.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ros_gui.dir/src/demo.cpp.i"
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mty/catkin_gui/src/ros_gui/src/demo.cpp > CMakeFiles/ros_gui.dir/src/demo.cpp.i
+
+CMakeFiles/ros_gui.dir/src/demo.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ros_gui.dir/src/demo.cpp.s"
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mty/catkin_gui/src/ros_gui/src/demo.cpp -o CMakeFiles/ros_gui.dir/src/demo.cpp.s
+
+CMakeFiles/ros_gui.dir/src/demo.cpp.o.requires:
+
+.PHONY : CMakeFiles/ros_gui.dir/src/demo.cpp.o.requires
+
+CMakeFiles/ros_gui.dir/src/demo.cpp.o.provides: CMakeFiles/ros_gui.dir/src/demo.cpp.o.requires
+	$(MAKE) -f CMakeFiles/ros_gui.dir/build.make CMakeFiles/ros_gui.dir/src/demo.cpp.o.provides.build
+.PHONY : CMakeFiles/ros_gui.dir/src/demo.cpp.o.provides
+
+CMakeFiles/ros_gui.dir/src/demo.cpp.o.provides.build: CMakeFiles/ros_gui.dir/src/demo.cpp.o
+
+
 CMakeFiles/ros_gui.dir/src/markerNode.cpp.o: CMakeFiles/ros_gui.dir/flags.make
 CMakeFiles/ros_gui.dir/src/markerNode.cpp.o: ../src/markerNode.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mty/catkin_gui/src/ros_gui/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/ros_gui.dir/src/markerNode.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mty/catkin_gui/src/ros_gui/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object CMakeFiles/ros_gui.dir/src/markerNode.cpp.o"
 	/usr/bin/g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ros_gui.dir/src/markerNode.cpp.o -c /home/mty/catkin_gui/src/ros_gui/src/markerNode.cpp
 
 CMakeFiles/ros_gui.dir/src/markerNode.cpp.i: cmake_force
@@ -306,7 +370,7 @@ CMakeFiles/ros_gui.dir/src/markerNode.cpp.o.provides.build: CMakeFiles/ros_gui.d
 
 CMakeFiles/ros_gui.dir/src/multigoal.cpp.o: CMakeFiles/ros_gui.dir/flags.make
 CMakeFiles/ros_gui.dir/src/multigoal.cpp.o: ../src/multigoal.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mty/catkin_gui/src/ros_gui/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/ros_gui.dir/src/multigoal.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mty/catkin_gui/src/ros_gui/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object CMakeFiles/ros_gui.dir/src/multigoal.cpp.o"
 	/usr/bin/g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ros_gui.dir/src/multigoal.cpp.o -c /home/mty/catkin_gui/src/ros_gui/src/multigoal.cpp
 
 CMakeFiles/ros_gui.dir/src/multigoal.cpp.i: cmake_force
@@ -330,7 +394,7 @@ CMakeFiles/ros_gui.dir/src/multigoal.cpp.o.provides.build: CMakeFiles/ros_gui.di
 
 CMakeFiles/ros_gui.dir/src/qnode.cpp.o: CMakeFiles/ros_gui.dir/flags.make
 CMakeFiles/ros_gui.dir/src/qnode.cpp.o: ../src/qnode.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mty/catkin_gui/src/ros_gui/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/ros_gui.dir/src/qnode.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mty/catkin_gui/src/ros_gui/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building CXX object CMakeFiles/ros_gui.dir/src/qnode.cpp.o"
 	/usr/bin/g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ros_gui.dir/src/qnode.cpp.o -c /home/mty/catkin_gui/src/ros_gui/src/qnode.cpp
 
 CMakeFiles/ros_gui.dir/src/qnode.cpp.i: cmake_force
@@ -354,7 +418,7 @@ CMakeFiles/ros_gui.dir/src/qnode.cpp.o.provides.build: CMakeFiles/ros_gui.dir/sr
 
 CMakeFiles/ros_gui.dir/src/dialog.cpp.o: CMakeFiles/ros_gui.dir/flags.make
 CMakeFiles/ros_gui.dir/src/dialog.cpp.o: ../src/dialog.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mty/catkin_gui/src/ros_gui/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/ros_gui.dir/src/dialog.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mty/catkin_gui/src/ros_gui/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building CXX object CMakeFiles/ros_gui.dir/src/dialog.cpp.o"
 	/usr/bin/g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ros_gui.dir/src/dialog.cpp.o -c /home/mty/catkin_gui/src/ros_gui/src/dialog.cpp
 
 CMakeFiles/ros_gui.dir/src/dialog.cpp.i: cmake_force
@@ -378,7 +442,7 @@ CMakeFiles/ros_gui.dir/src/dialog.cpp.o.provides.build: CMakeFiles/ros_gui.dir/s
 
 CMakeFiles/ros_gui.dir/src/main.cpp.o: CMakeFiles/ros_gui.dir/flags.make
 CMakeFiles/ros_gui.dir/src/main.cpp.o: ../src/main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mty/catkin_gui/src/ros_gui/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/ros_gui.dir/src/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mty/catkin_gui/src/ros_gui/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building CXX object CMakeFiles/ros_gui.dir/src/main.cpp.o"
 	/usr/bin/g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ros_gui.dir/src/main.cpp.o -c /home/mty/catkin_gui/src/ros_gui/src/main.cpp
 
 CMakeFiles/ros_gui.dir/src/main.cpp.i: cmake_force
@@ -402,7 +466,7 @@ CMakeFiles/ros_gui.dir/src/main.cpp.o.provides.build: CMakeFiles/ros_gui.dir/src
 
 CMakeFiles/ros_gui.dir/src/arm.cpp.o: CMakeFiles/ros_gui.dir/flags.make
 CMakeFiles/ros_gui.dir/src/arm.cpp.o: ../src/arm.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mty/catkin_gui/src/ros_gui/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object CMakeFiles/ros_gui.dir/src/arm.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mty/catkin_gui/src/ros_gui/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building CXX object CMakeFiles/ros_gui.dir/src/arm.cpp.o"
 	/usr/bin/g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ros_gui.dir/src/arm.cpp.o -c /home/mty/catkin_gui/src/ros_gui/src/arm.cpp
 
 CMakeFiles/ros_gui.dir/src/arm.cpp.i: cmake_force
@@ -426,7 +490,7 @@ CMakeFiles/ros_gui.dir/src/arm.cpp.o.provides.build: CMakeFiles/ros_gui.dir/src/
 
 CMakeFiles/ros_gui.dir/src/mapNode.cpp.o: CMakeFiles/ros_gui.dir/flags.make
 CMakeFiles/ros_gui.dir/src/mapNode.cpp.o: ../src/mapNode.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mty/catkin_gui/src/ros_gui/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object CMakeFiles/ros_gui.dir/src/mapNode.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mty/catkin_gui/src/ros_gui/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building CXX object CMakeFiles/ros_gui.dir/src/mapNode.cpp.o"
 	/usr/bin/g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ros_gui.dir/src/mapNode.cpp.o -c /home/mty/catkin_gui/src/ros_gui/src/mapNode.cpp
 
 CMakeFiles/ros_gui.dir/src/mapNode.cpp.i: cmake_force
@@ -450,7 +514,7 @@ CMakeFiles/ros_gui.dir/src/mapNode.cpp.o.provides.build: CMakeFiles/ros_gui.dir/
 
 CMakeFiles/ros_gui.dir/src/delete.cpp.o: CMakeFiles/ros_gui.dir/flags.make
 CMakeFiles/ros_gui.dir/src/delete.cpp.o: ../src/delete.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mty/catkin_gui/src/ros_gui/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object CMakeFiles/ros_gui.dir/src/delete.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mty/catkin_gui/src/ros_gui/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building CXX object CMakeFiles/ros_gui.dir/src/delete.cpp.o"
 	/usr/bin/g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ros_gui.dir/src/delete.cpp.o -c /home/mty/catkin_gui/src/ros_gui/src/delete.cpp
 
 CMakeFiles/ros_gui.dir/src/delete.cpp.i: cmake_force
@@ -474,7 +538,7 @@ CMakeFiles/ros_gui.dir/src/delete.cpp.o.provides.build: CMakeFiles/ros_gui.dir/s
 
 CMakeFiles/ros_gui.dir/qrc_media.cpp.o: CMakeFiles/ros_gui.dir/flags.make
 CMakeFiles/ros_gui.dir/qrc_media.cpp.o: qrc_media.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mty/catkin_gui/src/ros_gui/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building CXX object CMakeFiles/ros_gui.dir/qrc_media.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mty/catkin_gui/src/ros_gui/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building CXX object CMakeFiles/ros_gui.dir/qrc_media.cpp.o"
 	/usr/bin/g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ros_gui.dir/qrc_media.cpp.o -c /home/mty/catkin_gui/src/ros_gui/build/qrc_media.cpp
 
 CMakeFiles/ros_gui.dir/qrc_media.cpp.i: cmake_force
@@ -498,7 +562,7 @@ CMakeFiles/ros_gui.dir/qrc_media.cpp.o.provides.build: CMakeFiles/ros_gui.dir/qr
 
 CMakeFiles/ros_gui.dir/qrc_images.cpp.o: CMakeFiles/ros_gui.dir/flags.make
 CMakeFiles/ros_gui.dir/qrc_images.cpp.o: qrc_images.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mty/catkin_gui/src/ros_gui/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building CXX object CMakeFiles/ros_gui.dir/qrc_images.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mty/catkin_gui/src/ros_gui/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building CXX object CMakeFiles/ros_gui.dir/qrc_images.cpp.o"
 	/usr/bin/g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ros_gui.dir/qrc_images.cpp.o -c /home/mty/catkin_gui/src/ros_gui/build/qrc_images.cpp
 
 CMakeFiles/ros_gui.dir/qrc_images.cpp.i: cmake_force
@@ -522,7 +586,7 @@ CMakeFiles/ros_gui.dir/qrc_images.cpp.o.provides.build: CMakeFiles/ros_gui.dir/q
 
 CMakeFiles/ros_gui.dir/include/ros_gui/moc_markerNode.cpp.o: CMakeFiles/ros_gui.dir/flags.make
 CMakeFiles/ros_gui.dir/include/ros_gui/moc_markerNode.cpp.o: include/ros_gui/moc_markerNode.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mty/catkin_gui/src/ros_gui/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building CXX object CMakeFiles/ros_gui.dir/include/ros_gui/moc_markerNode.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mty/catkin_gui/src/ros_gui/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building CXX object CMakeFiles/ros_gui.dir/include/ros_gui/moc_markerNode.cpp.o"
 	/usr/bin/g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ros_gui.dir/include/ros_gui/moc_markerNode.cpp.o -c /home/mty/catkin_gui/src/ros_gui/build/include/ros_gui/moc_markerNode.cpp
 
 CMakeFiles/ros_gui.dir/include/ros_gui/moc_markerNode.cpp.i: cmake_force
@@ -546,7 +610,7 @@ CMakeFiles/ros_gui.dir/include/ros_gui/moc_markerNode.cpp.o.provides.build: CMak
 
 CMakeFiles/ros_gui.dir/include/ros_gui/moc_qnode.cpp.o: CMakeFiles/ros_gui.dir/flags.make
 CMakeFiles/ros_gui.dir/include/ros_gui/moc_qnode.cpp.o: include/ros_gui/moc_qnode.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mty/catkin_gui/src/ros_gui/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building CXX object CMakeFiles/ros_gui.dir/include/ros_gui/moc_qnode.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mty/catkin_gui/src/ros_gui/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building CXX object CMakeFiles/ros_gui.dir/include/ros_gui/moc_qnode.cpp.o"
 	/usr/bin/g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ros_gui.dir/include/ros_gui/moc_qnode.cpp.o -c /home/mty/catkin_gui/src/ros_gui/build/include/ros_gui/moc_qnode.cpp
 
 CMakeFiles/ros_gui.dir/include/ros_gui/moc_qnode.cpp.i: cmake_force
@@ -570,7 +634,7 @@ CMakeFiles/ros_gui.dir/include/ros_gui/moc_qnode.cpp.o.provides.build: CMakeFile
 
 CMakeFiles/ros_gui.dir/include/ros_gui/moc_dialog.cpp.o: CMakeFiles/ros_gui.dir/flags.make
 CMakeFiles/ros_gui.dir/include/ros_gui/moc_dialog.cpp.o: include/ros_gui/moc_dialog.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mty/catkin_gui/src/ros_gui/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building CXX object CMakeFiles/ros_gui.dir/include/ros_gui/moc_dialog.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mty/catkin_gui/src/ros_gui/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building CXX object CMakeFiles/ros_gui.dir/include/ros_gui/moc_dialog.cpp.o"
 	/usr/bin/g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ros_gui.dir/include/ros_gui/moc_dialog.cpp.o -c /home/mty/catkin_gui/src/ros_gui/build/include/ros_gui/moc_dialog.cpp
 
 CMakeFiles/ros_gui.dir/include/ros_gui/moc_dialog.cpp.i: cmake_force
@@ -594,7 +658,7 @@ CMakeFiles/ros_gui.dir/include/ros_gui/moc_dialog.cpp.o.provides.build: CMakeFil
 
 CMakeFiles/ros_gui.dir/include/ros_gui/moc_multigoal.cpp.o: CMakeFiles/ros_gui.dir/flags.make
 CMakeFiles/ros_gui.dir/include/ros_gui/moc_multigoal.cpp.o: include/ros_gui/moc_multigoal.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mty/catkin_gui/src/ros_gui/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building CXX object CMakeFiles/ros_gui.dir/include/ros_gui/moc_multigoal.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mty/catkin_gui/src/ros_gui/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building CXX object CMakeFiles/ros_gui.dir/include/ros_gui/moc_multigoal.cpp.o"
 	/usr/bin/g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ros_gui.dir/include/ros_gui/moc_multigoal.cpp.o -c /home/mty/catkin_gui/src/ros_gui/build/include/ros_gui/moc_multigoal.cpp
 
 CMakeFiles/ros_gui.dir/include/ros_gui/moc_multigoal.cpp.i: cmake_force
@@ -618,7 +682,7 @@ CMakeFiles/ros_gui.dir/include/ros_gui/moc_multigoal.cpp.o.provides.build: CMake
 
 CMakeFiles/ros_gui.dir/include/ros_gui/moc_semantic.cpp.o: CMakeFiles/ros_gui.dir/flags.make
 CMakeFiles/ros_gui.dir/include/ros_gui/moc_semantic.cpp.o: include/ros_gui/moc_semantic.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mty/catkin_gui/src/ros_gui/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building CXX object CMakeFiles/ros_gui.dir/include/ros_gui/moc_semantic.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mty/catkin_gui/src/ros_gui/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building CXX object CMakeFiles/ros_gui.dir/include/ros_gui/moc_semantic.cpp.o"
 	/usr/bin/g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ros_gui.dir/include/ros_gui/moc_semantic.cpp.o -c /home/mty/catkin_gui/src/ros_gui/build/include/ros_gui/moc_semantic.cpp
 
 CMakeFiles/ros_gui.dir/include/ros_gui/moc_semantic.cpp.i: cmake_force
@@ -642,7 +706,7 @@ CMakeFiles/ros_gui.dir/include/ros_gui/moc_semantic.cpp.o.provides.build: CMakeF
 
 CMakeFiles/ros_gui.dir/include/ros_gui/moc_mainwindow.cpp.o: CMakeFiles/ros_gui.dir/flags.make
 CMakeFiles/ros_gui.dir/include/ros_gui/moc_mainwindow.cpp.o: include/ros_gui/moc_mainwindow.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mty/catkin_gui/src/ros_gui/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building CXX object CMakeFiles/ros_gui.dir/include/ros_gui/moc_mainwindow.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mty/catkin_gui/src/ros_gui/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building CXX object CMakeFiles/ros_gui.dir/include/ros_gui/moc_mainwindow.cpp.o"
 	/usr/bin/g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ros_gui.dir/include/ros_gui/moc_mainwindow.cpp.o -c /home/mty/catkin_gui/src/ros_gui/build/include/ros_gui/moc_mainwindow.cpp
 
 CMakeFiles/ros_gui.dir/include/ros_gui/moc_mainwindow.cpp.i: cmake_force
@@ -666,7 +730,7 @@ CMakeFiles/ros_gui.dir/include/ros_gui/moc_mainwindow.cpp.o.provides.build: CMak
 
 CMakeFiles/ros_gui.dir/include/ros_gui/moc_arm.cpp.o: CMakeFiles/ros_gui.dir/flags.make
 CMakeFiles/ros_gui.dir/include/ros_gui/moc_arm.cpp.o: include/ros_gui/moc_arm.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mty/catkin_gui/src/ros_gui/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building CXX object CMakeFiles/ros_gui.dir/include/ros_gui/moc_arm.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mty/catkin_gui/src/ros_gui/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building CXX object CMakeFiles/ros_gui.dir/include/ros_gui/moc_arm.cpp.o"
 	/usr/bin/g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ros_gui.dir/include/ros_gui/moc_arm.cpp.o -c /home/mty/catkin_gui/src/ros_gui/build/include/ros_gui/moc_arm.cpp
 
 CMakeFiles/ros_gui.dir/include/ros_gui/moc_arm.cpp.i: cmake_force
@@ -690,7 +754,7 @@ CMakeFiles/ros_gui.dir/include/ros_gui/moc_arm.cpp.o.provides.build: CMakeFiles/
 
 CMakeFiles/ros_gui.dir/include/ros_gui/moc_delete.cpp.o: CMakeFiles/ros_gui.dir/flags.make
 CMakeFiles/ros_gui.dir/include/ros_gui/moc_delete.cpp.o: include/ros_gui/moc_delete.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mty/catkin_gui/src/ros_gui/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building CXX object CMakeFiles/ros_gui.dir/include/ros_gui/moc_delete.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mty/catkin_gui/src/ros_gui/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building CXX object CMakeFiles/ros_gui.dir/include/ros_gui/moc_delete.cpp.o"
 	/usr/bin/g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ros_gui.dir/include/ros_gui/moc_delete.cpp.o -c /home/mty/catkin_gui/src/ros_gui/build/include/ros_gui/moc_delete.cpp
 
 CMakeFiles/ros_gui.dir/include/ros_gui/moc_delete.cpp.i: cmake_force
@@ -714,7 +778,7 @@ CMakeFiles/ros_gui.dir/include/ros_gui/moc_delete.cpp.o.provides.build: CMakeFil
 
 CMakeFiles/ros_gui.dir/include/ros_gui/moc_mapNode.cpp.o: CMakeFiles/ros_gui.dir/flags.make
 CMakeFiles/ros_gui.dir/include/ros_gui/moc_mapNode.cpp.o: include/ros_gui/moc_mapNode.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mty/catkin_gui/src/ros_gui/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building CXX object CMakeFiles/ros_gui.dir/include/ros_gui/moc_mapNode.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mty/catkin_gui/src/ros_gui/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Building CXX object CMakeFiles/ros_gui.dir/include/ros_gui/moc_mapNode.cpp.o"
 	/usr/bin/g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ros_gui.dir/include/ros_gui/moc_mapNode.cpp.o -c /home/mty/catkin_gui/src/ros_gui/build/include/ros_gui/moc_mapNode.cpp
 
 CMakeFiles/ros_gui.dir/include/ros_gui/moc_mapNode.cpp.i: cmake_force
@@ -736,10 +800,60 @@ CMakeFiles/ros_gui.dir/include/ros_gui/moc_mapNode.cpp.o.provides: CMakeFiles/ro
 CMakeFiles/ros_gui.dir/include/ros_gui/moc_mapNode.cpp.o.provides.build: CMakeFiles/ros_gui.dir/include/ros_gui/moc_mapNode.cpp.o
 
 
+CMakeFiles/ros_gui.dir/include/ros_gui/moc_demo.cpp.o: CMakeFiles/ros_gui.dir/flags.make
+CMakeFiles/ros_gui.dir/include/ros_gui/moc_demo.cpp.o: include/ros_gui/moc_demo.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mty/catkin_gui/src/ros_gui/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Building CXX object CMakeFiles/ros_gui.dir/include/ros_gui/moc_demo.cpp.o"
+	/usr/bin/g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ros_gui.dir/include/ros_gui/moc_demo.cpp.o -c /home/mty/catkin_gui/src/ros_gui/build/include/ros_gui/moc_demo.cpp
+
+CMakeFiles/ros_gui.dir/include/ros_gui/moc_demo.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ros_gui.dir/include/ros_gui/moc_demo.cpp.i"
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mty/catkin_gui/src/ros_gui/build/include/ros_gui/moc_demo.cpp > CMakeFiles/ros_gui.dir/include/ros_gui/moc_demo.cpp.i
+
+CMakeFiles/ros_gui.dir/include/ros_gui/moc_demo.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ros_gui.dir/include/ros_gui/moc_demo.cpp.s"
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mty/catkin_gui/src/ros_gui/build/include/ros_gui/moc_demo.cpp -o CMakeFiles/ros_gui.dir/include/ros_gui/moc_demo.cpp.s
+
+CMakeFiles/ros_gui.dir/include/ros_gui/moc_demo.cpp.o.requires:
+
+.PHONY : CMakeFiles/ros_gui.dir/include/ros_gui/moc_demo.cpp.o.requires
+
+CMakeFiles/ros_gui.dir/include/ros_gui/moc_demo.cpp.o.provides: CMakeFiles/ros_gui.dir/include/ros_gui/moc_demo.cpp.o.requires
+	$(MAKE) -f CMakeFiles/ros_gui.dir/build.make CMakeFiles/ros_gui.dir/include/ros_gui/moc_demo.cpp.o.provides.build
+.PHONY : CMakeFiles/ros_gui.dir/include/ros_gui/moc_demo.cpp.o.provides
+
+CMakeFiles/ros_gui.dir/include/ros_gui/moc_demo.cpp.o.provides.build: CMakeFiles/ros_gui.dir/include/ros_gui/moc_demo.cpp.o
+
+
+CMakeFiles/ros_gui.dir/include/ros_gui/moc_dock.cpp.o: CMakeFiles/ros_gui.dir/flags.make
+CMakeFiles/ros_gui.dir/include/ros_gui/moc_dock.cpp.o: include/ros_gui/moc_dock.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mty/catkin_gui/src/ros_gui/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_46) "Building CXX object CMakeFiles/ros_gui.dir/include/ros_gui/moc_dock.cpp.o"
+	/usr/bin/g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ros_gui.dir/include/ros_gui/moc_dock.cpp.o -c /home/mty/catkin_gui/src/ros_gui/build/include/ros_gui/moc_dock.cpp
+
+CMakeFiles/ros_gui.dir/include/ros_gui/moc_dock.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ros_gui.dir/include/ros_gui/moc_dock.cpp.i"
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mty/catkin_gui/src/ros_gui/build/include/ros_gui/moc_dock.cpp > CMakeFiles/ros_gui.dir/include/ros_gui/moc_dock.cpp.i
+
+CMakeFiles/ros_gui.dir/include/ros_gui/moc_dock.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ros_gui.dir/include/ros_gui/moc_dock.cpp.s"
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mty/catkin_gui/src/ros_gui/build/include/ros_gui/moc_dock.cpp -o CMakeFiles/ros_gui.dir/include/ros_gui/moc_dock.cpp.s
+
+CMakeFiles/ros_gui.dir/include/ros_gui/moc_dock.cpp.o.requires:
+
+.PHONY : CMakeFiles/ros_gui.dir/include/ros_gui/moc_dock.cpp.o.requires
+
+CMakeFiles/ros_gui.dir/include/ros_gui/moc_dock.cpp.o.provides: CMakeFiles/ros_gui.dir/include/ros_gui/moc_dock.cpp.o.requires
+	$(MAKE) -f CMakeFiles/ros_gui.dir/build.make CMakeFiles/ros_gui.dir/include/ros_gui/moc_dock.cpp.o.provides.build
+.PHONY : CMakeFiles/ros_gui.dir/include/ros_gui/moc_dock.cpp.o.provides
+
+CMakeFiles/ros_gui.dir/include/ros_gui/moc_dock.cpp.o.provides.build: CMakeFiles/ros_gui.dir/include/ros_gui/moc_dock.cpp.o
+
+
 # Object files for target ros_gui
 ros_gui_OBJECTS = \
 "CMakeFiles/ros_gui.dir/src/semantic.cpp.o" \
+"CMakeFiles/ros_gui.dir/src/dock.cpp.o" \
 "CMakeFiles/ros_gui.dir/src/mainwindow.cpp.o" \
+"CMakeFiles/ros_gui.dir/src/demo.cpp.o" \
 "CMakeFiles/ros_gui.dir/src/markerNode.cpp.o" \
 "CMakeFiles/ros_gui.dir/src/multigoal.cpp.o" \
 "CMakeFiles/ros_gui.dir/src/qnode.cpp.o" \
@@ -758,13 +872,17 @@ ros_gui_OBJECTS = \
 "CMakeFiles/ros_gui.dir/include/ros_gui/moc_mainwindow.cpp.o" \
 "CMakeFiles/ros_gui.dir/include/ros_gui/moc_arm.cpp.o" \
 "CMakeFiles/ros_gui.dir/include/ros_gui/moc_delete.cpp.o" \
-"CMakeFiles/ros_gui.dir/include/ros_gui/moc_mapNode.cpp.o"
+"CMakeFiles/ros_gui.dir/include/ros_gui/moc_mapNode.cpp.o" \
+"CMakeFiles/ros_gui.dir/include/ros_gui/moc_demo.cpp.o" \
+"CMakeFiles/ros_gui.dir/include/ros_gui/moc_dock.cpp.o"
 
 # External object files for target ros_gui
 ros_gui_EXTERNAL_OBJECTS =
 
 devel/lib/ros_gui/ros_gui: CMakeFiles/ros_gui.dir/src/semantic.cpp.o
+devel/lib/ros_gui/ros_gui: CMakeFiles/ros_gui.dir/src/dock.cpp.o
 devel/lib/ros_gui/ros_gui: CMakeFiles/ros_gui.dir/src/mainwindow.cpp.o
+devel/lib/ros_gui/ros_gui: CMakeFiles/ros_gui.dir/src/demo.cpp.o
 devel/lib/ros_gui/ros_gui: CMakeFiles/ros_gui.dir/src/markerNode.cpp.o
 devel/lib/ros_gui/ros_gui: CMakeFiles/ros_gui.dir/src/multigoal.cpp.o
 devel/lib/ros_gui/ros_gui: CMakeFiles/ros_gui.dir/src/qnode.cpp.o
@@ -784,6 +902,8 @@ devel/lib/ros_gui/ros_gui: CMakeFiles/ros_gui.dir/include/ros_gui/moc_mainwindow
 devel/lib/ros_gui/ros_gui: CMakeFiles/ros_gui.dir/include/ros_gui/moc_arm.cpp.o
 devel/lib/ros_gui/ros_gui: CMakeFiles/ros_gui.dir/include/ros_gui/moc_delete.cpp.o
 devel/lib/ros_gui/ros_gui: CMakeFiles/ros_gui.dir/include/ros_gui/moc_mapNode.cpp.o
+devel/lib/ros_gui/ros_gui: CMakeFiles/ros_gui.dir/include/ros_gui/moc_demo.cpp.o
+devel/lib/ros_gui/ros_gui: CMakeFiles/ros_gui.dir/include/ros_gui/moc_dock.cpp.o
 devel/lib/ros_gui/ros_gui: CMakeFiles/ros_gui.dir/build.make
 devel/lib/ros_gui/ros_gui: /opt/ros/kinetic/lib/librviz.so
 devel/lib/ros_gui/ros_gui: /usr/lib/x86_64-linux-gnu/libOgreOverlay.so
@@ -886,7 +1006,7 @@ devel/lib/ros_gui/ros_gui: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_objde
 devel/lib/ros_gui/ros_gui: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_imgproc3.so.3.3.1
 devel/lib/ros_gui/ros_gui: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_core3.so.3.3.1
 devel/lib/ros_gui/ros_gui: CMakeFiles/ros_gui.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/mty/catkin_gui/src/ros_gui/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Linking CXX executable devel/lib/ros_gui/ros_gui"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/mty/catkin_gui/src/ros_gui/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_47) "Linking CXX executable devel/lib/ros_gui/ros_gui"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ros_gui.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -895,7 +1015,9 @@ CMakeFiles/ros_gui.dir/build: devel/lib/ros_gui/ros_gui
 .PHONY : CMakeFiles/ros_gui.dir/build
 
 CMakeFiles/ros_gui.dir/requires: CMakeFiles/ros_gui.dir/src/semantic.cpp.o.requires
+CMakeFiles/ros_gui.dir/requires: CMakeFiles/ros_gui.dir/src/dock.cpp.o.requires
 CMakeFiles/ros_gui.dir/requires: CMakeFiles/ros_gui.dir/src/mainwindow.cpp.o.requires
+CMakeFiles/ros_gui.dir/requires: CMakeFiles/ros_gui.dir/src/demo.cpp.o.requires
 CMakeFiles/ros_gui.dir/requires: CMakeFiles/ros_gui.dir/src/markerNode.cpp.o.requires
 CMakeFiles/ros_gui.dir/requires: CMakeFiles/ros_gui.dir/src/multigoal.cpp.o.requires
 CMakeFiles/ros_gui.dir/requires: CMakeFiles/ros_gui.dir/src/qnode.cpp.o.requires
@@ -915,6 +1037,8 @@ CMakeFiles/ros_gui.dir/requires: CMakeFiles/ros_gui.dir/include/ros_gui/moc_main
 CMakeFiles/ros_gui.dir/requires: CMakeFiles/ros_gui.dir/include/ros_gui/moc_arm.cpp.o.requires
 CMakeFiles/ros_gui.dir/requires: CMakeFiles/ros_gui.dir/include/ros_gui/moc_delete.cpp.o.requires
 CMakeFiles/ros_gui.dir/requires: CMakeFiles/ros_gui.dir/include/ros_gui/moc_mapNode.cpp.o.requires
+CMakeFiles/ros_gui.dir/requires: CMakeFiles/ros_gui.dir/include/ros_gui/moc_demo.cpp.o.requires
+CMakeFiles/ros_gui.dir/requires: CMakeFiles/ros_gui.dir/include/ros_gui/moc_dock.cpp.o.requires
 
 .PHONY : CMakeFiles/ros_gui.dir/requires
 
@@ -925,8 +1049,10 @@ CMakeFiles/ros_gui.dir/clean:
 CMakeFiles/ros_gui.dir/depend: qrc_media.cpp
 CMakeFiles/ros_gui.dir/depend: qrc_images.cpp
 CMakeFiles/ros_gui.dir/depend: ui_dialog.h
+CMakeFiles/ros_gui.dir/depend: ui_demo.h
 CMakeFiles/ros_gui.dir/depend: ui_mainwindow.h
 CMakeFiles/ros_gui.dir/depend: ui_arm.h
+CMakeFiles/ros_gui.dir/depend: ui_dock.h
 CMakeFiles/ros_gui.dir/depend: ui_multigoal.h
 CMakeFiles/ros_gui.dir/depend: ui_semantic.h
 CMakeFiles/ros_gui.dir/depend: ui_delete.h
@@ -939,6 +1065,8 @@ CMakeFiles/ros_gui.dir/depend: include/ros_gui/moc_mainwindow.cpp
 CMakeFiles/ros_gui.dir/depend: include/ros_gui/moc_arm.cpp
 CMakeFiles/ros_gui.dir/depend: include/ros_gui/moc_delete.cpp
 CMakeFiles/ros_gui.dir/depend: include/ros_gui/moc_mapNode.cpp
+CMakeFiles/ros_gui.dir/depend: include/ros_gui/moc_demo.cpp
+CMakeFiles/ros_gui.dir/depend: include/ros_gui/moc_dock.cpp
 	cd /home/mty/catkin_gui/src/ros_gui/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/mty/catkin_gui/src/ros_gui /home/mty/catkin_gui/src/ros_gui /home/mty/catkin_gui/src/ros_gui/build /home/mty/catkin_gui/src/ros_gui/build /home/mty/catkin_gui/src/ros_gui/build/CMakeFiles/ros_gui.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/ros_gui.dir/depend
 

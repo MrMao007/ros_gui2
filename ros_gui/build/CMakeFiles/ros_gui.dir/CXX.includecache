@@ -58,9 +58,25 @@ QtCore/qbytearray.h
 QtCore/qmetatype.h
 -
 
+/home/mty/catkin_gui/src/ros_gui/build/include/ros_gui/moc_demo.cpp
+../../../include/ros_gui/demo.h
+/home/mty/catkin_gui/src/ros_gui/include/ros_gui/demo.h
+QtCore/qbytearray.h
+-
+QtCore/qmetatype.h
+-
+
 /home/mty/catkin_gui/src/ros_gui/build/include/ros_gui/moc_dialog.cpp
 ../../../include/ros_gui/dialog.h
 /home/mty/catkin_gui/src/ros_gui/include/ros_gui/dialog.h
+QtCore/qbytearray.h
+-
+QtCore/qmetatype.h
+-
+
+/home/mty/catkin_gui/src/ros_gui/build/include/ros_gui/moc_dock.cpp
+../../../include/ros_gui/dock.h
+/home/mty/catkin_gui/src/ros_gui/include/ros_gui/dock.h
 QtCore/qbytearray.h
 -
 QtCore/qmetatype.h
@@ -172,6 +188,30 @@ QtWidgets/QPushButton
 QtWidgets/QWidget
 -
 
+/home/mty/catkin_gui/src/ros_gui/build/ui_demo.h
+QtCore/QVariant
+-
+QtWidgets/QAction
+-
+QtWidgets/QApplication
+-
+QtWidgets/QButtonGroup
+-
+QtWidgets/QDialog
+-
+QtWidgets/QGridLayout
+-
+QtWidgets/QHeaderView
+-
+QtWidgets/QLabel
+-
+QtWidgets/QLineEdit
+-
+QtWidgets/QPushButton
+-
+QtWidgets/QWidget
+-
+
 /home/mty/catkin_gui/src/ros_gui/build/ui_dialog.h
 QtCore/QVariant
 -
@@ -196,6 +236,30 @@ QtWidgets/QLineEdit
 QtWidgets/QPushButton
 -
 QtWidgets/QTabWidget
+-
+QtWidgets/QWidget
+-
+
+/home/mty/catkin_gui/src/ros_gui/build/ui_dock.h
+QtCore/QVariant
+-
+QtWidgets/QAction
+-
+QtWidgets/QApplication
+-
+QtWidgets/QButtonGroup
+-
+QtWidgets/QComboBox
+-
+QtWidgets/QDialog
+-
+QtWidgets/QGridLayout
+-
+QtWidgets/QHeaderView
+-
+QtWidgets/QLabel
+-
+QtWidgets/QPushButton
 -
 QtWidgets/QWidget
 -
@@ -308,6 +372,16 @@ vector
 QString
 -
 
+/home/mty/catkin_gui/src/ros_gui/include/ros_gui/demo.h
+QDialog
+-
+vector
+-
+QString
+-
+QMessageBox
+-
+
 /home/mty/catkin_gui/src/ros_gui/include/ros_gui/dialog.h
 QDialog
 -
@@ -317,6 +391,16 @@ mapNode.h
 /home/mty/catkin_gui/src/ros_gui/include/ros_gui/mapNode.h
 delete.h
 /home/mty/catkin_gui/src/ros_gui/include/ros_gui/delete.h
+
+/home/mty/catkin_gui/src/ros_gui/include/ros_gui/dock.h
+QDialog
+-
+vector
+-
+QString
+-
+opencv2/opencv.hpp
+-
 
 /home/mty/catkin_gui/src/ros_gui/include/ros_gui/mainwindow.h
 QMainWindow
@@ -349,6 +433,10 @@ semantic.h
 /home/mty/catkin_gui/src/ros_gui/include/ros_gui/semantic.h
 multigoal.h
 /home/mty/catkin_gui/src/ros_gui/include/ros_gui/multigoal.h
+demo.h
+/home/mty/catkin_gui/src/ros_gui/include/ros_gui/demo.h
+dock.h
+/home/mty/catkin_gui/src/ros_gui/include/ros_gui/dock.h
 
 /home/mty/catkin_gui/src/ros_gui/include/ros_gui/mapNode.h
 ros/ros.h
@@ -458,11 +546,23 @@ QString
 ../build/ui_delete.h
 /home/mty/catkin_gui/src/ros_gui/build/ui_delete.h
 
+/home/mty/catkin_gui/src/ros_gui/src/demo.cpp
+../include/ros_gui/demo.h
+/home/mty/catkin_gui/src/ros_gui/include/ros_gui/demo.h
+../build/ui_demo.h
+/home/mty/catkin_gui/src/ros_gui/build/ui_demo.h
+
 /home/mty/catkin_gui/src/ros_gui/src/dialog.cpp
 ../include/ros_gui/dialog.h
 /home/mty/catkin_gui/src/ros_gui/include/ros_gui/dialog.h
 ../build/ui_dialog.h
 /home/mty/catkin_gui/src/ros_gui/build/ui_dialog.h
+
+/home/mty/catkin_gui/src/ros_gui/src/dock.cpp
+../include/ros_gui/dock.h
+/home/mty/catkin_gui/src/ros_gui/include/ros_gui/dock.h
+../build/ui_dock.h
+/home/mty/catkin_gui/src/ros_gui/build/ui_dock.h
 
 /home/mty/catkin_gui/src/ros_gui/src/main.cpp
 ../include/ros_gui/mainwindow.h
@@ -7948,6 +8048,10 @@ qapplication.h
 qbuttongroup.h
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qbuttongroup.h
 
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QComboBox
+qcombobox.h
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qcombobox.h
+
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QDialog
 qdialog.h
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qdialog.h
@@ -8114,6 +8218,16 @@ limits.h
 
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qbuttongroup.h
 QtCore/qobject.h
+-
+
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qcombobox.h
+QtWidgets/qwidget.h
+-
+QtWidgets/qabstractitemdelegate.h
+-
+QtCore/qabstractitemmodel.h
+-
+QtCore/qvariant.h
 -
 
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qdesktopwidget.h
