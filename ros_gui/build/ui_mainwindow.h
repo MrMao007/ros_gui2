@@ -43,11 +43,9 @@ public:
     QVBoxLayout *_2;
     QGridLayout *gridLayout;
     QLabel *label_7;
-    QRadioButton *radioButton_2;
     QRadioButton *radioButton;
     QLabel *label_5;
     QRadioButton *radioButton_3;
-    QLabel *label_6;
     QRadioButton *radioButton_4;
     QLabel *label_8;
     QSpacerItem *verticalSpacer;
@@ -136,14 +134,7 @@ public:
         label_7->setObjectName(QStringLiteral("label_7"));
         label_7->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
 
-        gridLayout->addWidget(label_7, 2, 1, 1, 1);
-
-        radioButton_2 = new QRadioButton(tab);
-        radioButton_2->setObjectName(QStringLiteral("radioButton_2"));
-        radioButton_2->setMinimumSize(QSize(25, 25));
-        radioButton_2->setAutoExclusive(false);
-
-        gridLayout->addWidget(radioButton_2, 1, 0, 1, 1);
+        gridLayout->addWidget(label_7, 1, 1, 1, 1);
 
         radioButton = new QRadioButton(tab);
         radioButton->setObjectName(QStringLiteral("radioButton"));
@@ -172,13 +163,7 @@ public:
         radioButton_3->setCheckable(true);
         radioButton_3->setAutoExclusive(false);
 
-        gridLayout->addWidget(radioButton_3, 2, 0, 1, 1);
-
-        label_6 = new QLabel(tab);
-        label_6->setObjectName(QStringLiteral("label_6"));
-        label_6->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
-
-        gridLayout->addWidget(label_6, 1, 1, 1, 1);
+        gridLayout->addWidget(radioButton_3, 1, 0, 1, 1);
 
         radioButton_4 = new QRadioButton(tab);
         radioButton_4->setObjectName(QStringLiteral("radioButton_4"));
@@ -186,13 +171,13 @@ public:
         radioButton_4->setCheckable(true);
         radioButton_4->setAutoExclusive(false);
 
-        gridLayout->addWidget(radioButton_4, 3, 0, 1, 1);
+        gridLayout->addWidget(radioButton_4, 2, 0, 1, 1);
 
         label_8 = new QLabel(tab);
         label_8->setObjectName(QStringLiteral("label_8"));
         label_8->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
 
-        gridLayout->addWidget(label_8, 3, 1, 1, 1);
+        gridLayout->addWidget(label_8, 2, 1, 1, 1);
 
 
         _2->addLayout(gridLayout);
@@ -468,7 +453,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        tabWidget->setCurrentIndex(1);
+        tabWidget->setCurrentIndex(0);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -478,21 +463,19 @@ public:
     {
         MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", 0));
         label_7->setText(QApplication::translate("MainWindow", "\345\273\272\345\233\276", 0));
-        radioButton_2->setText(QString());
         radioButton->setText(QString());
         label_5->setText(QApplication::translate("MainWindow", "2D\346\277\200\345\205\211", 0));
         radioButton_3->setText(QString());
-        label_6->setText(QApplication::translate("MainWindow", "\351\207\214\347\250\213\350\256\241", 0));
         radioButton_4->setText(QString());
         label_8->setText(QApplication::translate("MainWindow", "\345\257\274\350\210\252", 0));
         tabWidget->setTabText(tabWidget->indexOf(tab), QApplication::translate("MainWindow", "2D", 0));
         radioButton_6->setText(QString());
         radioButton_7->setText(QString());
         label_10->setText(QApplication::translate("MainWindow", "3D\346\277\200\345\205\211", 0));
-        label_11->setText(QApplication::translate("MainWindow", "\345\256\232\344\275\215", 0));
+        label_11->setText(QApplication::translate("MainWindow", "\345\273\272\345\233\276", 0));
         radioButton_8->setText(QString());
         label_13->setText(QApplication::translate("MainWindow", "\350\256\260\345\275\225\350\267\257\345\276\204", 0));
-        label_12->setText(QApplication::translate("MainWindow", "\345\273\272\345\233\276", 0));
+        label_12->setText(QApplication::translate("MainWindow", "\345\257\274\350\210\252", 0));
         radioButton_9->setText(QString());
         radioButton_10->setText(QString());
         label_14->setText(QApplication::translate("MainWindow", "\350\267\237\350\270\252\350\267\257\345\276\204", 0));

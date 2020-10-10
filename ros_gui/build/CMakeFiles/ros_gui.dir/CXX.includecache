@@ -583,6 +583,8 @@ math.h
 -
 unistd.h
 -
+QCloseEvent
+-
 
 /home/mty/catkin_gui/src/ros_gui/src/mapNode.cpp
 ros/ros.h
@@ -7693,6 +7695,10 @@ QtCore/qvector.h
 -
 QtCore/qscopedpointer.h
 -
+
+/usr/include/x86_64-linux-gnu/qt5/QtGui/QCloseEvent
+qevent.h
+/usr/include/x86_64-linux-gnu/qt5/QtGui/qevent.h
 
 /usr/include/x86_64-linux-gnu/qt5/QtGui/QCursor
 qcursor.h

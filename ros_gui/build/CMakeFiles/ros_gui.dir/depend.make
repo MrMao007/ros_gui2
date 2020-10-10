@@ -5803,6 +5803,7 @@ CMakeFiles/ros_gui.dir/src/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/Q
 CMakeFiles/ros_gui.dir/src/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qwaitcondition.h
 CMakeFiles/ros_gui.dir/src/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qwineventnotifier.h
 CMakeFiles/ros_gui.dir/src/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qxmlstream.h
+CMakeFiles/ros_gui.dir/src/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtGui/QCloseEvent
 CMakeFiles/ros_gui.dir/src/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtGui/QCursor
 CMakeFiles/ros_gui.dir/src/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtGui/QIcon
 CMakeFiles/ros_gui.dir/src/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtGui/QImage

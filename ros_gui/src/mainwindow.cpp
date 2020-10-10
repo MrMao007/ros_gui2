@@ -2,6 +2,7 @@
 #include "../build/ui_mainwindow.h"
 #include <math.h>
 #include <unistd.h>
+#include <QCloseEvent>
 
 #define pi 3.1415926
 
@@ -35,7 +36,6 @@ MainWindow::MainWindow(int argc, char** argv, QWidget *parent) :
 
     QFont font("Microsoft YaHei", 12, 50);
     ui->label_5->setFont(font);
-    ui->label_6->setFont(font);
     ui->label_7->setFont(font);
     ui->label_8->setFont(font);
     ui->label_9->setFont(font);
@@ -95,6 +95,13 @@ MainWindow::MainWindow(int argc, char** argv, QWidget *parent) :
     connect(&(this->dialog_ui->mapnode), SIGNAL(demostration_ready_signal(QString)), this, SLOT(demostration_ready_slot()));
     connect(&(this->dialog_ui->mapnode), SIGNAL(demostration_ready_signal(QString)),this->dock_ui, SLOT(demostration_ready_slot(QString)));
     connect(&(this->dialog_ui->mapnode), SIGNAL(ros_shutdown()), this, SLOT(close()));
+
+    system("gnome-terminal -x bash -c 'bash ~/bash/odom.sh'");
+    //std::cout << "567" << std::endl;
+}
+
+void MainWindow::closeEvent(QCloseEvent *e){
+   system("gnome-terminal -x bash -c 'bash ~/bash/odom_shut.sh'");
 }
 
 MainWindow::~MainWindow()
@@ -112,20 +119,12 @@ void MainWindow::on_radioButton_toggled(bool state){
     }
 }
 
-void MainWindow::on_radioButton_2_toggled(bool state){
-    if(state){
-        system("gnome-terminal -x bash -c 'bash ~/bash/odom.sh'");
-    }
-    else{
-        system("gnome-terminal -x bash -c 'bash ~/bash/odom_shut.sh'");
-    }
-}
 
 void MainWindow::on_radioButton_3_toggled(bool state){
     if(state){
-        if(!ui->radioButton->isChecked() || !ui->radioButton_2->isChecked()){
+        if(!ui->radioButton->isChecked()){
             infoLabel->setStyleSheet("color:red");
-            infoLabel->setText("需要先启动激光雷达和里程计!");
+            infoLabel->setText("需要先启动激光雷达!");
             ui->radioButton_3->setChecked(false);
         }
         else{
@@ -142,15 +141,16 @@ void MainWindow::on_radioButton_3_toggled(bool state){
 
 void MainWindow::on_radioButton_4_toggled(bool state){
     if(state){
-        if(!ui->radioButton->isChecked() || !ui->radioButton_2->isChecked()){
+        if(!ui->radioButton->isChecked()){
             infoLabel->setStyleSheet("color:red");
-            infoLabel->setText("需要先启动激光雷达和里程计!");
+            infoLabel->setText("需要先启动激光雷达!");
             ui->radioButton_4->setChecked(false);
         }
         else{
             infoLabel->setStyleSheet("color:green");
             infoLabel->setText("正常");
             system("gnome-terminal -x bash -c 'bash ~/bash/nav_2d.sh'");
+
             manager_->setFixedFrame("/map");
 
             rviz::Display *map=manager_->createDisplay("rviz/Map","adjustable map",true);
@@ -165,6 +165,7 @@ void MainWindow::on_radioButton_4_toggled(bool state){
             ROS_ASSERT(laser!=NULL);
             laser->subProp("Topic")->setValue("/scan");
             laser->subProp("Size (m)")->setValue("0.1");
+            laser->subProp("Color Transformer")->setValue("AxisColor");
 
             rviz::Display *linear=manager_->createDisplay("rviz/Marker","adjustable linear",true);
             ROS_ASSERT(linear!=NULL);
@@ -214,7 +215,7 @@ void MainWindow::on_radioButton_4_toggled(bool state){
         }
     }
     else{
-
+        manager_->removeAllDisplays();
         system("gnome-terminal -x bash -c 'bash ~/bash/nav_2d_shut.sh'");
     }
 }
@@ -239,7 +240,7 @@ void MainWindow::on_radioButton_6_toggled(bool state){
 
 void MainWindow::on_radioButton_7_toggled(bool state){
     if(state){
-        if(!ui->radioButton->isChecked() || !ui->radioButton_2->isChecked()){
+        if(!ui->radioButton_6->isChecked()){
             infoLabel->setStyleSheet("color:red");
             infoLabel->setText("需要先启动激光雷达!");
             ui->radioButton_7->setChecked(false);
@@ -247,18 +248,71 @@ void MainWindow::on_radioButton_7_toggled(bool state){
         else{
             infoLabel->setStyleSheet("color:green");
             infoLabel->setText("正常");
-            system("gnome-terminal -x bash -c 'bash ~/bash/loc_3d.sh'");
+            system("gnome-terminal -x bash -c 'bash ~/bash/nav_3d.sh'");
+
+            manager_->setFixedFrame("/map");
+
+            rviz::Display *map=manager_->createDisplay("rviz/Map","adjustable map",true);
+            ROS_ASSERT(map!=NULL);
+            map->subProp("Topic")->setValue("/map");
+
+            rviz::Display *robot=manager_->createDisplay("rviz/RobotModel","adjustable robot",true);
+            ROS_ASSERT(robot!=NULL);
+            robot->subProp("Robot Description")->setValue("robot_description");
+
+            rviz::Display *laser=manager_->createDisplay("rviz/LaserScan","adjustable laser",true);
+            ROS_ASSERT(laser!=NULL);
+            laser->subProp("Topic")->setValue("/scan");
+            laser->subProp("Size (m)")->setValue("0.1");
+            laser->subProp("Color Transformer")->setValue("AxisColor");
+
+
+            rviz::Display *linear=manager_->createDisplay("rviz/Marker","adjustable linear",true);
+            ROS_ASSERT(linear!=NULL);
+            linear->subProp("Marker Topic")->setValue("/lmarker");
+
+
+            rviz::Display *angular=manager_->createDisplay("rviz/MarkerArray","adjustable angular",true);
+            ROS_ASSERT(angular!=NULL);
+            angular->subProp("Marker Topic")->setValue("/amarker");
+
+            rviz::Display *text=manager_->createDisplay("rviz/Marker","adjustable text",true);
+            ROS_ASSERT(text!=NULL);
+            text->subProp("Marker Topic")->setValue("/tmarker");
+
+            rviz::Display *goal_marker=manager_->createDisplay("rviz/MarkerArray","adjustable goal",true);
+            ROS_ASSERT(goal_marker!=NULL);
+            goal_marker->subProp("Marker Topic")->setValue("/goalmarker");
+
+
+            rviz::Display *goalid_marker=manager_->createDisplay("rviz/MarkerArray","adjustable goalid",true);
+            ROS_ASSERT(goalid_marker!=NULL);
+            goalid_marker->subProp("Marker Topic")->setValue("/goalid_marker");
+
+            rviz::Display *forbidden=manager_->createDisplay("rviz/MarkerArray","adjustable forbidden",true);
+            ROS_ASSERT(forbidden!=NULL);
+            forbidden->subProp("Marker Topic")->setValue("/forbidden_marker");
+
+            rviz::Display *id_marker=manager_->createDisplay("rviz/MarkerArray","adjustable id",true);
+            ROS_ASSERT(id_marker!=NULL);
+            id_marker->subProp("Marker Topic")->setValue("/id_marker");
+
+            rviz::Display *semantic_marker=manager_->createDisplay("rviz/MarkerArray","adjustable semantic",true);
+            ROS_ASSERT(semantic_marker!=NULL);
+            semantic_marker->subProp("Marker Topic")->setValue("/semantic_marker");
+
+            manager_->startUpdate();
         }
     }
     else{
-
-        system("gnome-terminal -x bash -c 'bash ~/bash/loc_3d_shut.sh'");
+        manager_->removeAllDisplays();
+        system("gnome-terminal -x bash -c 'bash ~/bash/nav_3d_shut.sh'");
     }
 }
 
 void MainWindow::on_radioButton_8_toggled(bool state){
     if(state){
-        if(!ui->radioButton->isChecked() || !ui->radioButton_2->isChecked()){
+        if(!ui->radioButton_6->isChecked()){
             infoLabel->setStyleSheet("color:red");
             infoLabel->setText("需要先启动激光雷达!");
             ui->radioButton_8->setChecked(false);

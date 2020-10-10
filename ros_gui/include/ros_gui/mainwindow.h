@@ -37,6 +37,7 @@ public:
     //void keyReleaseEvent(QKeyEvent *);
     void ModifyLineData(std::string fileName, int lineNum, std::string lineData);
     std::string CharToStr(char * contentChar);
+    void closeEvent(QCloseEvent *event);
     int door_state = 1;
 
 signals:
@@ -100,7 +101,7 @@ public Q_SLOTS:
 private slots:
 
     void on_radioButton_toggled(bool state);
-    void on_radioButton_2_toggled(bool state);
+
     void on_radioButton_3_toggled(bool state);
     void on_radioButton_4_toggled(bool state);
     void on_radioButton_5_toggled(bool state);

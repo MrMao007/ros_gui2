@@ -5804,6 +5804,7 @@ CMakeFiles/ros_gui.dir/src/mainwindow.cpp.o
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qwaitcondition.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qwineventnotifier.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qxmlstream.h
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/QCloseEvent
  /usr/include/x86_64-linux-gnu/qt5/QtGui/QCursor
  /usr/include/x86_64-linux-gnu/qt5/QtGui/QIcon
  /usr/include/x86_64-linux-gnu/qt5/QtGui/QImage
