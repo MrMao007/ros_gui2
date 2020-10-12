@@ -1188,6 +1188,9 @@
       <Unit filename="/home/mty/catkin_gui/src/ros_gui/src/multigoal.cpp">
          <Option target="ros_gui"/>
       </Unit>
+      <Unit filename="/home/mty/catkin_gui/src/ros_gui/src/nav.cpp">
+         <Option target="ros_gui"/>
+      </Unit>
       <Unit filename="/home/mty/catkin_gui/src/ros_gui/src/qnode.cpp">
          <Option target="ros_gui"/>
       </Unit>
@@ -1213,6 +1216,9 @@
          <Option target="ros_gui"/>
       </Unit>
       <Unit filename="/home/mty/catkin_gui/src/ros_gui/ui/multigoal.ui">
+         <Option target="ros_gui"/>
+      </Unit>
+      <Unit filename="/home/mty/catkin_gui/src/ros_gui/ui/nav.ui">
          <Option target="ros_gui"/>
       </Unit>
       <Unit filename="/home/mty/catkin_gui/src/ros_gui/ui/semantic.ui">

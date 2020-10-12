@@ -70,7 +70,7 @@ public:
 
     void retranslateUi(QDialog *Semantic)
     {
-        Semantic->setWindowTitle(QApplication::translate("Semantic", "\345\210\240\351\231\244\347\246\201\350\241\214\345\214\272\345\237\237", 0));
+        Semantic->setWindowTitle(QApplication::translate("Semantic", "\350\257\255\344\271\211\346\240\207\350\256\260\345\214\272\345\237\237", 0));
         pushButton->setText(QApplication::translate("Semantic", "\347\241\256\345\256\232", 0));
         label->setText(QApplication::translate("Semantic", "\346\240\207\350\256\260\345\206\205\345\256\271\357\274\232", 0));
         pushButton_2->setText(QApplication::translate("Semantic", "\351\200\211\345\217\226\346\240\207\350\256\260\344\275\215\347\275\256", 0));

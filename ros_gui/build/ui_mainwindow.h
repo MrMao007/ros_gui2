@@ -85,7 +85,7 @@ public:
     QPushButton *pushButton_26;
     QPushButton *pushButton_27;
     QPushButton *pushButton_28;
-    QPushButton *pushButton_30;
+    QPushButton *pushButton_4;
     QPushButton *pushButton_3;
     QPushButton *pushButton_31;
     QSpacerItem *horizontalSpacer;
@@ -406,10 +406,10 @@ public:
 
         horizontalLayout_2->addWidget(pushButton_28);
 
-        pushButton_30 = new QPushButton(centralWidget);
-        pushButton_30->setObjectName(QStringLiteral("pushButton_30"));
+        pushButton_4 = new QPushButton(centralWidget);
+        pushButton_4->setObjectName(QStringLiteral("pushButton_4"));
 
-        horizontalLayout_2->addWidget(pushButton_30);
+        horizontalLayout_2->addWidget(pushButton_4);
 
         pushButton_3 = new QPushButton(centralWidget);
         pushButton_3->setObjectName(QStringLiteral("pushButton_3"));
@@ -496,7 +496,7 @@ public:
         pushButton_26->setText(QApplication::translate("MainWindow", "\346\267\273\345\212\240\347\246\201\350\241\214\345\214\272\345\237\237", 0));
         pushButton_27->setText(QApplication::translate("MainWindow", "\345\210\240\351\231\244\347\246\201\350\241\214\345\214\272\345\237\237", 0));
         pushButton_28->setText(QApplication::translate("MainWindow", "\350\257\255\344\271\211\346\240\207\350\256\260\345\214\272\345\237\237", 0));
-        pushButton_30->setText(QApplication::translate("MainWindow", "\345\210\260\351\227\250\345\211\215", 0));
+        pushButton_4->setText(QApplication::translate("MainWindow", "\345\257\274\350\210\252\350\207\263...", 0));
         pushButton_3->setText(QApplication::translate("MainWindow", "\347\244\272\346\225\231", 0));
         pushButton_31->setText(QApplication::translate("MainWindow", "\345\257\271\346\216\245", 0));
     } // retranslateUi

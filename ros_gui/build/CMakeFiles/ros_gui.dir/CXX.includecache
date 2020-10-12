@@ -114,6 +114,14 @@ QtCore/qbytearray.h
 QtCore/qmetatype.h
 -
 
+/home/mty/catkin_gui/src/ros_gui/build/include/ros_gui/moc_nav.cpp
+../../../include/ros_gui/nav.h
+/home/mty/catkin_gui/src/ros_gui/include/ros_gui/nav.h
+QtCore/qbytearray.h
+-
+QtCore/qmetatype.h
+-
+
 /home/mty/catkin_gui/src/ros_gui/build/include/ros_gui/moc_qnode.cpp
 ../../../include/ros_gui/qnode.h
 /home/mty/catkin_gui/src/ros_gui/include/ros_gui/qnode.h
@@ -320,6 +328,26 @@ QtWidgets/QHeaderView
 QtWidgets/QPushButton
 -
 
+/home/mty/catkin_gui/src/ros_gui/build/ui_nav.h
+QtCore/QVariant
+-
+QtWidgets/QAction
+-
+QtWidgets/QApplication
+-
+QtWidgets/QButtonGroup
+-
+QtWidgets/QDialog
+-
+QtWidgets/QGridLayout
+-
+QtWidgets/QHeaderView
+-
+QtWidgets/QPushButton
+-
+QtWidgets/QWidget
+-
+
 /home/mty/catkin_gui/src/ros_gui/build/ui_semantic.h
 QtCore/QVariant
 -
@@ -437,6 +465,8 @@ demo.h
 /home/mty/catkin_gui/src/ros_gui/include/ros_gui/demo.h
 dock.h
 /home/mty/catkin_gui/src/ros_gui/include/ros_gui/dock.h
+nav.h
+/home/mty/catkin_gui/src/ros_gui/include/ros_gui/nav.h
 
 /home/mty/catkin_gui/src/ros_gui/include/ros_gui/mapNode.h
 ros/ros.h
@@ -495,6 +525,14 @@ std_msgs/Float32.h
 -
 
 /home/mty/catkin_gui/src/ros_gui/include/ros_gui/multigoal.h
+QDialog
+-
+vector
+-
+QString
+-
+
+/home/mty/catkin_gui/src/ros_gui/include/ros_gui/nav.h
 QDialog
 -
 vector
@@ -621,6 +659,12 @@ math.h
 /home/mty/catkin_gui/src/ros_gui/include/ros_gui/multigoal.h
 ../build/ui_multigoal.h
 /home/mty/catkin_gui/src/ros_gui/build/ui_multigoal.h
+
+/home/mty/catkin_gui/src/ros_gui/src/nav.cpp
+../include/ros_gui/nav.h
+/home/mty/catkin_gui/src/ros_gui/include/ros_gui/nav.h
+../build/ui_nav.h
+/home/mty/catkin_gui/src/ros_gui/build/ui_nav.h
 
 /home/mty/catkin_gui/src/ros_gui/src/qnode.cpp
 ros/ros.h

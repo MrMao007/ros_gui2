@@ -64,7 +64,7 @@ public:
 
     void retranslateUi(QDialog *Demo)
     {
-        Demo->setWindowTitle(QApplication::translate("Demo", "\345\210\240\351\231\244\347\246\201\350\241\214\345\214\272\345\237\237", 0));
+        Demo->setWindowTitle(QApplication::translate("Demo", "\347\244\272\346\225\231", 0));
         pushButton->setText(QApplication::translate("Demo", "\347\241\256\345\256\232", 0));
         label->setText(QApplication::translate("Demo", "\347\244\272\346\225\231\347\202\271\345\220\215\347\247\260\357\274\232", 0));
     } // retranslateUi

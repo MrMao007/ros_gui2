@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>删除禁行区域</string>
+   <string>语义标记区域</string>
   </property>
   <widget class="QPushButton" name="pushButton">
    <property name="geometry">

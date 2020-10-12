@@ -18,6 +18,7 @@
 #include "multigoal.h"
 #include "demo.h"
 #include "dock.h"
+#include "nav.h"
 
 
 
@@ -38,7 +39,7 @@ public:
     void ModifyLineData(std::string fileName, int lineNum, std::string lineData);
     std::string CharToStr(char * contentChar);
     void closeEvent(QCloseEvent *event);
-    int door_state = 1;
+
 
 signals:
     void record_path_signal();
@@ -49,11 +50,7 @@ signals:
 
     void track_shut_signal();
 
-    void door_front_signal();
 
-    void door_in_signal();
-
-    void door_out_signal();
 
 
 public Q_SLOTS:
@@ -86,12 +83,6 @@ public Q_SLOTS:
 
     void setgoal_slot();
 
-    void door_front_ready_slot();
-
-    void door_in_ready_slot();
-
-    void door_out_ready_slot();
-
     void dock_ready_slot();
 
     void dock_ready_slot2();
@@ -117,6 +108,8 @@ private slots:
 
     void on_pushButton_3_clicked();
 
+    void on_pushButton_4_clicked();
+
     void on_pushButton_23_clicked();
 
     void on_pushButton_24_clicked();
@@ -130,8 +123,6 @@ private slots:
     void on_pushButton_28_clicked();
 
     void on_pushButton_29_clicked();
-
-    void on_pushButton_30_clicked();
 
     void on_pushButton_31_clicked();
 
@@ -155,6 +146,7 @@ private:
     Multigoal *multigoal_ui;
     Demo *demo_ui;
     Dock *dock_ui;
+    Nav *nav_ui;
     double cur_angle = 0;
     rviz::VisualizationManager *manager_;
     rviz::RenderPanel *render_panel_;

@@ -518,9 +518,9 @@
          </widget>
         </item>
         <item>
-         <widget class="QPushButton" name="pushButton_30">
+         <widget class="QPushButton" name="pushButton_4">
           <property name="text">
-           <string>到门前</string>
+           <string>导航至...</string>
           </property>
          </widget>
         </item>

@@ -66,7 +66,7 @@ public:
 
     void retranslateUi(QDialog *Dock)
     {
-        Dock->setWindowTitle(QApplication::translate("Dock", "\345\210\240\351\231\244\347\246\201\350\241\214\345\214\272\345\237\237", 0));
+        Dock->setWindowTitle(QApplication::translate("Dock", "\345\257\271\346\216\245", 0));
         pushButton->setText(QApplication::translate("Dock", "\347\241\256\345\256\232", 0));
         label->setText(QApplication::translate("Dock", "\345\257\271\346\216\245\347\202\271\357\274\232", 0));
     } // retranslateUi
