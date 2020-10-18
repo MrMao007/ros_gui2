@@ -79,6 +79,39 @@ bool MapNode::init() {
 
     refscan_pub = n.advertise<sensor_msgs::LaserScan>("reftable", 10);
 
+    std::string home_path = std::getenv("HOME");
+    std::string pattern = home_path + "/bash/*.dat";
+    std::vector<cv::String> fn;
+    cv::glob(pattern, fn);
+    for(int i = 0; i < fn.size(); i++){
+        std::string temp = fn[i];
+        int pos = temp.find_last_of('/');
+        std::string sfilename = temp.substr(pos+1);
+        pos = sfilename.find_last_of('.');
+        std::string temp_dock = sfilename.substr(0,pos);
+        readFile(temp_dock);
+
+        visualization_msgs::Marker tmp;
+        tmp.header.frame_id = "/map";
+        tmp.header.stamp = ros::Time::now();
+        tmp.ns = "semantic";
+        tmp.action = visualization_msgs::Marker::ADD;
+        tmp.id = semantic_id++;
+        tmp.type = visualization_msgs::Marker::TEXT_VIEW_FACING;
+        tmp.color.g = 1.0;
+        tmp.color.r = 1.0;
+        tmp.color.a = 1.0;
+        tmp.scale.z = 0.5;
+        tmp.pose.orientation.z=1;
+        tmp.pose.position.x=ref_goal.pose.pose.position.x;
+        tmp.pose.position.y=ref_goal.pose.pose.position.y;
+        tmp.text = temp_dock;
+
+        semantic_markerarray.markers.push_back(tmp);
+
+    }
+
+
     start();
     return true;
 }
@@ -91,6 +124,7 @@ void MapNode::run() {
             while ( ros::ok() ) {
                 ref_laser.header.stamp=ros::Time::now();
                 refscan_pub.publish(ref_laser);
+                semantic_markerarray_pub.publish(semantic_markerarray);
                 //调用消息处理回调函数
                 ros::spinOnce();
 
@@ -100,6 +134,7 @@ void MapNode::run() {
 }
 
 void MapNode::WriteLaser(const sensor_msgs::LaserScan scan){
+
     sensor_msgs::LaserScan tmp = scan;
     std::ofstream fout;
     int num = tmp.ranges.size();
@@ -107,6 +142,7 @@ void MapNode::WriteLaser(const sensor_msgs::LaserScan scan){
     std::string filename = home_path + "/bash/" + demo_name.toStdString() + ".dat";
     fout.open(filename, std::ios::binary|std::ios::out);
     //fout.write((char*)&(tmp.header.stamp), sizeof(tmp.header.stamp));
+
     fout.write((char*)&(tmp.angle_min), sizeof(tmp.angle_min));
     fout.write((char*)&(tmp.angle_max), sizeof(tmp.angle_max));
     fout.write((char*)&(tmp.angle_increment), sizeof(tmp.angle_increment));
@@ -129,6 +165,24 @@ void MapNode::refscanCallback(const sensor_msgs::LaserScanConstPtr &scan){
         return;
     demo_flag = 0;
     ROS_INFO("555");
+    visualization_msgs::Marker tmp;
+    tmp.header.frame_id = "/map";
+    tmp.header.stamp = ros::Time::now();
+    tmp.ns = "semantic";
+    tmp.action = visualization_msgs::Marker::ADD;
+    tmp.id = semantic_id++;
+    tmp.type = visualization_msgs::Marker::TEXT_VIEW_FACING;
+    tmp.color.g = 1.0;
+    tmp.color.r = 1.0;
+    tmp.color.a = 1.0;
+    tmp.scale.z = 0.5;
+    tmp.pose.orientation.z=1;
+    tmp.pose.position.x=pose_.pose.pose.position.x;
+    tmp.pose.position.y=pose_.pose.pose.position.y;
+    tmp.text = demo_name.toStdString();
+
+    semantic_markerarray.markers.push_back(tmp);
+    semantic_markerarray_pub.publish(semantic_markerarray);
     WriteLaser(got_laser);
     emit demostration_ready_signal(demo_name);
 }
@@ -532,9 +586,9 @@ void MapNode::send_door_out(){
 void MapNode::door_out_slot(){
     QtConcurrent::run(this,&MapNode::send_door_out);
 }
-void MapNode::readFile(){
+void MapNode::readFile(std::string dock_n){
     std::string home_path = std::getenv("HOME");
-    std::string filename = home_path + "/bash/" + dock_name.toStdString() + ".dat";
+    std::string filename = home_path + "/bash/" + dock_n + ".dat";
     std::ifstream infile(filename, std::ios::binary|std::ios::in);
     //sensor_msgs::LaserScan tmp_l;
     //geometry_msgs::PoseWithCovarianceStamped temp;
@@ -545,6 +599,7 @@ void MapNode::readFile(){
     ref_laser.header.frame_id = "/2dlaser1_link";
     //ref_laser.header.stamp = ros::Time::now();
     //infile.read((char*)&(ref_laser.header.stamp), sizeof(ref_laser.header.stamp));
+
     infile.read((char*)&(ref_laser.angle_min), sizeof(ref_laser.angle_min));
     infile.read((char*)&(ref_laser.angle_max), sizeof(ref_laser.angle_max));
     infile.read((char*)&(ref_laser.angle_increment), sizeof(ref_laser.angle_increment));
@@ -570,7 +625,7 @@ void MapNode::readFile(){
 
 void MapNode::send_dock(){
     dock_state = 0;
-    readFile();
+    readFile(dock_name.toStdString());
     MoveBaseClient ac1("move_base", true);
     while(!ac1.waitForServer(ros::Duration(5.0))){
       ROS_INFO("Waiting for the move_base action server to come up");
@@ -663,6 +718,49 @@ void MapNode::clear_path_markerarray(){
 void MapNode::demostration_slot(QString demo_n){
     demo_name = demo_n;
     demo_flag = 1;
+}
+
+void MapNode::track_2d_slot(){
+    clear_path_markerarray();
+    std::string filename = "/home/mty/catkin_gazebo/src/path_pursuit/path/path.txt";
+    std::vector<std::pair<double,double>> path;
+    std::ifstream in(filename, std::ifstream::in);
+    if (in.good())
+        {
+            std::string line;
+            while (std::getline(in, line))
+            {
+                std::istringstream stream(line);
+                std::string x,y;
+                stream >> x >> y;
+                path.push_back(std::make_pair(std::atof(x.c_str()),std::atof(y.c_str())));
+
+            }
+            in.close();
+            int pointsize = path.size();
+            //std::cout << pointsize <<std::endl;
+            visualization_msgs::Marker tmp;
+            tmp.header.frame_id = "/map";
+            tmp.header.stamp = ros::Time::now();
+            tmp.ns = "path";
+            tmp.action = visualization_msgs::Marker::ADD;
+
+            tmp.type = visualization_msgs::Marker::CYLINDER;
+            tmp.color.b = 1.0;
+            tmp.color.r = 1.0;
+            tmp.color.a = 1.0;
+            tmp.scale.x = 0.1;
+            tmp.scale.y = 0.1;
+            for(int i = 0; i < path.size(); i++){
+                tmp.id = path_id++;
+                tmp.pose.position.x = path[i].first;
+                tmp.pose.position.y = path[i].second;
+                path_markerarray.markers.push_back(tmp);
+            }
+            std::cout << path_markerarray.markers.size() << std::endl;
+            pathmarker_pub.publish(path_markerarray);
+
+        }
 }
 
 }  // namespace ros_gui

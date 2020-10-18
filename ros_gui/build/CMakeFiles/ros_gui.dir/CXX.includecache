@@ -505,6 +505,8 @@ std_msgs/Float32.h
 -
 QtConcurrent/QtConcurrent
 -
+opencv2/opencv.hpp
+-
 
 /home/mty/catkin_gui/src/ros_gui/include/ros_gui/markerNode.h
 ros/ros.h

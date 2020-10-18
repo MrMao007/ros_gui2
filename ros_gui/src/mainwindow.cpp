@@ -37,12 +37,16 @@ MainWindow::MainWindow(int argc, char** argv, QWidget *parent) :
 
     QFont font("Microsoft YaHei", 12, 50);
     ui->label_5->setFont(font);
+    ui->label_6->setFont(font);
     ui->label_7->setFont(font);
     ui->label_8->setFont(font);
     ui->label_9->setFont(font);
     ui->label_10->setFont(font);
     ui->label_11->setFont(font);
     ui->label_12->setFont(font);
+    ui->label_13->setFont(font);
+    ui->label_14->setFont(font);
+    ui->label_15->setFont(font);
     ui->pushButton_23->setFont(font);
     markernode.init();
 
@@ -70,6 +74,7 @@ MainWindow::MainWindow(int argc, char** argv, QWidget *parent) :
     connect(this, SIGNAL(save_path_signal()), &(this->dialog_ui->mapnode), SLOT(save_path_slot()));
     connect(this, SIGNAL(track_signal()), &(this->dialog_ui->mapnode), SLOT(track_slot()));
     connect(this, SIGNAL(track_shut_signal()), &(this->dialog_ui->mapnode), SLOT(track_shut_slot()));
+    connect(this, SIGNAL(track_2d_signal()), &(this->dialog_ui->mapnode), SLOT(track_2d_slot()));
     connect(dialog_ui,SIGNAL(startp()),this,SLOT(startp_slot()));
     connect(dialog_ui,SIGNAL(endp()),this,SLOT(endp_slot()));
     connect(dialog_ui,SIGNAL(markersignal()),this,SLOT(markersignal_slot()));
@@ -117,6 +122,15 @@ void MainWindow::on_radioButton_toggled(bool state){
     }
     else{
         system("gnome-terminal -x bash -c 'bash ~/bash/laser_2d_shut.sh'");
+    }
+}
+
+void MainWindow::on_radioButton_2_toggled(bool state){
+    if(state){
+        system("gnome-terminal -x bash -c 'bash ~/bash/record.sh'");
+    }
+    else{
+        system("gnome-terminal -x bash -c 'bash ~/bash/record_shut.sh'");
     }
 }
 
@@ -351,6 +365,21 @@ void MainWindow::on_radioButton_10_toggled(bool state){
         emit track_shut_signal();
     }
 }
+
+void MainWindow::on_radioButton_11_toggled(bool state){
+    if(state){
+        rviz::Display *path_marker=manager_->createDisplay("rviz/MarkerArray","adjustable path",true);
+        ROS_ASSERT(path_marker!=NULL);
+        path_marker->subProp("Marker Topic")->setValue("/path_marker");
+        manager_->startUpdate();
+        emit track_2d_signal();
+        system("gnome-terminal -x bash -c 'bash ~/bash/pursuit.sh'");
+    }
+    else{
+        system("gnome-terminal -x bash -c 'bash ~/bash/pursuit_shut.sh'");
+    }
+}
+
 void MainWindow::on_pushButton_clicked(){
     QString filename = QFileDialog::getOpenFileName(this, "select map", "/","PCD Files(*.pcd);;All Files(*)");
     ui->lineEdit->setText(filename);

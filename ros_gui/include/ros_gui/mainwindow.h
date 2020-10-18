@@ -50,8 +50,7 @@ signals:
 
     void track_shut_signal();
 
-
-
+    void track_2d_signal();
 
 public Q_SLOTS:
 
@@ -92,7 +91,7 @@ public Q_SLOTS:
 private slots:
 
     void on_radioButton_toggled(bool state);
-
+    void on_radioButton_2_toggled(bool state);
     void on_radioButton_3_toggled(bool state);
     void on_radioButton_4_toggled(bool state);
     void on_radioButton_5_toggled(bool state);
@@ -101,6 +100,7 @@ private slots:
     void on_radioButton_8_toggled(bool state);
     void on_radioButton_9_toggled(bool state);
     void on_radioButton_10_toggled(bool state);
+    void on_radioButton_11_toggled(bool state);
 
     void on_pushButton_clicked();
 

@@ -46,8 +46,12 @@ public:
     QRadioButton *radioButton;
     QLabel *label_5;
     QRadioButton *radioButton_3;
-    QRadioButton *radioButton_4;
+    QRadioButton *radioButton_2;
     QLabel *label_8;
+    QRadioButton *radioButton_4;
+    QRadioButton *radioButton_11;
+    QLabel *label_6;
+    QLabel *label_15;
     QSpacerItem *verticalSpacer;
     QWidget *widget;
     QVBoxLayout *verticalLayout_3;
@@ -112,7 +116,7 @@ public:
         verticalLayout_10->setObjectName(QStringLiteral("verticalLayout_10"));
         tabWidget = new QTabWidget(centralWidget);
         tabWidget->setObjectName(QStringLiteral("tabWidget"));
-        QSizePolicy sizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
+        QSizePolicy sizePolicy(QSizePolicy::Minimum, QSizePolicy::Expanding);
         sizePolicy.setHorizontalStretch(0);
         sizePolicy.setVerticalStretch(0);
         sizePolicy.setHeightForWidth(tabWidget->sizePolicy().hasHeightForWidth());
@@ -165,19 +169,43 @@ public:
 
         gridLayout->addWidget(radioButton_3, 1, 0, 1, 1);
 
+        radioButton_2 = new QRadioButton(tab);
+        radioButton_2->setObjectName(QStringLiteral("radioButton_2"));
+        radioButton_2->setMinimumSize(QSize(25, 25));
+        radioButton_2->setAutoExclusive(false);
+
+        gridLayout->addWidget(radioButton_2, 4, 0, 1, 1);
+
+        label_8 = new QLabel(tab);
+        label_8->setObjectName(QStringLiteral("label_8"));
+        label_8->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
+
+        gridLayout->addWidget(label_8, 3, 1, 1, 1);
+
         radioButton_4 = new QRadioButton(tab);
         radioButton_4->setObjectName(QStringLiteral("radioButton_4"));
         radioButton_4->setMinimumSize(QSize(25, 25));
         radioButton_4->setCheckable(true);
         radioButton_4->setAutoExclusive(false);
 
-        gridLayout->addWidget(radioButton_4, 2, 0, 1, 1);
+        gridLayout->addWidget(radioButton_4, 3, 0, 1, 1);
 
-        label_8 = new QLabel(tab);
-        label_8->setObjectName(QStringLiteral("label_8"));
-        label_8->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
+        radioButton_11 = new QRadioButton(tab);
+        radioButton_11->setObjectName(QStringLiteral("radioButton_11"));
+        radioButton_11->setMinimumSize(QSize(25, 25));
+        radioButton_11->setAutoExclusive(false);
 
-        gridLayout->addWidget(label_8, 2, 1, 1, 1);
+        gridLayout->addWidget(radioButton_11, 5, 0, 1, 1);
+
+        label_6 = new QLabel(tab);
+        label_6->setObjectName(QStringLiteral("label_6"));
+
+        gridLayout->addWidget(label_6, 4, 1, 1, 1);
+
+        label_15 = new QLabel(tab);
+        label_15->setObjectName(QStringLiteral("label_15"));
+
+        gridLayout->addWidget(label_15, 5, 1, 1, 1);
 
 
         _2->addLayout(gridLayout);
@@ -378,46 +406,70 @@ public:
         horizontalLayout_2->setObjectName(QStringLiteral("horizontalLayout_2"));
         pushButton_24 = new QPushButton(centralWidget);
         pushButton_24->setObjectName(QStringLiteral("pushButton_24"));
+        QSizePolicy sizePolicy2(QSizePolicy::Minimum, QSizePolicy::Minimum);
+        sizePolicy2.setHorizontalStretch(0);
+        sizePolicy2.setVerticalStretch(0);
+        sizePolicy2.setHeightForWidth(pushButton_24->sizePolicy().hasHeightForWidth());
+        pushButton_24->setSizePolicy(sizePolicy2);
 
         horizontalLayout_2->addWidget(pushButton_24);
 
         pushButton_25 = new QPushButton(centralWidget);
         pushButton_25->setObjectName(QStringLiteral("pushButton_25"));
+        QSizePolicy sizePolicy3(QSizePolicy::Minimum, QSizePolicy::Preferred);
+        sizePolicy3.setHorizontalStretch(0);
+        sizePolicy3.setVerticalStretch(0);
+        sizePolicy3.setHeightForWidth(pushButton_25->sizePolicy().hasHeightForWidth());
+        pushButton_25->setSizePolicy(sizePolicy3);
 
         horizontalLayout_2->addWidget(pushButton_25);
 
         pushButton_29 = new QPushButton(centralWidget);
         pushButton_29->setObjectName(QStringLiteral("pushButton_29"));
+        sizePolicy2.setHeightForWidth(pushButton_29->sizePolicy().hasHeightForWidth());
+        pushButton_29->setSizePolicy(sizePolicy2);
 
         horizontalLayout_2->addWidget(pushButton_29);
 
         pushButton_26 = new QPushButton(centralWidget);
         pushButton_26->setObjectName(QStringLiteral("pushButton_26"));
+        sizePolicy2.setHeightForWidth(pushButton_26->sizePolicy().hasHeightForWidth());
+        pushButton_26->setSizePolicy(sizePolicy2);
 
         horizontalLayout_2->addWidget(pushButton_26);
 
         pushButton_27 = new QPushButton(centralWidget);
         pushButton_27->setObjectName(QStringLiteral("pushButton_27"));
+        sizePolicy2.setHeightForWidth(pushButton_27->sizePolicy().hasHeightForWidth());
+        pushButton_27->setSizePolicy(sizePolicy2);
 
         horizontalLayout_2->addWidget(pushButton_27);
 
         pushButton_28 = new QPushButton(centralWidget);
         pushButton_28->setObjectName(QStringLiteral("pushButton_28"));
+        sizePolicy2.setHeightForWidth(pushButton_28->sizePolicy().hasHeightForWidth());
+        pushButton_28->setSizePolicy(sizePolicy2);
 
         horizontalLayout_2->addWidget(pushButton_28);
 
         pushButton_4 = new QPushButton(centralWidget);
         pushButton_4->setObjectName(QStringLiteral("pushButton_4"));
+        sizePolicy2.setHeightForWidth(pushButton_4->sizePolicy().hasHeightForWidth());
+        pushButton_4->setSizePolicy(sizePolicy2);
 
         horizontalLayout_2->addWidget(pushButton_4);
 
         pushButton_3 = new QPushButton(centralWidget);
         pushButton_3->setObjectName(QStringLiteral("pushButton_3"));
+        sizePolicy2.setHeightForWidth(pushButton_3->sizePolicy().hasHeightForWidth());
+        pushButton_3->setSizePolicy(sizePolicy2);
 
         horizontalLayout_2->addWidget(pushButton_3);
 
         pushButton_31 = new QPushButton(centralWidget);
         pushButton_31->setObjectName(QStringLiteral("pushButton_31"));
+        sizePolicy2.setHeightForWidth(pushButton_31->sizePolicy().hasHeightForWidth());
+        pushButton_31->setSizePolicy(sizePolicy2);
 
         horizontalLayout_2->addWidget(pushButton_31);
 
@@ -435,7 +487,7 @@ public:
         verticalLayout_6->addLayout(verticalLayout);
 
         verticalLayout_6->setStretch(0, 1);
-        verticalLayout_6->setStretch(1, 1);
+        verticalLayout_6->setStretch(1, 3);
         verticalLayout_6->setStretch(2, 30);
 
         horizontalLayout_5->addLayout(verticalLayout_6);
@@ -466,8 +518,12 @@ public:
         radioButton->setText(QString());
         label_5->setText(QApplication::translate("MainWindow", "2D\346\277\200\345\205\211", 0));
         radioButton_3->setText(QString());
-        radioButton_4->setText(QString());
+        radioButton_2->setText(QString());
         label_8->setText(QApplication::translate("MainWindow", "\345\257\274\350\210\252", 0));
+        radioButton_4->setText(QString());
+        radioButton_11->setText(QString());
+        label_6->setText(QApplication::translate("MainWindow", "\350\256\260\345\275\225\350\267\257\345\276\204", 0));
+        label_15->setText(QApplication::translate("MainWindow", "\350\267\237\350\270\252\350\267\257\345\276\204", 0));
         tabWidget->setTabText(tabWidget->indexOf(tab), QApplication::translate("MainWindow", "2D", 0));
         radioButton_6->setText(QString());
         radioButton_7->setText(QString());

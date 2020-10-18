@@ -38,6 +38,7 @@
 #include <actionlib/client/simple_action_client.h>
 #include <std_msgs/Float32.h>
 #include <QtConcurrent/QtConcurrent>
+#include <opencv2/opencv.hpp>
 //#include <qfiledialog.h>
 
 
@@ -75,7 +76,7 @@ public:
     void send_door_in();
     void send_door_out();
     void send_dock();
-    void readFile();
+    void readFile(std::string);
     geometry_msgs::PoseStamped coarsetofine(const geometry_msgs::PoseStampedConstPtr &goal);
     void WriteLaser(const sensor_msgs::LaserScan scan);
 
@@ -149,6 +150,7 @@ public Q_SLOTS:
     void door_out_slot();
     void dock_slot(QString dock_n);
     void demostration_slot(QString demo_n);
+    void track_2d_slot();
 
 private:
     int init_argc;
