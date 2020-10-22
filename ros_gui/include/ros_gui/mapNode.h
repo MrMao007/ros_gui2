@@ -32,6 +32,7 @@
 #include <geometry_msgs/Point.h>
 #include <geometry_msgs/PoseWithCovarianceStamped.h>
 #include <sensor_msgs/LaserScan.h>
+#include <nav_msgs/Path.h>
 #include <custom_msgs/Obstacles.h>
 #include <custom_msgs/Form.h>
 #include <move_base_msgs/MoveBaseAction.h>
@@ -69,6 +70,7 @@ public:
     void goalCallback(const geometry_msgs::PoseStampedConstPtr &goal);
     void coarseCallback(const geometry_msgs::PoseStampedConstPtr &goal);
     void pathCallback(const geometry_msgs::PoseWithCovarianceStampedConstPtr &traj);
+    void routeCallback(const nav_msgs::PathConstPtr &route);
     void refscanCallback(const sensor_msgs::LaserScanConstPtr &scan);
     void dock_stateCallback(const std_msgs::Int8ConstPtr &state);
     void send_multigoal();
@@ -168,6 +170,7 @@ private:
     ros::Subscriber goal_sub;
     ros::Subscriber coarse_sub;
     ros::Subscriber path_sub;
+    ros::Subscriber route_sub;
     ros::Subscriber refscan_sub;
     ros::Subscriber dock_state_sub;
 
@@ -179,6 +182,7 @@ private:
     ros::Publisher obstacle_pub;
     ros::Publisher fine_pub;
     ros::Publisher pathmarker_pub;
+    ros::Publisher routemarker_pub;
     ros::Publisher refscan_pub;
 
 

@@ -371,6 +371,11 @@ void MainWindow::on_radioButton_11_toggled(bool state){
         rviz::Display *path_marker=manager_->createDisplay("rviz/MarkerArray","adjustable path",true);
         ROS_ASSERT(path_marker!=NULL);
         path_marker->subProp("Marker Topic")->setValue("/path_marker");
+
+        rviz::Display *route_marker=manager_->createDisplay("rviz/MarkerArray","adjustable route",true);
+        ROS_ASSERT(route_marker!=NULL);
+        route_marker->subProp("Marker Topic")->setValue("/route_marker");
+
         manager_->startUpdate();
         emit track_2d_signal();
         system("gnome-terminal -x bash -c 'bash ~/bash/pursuit.sh'");

@@ -65,6 +65,8 @@ bool MapNode::init() {
     coarse_sub = n.subscribe<geometry_msgs::PoseStamped>("coarse_goal", 10, &MapNode::coarseCallback, this);
     path_sub = n.subscribe<geometry_msgs::PoseWithCovarianceStamped>("amcl_pose", 10, &MapNode::pathCallback, this);
 
+    route_sub = n.subscribe<nav_msgs::Path>("route_plan",1,&MapNode::routeCallback, this);
+
     refscan_sub = n.subscribe<sensor_msgs::LaserScan>("refscan", 10, &MapNode::refscanCallback, this);
     dock_state_sub = n.subscribe<std_msgs::Int8>("state",1,&MapNode::dock_stateCallback, this);
 
@@ -76,6 +78,7 @@ bool MapNode::init() {
     obstacle_pub = n.advertise<custom_msgs::Obstacles>("Vobstacls", 10);
     fine_pub = n.advertise<geometry_msgs::PoseStamped>("move_base_simple/goal", 10);
     pathmarker_pub = n.advertise<visualization_msgs::MarkerArray>("path_marker", 10);
+    routemarker_pub = n.advertise<visualization_msgs::MarkerArray>("route_marker", 10);
 
     refscan_pub = n.advertise<sensor_msgs::LaserScan>("reftable", 10);
 
@@ -249,6 +252,31 @@ void MapNode::pathCallback(const geometry_msgs::PoseWithCovarianceStampedConstPt
         }
 
     }
+}
+
+void MapNode::routeCallback(const nav_msgs::PathConstPtr &route){
+    int num = route->poses.size();
+    int route_id = 0;
+    visualization_msgs::MarkerArray route_makerarray;
+    visualization_msgs::Marker tmp;
+    tmp.header.frame_id = "/map";
+    tmp.header.stamp = ros::Time::now();
+    tmp.ns = "route";
+    tmp.action = visualization_msgs::Marker::ADD;
+    tmp.type = visualization_msgs::Marker::CYLINDER;
+    tmp.color.b = 1.0;
+    tmp.color.r = 1.0;
+    tmp.color.a = 1.0;
+    tmp.scale.x = 0.1;
+    tmp.scale.y = 0.1;
+    for(int i = 0; i < num; i++){
+        tmp.id = route_id++;
+        tmp.pose.position.x = route->poses[i].pose.position.x;
+        tmp.pose.position.y = route->poses[i].pose.position.y;
+        route_makerarray.markers.push_back(tmp);
+    }
+    //std::cout << path_markerarray.markers.size() << std::endl;
+    routemarker_pub.publish(route_makerarray);
 }
 
 void MapNode::marker_slot(){
@@ -746,7 +774,7 @@ void MapNode::track_2d_slot(){
             tmp.action = visualization_msgs::Marker::ADD;
 
             tmp.type = visualization_msgs::Marker::CYLINDER;
-            tmp.color.b = 1.0;
+            tmp.color.g = 1.0;
             tmp.color.r = 1.0;
             tmp.color.a = 1.0;
             tmp.scale.x = 0.1;
