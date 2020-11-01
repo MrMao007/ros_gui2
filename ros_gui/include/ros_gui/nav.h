@@ -4,6 +4,7 @@
 #include <QDialog>
 #include <vector>
 #include <QString>
+#include <geometry_msgs/PoseStamped.h>
 
 namespace Ui {
 class Nav;
@@ -24,6 +25,10 @@ signals:
     void door_in_signal();
 
     void door_out_signal();
+	
+    void vicon_signal();
+    
+    void tea_signal();
 
 public Q_SLOTS:
     void door_front_ready_slot();
@@ -42,6 +47,8 @@ private slots:
 
 private:
     Ui::Nav *ui;
+    //ros::Publisher goal_pub;
+
 
 };
 

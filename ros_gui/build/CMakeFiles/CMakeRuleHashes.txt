@@ -12,6 +12,7 @@ cb84eabd783927f8d591af396158305c include/ros_gui/moc_markerNode.cpp
 899fee6b53fd1bc3314a2bbcaa2ed1e9 include/ros_gui/moc_multigoal.cpp
 1c09a7f258a9b798dba7c899e6071e3d include/ros_gui/moc_multinode.cpp
 e44ed694deea7d6953afe59ee11fd00e include/ros_gui/moc_nav.cpp
+4f020e84f39a07a63ee6740e91c78279 include/ros_gui/moc_progress.cpp
 3d338ebaa2dc452f99e2af2b7662f0c8 include/ros_gui/moc_qnode.cpp
 70f4837e9f0e977e535e2c5deed9e7e2 include/ros_gui/moc_semantic.cpp
 f286e1c9b6eae487e1026d8a492ec73f qrc_images.cpp
@@ -24,4 +25,5 @@ e4413443829fd9811356d576fbb44a52 ui_dialog.h
 dcae0e50798334131da8a22b775c9c98 ui_mainwindow.h
 8d84123bd8c05dde10d86a72891c1213 ui_multigoal.h
 84b16a115cc40ed1d897e12c4d9f73ce ui_nav.h
+b12304953ca252a2f968804ad52dc021 ui_progress.h
 fe8278d7676079c1b758d0aa82818263 ui_semantic.h

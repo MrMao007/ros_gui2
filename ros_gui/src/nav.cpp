@@ -33,11 +33,12 @@ void Nav::on_pushButton_clicked(){
 }
 
 void Nav::on_pushButton_2_clicked(){
-;
+    emit vicon_signal();
+
 }
 
 void Nav::on_pushButton_3_clicked(){
-    ;
+    emit tea_signal();
 }
 
 void Nav::door_front_ready_slot()

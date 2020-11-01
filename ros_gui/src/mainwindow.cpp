@@ -26,6 +26,7 @@ MainWindow::MainWindow(int argc, char** argv, QWidget *parent) :
     this->demo_ui = new Demo();
     this->dock_ui = new Dock();
     this->nav_ui = new Nav();
+    this->progress_ui = new Progress();
 
     this->infoLabel = new QLabel;
     infoLabel->setMinimumSize(300,20); //设置标签最小尺寸
@@ -91,6 +92,10 @@ MainWindow::MainWindow(int argc, char** argv, QWidget *parent) :
     connect(nav_ui, SIGNAL(door_front_signal()), &(this->dialog_ui->mapnode), SLOT(door_front_slot()));
     connect(nav_ui, SIGNAL(door_in_signal()), &(this->dialog_ui->mapnode), SLOT(door_in_slot()));
     connect(nav_ui, SIGNAL(door_out_signal()), &(this->dialog_ui->mapnode), SLOT(door_out_slot()));
+    
+    connect(nav_ui, SIGNAL(vicon_signal()), &(this->dialog_ui->mapnode), SLOT(vicon_slot()));
+    connect(nav_ui, SIGNAL(tea_signal()), &(this->dialog_ui->mapnode), SLOT(tea_slot()));
+    
     connect(&(this->dialog_ui->mapnode), SIGNAL(door_front_ready_signal()), nav_ui, SLOT(door_front_ready_slot()));
     connect(&(this->dialog_ui->mapnode), SIGNAL(door_in_ready_signal()), nav_ui, SLOT(door_in_ready_slot()));
     connect(&(this->dialog_ui->mapnode), SIGNAL(door_out_ready_signal()), nav_ui, SLOT(door_out_ready_slot()));
@@ -102,12 +107,11 @@ MainWindow::MainWindow(int argc, char** argv, QWidget *parent) :
     connect(&(this->dialog_ui->mapnode), SIGNAL(demostration_ready_signal(QString)),this->dock_ui, SLOT(demostration_ready_slot(QString)));
     connect(&(this->dialog_ui->mapnode), SIGNAL(ros_shutdown()), this, SLOT(close()));
 
-    system("gnome-terminal -x bash -c 'bash ~/bash/odom.sh'");
     //std::cout << "567" << std::endl;
 }
 
 void MainWindow::closeEvent(QCloseEvent *e){
-   system("gnome-terminal -x bash -c 'bash ~/bash/odom_shut.sh'");
+   ;
 }
 
 MainWindow::~MainWindow()
@@ -118,10 +122,12 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_radioButton_toggled(bool state){
     if(state){
-        system("gnome-terminal -x bash -c 'bash ~/bash/laser_2d.sh'");
+        system("gnome-terminal -x bash -c 'bash ~/bash/laser_2d.sh'");//
+        system("gnome-terminal -x bash -c 'bash ~/bash/odom.sh'");
     }
     else{
         system("gnome-terminal -x bash -c 'bash ~/bash/laser_2d_shut.sh'");
+        system("gnome-terminal -x bash -c 'bash ~/bash/odom_shut.sh'");
     }
 }
 
@@ -153,7 +159,19 @@ void MainWindow::on_radioButton_3_toggled(bool state){
         system("gnome-terminal -x bash -c 'bash ~/bash/mapping_2d_shut.sh'");
     }
 }
+void MainWindow::runNav(){
+    progress_ui->show();
+    progress_ui->setProgress(50,"开启导航...");
+    system("gnome-terminal -x bash -c 'bash ~/bash/nav_2d.sh'");
+    sleep(5);
+    progress_ui->setProgress(100,"开启ICP...");
+    system("gnome-terminal -x bash -c 'bash ~/bash/scan_map_icp.sh'");
+    progress_ui->hide();
+}
 
+void MainWindow::startNav(){
+    QtConcurrent::run(this,&MainWindow::runNav);
+}
 void MainWindow::on_radioButton_4_toggled(bool state){
     if(state){
         if(!ui->radioButton->isChecked()){
@@ -164,7 +182,10 @@ void MainWindow::on_radioButton_4_toggled(bool state){
         else{
             infoLabel->setStyleSheet("color:green");
             infoLabel->setText("正常");
-            system("gnome-terminal -x bash -c 'bash ~/bash/nav_2d.sh'");
+
+            /**/
+            startNav();
+            
 
             manager_->setFixedFrame("/map");
 
@@ -172,9 +193,9 @@ void MainWindow::on_radioButton_4_toggled(bool state){
             ROS_ASSERT(map!=NULL);
             map->subProp("Topic")->setValue("/map");
 
-            rviz::Display *robot=manager_->createDisplay("rviz/RobotModel","adjustable robot",true);
+            /*rviz::Display *robot=manager_->createDisplay("rviz/RobotModel","adjustable robot",true);
             ROS_ASSERT(robot!=NULL);
-            robot->subProp("Robot Description")->setValue("robot_description");
+            robot->subProp("Robot Description")->setValue("robot_description");*/
 
             rviz::Display *laser=manager_->createDisplay("rviz/LaserScan","adjustable laser",true);
             ROS_ASSERT(laser!=NULL);
@@ -378,7 +399,8 @@ void MainWindow::on_radioButton_11_toggled(bool state){
 
         manager_->startUpdate();
         emit track_2d_signal();
-        system("gnome-terminal -x bash -c 'bash ~/bash/pursuit.sh'");
+	//nohup
+	system("gnome-terminal -x bash -c 'bash ~/bash/plan.sh'");
     }
     else{
         system("gnome-terminal -x bash -c 'bash ~/bash/pursuit_shut.sh'");

@@ -522,7 +522,7 @@ public:
         label_8->setText(QApplication::translate("MainWindow", "\345\257\274\350\210\252", 0));
         radioButton_4->setText(QString());
         radioButton_11->setText(QString());
-        label_6->setText(QApplication::translate("MainWindow", "\350\256\260\345\275\225\350\267\257\345\276\204", 0));
+        label_6->setText(QApplication::translate("MainWindow", "\345\205\254\350\267\257\347\275\221", 0));
         label_15->setText(QApplication::translate("MainWindow", "\350\267\237\350\270\252\350\267\257\345\276\204", 0));
         tabWidget->setTabText(tabWidget->indexOf(tab), QApplication::translate("MainWindow", "2D", 0));
         radioButton_6->setText(QString());

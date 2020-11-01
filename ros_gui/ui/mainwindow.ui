@@ -189,7 +189,7 @@
               <item row="4" column="1">
                <widget class="QLabel" name="label_6">
                 <property name="text">
-                 <string>记录路径</string>
+                 <string>公路网</string>
                 </property>
                </widget>
               </item>

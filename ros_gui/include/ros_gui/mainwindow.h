@@ -19,6 +19,7 @@
 #include "demo.h"
 #include "dock.h"
 #include "nav.h"
+#include "progress.h"
 
 
 
@@ -39,7 +40,8 @@ public:
     void ModifyLineData(std::string fileName, int lineNum, std::string lineData);
     std::string CharToStr(char * contentChar);
     void closeEvent(QCloseEvent *event);
-
+    void startNav();
+    void runNav();
 
 signals:
     void record_path_signal();
@@ -146,6 +148,7 @@ private:
     Multigoal *multigoal_ui;
     Demo *demo_ui;
     Dock *dock_ui;
+    Progress *progress_ui;
     Nav *nav_ui;
     double cur_angle = 0;
     rviz::VisualizationManager *manager_;

@@ -122,6 +122,14 @@ QtCore/qbytearray.h
 QtCore/qmetatype.h
 -
 
+/home/mty/catkin_gui/src/ros_gui/build/include/ros_gui/moc_progress.cpp
+../../../include/ros_gui/progress.h
+/home/mty/catkin_gui/src/ros_gui/include/ros_gui/progress.h
+QtCore/qbytearray.h
+-
+QtCore/qmetatype.h
+-
+
 /home/mty/catkin_gui/src/ros_gui/build/include/ros_gui/moc_qnode.cpp
 ../../../include/ros_gui/qnode.h
 /home/mty/catkin_gui/src/ros_gui/include/ros_gui/qnode.h
@@ -348,6 +356,22 @@ QtWidgets/QPushButton
 QtWidgets/QWidget
 -
 
+/home/mty/catkin_gui/src/ros_gui/build/ui_progress.h
+QtCore/QVariant
+-
+QtWidgets/QAction
+-
+QtWidgets/QApplication
+-
+QtWidgets/QButtonGroup
+-
+QtWidgets/QDialog
+-
+QtWidgets/QHeaderView
+-
+QtWidgets/QProgressBar
+-
+
 /home/mty/catkin_gui/src/ros_gui/build/ui_semantic.h
 QtCore/QVariant
 -
@@ -467,6 +491,8 @@ dock.h
 /home/mty/catkin_gui/src/ros_gui/include/ros_gui/dock.h
 nav.h
 /home/mty/catkin_gui/src/ros_gui/include/ros_gui/nav.h
+progress.h
+/home/mty/catkin_gui/src/ros_gui/include/ros_gui/progress.h
 
 /home/mty/catkin_gui/src/ros_gui/include/ros_gui/mapNode.h
 ros/ros.h
@@ -492,6 +518,8 @@ geometry_msgs/Point.h
 geometry_msgs/PoseWithCovarianceStamped.h
 -
 sensor_msgs/LaserScan.h
+-
+nav_msgs/Path.h
 -
 custom_msgs/Obstacles.h
 -
@@ -535,6 +563,16 @@ QString
 -
 
 /home/mty/catkin_gui/src/ros_gui/include/ros_gui/nav.h
+QDialog
+-
+vector
+-
+QString
+-
+geometry_msgs/PoseStamped.h
+-
+
+/home/mty/catkin_gui/src/ros_gui/include/ros_gui/progress.h
 QDialog
 -
 vector
@@ -667,6 +705,12 @@ math.h
 /home/mty/catkin_gui/src/ros_gui/include/ros_gui/nav.h
 ../build/ui_nav.h
 /home/mty/catkin_gui/src/ros_gui/build/ui_nav.h
+
+/home/mty/catkin_gui/src/ros_gui/src/progress.cpp
+../include/ros_gui/progress.h
+/home/mty/catkin_gui/src/ros_gui/include/ros_gui/progress.h
+../build/ui_progress.h
+/home/mty/catkin_gui/src/ros_gui/build/ui_progress.h
 
 /home/mty/catkin_gui/src/ros_gui/src/qnode.cpp
 ros/ros.h
@@ -1544,6 +1588,26 @@ ros/serialization.h
 ros/builtin_message_traits.h
 -
 ros/message_operations.h
+-
+
+/opt/ros/kinetic/include/nav_msgs/Path.h
+string
+-
+vector
+-
+map
+-
+ros/types.h
+-
+ros/serialization.h
+-
+ros/builtin_message_traits.h
+-
+ros/message_operations.h
+-
+std_msgs/Header.h
+-
+geometry_msgs/PoseStamped.h
 -
 
 /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv/cxcore.h

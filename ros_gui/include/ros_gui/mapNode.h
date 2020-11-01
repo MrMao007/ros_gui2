@@ -150,6 +150,8 @@ public Q_SLOTS:
     void door_front_slot();
     void door_in_slot();
     void door_out_slot();
+    void vicon_slot();
+    void tea_slot();
     void dock_slot(QString dock_n);
     void demostration_slot(QString demo_n);
     void track_2d_slot();
@@ -184,6 +186,7 @@ private:
     ros::Publisher pathmarker_pub;
     ros::Publisher routemarker_pub;
     ros::Publisher refscan_pub;
+    ros::Publisher goal_pub;
 
 
 };

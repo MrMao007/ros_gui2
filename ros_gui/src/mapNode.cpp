@@ -81,7 +81,8 @@ bool MapNode::init() {
     routemarker_pub = n.advertise<visualization_msgs::MarkerArray>("route_marker", 10);
 
     refscan_pub = n.advertise<sensor_msgs::LaserScan>("reftable", 10);
-
+	
+    goal_pub = n.advertise<geometry_msgs::PoseStamped>("move_base_simple/goal", 10);
     std::string home_path = std::getenv("HOME");
     std::string pattern = home_path + "/bash/*.dat";
     std::vector<cv::String> fn;
@@ -547,13 +548,21 @@ void MapNode::multigoal_slot(){
 }
 
 void MapNode::send_door_front(){
-    MoveBaseClient ac1("move_base", true);
+    /*MoveBaseClient ac1("move_base", true);
     while(!ac1.waitForServer(ros::Duration(5.0))){
       ROS_INFO("Waiting for the move_base action server to come up");
     }
     move_base_msgs::MoveBaseGoal tmp;
-    tmp.target_pose.header = goal_vec[0].header;
-    tmp.target_pose.pose = goal_vec[0].pose;
+    tmp.target_pose.header.seq = 1;
+    tmp.target_pose.header.stamp = ros::Time::now();
+    tmp.target_pose.header.frame_id="map";
+    tmp.target_pose.pose.position.x=64.0355529785;
+    tmp.target_pose.pose.position.y=28.2884750366;
+    tmp.target_pose.pose.position.z=0;
+    tmp.target_pose.pose.orientation.x=0;
+    tmp.target_pose.pose.orientation.y=0;
+    tmp.target_pose.pose.orientation.z=-0.555078010714;
+    tmp.target_pose.pose.orientation.w=0.831798294073;
     ac1.sendGoal(tmp);
     ac1.waitForResult();
     if(ac1.getState() == actionlib::SimpleClientGoalState::SUCCEEDED){
@@ -562,7 +571,20 @@ void MapNode::send_door_front(){
     }
     else{
         ROS_INFO("FAIL!");
-    }
+    }*/
+    geometry_msgs::PoseStamped tmp;
+    tmp.header.seq = 1;
+    tmp.header.stamp = ros::Time::now();
+    tmp.header.frame_id="map";
+    tmp.pose.position.x=-23.547164917;
+    tmp.pose.position.y=1.08935546875;
+    tmp.pose.position.z=0;
+    tmp.pose.orientation.x=0;
+    tmp.pose.orientation.y=0;
+    tmp.pose.orientation.z=0.910775758788;
+    tmp.pose.orientation.w=0.412901340764;  
+    goal_pub.publish(tmp);
+    emit door_front_ready_signal();
 }
 
 void MapNode::door_front_slot(){
@@ -570,13 +592,21 @@ void MapNode::door_front_slot(){
 }
 
 void MapNode::send_door_in(){
-    MoveBaseClient ac1("move_base", true);
+    /*MoveBaseClient ac1("move_base", true);
     while(!ac1.waitForServer(ros::Duration(5.0))){
       ROS_INFO("Waiting for the move_base action server to come up");
     }
     move_base_msgs::MoveBaseGoal tmp;
-    tmp.target_pose.header = goal_vec[1].header;
-    tmp.target_pose.pose = goal_vec[1].pose;
+    tmp.target_pose.header.seq = 1;
+    tmp.target_pose.header.stamp = ros::Time::now();
+    tmp.target_pose.header.frame_id="map";
+    tmp.target_pose.pose.position.x=64.2453384399;
+    tmp.target_pose.pose.position.y=26.2827415466;
+    tmp.target_pose.pose.position.z=0;
+    tmp.target_pose.pose.orientation.x=0;
+    tmp.target_pose.pose.orientation.y=0;
+    tmp.target_pose.pose.orientation.z=-0.748443760728;
+    tmp.target_pose.pose.orientation.w=0.663198263739;
     ac1.sendGoal(tmp);
     ac1.waitForResult();
     if(ac1.getState() == actionlib::SimpleClientGoalState::SUCCEEDED){
@@ -585,7 +615,20 @@ void MapNode::send_door_in(){
     }
     else{
         ROS_INFO("FAIL!");
-    }
+    }*/
+    geometry_msgs::PoseStamped tmp;
+    tmp.header.seq = 1;
+    tmp.header.stamp = ros::Time::now();
+    tmp.header.frame_id="map";
+    tmp.pose.position.x=-24.6230697632;
+    tmp.pose.position.y=2.89471721649;
+    tmp.pose.position.z=0;
+    tmp.pose.orientation.x=0;
+    tmp.pose.orientation.y=0;
+    tmp.pose.orientation.z=2.89471721649;
+    tmp.pose.orientation.w=2.89471721649;  
+    goal_pub.publish(tmp);
+    emit door_in_ready_signal();
 }
 
 void MapNode::door_in_slot(){
@@ -593,27 +636,44 @@ void MapNode::door_in_slot(){
 }
 
 void MapNode::send_door_out(){
-    MoveBaseClient ac1("move_base", true);
-    while(!ac1.waitForServer(ros::Duration(5.0))){
-      ROS_INFO("Waiting for the move_base action server to come up");
-    }
-    move_base_msgs::MoveBaseGoal tmp;
-    tmp.target_pose.header = goal_vec[2].header;
-    tmp.target_pose.pose = goal_vec[2].pose;
-    ac1.sendGoal(tmp);
-    ac1.waitForResult();
-    if(ac1.getState() == actionlib::SimpleClientGoalState::SUCCEEDED){
-        ROS_INFO("Goal succeeded");
-        emit door_out_ready_signal();
-    }
-    else{
-        ROS_INFO("FAIL!");
-    }
+    system("gnome-terminal -x bash -c 'bash ~/bash/door_out.sh'");
+    emit door_out_ready_signal();
 }
 
 void MapNode::door_out_slot(){
     QtConcurrent::run(this,&MapNode::send_door_out);
 }
+
+void MapNode::vicon_slot(){
+    geometry_msgs::PoseStamped tmp;
+    tmp.header.seq = 1;
+    tmp.header.stamp = ros::Time::now();
+    tmp.header.frame_id="map";
+    tmp.pose.position.x=-7.57885551453;
+    tmp.pose.position.y=-5.12786769867;
+    tmp.pose.position.z=0;
+    tmp.pose.orientation.x=0;
+    tmp.pose.orientation.y=0;
+    tmp.pose.orientation.z=0.965560421764;
+    tmp.pose.orientation.w=-0.260178922902;  
+    goal_pub.publish(tmp);
+}
+
+void MapNode::tea_slot(){
+    geometry_msgs::PoseStamped tmp;
+    tmp.header.seq = 1;
+    tmp.header.stamp = ros::Time::now();
+    tmp.header.frame_id="map";
+    tmp.pose.position.x=17.532333374;
+    tmp.pose.position.y=-7.39080619812;
+    tmp.pose.position.z=0;
+    tmp.pose.orientation.x=0;
+    tmp.pose.orientation.y=0;
+    tmp.pose.orientation.z=0.348724332413;
+    tmp.pose.orientation.w=0.937225341091;  
+    goal_pub.publish(tmp);
+}
+
 void MapNode::readFile(std::string dock_n){
     std::string home_path = std::getenv("HOME");
     std::string filename = home_path + "/bash/" + dock_n + ".dat";
@@ -750,7 +810,7 @@ void MapNode::demostration_slot(QString demo_n){
 
 void MapNode::track_2d_slot(){
     clear_path_markerarray();
-    std::string filename = "/home/mty/catkin_gazebo/src/path_pursuit/path/path.txt";
+    std::string filename = "/home/rmr/navigation_ws/src/route_planner/launch/path.txt";
     std::vector<std::pair<double,double>> path;
     std::ifstream in(filename, std::ifstream::in);
     if (in.good())
@@ -774,9 +834,8 @@ void MapNode::track_2d_slot(){
             tmp.action = visualization_msgs::Marker::ADD;
 
             tmp.type = visualization_msgs::Marker::CYLINDER;
-            tmp.color.g = 1.0;
-            tmp.color.r = 1.0;
-            tmp.color.a = 1.0;
+            tmp.color.g = 1;     
+            tmp.color.a = 0.2;
             tmp.scale.x = 0.1;
             tmp.scale.y = 0.1;
             for(int i = 0; i < path.size(); i++){
